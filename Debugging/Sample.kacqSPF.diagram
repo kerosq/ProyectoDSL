@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uMLSPFDiagram dslVersion="1.0.0.0" Id="e8f2062a-c99f-47dd-b100-1f5c7654708f" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="3758d621-d62b-477d-8b15-18d91518be40" />
+  <nestedChildShapes>
+    <exampleShape Id="d34d2fbd-4919-4504-9ee6-b7823175defb" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/3758d621-d62b-477d-8b15-18d91518be40/ExampleElement1" />
+    </exampleShape>
+    <exampleShape Id="f751a4a9-47e6-40f1-8ca9-be4a87b1ff06" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/3758d621-d62b-477d-8b15-18d91518be40/ExampleElement2" />
+    </exampleShape>
+    <exampleConnector Id="479247b9-c574-4fdc-b4cd-1095a6f4b559" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="a3167e78-567f-4682-9926-3b1154b9ff80">
+      <nodes>
+        <exampleShapeMoniker Id="d34d2fbd-4919-4504-9ee6-b7823175defb" />
+        <exampleShapeMoniker Id="f751a4a9-47e6-40f1-8ca9-be4a87b1ff06" />
+      </nodes>
+    </exampleConnector>
+  </nestedChildShapes>
+</uMLSPFDiagram>

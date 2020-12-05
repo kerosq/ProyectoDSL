@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<microsoft.VisualStudio.Modeling.DslDesigner.DslDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18.228191832005976, 8.5" isCompleteView="false" name="DslDefinition">
+  <DslMoniker Name="/IPS.UMLSPF/UMLSPF" />
+  <nestedChildShapes>
+    <microsoft.VisualStudio.Modeling.DslDesigner.DomainModelElements Id="b3b856dd-9b75-43e1-af81-da7a15ab5818" absoluteBounds="0, 0, 2.4166666716337204, 8.5">
+      <nestedChildShapes>
+        <microsoft.VisualStudio.Modeling.DslDesigner.ClassShape Id="66b33c85-9e7b-46e1-bf40-568103db2bb3" absoluteBounds="0.5, 0.5, 1.6666666716337204, 0.7493896484375">
+          <RootNodeMoniker Id="121c39fd-14a4-4fdd-a239-3a9a6f8a64ee" />
+          <nestedChildShapes>
+            <elementListCompartment Id="6b822bcc-c6d2-443e-88e7-09f8e9ae8f6f" absoluteBounds="0.515, 0.9, 1.6366666716337206, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </microsoft.VisualStudio.Modeling.DslDesigner.ClassShape>
+      </nestedChildShapes>
+    </microsoft.VisualStudio.Modeling.DslDesigner.DomainModelElements>
+    <microsoft.VisualStudio.Modeling.DslDesigner.DiagramElements Id="0a7d3ac3-bd11-4655-aa0e-45d601e10ba2" absoluteBounds="2.4166666716337204, 0, 15.811525160372256, 8.5">
+      <nestedChildShapes>
+        <microsoft.VisualStudio.Modeling.DslDesigner.DiagramShape Id="73ae2422-9f87-42a3-b3bf-707c1a0187a0" absoluteBounds="2.9166666716337204, 0.5, 1.6666666716337204, 0.7493896484375">
+          <RootNodeMoniker Id="273fb23e-a76e-4f8d-9ffd-eb50b7a41a2d" />
+          <nestedChildShapes>
+            <elementListCompartment Id="eb62b773-a21a-4071-8552-75347bf98983" absoluteBounds="2.931666671633721, 0.89999999999999991, 1.6366666716337206, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </microsoft.VisualStudio.Modeling.DslDesigner.DiagramShape>
+      </nestedChildShapes>
+    </microsoft.VisualStudio.Modeling.DslDesigner.DiagramElements>
+  </nestedChildShapes>
+  <diagramState>
+    <DslDesignerDiagramState>
+      <DomainModelElementTree>
+        <DslDesignerDiagramTree>
+          <Roots>
+            <RootNode Id="121c39fd-14a4-4fdd-a239-3a9a6f8a64ee">
+              <Class>
+                <DomainClassMoniker Name="/IPS.UMLSPF/ExampleModel" />
+              </Class>
+            </RootNode>
+          </Roots>
+        </DslDesignerDiagramTree>
+      </DomainModelElementTree>
+      <DiagramElementTree>
+        <DslDesignerDiagramTree>
+          <Roots>
+            <RootNode Id="273fb23e-a76e-4f8d-9ffd-eb50b7a41a2d">
+              <Class>
+                <DiagramMoniker Name="/IPS.UMLSPF/UMLSPFDiagram" />
+              </Class>
+            </RootNode>
+          </Roots>
+        </DslDesignerDiagramTree>
+      </DiagramElementTree>
+    </DslDesignerDiagramState>
+  </diagramState>
+</microsoft.VisualStudio.Modeling.DslDesigner.DslDesignerDiagram>
