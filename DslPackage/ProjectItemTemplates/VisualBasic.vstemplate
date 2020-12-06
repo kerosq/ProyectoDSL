@@ -1,2 +1,17 @@
-<!-- Placeholder for content that will be generated when the solution is built for the first time -->
-<VSTemplate xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"/>
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{ba3bcf23-6ee0-49a6-b2c1-b727b13560e0}</TemplateID>
+		<Name Package="{8212dcc1-81c2-480c-9772-e73f24604d12}" ID="103"/>
+		<Description Package="{8212dcc1-81c2-480c-9772-e73f24604d12}" ID="102"/>
+		<Icon Package="{8212dcc1-81c2-480c-9772-e73f24604d12}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>UMLSPF.kacqSPF</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.kacqSPF">kacqSPF.kacqSPF</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.kacqSPF.diagram">kacqSPF.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

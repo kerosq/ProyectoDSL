@@ -30,7 +30,7 @@
           <Roots>
             <RootNode Id="121c39fd-14a4-4fdd-a239-3a9a6f8a64ee">
               <Class>
-                <DomainClassMoniker Name="/IPS.UMLSPF/ExampleModel" />
+                <DomainClassMoniker Name="/IPS.UMLSPF/UML" />
               </Class>
             </RootNode>
           </Roots>
