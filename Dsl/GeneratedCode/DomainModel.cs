@@ -68,7 +68,11 @@ namespace IPS.UMLSPF
 			return new global::System.Type[]
 			{
 				typeof(UML),
+				typeof(Clase),
+				typeof(UMLHasClase),
 				typeof(UMLSPFDiagram),
+				typeof(SClase),
+				typeof(global::IPS.UMLSPF.FixUpDiagram),
 			};
 		}
 		/// <summary>
@@ -80,6 +84,19 @@ namespace IPS.UMLSPF
 		{
 			return new DomainMemberInfo[]
 			{
+				new DomainMemberInfo(typeof(Clase), "Nombre", Clase.NombreDomainPropertyId, typeof(Clase.NombrePropertyHandler)),
+			};
+		}
+		/// <summary>
+		/// Gets the list of generated domain roles.
+		/// </summary>
+		/// <returns>List of role data.</returns>
+		protected sealed override DomainRolePlayerInfo[] GetGeneratedDomainRoles()
+		{
+			return new DomainRolePlayerInfo[]
+			{
+				new DomainRolePlayerInfo(typeof(UMLHasClase), "UML", UMLHasClase.UMLDomainRoleId),
+				new DomainRolePlayerInfo(typeof(UMLHasClase), "Clase", UMLHasClase.ClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -101,9 +118,11 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4);
 				createElementMap.Add(typeof(UML), 0);
-				createElementMap.Add(typeof(UMLSPFDiagram), 1);
+				createElementMap.Add(typeof(Clase), 1);
+				createElementMap.Add(typeof(UMLSPFDiagram), 2);
+				createElementMap.Add(typeof(SClase), 3);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -118,7 +137,9 @@ namespace IPS.UMLSPF
 			switch (index)
 			{
 				case 0: return new UML(partition, propertyAssignments);
-				case 1: return new UMLSPFDiagram(partition, propertyAssignments);
+				case 1: return new Clase(partition, propertyAssignments);
+				case 2: return new UMLSPFDiagram(partition, propertyAssignments);
+				case 3: return new SClase(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -141,7 +162,8 @@ namespace IPS.UMLSPF
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(0);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(1);
+				createElementLinkMap.Add(typeof(UMLHasClase), 0);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -156,6 +178,7 @@ namespace IPS.UMLSPF
 			}
 			switch (index)
 			{
+				case 0: return new UMLHasClase(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -236,6 +259,7 @@ namespace IPS.UMLSPF
 					DslModeling::ChainingElementVisitorFilter copyFilter = new DslModeling::ChainingElementVisitorFilter();
 					copyFilter.AddFilter(new UMLSPFCopyClosure());
 					copyFilter.AddFilter(new DslModeling::CoreCopyClosure());
+					copyFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceCopyClosure());
 					
 					UMLSPFDomainModel.copyClosure = copyFilter;
 				}
@@ -255,6 +279,7 @@ namespace IPS.UMLSPF
 					DslModeling::ChainingElementVisitorFilter removeFilter = new DslModeling::ChainingElementVisitorFilter();
 					removeFilter.AddFilter(new UMLSPFDeleteClosure());
 					removeFilter.AddFilter(new DslModeling::CoreDeleteClosure());
+					removeFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceDeleteClosure());
 		
 					UMLSPFDomainModel.removeClosure = removeFilter;
 				}
@@ -273,6 +298,7 @@ namespace IPS.UMLSPF
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
 		}
 		
 		/// <summary>
@@ -283,6 +309,7 @@ namespace IPS.UMLSPF
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
 		}
 		#endregion
 	}
@@ -318,6 +345,7 @@ namespace IPS.UMLSPF
 		public UMLSPFDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
+			DomainRoles.Add(global::IPS.UMLSPF.UMLHasClase.ClaseDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

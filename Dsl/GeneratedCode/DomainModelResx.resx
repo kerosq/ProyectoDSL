@@ -133,6 +133,62 @@
     <value>UML</value>
     <comment>DisplayName for DomainClass &apos;UML&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Clase</value>
+    <comment>Description for DomainClass &apos;Clase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Clase.DisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>DisplayName for DomainClass &apos;Clase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Clase/Nombre.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Clase.Nombre</value>
+    <comment>Description for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Clase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Clase/Nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Clase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.UMLHasClase</value>
+    <comment>Description for DomainClass &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase.DisplayName" xml:space="preserve">
+    <value>UMLHas Clase</value>
+    <comment>DisplayName for DomainClass &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase/UML.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.UMLHasClase.UML</value>
+    <comment>Description for DomainRole &apos;UML&apos; on DomainRelationship &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase/UML.DisplayName" xml:space="preserve">
+    <value>UML</value>
+    <comment>DisplayName for DomainRole &apos;UML&apos; on DomainRelationship &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase/UML.PropertyDisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;UML&apos; on DomainRelationship &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.UMLHasClase.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase/Clase.DisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UMLHasClase/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>UML</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;UMLHasClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.SClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.SClase</value>
+    <comment>Description for DomainClass &apos;SClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.SClase.DisplayName" xml:space="preserve">
+    <value>SClase</value>
+    <comment>DisplayName for DomainClass &apos;SClase&apos;</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>UMLSPF (*.kacqSPF)|*.kacqSPF</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>
@@ -152,6 +208,14 @@
   <data name="UMLSPFToolboxTab" xml:space="preserve">
     <value>UMLSPF</value>
     <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="IconsClassToolboxItem" xml:space="preserve">
+    <value>AgregarClase</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="IconsClassToolboxTooltip" xml:space="preserve">
+    <value>Agregar Clase</value>
+    <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
@@ -276,6 +340,11 @@ A DomainClass can be serialized as a moniker only if
   <data name="UnloadableSaveValidationFailed" xml:space="preserve">
     <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="IconsClassToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\IconoClase.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
   </data>
 </root>
 

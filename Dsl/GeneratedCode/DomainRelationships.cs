@@ -9,3 +9,242 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship UMLHasClase
+	/// Description for IPS.UMLSPF.UMLHasClase
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.UMLHasClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.UMLHasClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("a9b6e343-13d8-40ae-994b-012eafb94bff")]
+	public partial class UMLHasClase : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// UMLHasClase domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa9b6e343, 0x13d8, 0x40ae, 0x99, 0x4b, 0x01, 0x2e, 0xaf, 0xb9, 0x4b, 0xff);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a UMLHasClase link in the same Partition as the given UML
+		/// </summary>
+		/// <param name="source">UML to use as the source of the relationship.</param>
+		/// <param name="target">Clase to use as the target of the relationship.</param>
+		public UMLHasClase(UML source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(UMLHasClase.UMLDomainRoleId, source), new DslModeling::RoleAssignment(UMLHasClase.ClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public UMLHasClase(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public UMLHasClase(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public UMLHasClase(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public UMLHasClase(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region UML domain role code
+		
+		/// <summary>
+		/// UML domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid UMLDomainRoleId = new global::System.Guid(0xcd62c36a, 0x4feb, 0x4c05, 0x8a, 0x87, 0xe7, 0x35, 0xab, 0xd2, 0x87, 0x95);
+		
+		/// <summary>
+		/// DomainRole UML
+		/// Description for IPS.UMLSPF.UMLHasClase.UML
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.UMLHasClase/UML.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.UMLHasClase/UML.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.UMLHasClase/UML.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("cd62c36a-4feb-4c05-8a87-e735abd28795")]
+		public virtual UML UML
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (UML)DslModeling::DomainRoleInfo.GetRolePlayer(this, UMLDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, UMLDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access UML of a Clase
+		/// <summary>
+		/// Gets UML.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static UML GetUML(Clase element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseDomainRoleId) as UML;
+		}
+		
+		/// <summary>
+		/// Sets UML.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetUML(Clase element, UML newUML)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseDomainRoleId, newUML);
+		}
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0x7b20d996, 0xb631, 0x4d0a, 0xbd, 0xc4, 0xbf, 0xcf, 0x98, 0x09, 0x2b, 0xc5);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for IPS.UMLSPF.UMLHasClase.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.UMLHasClase/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.UMLHasClase/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "UML", PropertyDisplayNameKey="IPS.UMLSPF.UMLHasClase/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("7b20d996-b631-4d0a-bdc4-bfcf98092bc5")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Clase of a UML
+		/// <summary>
+		/// Gets a list of Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetClase(UML element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, UMLDomainRoleId);
+		}
+		#endregion
+		#region UML link accessor
+		/// <summary>
+		/// Get the list of UMLHasClase links to a UML.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.UMLHasClase> GetLinksToClase ( global::IPS.UMLSPF.UML uMLInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.UMLHasClase>(uMLInstance, global::IPS.UMLSPF.UMLHasClase.UMLDomainRoleId);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the UMLHasClase link to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.UMLHasClase GetLinkToUML (global::IPS.UMLSPF.Clase claseInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.UMLHasClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.UMLHasClase>(claseInstance, global::IPS.UMLSPF.UMLHasClase.ClaseDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Clase not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region UMLHasClase instance accessors
+		
+		/// <summary>
+		/// Get any UMLHasClase links between a given UML and a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.UMLHasClase> GetLinks( global::IPS.UMLSPF.UML source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.UMLHasClase> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.UMLHasClase>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.UMLHasClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.UMLHasClase>(source, global::IPS.UMLSPF.UMLHasClase.UMLDomainRoleId);
+			foreach ( global::IPS.UMLSPF.UMLHasClase link in links )
+			{
+				if ( target.Equals(link.Clase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one UMLHasClase link between a given UMLand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.UMLHasClase GetLink( global::IPS.UMLSPF.UML source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.UMLHasClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.UMLHasClase>(source, global::IPS.UMLSPF.UMLHasClase.UMLDomainRoleId);
+			foreach ( global::IPS.UMLSPF.UMLHasClase link in links )
+			{
+				if ( target.Equals(link.Clase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

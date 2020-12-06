@@ -29,6 +29,14 @@ namespace IPS.UMLSPF
 	[VSShell::ProvideToolWindow(typeof(UMLSPFExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(UMLSPFExplorerToolWindow), Constants.UMLSPFEditorFactoryId)]
 	[VSShell::ProvideStaticToolboxGroup("@UMLSPFToolboxTab;IPS.UMLSPF.Dsl.dll", "IPS.UMLSPF.UMLSPFToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@IconsClassToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.IconsClassToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AgregarClase", 
+					"@IconsClassToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 0)]
 	[VSShell::ProvideEditorFactory(typeof(UMLSPFEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(UMLSPFEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(UMLSPFEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

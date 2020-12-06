@@ -159,6 +159,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\IconoClase.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>
@@ -249,9 +250,5 @@
     <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
       <Link>CodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="Resources\ExampleConnectorToolBitmap.bmp" />
-    <Content Include="Resources\ExampleShapeToolBitmap.bmp" />
-    <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />
-    <EmbeddedResource Include="Resources\ConnectorTargetSearch.cur" />
   </ItemGroup>
 </Project>

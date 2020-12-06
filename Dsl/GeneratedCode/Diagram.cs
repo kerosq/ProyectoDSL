@@ -107,6 +107,46 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
+		#region Shape mapping
+		/// <summary>
+		/// Called during view fixup to ask the parent whether a shape should be created for the given child element.
+		/// </summary>
+		/// <remarks>
+		/// Always return true, since we assume there is only one diagram per model file for DSL scenarios.
+		/// </remarks>
+		protected override bool ShouldAddShapeForElement(DslModeling::ModelElement element)
+		{
+			return true;
+		}
+		
+		
+		/// <summary>
+		/// Creates a new shape for the given model element as part of view fixup
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Generated code.")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
+		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
+		{
+			if(element is global::IPS.UMLSPF.Clase)
+			{
+				global::IPS.UMLSPF.SClase newShape = new global::IPS.UMLSPF.SClase(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			return base.CreateChildShape(element);
+		}
+		#endregion
+		#region Decorator mapping
+		/// <summary>
+		/// Initialize shape decorator mappings.  This is done here rather than in individual shapes because decorator maps
+		/// are defined per diagram type rather than per shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+		}
+		
+		#endregion
 		#region Constructors, domain class Id
 	
 		/// <summary>
@@ -137,5 +177,55 @@ namespace IPS.UMLSPF
 }
 namespace IPS.UMLSPF
 {
+	
+		/// <summary>
+		/// Double derived implementation for the rule that initiates view fixup when an element that has an associated shape is added to the model.
+		/// This now enables the DSL author to everride the SkipFixUp() method 
+		/// </summary>
+		internal partial class FixUpDiagramBase : DslModeling::AddRule
+		{
+			protected virtual bool SkipFixup(DslModeling::ModelElement childElement)
+			{
+				return childElement.IsDeleted;
+			}
+		}
+	
+		/// <summary>
+		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		internal sealed partial class FixUpDiagram : FixUpDiagramBase
+		{
+			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			{
+				if(e == null) throw new global::System.ArgumentNullException("e");
+			
+				DslModeling::ModelElement childElement = e.ModelElement;
+				if (this.SkipFixup(childElement))
+					return;
+				DslModeling::ModelElement parentElement;
+				if(childElement is global::IPS.UMLSPF.Clase)
+				{
+					parentElement = GetParentForClase((global::IPS.UMLSPF.Clase)childElement);
+				} else
+				{
+					parentElement = null;
+				}
+				
+				if(parentElement != null)
+				{
+					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
+				}
+			}
+			public static global::IPS.UMLSPF.UML GetParentForClase( global::IPS.UMLSPF.Clase root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.UML result = root.UML;
+				if ( result == null ) return null;
+				return result;
+			}
+		}
+		
 	
 	}
