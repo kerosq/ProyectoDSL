@@ -133,6 +133,14 @@
     <value>UML</value>
     <comment>DisplayName for DomainClass &apos;UML&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.UML/NombreUML.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.UML.Nombre UML</value>
+    <comment>Description for DomainProperty &apos;NombreUML&apos; on DomainClass &apos;UML&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.UML/NombreUML.DisplayName" xml:space="preserve">
+    <value>Nombre UML</value>
+    <comment>DisplayName for DomainProperty &apos;NombreUML&apos; on DomainClass &apos;UML&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.Clase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.Clase</value>
     <comment>Description for DomainClass &apos;Clase&apos;</comment>
@@ -141,13 +149,29 @@
     <value>Clase</value>
     <comment>DisplayName for DomainClass &apos;Clase&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.Clase/Nombre.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.Clase.Nombre</value>
-    <comment>Description for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Clase&apos;</comment>
+  <data name="IPS.UMLSPF.Clase/NombreClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Clase.Nombre Clase</value>
+    <comment>Description for DomainProperty &apos;NombreClase&apos; on DomainClass &apos;Clase&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.Clase/Nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Clase&apos;</comment>
+  <data name="IPS.UMLSPF.Clase/NombreClase.DisplayName" xml:space="preserve">
+    <value>Nombre Clase</value>
+    <comment>DisplayName for DomainProperty &apos;NombreClase&apos; on DomainClass &apos;Clase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Atributo</value>
+    <comment>Description for DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo.DisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>DisplayName for DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo/NombreAtributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Atributo.Nombre Atributo</value>
+    <comment>Description for DomainProperty &apos;NombreAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo/NombreAtributo.DisplayName" xml:space="preserve">
+    <value>Nombre Atributo</value>
+    <comment>DisplayName for DomainProperty &apos;NombreAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.UMLHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.UMLHasClase</value>
@@ -181,13 +205,53 @@
     <value>UML</value>
     <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;UMLHasClase&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.SClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.SClase</value>
-    <comment>Description for DomainClass &apos;SClase&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtributo</value>
+    <comment>Description for DomainClass &apos;ClaseHasAtributo&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.SClase.DisplayName" xml:space="preserve">
-    <value>SClase</value>
-    <comment>DisplayName for DomainClass &apos;SClase&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtributo.DisplayName" xml:space="preserve">
+    <value>Clase Has Atributo</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributo/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtributo.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributo/Clase.DisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributo/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributo/Atributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtributo.Atributo</value>
+    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributo/Atributo.DisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.CMPClase</value>
+    <comment>Description for DomainClass &apos;CMPClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.CMPClase.DisplayName" xml:space="preserve">
+    <value>CMPClase</value>
+    <comment>DisplayName for DomainClass &apos;CMPClase&apos;</comment>
+  </data>
+  <data name="CMPClasecmpAtributosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CMPClaseNombreDefaultText" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>UMLSPF (*.kacqSPF)|*.kacqSPF</value>

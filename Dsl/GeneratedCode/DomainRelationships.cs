@@ -248,3 +248,242 @@ namespace IPS.UMLSPF
 		#endregion
 	}
 }
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship ClaseHasAtributo
+	/// Description for IPS.UMLSPF.ClaseHasAtributo
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("8536dcfa-cd47-42ad-bec5-6b313e3f4900")]
+	public partial class ClaseHasAtributo : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseHasAtributo domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x8536dcfa, 0xcd47, 0x42ad, 0xbe, 0xc5, 0x6b, 0x31, 0x3e, 0x3f, 0x49, 0x00);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseHasAtributo link in the same Partition as the given Clase
+		/// </summary>
+		/// <param name="source">Clase to use as the source of the relationship.</param>
+		/// <param name="target">Atributo to use as the target of the relationship.</param>
+		public ClaseHasAtributo(Clase source, Atributo target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasAtributo.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasAtributo.AtributoDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasAtributo(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasAtributo(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasAtributo(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasAtributo(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0xdb2f3002, 0x204b, 0x4e00, 0x9b, 0x5a, 0xf7, 0x80, 0xc5, 0xc3, 0xee, 0xba);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for IPS.UMLSPF.ClaseHasAtributo.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributo/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributo/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atributo", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributo/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("db2f3002-204b-4e00-9b5a-f780c5c3eeba")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Clase of a Atributo
+		/// <summary>
+		/// Gets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Clase GetClase(Atributo element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClase(Atributo element, Clase newClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoDomainRoleId, newClase);
+		}
+		#endregion
+		#region Atributo domain role code
+		
+		/// <summary>
+		/// Atributo domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoDomainRoleId = new global::System.Guid(0x63085b37, 0x3fe4, 0x4d9f, 0xb9, 0x62, 0xf5, 0x81, 0x75, 0x93, 0xb6, 0x64);
+		
+		/// <summary>
+		/// DomainRole Atributo
+		/// Description for IPS.UMLSPF.ClaseHasAtributo.Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributo/Atributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributo/Atributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributo/Atributo.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("63085b37-3fe4-4d9f-b962-f5817593b664")]
+		public virtual Atributo Atributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Atributo)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Atributo of a Clase
+		/// <summary>
+		/// Gets a list of Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Atributo> GetAtributo(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(element, ClaseDomainRoleId);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the list of ClaseHasAtributo links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributo> GetLinksToAtributo ( global::IPS.UMLSPF.Clase claseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(claseInstance, global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId);
+		}
+		#endregion
+		#region Atributo link accessor
+		/// <summary>
+		/// Get the ClaseHasAtributo link to a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseHasAtributo GetLinkToClase (global::IPS.UMLSPF.Atributo atributoInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(atributoInstance, global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Atributo not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseHasAtributo instance accessors
+		
+		/// <summary>
+		/// Get any ClaseHasAtributo links between a given Clase and a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributo> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Atributo target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributo> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributo>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(source, global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtributo link in links )
+			{
+				if ( target.Equals(link.Atributo) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseHasAtributo link between a given Claseand a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseHasAtributo GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Atributo target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(source, global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtributo link in links )
+			{
+				if ( target.Equals(link.Atributo) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
