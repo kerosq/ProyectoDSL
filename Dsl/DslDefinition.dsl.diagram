@@ -65,12 +65,12 @@
             <elementListCompartment Id="eb62b773-a21a-4071-8552-75347bf98983" absoluteBounds="9.631666671633722, 0.89999999999999991, 1.6366666716337206, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.DiagramShape>
-        <microsoft.VisualStudio.Modeling.DslDesigner.CompartmentShapeShape Id="1aad5389-a351-4848-ae62-15bf2fa09cb0" absoluteBounds="9.6166666716337215, 1.4293896484375, 1.6666666716337204, 1.8450732421874998">
+        <microsoft.VisualStudio.Modeling.DslDesigner.CompartmentShapeShape Id="1aad5389-a351-4848-ae62-15bf2fa09cb0" absoluteBounds="9.6166666716337215, 1.4293896484375, 1.6666666716337204, 2.0373746744791665">
           <RootNodeMoniker Id="bd508042-4789-4ad3-b7eb-9375a21a5fe4" />
           <nestedChildShapes>
             <elementListCompartment Id="d5b0fdce-b614-4451-873f-02735266073d" absoluteBounds="9.631666671633722, 1.8293896484375, 1.6366666716337206, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
-            <elementListCompartment Id="4f244650-f1aa-434d-b575-5f2427f95472" absoluteBounds="9.631666671633722, 2.088779296875, 1.6366666716337206, 0.44169108072916663" name="Decorators" titleTextColor="Black" itemTextColor="Black" />
-            <elementListCompartment Id="e4803638-b04e-4290-acb3-dcf67b7e7088" absoluteBounds="9.631666671633722, 2.5404703776041666, 1.6366666716337206, 0.63399251302083326" name="Compartments" titleTextColor="Black" itemTextColor="Black" />
+            <elementListCompartment Id="4f244650-f1aa-434d-b575-5f2427f95472" absoluteBounds="9.631666671633722, 2.088779296875, 1.6366666716337206, 0.63399251302083326" name="Decorators" titleTextColor="Black" itemTextColor="Black" />
+            <elementListCompartment Id="e4803638-b04e-4290-acb3-dcf67b7e7088" absoluteBounds="9.631666671633722, 2.7327718098958331, 1.6366666716337206, 0.63399251302083326" name="Compartments" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.CompartmentShapeShape>
       </nestedChildShapes>

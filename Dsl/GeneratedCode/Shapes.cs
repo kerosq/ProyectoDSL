@@ -181,6 +181,10 @@ namespace IPS.UMLSPF
 			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold8");			
 			shapeFields.Add(field1);
 			
+			DslDiagrams::ImageField field2 = new DslDiagrams::ImageField("IconDecoClase");
+			field2.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetObject("CMPClaseIconDecoClaseDefaultImage"));
+			shapeFields.Add(field2);
+			
 		}
 		
 		/// <summary>
@@ -195,6 +199,10 @@ namespace IPS.UMLSPF
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreClase");
 			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
+				
+			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "IconDecoClase");
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator2);
 				
 		}
 		

@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\IconoClase.bmp" />
+    <Content Include="Resources\IconoDecoClaseU.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>

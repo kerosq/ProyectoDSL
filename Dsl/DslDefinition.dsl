@@ -158,6 +158,9 @@
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" FontStyle="Bold" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconDecoClase" DisplayName="Icon Clase" DefaultIcon="Resources\IconoDecoClaseU.bmp" />
+      </ShapeHasDecorators>
       <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpAtributos" TitleFontStyle="Bold" Title="Atributos" TitleTextColor="Beige" />
       <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpOperaciones" TitleFontStyle="Bold, Italic" Title="Operaciones" TitleTextColor="Beige" />
     </CompartmentShape>
