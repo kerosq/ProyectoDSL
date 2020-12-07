@@ -205,6 +205,22 @@
     <value>Nombre Operacion</value>
     <comment>DisplayName for DomainProperty &apos;NombreOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Operaciones/TipoOperacion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Operaciones.Tipo Operacion</value>
+    <comment>Description for DomainProperty &apos;TipoOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones/TipoOperacion.DisplayName" xml:space="preserve">
+    <value>Tipo Operacion</value>
+    <comment>DisplayName for DomainProperty &apos;TipoOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones/MostrarOperacion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Operaciones.Mostrar Operacion</value>
+    <comment>Description for DomainProperty &apos;MostrarOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones/MostrarOperacion.DisplayName" xml:space="preserve">
+    <value>Mostrar Operacion</value>
+    <comment>DisplayName for DomainProperty &apos;MostrarOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.UMLHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.UMLHasClase</value>
     <comment>Description for DomainClass &apos;UMLHasClase&apos;</comment>

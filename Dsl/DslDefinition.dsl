@@ -73,6 +73,16 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="fc97e0b4-f8b7-4ff6-a2d9-46ceb9095f20" Description="Description for IPS.UMLSPF.Operaciones.Tipo Operacion" Name="TipoOperacion" DisplayName="Tipo Operacion">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="52dc144c-75fe-4f98-ab87-5a2c3e2bcdd9" Description="Description for IPS.UMLSPF.Operaciones.Mostrar Operacion" Name="MostrarOperacion" DisplayName="Mostrar Operacion" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
   </Classes>
@@ -144,7 +154,7 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <CompartmentShape Id="86de9b4d-d826-45c7-be05-d815713d3985" Description="Description for IPS.UMLSPF.CMPClase" Name="CMPClase" DisplayName="CMPClase" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase" FillColor="PaleGoldenrod" OutlineColor="OrangeRed" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <CompartmentShape Id="86de9b4d-d826-45c7-be05-d815713d3985" Description="Description for IPS.UMLSPF.CMPClase" Name="CMPClase" DisplayName="CMPClase" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase" FillColor="PaleGoldenrod" OutlineColor="OrangeRed" InitialWidth="2" InitialHeight="1.5" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" FontStyle="Bold" />
       </ShapeHasDecorators>
@@ -211,6 +221,12 @@
           <XmlPropertyData XmlName="nombreOperacion">
             <DomainPropertyMoniker Name="Operaciones/NombreOperacion" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoOperacion">
+            <DomainPropertyMoniker Name="Operaciones/TipoOperacion" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="mostrarOperacion" Representation="Ignore">
+            <DomainPropertyMoniker Name="Operaciones/MostrarOperacion" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseHasOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasOperacionesMoniker" ElementName="claseHasOperaciones" MonikerTypeName="ClaseHasOperacionesMoniker">
@@ -256,7 +272,7 @@
           </ElementsDisplayed>
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Operaciones/NombreOperacion" />
+              <DomainPropertyMoniker Name="Operaciones/MostrarOperacion" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>

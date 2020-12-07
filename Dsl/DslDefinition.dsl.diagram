@@ -31,10 +31,10 @@
             <elementListCompartment Id="185b2f82-3c01-4584-9ba9-00a685e69396" absoluteBounds="7.2150000000000007, 3.3833821614583335, 1.6366666716337206, 0.8262939453125" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.ClassShape>
-        <microsoft.VisualStudio.Modeling.DslDesigner.ClassShape Id="3550fe6c-5a59-458e-9bc9-1e8c842b460c" absoluteBounds="7.2000000000000011, 4.6096761067708325, 1.6666666716337204, 0.941691080729167">
+        <microsoft.VisualStudio.Modeling.DslDesigner.ClassShape Id="3550fe6c-5a59-458e-9bc9-1e8c842b460c" absoluteBounds="7.2000000000000011, 4.6096761067708325, 1.6666666716337204, 1.3262939453125">
           <SourceRoleNodeMoniker Id="126ea573-a783-42e9-9f14-042b599f0e0c" />
           <nestedChildShapes>
-            <elementListCompartment Id="cd8f90b3-3d62-4352-b82d-af87d388f525" absoluteBounds="7.2150000000000007, 5.0096761067708329, 1.6366666716337206, 0.44169108072916663" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+            <elementListCompartment Id="cd8f90b3-3d62-4352-b82d-af87d388f525" absoluteBounds="7.2150000000000007, 5.0096761067708329, 1.6366666716337206, 0.8262939453125" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.ClassShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.ClassShape Id="2edffb70-cbad-4ecf-b3f3-e29cb7216c7e" absoluteBounds="3.85, 1.7416910807291668, 1.66666667163372, 0.94169108072916674">

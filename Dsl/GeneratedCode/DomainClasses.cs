@@ -977,6 +977,159 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
+		#region TipoOperacion domain property code
+		
+		/// <summary>
+		/// TipoOperacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoOperacionDomainPropertyId = new global::System.Guid(0xfc97e0b4, 0xf8b7, 0x4ff6, 0xa2, 0xd9, 0x46, 0xce, 0xb9, 0x09, 0x5f, 0x20);
+		
+		/// <summary>
+		/// Storage for TipoOperacion
+		/// </summary>
+		private global::System.String tipoOperacionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoOperacion domain property.
+		/// Description for IPS.UMLSPF.Operaciones.Tipo Operacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/TipoOperacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/TipoOperacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("fc97e0b4-f8b7-4ff6-a2d9-46ceb9095f20")]
+		public global::System.String TipoOperacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoOperacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoOperacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Operaciones.TipoOperacion domain property.
+		/// </summary>
+		internal sealed partial class TipoOperacionPropertyHandler : DslModeling::DomainPropertyValueHandler<Operaciones, global::System.String>
+		{
+			private TipoOperacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Operaciones.TipoOperacion domain property value handler.
+			/// </summary>
+			public static readonly TipoOperacionPropertyHandler Instance = new TipoOperacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Operaciones.TipoOperacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoOperacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Operaciones element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoOperacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Operaciones element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoOperacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region MostrarOperacion domain property code
+		
+		/// <summary>
+		/// MostrarOperacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid MostrarOperacionDomainPropertyId = new global::System.Guid(0x52dc144c, 0x75fe, 0x4f98, 0xab, 0x87, 0x5a, 0x2c, 0x3e, 0x2b, 0xcd, 0xd9);
+		
+		/// <summary>
+		/// Gets or sets the value of MostrarOperacion domain property.
+		/// Description for IPS.UMLSPF.Operaciones.Mostrar Operacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/MostrarOperacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/MostrarOperacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("52dc144c-75fe-4f98-ab87-5a2c3e2bcdd9")]
+		public global::System.String MostrarOperacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return MostrarOperacionPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Operaciones.MostrarOperacion domain property.
+		/// </summary>
+		internal sealed partial class MostrarOperacionPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Operaciones, global::System.String>
+		{
+			private MostrarOperacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Operaciones.MostrarOperacion domain property value handler.
+			/// </summary>
+			public static readonly MostrarOperacionPropertyHandler Instance = new MostrarOperacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Operaciones.MostrarOperacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return MostrarOperacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Operaciones element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for MostrarOperacion because its Kind is
+				// set to Calculated. Please provide the GetMostrarOperacionValue()
+				// method on the domain class.
+				return element.GetMostrarOperacionValue();
+			}
+		
+		}
+		
+		#endregion
 		#region Clase opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Clase.

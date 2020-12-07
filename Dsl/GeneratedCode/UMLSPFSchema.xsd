@@ -176,6 +176,8 @@
         </xsd:attribute>
         <!-- Property: NombreOperacion -->
         <xsd:attribute name="nombreOperacion" type="xsd:string" />
+        <!-- Property: TipoOperacion -->
+        <xsd:attribute name="tipoOperacion" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

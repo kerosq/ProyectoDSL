@@ -99,6 +99,8 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(Atributo), "TipoAtributo", Atributo.TipoAtributoDomainPropertyId, typeof(Atributo.TipoAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "MostrarAtributo", Atributo.MostrarAtributoDomainPropertyId, typeof(Atributo.MostrarAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(Operaciones), "NombreOperacion", Operaciones.NombreOperacionDomainPropertyId, typeof(Operaciones.NombreOperacionPropertyHandler)),
+				new DomainMemberInfo(typeof(Operaciones), "TipoOperacion", Operaciones.TipoOperacionDomainPropertyId, typeof(Operaciones.TipoOperacionPropertyHandler)),
+				new DomainMemberInfo(typeof(Operaciones), "MostrarOperacion", Operaciones.MostrarOperacionDomainPropertyId, typeof(Operaciones.MostrarOperacionPropertyHandler)),
 			};
 		}
 		/// <summary>

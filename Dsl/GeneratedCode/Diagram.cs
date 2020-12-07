@@ -506,7 +506,7 @@ namespace IPS.UMLSPF
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributos((global::IPS.UMLSPF.Atributo)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
 				}
-				if(e.ModelElement is global::IPS.UMLSPF.Operaciones && e.DomainProperty.Id == global::IPS.UMLSPF.Operaciones.NombreOperacionDomainPropertyId)
+				if(e.ModelElement is global::IPS.UMLSPF.Operaciones && e.DomainProperty.Id == global::IPS.UMLSPF.Operaciones.MostrarOperacionDomainPropertyId)
 				{
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);

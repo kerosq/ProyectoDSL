@@ -2520,6 +2520,23 @@ namespace IPS.UMLSPF
 					}
 				}
 			}
+			// TipoOperacion
+			if (!serializationContext.Result.Failed)
+			{
+				string attribTipoOperacion = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoOperacion");
+				if (attribTipoOperacion != null)
+				{
+					global::System.String valueOfTipoOperacion;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoOperacion, out valueOfTipoOperacion))
+					{
+						instanceOfOperaciones.TipoOperacion = valueOfTipoOperacion;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoOperacion", typeof(global::System.String), attribTipoOperacion);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -2953,6 +2970,17 @@ namespace IPS.UMLSPF
 				{
 					if (!string.IsNullOrEmpty(propValue))
 						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreOperacion", propValue);
+	
+				}
+			}
+			// TipoOperacion
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfOperaciones.TipoOperacion;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoOperacion", propValue);
 	
 				}
 			}

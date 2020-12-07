@@ -123,7 +123,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(2, 1.5);
 			}
 		}
 		#endregion
@@ -328,7 +328,7 @@ namespace IPS.UMLSPF
 																				null);
 					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
 																				"cmpOperaciones", 
-																				global::IPS.UMLSPF.Operaciones.NombreOperacionDomainPropertyId, 
+																				global::IPS.UMLSPF.Operaciones.MostrarOperacionDomainPropertyId, 
 																				global::IPS.UMLSPF.Operaciones.DomainClassId, 
 																				GetElementsFromClaseForcmpOperaciones,
 																				null,
