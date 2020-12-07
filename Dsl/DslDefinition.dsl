@@ -37,11 +37,28 @@
             <DomainPath>ClaseHasAtributo.Atributo</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Operaciones" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClaseHasOperaciones.Operaciones</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="15e0cb84-72cd-496c-a7d5-96c0af55648a" Description="Description for IPS.UMLSPF.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="IPS.UMLSPF">
       <Properties>
         <DomainProperty Id="1d278e7f-8906-4b8e-ac0c-347b317e0024" Description="Description for IPS.UMLSPF.Atributo.Nombre Atributo" Name="NombreAtributo" DisplayName="Nombre Atributo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="87bb9588-ec65-4d28-b5cc-545cea7713b9" Description="Description for IPS.UMLSPF.Operaciones" Name="Operaciones" DisplayName="Operaciones" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="086b3a63-8cd2-4187-99ce-e4068891c035" Description="Description for IPS.UMLSPF.Operaciones.Nombre Operacion" Name="NombreOperacion" DisplayName="Nombre Operacion">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -82,6 +99,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="555a51fc-f4e2-4122-b27c-bffa5105fa66" Description="Description for IPS.UMLSPF.ClaseHasOperaciones" Name="ClaseHasOperaciones" DisplayName="Clase Has Operaciones" Namespace="IPS.UMLSPF" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="dfc13914-090a-41d9-b52b-2c2f3fe755cd" Description="Description for IPS.UMLSPF.ClaseHasOperaciones.Clase" Name="Clase" DisplayName="Clase" PropertyName="Operaciones" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Operaciones">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="78609571-12e9-4d9a-9070-edf2628d2972" Description="Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones" Name="Operaciones" DisplayName="Operaciones" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Operaciones" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -106,6 +139,7 @@
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
       <Compartment Name="cmpAtributos" />
+      <Compartment Name="cmpOperaciones" />
     </CompartmentShape>
   </Shapes>
   <XmlSerializationBehavior Name="UMLSPFSerializationBehavior" Namespace="IPS.UMLSPF">
@@ -133,6 +167,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="ClaseHasAtributo" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="operaciones">
+            <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="UMLHasClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="uMLHasClaseMoniker" ElementName="uMLHasClase" MonikerTypeName="UMLHasClaseMoniker">
@@ -151,6 +188,17 @@
       </XmlClassData>
       <XmlClassData TypeName="CMPClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="cMPClaseMoniker" ElementName="cMPClase" MonikerTypeName="CMPClaseMoniker">
         <CompartmentShapeMoniker Name="CMPClase" />
+      </XmlClassData>
+      <XmlClassData TypeName="Operaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionesMoniker" ElementName="operaciones" MonikerTypeName="OperacionesMoniker">
+        <DomainClassMoniker Name="Operaciones" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombreOperacion">
+            <DomainPropertyMoniker Name="Operaciones/NombreOperacion" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseHasOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasOperacionesMoniker" ElementName="claseHasOperaciones" MonikerTypeName="ClaseHasOperacionesMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -182,6 +230,17 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Atributo/NombreAtributo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="CMPClase/cmpOperaciones" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasOperaciones.Operaciones/!Operaciones</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operaciones/NombreOperacion" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>

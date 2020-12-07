@@ -157,8 +157,8 @@ namespace IPS.UMLSPF
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("Nombre");
-			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClaseNombreDefaultText");
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NombreClase");
+			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClaseNombreClaseDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -177,7 +177,7 @@ namespace IPS.UMLSPF
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Nombre");
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreClase");
 			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
@@ -233,7 +233,7 @@ namespace IPS.UMLSPF
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[1+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[2+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
@@ -247,6 +247,15 @@ namespace IPS.UMLSPF
 						null, null,
 						false);
 					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
+				}
+				{
+					string title = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClasecmpOperacionesTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("cmpOperaciones", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
+						null, null,
+						false);
+					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 			}
 			
@@ -280,7 +289,7 @@ namespace IPS.UMLSPF
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[1+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[2+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
@@ -291,6 +300,14 @@ namespace IPS.UMLSPF
 																				global::IPS.UMLSPF.Atributo.NombreAtributoDomainPropertyId, 
 																				global::IPS.UMLSPF.Atributo.DomainClassId, 
 																				GetElementsFromClaseForcmpAtributos,
+																				null,
+																				null,
+																				null);
+					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
+																				"cmpOperaciones", 
+																				global::IPS.UMLSPF.Operaciones.NombreOperacionDomainPropertyId, 
+																				global::IPS.UMLSPF.Operaciones.DomainClassId, 
+																				GetElementsFromClaseForcmpOperaciones,
 																				null,
 																				null,
 																				null);
@@ -328,6 +345,13 @@ namespace IPS.UMLSPF
 				global::IPS.UMLSPF.Clase root = (global::IPS.UMLSPF.Clase)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::IPS.UMLSPF.Atributo> result = root.Atributo;
+				return result;
+			}
+			internal static global::System.Collections.IList GetElementsFromClaseForcmpOperaciones(DslModeling::ModelElement rootElement)
+			{
+				global::IPS.UMLSPF.Clase root = (global::IPS.UMLSPF.Clase)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::IPS.UMLSPF.Operaciones> result = root.Operaciones;
 				return result;
 			}
 			#endregion

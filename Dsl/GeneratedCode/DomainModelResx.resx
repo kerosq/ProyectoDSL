@@ -173,6 +173,22 @@
     <value>Nombre Atributo</value>
     <comment>DisplayName for DomainProperty &apos;NombreAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Operaciones.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Operaciones</value>
+    <comment>Description for DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones.DisplayName" xml:space="preserve">
+    <value>Operaciones</value>
+    <comment>DisplayName for DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones/NombreOperacion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Operaciones.Nombre Operacion</value>
+    <comment>Description for DomainProperty &apos;NombreOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones/NombreOperacion.DisplayName" xml:space="preserve">
+    <value>Nombre Operacion</value>
+    <comment>DisplayName for DomainProperty &apos;NombreOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.UMLHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.UMLHasClase</value>
     <comment>Description for DomainClass &apos;UMLHasClase&apos;</comment>
@@ -237,6 +253,38 @@
     <value>Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasOperaciones</value>
+    <comment>Description for DomainClass &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones.DisplayName" xml:space="preserve">
+    <value>Clase Has Operaciones</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasOperaciones.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones/Clase.DisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Operaciones</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones</value>
+    <comment>Description for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.DisplayName" xml:space="preserve">
+    <value>Operaciones</value>
+    <comment>DisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.PropertyDisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.CMPClase</value>
     <comment>Description for DomainClass &apos;CMPClase&apos;</comment>
@@ -249,8 +297,12 @@
     <value></value>
     <comment>Compartment title</comment>
   </data>
-  <data name="CMPClaseNombreDefaultText" xml:space="preserve">
-    <value>Nombre</value>
+  <data name="CMPClasecmpOperacionesTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CMPClaseNombreClaseDefaultText" xml:space="preserve">
+    <value>NombreClase</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="FormatList" xml:space="preserve">

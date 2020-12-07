@@ -409,6 +409,21 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
+		#region Operaciones opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Operaciones.
+		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Clase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Operaciones> Operaciones
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Operaciones>, Operaciones>(global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -430,6 +445,11 @@ namespace IPS.UMLSPF
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Atributo.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Operaciones.DomainClassId)) 
 				{
 					return true;
 				}
@@ -466,6 +486,15 @@ namespace IPS.UMLSPF
 
 				return;
 			}
+				
+			global::IPS.UMLSPF.Operaciones sourceOperaciones2 = sourceElement as global::IPS.UMLSPF.Operaciones;
+			if (sourceOperaciones2 != null)
+			{
+				// Create link for path ClaseHasOperaciones.Operaciones
+				this.Operaciones.Add(sourceOperaciones2);
+
+				return;
+			}
 		
 			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
 			// during a "Paste".
@@ -498,6 +527,20 @@ namespace IPS.UMLSPF
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.Operaciones sourceOperaciones2 = sourceElement as global::IPS.UMLSPF.Operaciones;
+			if (sourceOperaciones2 != null)
+			{
+				// Delete link for path ClaseHasOperaciones.Operaciones
+				
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasOperaciones.GetLinks((global::IPS.UMLSPF.Clase)this, sourceOperaciones2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId);
 				}
 
 				return;
@@ -650,6 +693,153 @@ namespace IPS.UMLSPF
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass Operaciones
+	/// Description for IPS.UMLSPF.Operaciones
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("87bb9588-ec65-4d28-b5cc-545cea7713b9")]
+	public partial class Operaciones : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Operaciones domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x87bb9588, 0xec65, 0x4d28, 0xb5, 0xcc, 0x54, 0x5c, 0xea, 0x77, 0x13, 0xb9);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Operaciones(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Operaciones(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region NombreOperacion domain property code
+		
+		/// <summary>
+		/// NombreOperacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreOperacionDomainPropertyId = new global::System.Guid(0x086b3a63, 0x8cd2, 0x4187, 0x99, 0xce, 0xe4, 0x06, 0x88, 0x91, 0xc0, 0x35);
+		
+		/// <summary>
+		/// Storage for NombreOperacion
+		/// </summary>
+		private global::System.String nombreOperacionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreOperacion domain property.
+		/// Description for IPS.UMLSPF.Operaciones.Nombre Operacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/NombreOperacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/NombreOperacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("086b3a63-8cd2-4187-99ce-e4068891c035")]
+		public global::System.String NombreOperacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreOperacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreOperacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Operaciones.NombreOperacion domain property.
+		/// </summary>
+		internal sealed partial class NombreOperacionPropertyHandler : DslModeling::DomainPropertyValueHandler<Operaciones, global::System.String>
+		{
+			private NombreOperacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Operaciones.NombreOperacion domain property value handler.
+			/// </summary>
+			public static readonly NombreOperacionPropertyHandler Instance = new NombreOperacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Operaciones.NombreOperacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreOperacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Operaciones element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreOperacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Operaciones element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreOperacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Clase opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Clase.
+		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones
+		/// </summary>
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId, value);
 			}
 		}
 		#endregion

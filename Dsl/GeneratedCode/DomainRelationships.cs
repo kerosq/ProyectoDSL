@@ -487,3 +487,242 @@ namespace IPS.UMLSPF
 		#endregion
 	}
 }
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship ClaseHasOperaciones
+	/// Description for IPS.UMLSPF.ClaseHasOperaciones
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasOperaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasOperaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("555a51fc-f4e2-4122-b27c-bffa5105fa66")]
+	public partial class ClaseHasOperaciones : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseHasOperaciones domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x555a51fc, 0xf4e2, 0x4122, 0xb2, 0x7c, 0xbf, 0xfa, 0x51, 0x05, 0xfa, 0x66);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseHasOperaciones link in the same Partition as the given Clase
+		/// </summary>
+		/// <param name="source">Clase to use as the source of the relationship.</param>
+		/// <param name="target">Operaciones to use as the target of the relationship.</param>
+		public ClaseHasOperaciones(Clase source, Operaciones target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasOperaciones.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasOperaciones.OperacionesDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasOperaciones(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasOperaciones(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasOperaciones(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasOperaciones(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0xdfc13914, 0x090a, 0x41d9, 0xb5, 0x2b, 0x2c, 0x2f, 0x3f, 0xe7, 0x55, 0xcd);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasOperaciones/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasOperaciones/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Operaciones", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasOperaciones/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("dfc13914-090a-41d9-b52b-2c2f3fe755cd")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Clase of a Operaciones
+		/// <summary>
+		/// Gets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Clase GetClase(Operaciones element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, OperacionesDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClase(Operaciones element, Clase newClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, OperacionesDomainRoleId, newClase);
+		}
+		#endregion
+		#region Operaciones domain role code
+		
+		/// <summary>
+		/// Operaciones domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid OperacionesDomainRoleId = new global::System.Guid(0x78609571, 0x12e9, 0x4d9a, 0x90, 0x70, 0xed, 0xf2, 0x62, 0x8d, 0x29, 0x72);
+		
+		/// <summary>
+		/// DomainRole Operaciones
+		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasOperaciones/Operaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasOperaciones/Operaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("78609571-12e9-4d9a-9070-edf2628d2972")]
+		public virtual Operaciones Operaciones
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Operaciones)DslModeling::DomainRoleInfo.GetRolePlayer(this, OperacionesDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, OperacionesDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Operaciones of a Clase
+		/// <summary>
+		/// Gets a list of Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Operaciones> GetOperaciones(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Operaciones>, Operaciones>(element, ClaseDomainRoleId);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the list of ClaseHasOperaciones links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasOperaciones> GetLinksToOperaciones ( global::IPS.UMLSPF.Clase claseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(claseInstance, global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
+		}
+		#endregion
+		#region Operaciones link accessor
+		/// <summary>
+		/// Get the ClaseHasOperaciones link to a Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseHasOperaciones GetLinkToClase (global::IPS.UMLSPF.Operaciones operacionesInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(operacionesInstance, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Operaciones not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseHasOperaciones instance accessors
+		
+		/// <summary>
+		/// Get any ClaseHasOperaciones links between a given Clase and a Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasOperaciones> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Operaciones target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasOperaciones> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasOperaciones>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(source, global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasOperaciones link in links )
+			{
+				if ( target.Equals(link.Operaciones) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseHasOperaciones link between a given Claseand a Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseHasOperaciones GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Operaciones target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(source, global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasOperaciones link in links )
+			{
+				if ( target.Equals(link.Operaciones) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

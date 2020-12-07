@@ -243,7 +243,7 @@ namespace IPS.UMLSPF
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Clase.NombreClaseDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Nombre").AssociateValueWith(shape.Store, propertyInfo);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreClase").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -350,6 +350,7 @@ namespace IPS.UMLSPF
 		/// Rule to update compartments when an item is added to the list
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
 		{
 			/// <summary>
@@ -371,6 +372,11 @@ namespace IPS.UMLSPF
 					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpAtributosFromLastLink((global::IPS.UMLSPF.ClaseHasAtributo)e.ModelElement);
 					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
 				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasOperaciones)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+				}
 			}
 			
 			#region static DomainPath traversal methods to get the list of compartments to update
@@ -382,6 +388,20 @@ namespace IPS.UMLSPF
 				return new DslModeling::ModelElement[] {result};
 			}
 			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpAtributos(global::IPS.UMLSPF.Atributo root)
+			{
+				// Segments 1 and 0
+				global::IPS.UMLSPF.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpOperacionesFromLastLink(global::IPS.UMLSPF.ClaseHasOperaciones root)
+			{
+				// Segment 0
+				global::IPS.UMLSPF.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpOperaciones(global::IPS.UMLSPF.Operaciones root)
 			{
 				// Segments 1 and 0
 				global::IPS.UMLSPF.Clase result = root.Clase;
@@ -434,6 +454,7 @@ namespace IPS.UMLSPF
 		/// Rule to update compartments when an items is removed from the list
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
 		{
 			/// <summary>
@@ -453,6 +474,11 @@ namespace IPS.UMLSPF
 					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributosFromLastLink((global::IPS.UMLSPF.ClaseHasAtributo)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
 				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasOperaciones)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+				}
 			}
 		}
 		
@@ -460,6 +486,7 @@ namespace IPS.UMLSPF
 		/// Rule to update compartments when the property on an item being displayed changes.
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Operaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
 		{
 			/// <summary>
@@ -479,6 +506,11 @@ namespace IPS.UMLSPF
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributos((global::IPS.UMLSPF.Atributo)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
 				}
+				if(e.ModelElement is global::IPS.UMLSPF.Operaciones && e.DomainProperty.Id == global::IPS.UMLSPF.Operaciones.NombreOperacionDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+				}
 			}
 		}
 		
@@ -486,6 +518,7 @@ namespace IPS.UMLSPF
 		/// Rule to update compartments when a roleplayer change happens
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
 		{
 			/// <summary>
@@ -527,6 +560,33 @@ namespace IPS.UMLSPF
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
 					}
 				}
+				if(typeof(global::IPS.UMLSPF.ClaseHasOperaciones).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.Operaciones)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::IPS.UMLSPF.CMPClase compartmentShape = pel as global::IPS.UMLSPF.CMPClase;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+					}
+				}
 			}
 		}
 	
@@ -534,6 +594,7 @@ namespace IPS.UMLSPF
 		/// Rule to update compartments when the order of items in the list changes.
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
 		{
 			/// <summary>
@@ -554,6 +615,14 @@ namespace IPS.UMLSPF
 					{
 						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributos((global::IPS.UMLSPF.Atributo)e.CounterpartRolePlayer);
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseHasOperaciones).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
 					}
 				}
 			}
