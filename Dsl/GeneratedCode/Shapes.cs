@@ -129,24 +129,38 @@ namespace IPS.UMLSPF
 		#endregion
 		#region Shape styles
 		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.OrangeRed);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.PaleGoldenrod);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+			// Custom font styles
+			DslDiagrams::FontSettings fontSettings;
+			fontSettings = new DslDiagrams::FontSettings();
+			fontSettings.Style =  global::System.Drawing.FontStyle.Bold ;
+			fontSettings.Size = 8/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold8"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
+		}
+		
+		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
 		public override bool HasBackgroundGradient
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -164,6 +178,7 @@ namespace IPS.UMLSPF
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold8");			
 			shapeFields.Add(field1);
 			
 		}
@@ -178,7 +193,7 @@ namespace IPS.UMLSPF
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreClase");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -240,21 +255,29 @@ namespace IPS.UMLSPF
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
 				}
 				{
+					DslDiagrams::FontSettings titleFont = new DslDiagrams::FontSettings();
+					titleFont.Style =  global::System.Drawing.FontStyle.Bold ;
+					titleFont.Size = 8/72.0F;
 					string title = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClasecmpAtributosTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("cmpAtributos", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Beige), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Khaki), false,
+						titleFont, null,
 						false);
+					descriptor.TitleTextColor = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Beige);
 					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
 				}
 				{
+					DslDiagrams::FontSettings titleFont = new DslDiagrams::FontSettings();
+					titleFont.Style =  global::System.Drawing.FontStyle.Bold |  global::System.Drawing.FontStyle.Italic ;
+					titleFont.Size = 8/72.0F;
 					string title = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClasecmpOperacionesTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("cmpOperaciones", title, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
-						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
-						null, null,
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Beige), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Khaki), false,
+						titleFont, null,
 						false);
+					descriptor.TitleTextColor = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Beige);
 					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 			}

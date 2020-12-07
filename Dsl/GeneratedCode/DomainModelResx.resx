@@ -294,11 +294,11 @@
     <comment>DisplayName for DomainClass &apos;CMPClase&apos;</comment>
   </data>
   <data name="CMPClasecmpAtributosTitle" xml:space="preserve">
-    <value></value>
+    <value>Atributos</value>
     <comment>Compartment title</comment>
   </data>
   <data name="CMPClasecmpOperacionesTitle" xml:space="preserve">
-    <value></value>
+    <value>Operaciones</value>
     <comment>Compartment title</comment>
   </data>
   <data name="CMPClaseNombreClaseDefaultText" xml:space="preserve">
