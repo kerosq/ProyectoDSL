@@ -74,9 +74,12 @@ namespace IPS.UMLSPF
 				typeof(UMLHasClase),
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasOperaciones),
+				typeof(ClaseReferencesTargetClase),
 				typeof(UMLSPFDiagram),
+				typeof(ConecClase),
 				typeof(CMPClase),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
+				typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged),
 				typeof(global::IPS.UMLSPF.CompartmentItemAddRule),
 				typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule),
 				typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerChangeRule),
@@ -117,6 +120,8 @@ namespace IPS.UMLSPF
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Atributo", ClaseHasAtributo.AtributoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasOperaciones), "Clase", ClaseHasOperaciones.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasOperaciones), "Operaciones", ClaseHasOperaciones.OperacionesDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseReferencesTargetClase), "SourceClase", ClaseReferencesTargetClase.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseReferencesTargetClase), "TargetClase", ClaseReferencesTargetClase.TargetClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -138,13 +143,14 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(7);
 				createElementMap.Add(typeof(UML), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
 				createElementMap.Add(typeof(Operaciones), 3);
 				createElementMap.Add(typeof(UMLSPFDiagram), 4);
-				createElementMap.Add(typeof(CMPClase), 5);
+				createElementMap.Add(typeof(ConecClase), 5);
+				createElementMap.Add(typeof(CMPClase), 6);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -163,7 +169,8 @@ namespace IPS.UMLSPF
 				case 2: return new Atributo(partition, propertyAssignments);
 				case 3: return new Operaciones(partition, propertyAssignments);
 				case 4: return new UMLSPFDiagram(partition, propertyAssignments);
-				case 5: return new CMPClase(partition, propertyAssignments);
+				case 5: return new ConecClase(partition, propertyAssignments);
+				case 6: return new CMPClase(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -186,10 +193,11 @@ namespace IPS.UMLSPF
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4);
 				createElementLinkMap.Add(typeof(UMLHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperaciones), 2);
+				createElementLinkMap.Add(typeof(ClaseReferencesTargetClase), 3);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -207,6 +215,7 @@ namespace IPS.UMLSPF
 				case 0: return new UMLHasClase(partition, roleAssignments, propertyAssignments);
 				case 1: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
 				case 2: return new ClaseHasOperaciones(partition, roleAssignments, propertyAssignments);
+				case 3: return new ClaseReferencesTargetClase(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -327,6 +336,7 @@ namespace IPS.UMLSPF
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemAddRule));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerChangeRule));
@@ -343,6 +353,7 @@ namespace IPS.UMLSPF
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemAddRule));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerChangeRule));

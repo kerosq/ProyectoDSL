@@ -424,6 +424,36 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
+		#region TargetClase opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of TargetClase.
+		/// Description for IPS.UMLSPF.ClaseReferencesTargetClase.SourceClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> TargetClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.ClaseReferencesTargetClase.SourceClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region SourceClase opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of SourceClase.
+		/// Description for IPS.UMLSPF.ClaseReferencesTargetClase.TargetClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> SourceClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.ClaseReferencesTargetClase.TargetClaseDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the

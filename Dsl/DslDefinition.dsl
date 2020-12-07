@@ -135,6 +135,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="6f46edc6-89a2-47b6-b489-b76d99a215bc" Description="Description for IPS.UMLSPF.ClaseReferencesTargetClase" Name="ClaseReferencesTargetClase" DisplayName="Clase References Target Clase" Namespace="IPS.UMLSPF">
+      <Source>
+        <DomainRole Id="7fd2a6d7-29f6-43ea-9cb2-497a0f0b345a" Description="Description for IPS.UMLSPF.ClaseReferencesTargetClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClase" PropertyDisplayName="Target Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="67f5ef43-fd4f-4067-92ea-e47dcf72c744" Description="Description for IPS.UMLSPF.ClaseReferencesTargetClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="SourceClase" PropertyDisplayName="Source Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -165,6 +181,9 @@
       <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpOperaciones" TitleFontStyle="Bold, Italic" Title="Operaciones" TitleTextColor="Beige" />
     </CompartmentShape>
   </Shapes>
+  <Connectors>
+    <Connector Id="fc067f1a-076e-47d8-b155-ef171c2da590" Description="Description for IPS.UMLSPF.ConecClase" Name="ConecClase" DisplayName="Conec Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Clase" />
+  </Connectors>
   <XmlSerializationBehavior Name="UMLSPFSerializationBehavior" Namespace="IPS.UMLSPF">
     <ClassData>
       <XmlClassData TypeName="UML" MonikerAttributeName="" SerializeId="true" MonikerElementName="uMLMoniker" ElementName="uML" MonikerTypeName="UMLMoniker">
@@ -192,6 +211,9 @@
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="operaciones">
             <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
+            <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -235,9 +257,36 @@
       <XmlClassData TypeName="ClaseHasOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasOperacionesMoniker" ElementName="claseHasOperaciones" MonikerTypeName="ClaseHasOperacionesMoniker">
         <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
       </XmlClassData>
+      <XmlClassData TypeName="ClaseReferencesTargetClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseReferencesTargetClaseMoniker" ElementName="claseReferencesTargetClase" MonikerTypeName="ClaseReferencesTargetClaseMoniker">
+        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConecClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecClaseMoniker" ElementName="conecClase" MonikerTypeName="ConecClaseMoniker">
+        <ConnectorMoniker Name="ConecClase" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="UMLSPFExplorer" />
+  <ConnectionBuilders>
+    <ConnectionBuilder Name="ClaseReferencesTargetClaseBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+  </ConnectionBuilders>
   <Diagram Id="f1ee146e-d981-4262-8e9d-ddacc33d3420" Description="Description for IPS.UMLSPF.UMLSPFDiagram" Name="UMLSPFDiagram" DisplayName="Minimal Language Diagram" Namespace="IPS.UMLSPF" FillColor="DimGray" TextColor="White">
     <Class>
       <DomainClassMoniker Name="UML" />
@@ -281,6 +330,12 @@
         </CompartmentMap>
       </CompartmentShapeMap>
     </ShapeMaps>
+    <ConnectorMaps>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConecClase" />
+        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+      </ConnectorMap>
+    </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="kacqSPF" EditorGuid="096cb769-d340-4d6e-b06a-a2816f59d3a1">
     <RootClass>
@@ -293,6 +348,9 @@
       <ElementTool Name="IconsClass" ToolboxIcon="Resources\IconoClase.bmp" Caption="AgregarClase" Tooltip="Agregar Clase" HelpKeyword="AgregarClase">
         <DomainClassMoniker Name="Clase" />
       </ElementTool>
+      <ConnectionTool Name="ConectarClases" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarClases" Tooltip="Conectar Clases" HelpKeyword="ConectarClases">
+        <ConnectionBuilderMoniker Name="UMLSPF/ClaseReferencesTargetClaseBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="UMLSPFDiagram" />

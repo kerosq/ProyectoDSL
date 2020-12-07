@@ -317,6 +317,38 @@
     <value>Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseReferencesTargetClase</value>
+    <comment>Description for DomainClass &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase.DisplayName" xml:space="preserve">
+    <value>Clase References Target Clase</value>
+    <comment>DisplayName for DomainClass &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/SourceClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseReferencesTargetClase.SourceClase</value>
+    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/SourceClase.DisplayName" xml:space="preserve">
+    <value>Source Clase</value>
+    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/SourceClase.PropertyDisplayName" xml:space="preserve">
+    <value>Target Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/TargetClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseReferencesTargetClase.TargetClase</value>
+    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/TargetClase.DisplayName" xml:space="preserve">
+    <value>Target Clase</value>
+    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/TargetClase.PropertyDisplayName" xml:space="preserve">
+    <value>Source Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.CMPClase</value>
     <comment>Description for DomainClass &apos;CMPClase&apos;</comment>
@@ -336,6 +368,14 @@
   <data name="CMPClaseNombreClaseDefaultText" xml:space="preserve">
     <value>NombreClase</value>
     <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConecClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ConecClase</value>
+    <comment>Description for DomainClass &apos;ConecClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConecClase.DisplayName" xml:space="preserve">
+    <value>Conec Clase</value>
+    <comment>DisplayName for DomainClass &apos;ConecClase&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>UMLSPF (*.kacqSPF)|*.kacqSPF</value>
@@ -363,6 +403,14 @@
   </data>
   <data name="IconsClassToolboxTooltip" xml:space="preserve">
     <value>Agregar Clase</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConectarClasesToolboxItem" xml:space="preserve">
+    <value>ConectarClases</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConectarClasesToolboxTooltip" xml:space="preserve">
+    <value>Conectar Clases</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -496,6 +544,10 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="IconsClassToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\IconoClase.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConectarClasesToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectorArrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>
