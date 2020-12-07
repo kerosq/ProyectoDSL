@@ -501,7 +501,7 @@ namespace IPS.UMLSPF
 			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::IPS.UMLSPF.Atributo && e.DomainProperty.Id == global::IPS.UMLSPF.Atributo.NombreAtributoDomainPropertyId)
+				if(e.ModelElement is global::IPS.UMLSPF.Atributo && e.DomainProperty.Id == global::IPS.UMLSPF.Atributo.MostrarAtributoDomainPropertyId)
 				{
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributos((global::IPS.UMLSPF.Atributo)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);

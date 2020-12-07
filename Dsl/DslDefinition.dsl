@@ -54,6 +54,16 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="ff823fe5-1d5e-43e5-9cef-c1b8535d4ad9" Description="Description for IPS.UMLSPF.Atributo.Tipo Atributo" Name="TipoAtributo" DisplayName="Tipo Atributo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="8e6df31c-3122-47d6-84f6-80e860984576" Description="Description for IPS.UMLSPF.Atributo.Mostrar Atributo" Name="MostrarAtributo" DisplayName="Mostrar Atributo" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="87bb9588-ec65-4d28-b5cc-545cea7713b9" Description="Description for IPS.UMLSPF.Operaciones" Name="Operaciones" DisplayName="Operaciones" Namespace="IPS.UMLSPF">
@@ -181,6 +191,12 @@
           <XmlPropertyData XmlName="nombreAtributo">
             <DomainPropertyMoniker Name="Atributo/NombreAtributo" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoAtributo">
+            <DomainPropertyMoniker Name="Atributo/TipoAtributo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="mostrarAtributo" Representation="Ignore">
+            <DomainPropertyMoniker Name="Atributo/MostrarAtributo" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
@@ -229,7 +245,7 @@
           </ElementsDisplayed>
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/NombreAtributo" />
+              <DomainPropertyMoniker Name="Atributo/MostrarAtributo" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>

@@ -140,6 +140,8 @@
         </xsd:attribute>
         <!-- Property: NombreAtributo -->
         <xsd:attribute name="nombreAtributo" type="xsd:string" />
+        <!-- Property: TipoAtributo -->
+        <xsd:attribute name="tipoAtributo" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

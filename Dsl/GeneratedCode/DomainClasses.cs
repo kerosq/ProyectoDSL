@@ -677,6 +677,159 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
+		#region TipoAtributo domain property code
+		
+		/// <summary>
+		/// TipoAtributo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoAtributoDomainPropertyId = new global::System.Guid(0xff823fe5, 0x1d5e, 0x43e5, 0x9c, 0xef, 0xc1, 0xb8, 0x53, 0x5d, 0x4a, 0xd9);
+		
+		/// <summary>
+		/// Storage for TipoAtributo
+		/// </summary>
+		private global::System.String tipoAtributoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoAtributo domain property.
+		/// Description for IPS.UMLSPF.Atributo.Tipo Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Atributo/TipoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Atributo/TipoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ff823fe5-1d5e-43e5-9cef-c1b8535d4ad9")]
+		public global::System.String TipoAtributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoAtributoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoAtributoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.TipoAtributo domain property.
+		/// </summary>
+		internal sealed partial class TipoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
+		{
+			private TipoAtributoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.TipoAtributo domain property value handler.
+			/// </summary>
+			public static readonly TipoAtributoPropertyHandler Instance = new TipoAtributoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.TipoAtributo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoAtributoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoAtributoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Atributo element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoAtributoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region MostrarAtributo domain property code
+		
+		/// <summary>
+		/// MostrarAtributo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid MostrarAtributoDomainPropertyId = new global::System.Guid(0x8e6df31c, 0x3122, 0x47d6, 0x84, 0xf6, 0x80, 0xe8, 0x60, 0x98, 0x45, 0x76);
+		
+		/// <summary>
+		/// Gets or sets the value of MostrarAtributo domain property.
+		/// Description for IPS.UMLSPF.Atributo.Mostrar Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Atributo/MostrarAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Atributo/MostrarAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("8e6df31c-3122-47d6-84f6-80e860984576")]
+		public global::System.String MostrarAtributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return MostrarAtributoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.MostrarAtributo domain property.
+		/// </summary>
+		internal sealed partial class MostrarAtributoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Atributo, global::System.String>
+		{
+			private MostrarAtributoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.MostrarAtributo domain property value handler.
+			/// </summary>
+			public static readonly MostrarAtributoPropertyHandler Instance = new MostrarAtributoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.MostrarAtributo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return MostrarAtributoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for MostrarAtributo because its Kind is
+				// set to Calculated. Please provide the GetMostrarAtributoValue()
+				// method on the domain class.
+				return element.GetMostrarAtributoValue();
+			}
+		
+		}
+		
+		#endregion
 		#region Clase opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Clase.

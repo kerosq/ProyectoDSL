@@ -173,6 +173,22 @@
     <value>Nombre Atributo</value>
     <comment>DisplayName for DomainProperty &apos;NombreAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Atributo/TipoAtributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Atributo.Tipo Atributo</value>
+    <comment>Description for DomainProperty &apos;TipoAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo/TipoAtributo.DisplayName" xml:space="preserve">
+    <value>Tipo Atributo</value>
+    <comment>DisplayName for DomainProperty &apos;TipoAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo/MostrarAtributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Atributo.Mostrar Atributo</value>
+    <comment>Description for DomainProperty &apos;MostrarAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo/MostrarAtributo.DisplayName" xml:space="preserve">
+    <value>Mostrar Atributo</value>
+    <comment>DisplayName for DomainProperty &apos;MostrarAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.Operaciones.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.Operaciones</value>
     <comment>Description for DomainClass &apos;Operaciones&apos;</comment>

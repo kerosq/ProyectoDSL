@@ -320,7 +320,7 @@ namespace IPS.UMLSPF
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"cmpAtributos", 
-																				global::IPS.UMLSPF.Atributo.NombreAtributoDomainPropertyId, 
+																				global::IPS.UMLSPF.Atributo.MostrarAtributoDomainPropertyId, 
 																				global::IPS.UMLSPF.Atributo.DomainClassId, 
 																				GetElementsFromClaseForcmpAtributos,
 																				null,
