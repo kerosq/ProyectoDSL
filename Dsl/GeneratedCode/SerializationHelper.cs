@@ -309,10 +309,10 @@ namespace IPS.UMLSPF
 	{
 	
 		/// <summary>
-		/// Loads a UML instance into the default partition of the given store, and ignore serialization result.
+		/// Loads a ModeloClassWEB instance into the default partition of the given store, and ignore serialization result.
 		/// </summary>
-		/// <param name="store">The new UML instance will be created into the default partition of this store.</param>
-		/// <param name="fileName">Name of the file from which the UML instance will be deserialized.</param>
+		/// <param name="store">The new ModeloClassWEB instance will be created into the default partition of this store.</param>
+		/// <param name="fileName">Name of the file from which the ModeloClassWEB instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
 		/// If null is passed, schema validation will not be performed.
@@ -324,8 +324,8 @@ namespace IPS.UMLSPF
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded UML instance.</returns>
-		public virtual UML LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ModeloClassWEB instance.</returns>
+		public virtual ModeloClassWEB LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -336,11 +336,11 @@ namespace IPS.UMLSPF
 		}
 		
 		/// <summary>
-		/// Loads a UML instance into the default partition of the given store.
+		/// Loads a ModeloClassWEB instance into the default partition of the given store.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="store">The new UML instance will be created into the default partition of this store.</param>
-		/// <param name="fileName">Name of the file from which the UML instance will be deserialized.</param>
+		/// <param name="store">The new ModeloClassWEB instance will be created into the default partition of this store.</param>
+		/// <param name="fileName">Name of the file from which the ModeloClassWEB instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
 		/// If null is passed, schema validation will not be performed.
@@ -352,8 +352,8 @@ namespace IPS.UMLSPF
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded UML instance.</returns>
-		public virtual UML LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ModeloClassWEB instance.</returns>
+		public virtual ModeloClassWEB LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -364,11 +364,11 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// Loads a UML instance.
+		/// Loads a ModeloClassWEB instance.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="partition">Partition in which the new UML instance will be created.</param>
-		/// <param name="fileName">Name of the file from which the UML instance will be deserialized.</param>
+		/// <param name="partition">Partition in which the new ModeloClassWEB instance will be created.</param>
+		/// <param name="fileName">Name of the file from which the ModeloClassWEB instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
 		/// If null is passed, schema validation will not be performed.
@@ -380,9 +380,9 @@ namespace IPS.UMLSPF
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded UML instance.</returns>
+		/// <returns>The loaded ModeloClassWEB instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability","CA1506:AvoidExcessiveClassCoupling", Justification="Generated code")]
-		public virtual UML LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		public virtual ModeloClassWEB LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (string.IsNullOrEmpty(fileName))
@@ -396,11 +396,11 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// Loads a UML instance from a stream.
+		/// Loads a ModeloClassWEB instance from a stream.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="partition">Partition in which the new UML instance will be created.</param>
-		/// <param name="location">Source location associated with stream from which the UML instance is to be loaded. Usually a file path, but can be any string, including null.</param>
+		/// <param name="partition">Partition in which the new ModeloClassWEB instance will be created.</param>
+		/// <param name="location">Source location associated with stream from which the ModeloClassWEB instance is to be loaded. Usually a file path, but can be any string, including null.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
 		/// If null is passed, schema validation will not be performed.
@@ -412,10 +412,10 @@ namespace IPS.UMLSPF
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <param name="stream">The Stream from which the UML will be deserialized.</param>
-		/// <returns>The loaded UML instance.</returns>
+		/// <param name="stream">The Stream from which the ModeloClassWEB will be deserialized.</param>
+		/// <returns>The loaded ModeloClassWEB instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability","CA1506:AvoidExcessiveClassCoupling", Justification="Generated code")]
-		public virtual UML LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string location, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator, global::System.IO.Stream stream)
+		public virtual ModeloClassWEB LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string location, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator, global::System.IO.Stream stream)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -432,10 +432,10 @@ namespace IPS.UMLSPF
 				throw new global::System.InvalidOperationException(UMLSPFDomainModel.SingletonResourceManager.GetString("MissingTransaction"));
 			}
 			
-			UML modelRoot = null;
+			ModeloClassWEB modelRoot = null;
 			DslModeling::DomainXmlSerializerDirectory directory = this.GetDirectory(partition.Store);
-			DslModeling::DomainClassXmlSerializer modelRootSerializer = directory.GetSerializer(UML.DomainClassId);
-			global::System.Diagnostics.Debug.Assert(modelRootSerializer != null, "Cannot find serializer for UML!");
+			DslModeling::DomainClassXmlSerializer modelRootSerializer = directory.GetSerializer(ModeloClassWEB.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(modelRootSerializer != null, "Cannot find serializer for ModeloClassWEB!");
 			if (modelRootSerializer != null)
 			{
 				DslModeling::SerializationContext serializationContext = new DslModeling::SerializationContext(directory, location, serializationResult);
@@ -466,7 +466,7 @@ namespace IPS.UMLSPF
 								
 								reader.MoveToContent();
 									
-								modelRoot = modelRootSerializer.TryCreateInstance(serializationContext, reader, partition) as UML;
+								modelRoot = modelRootSerializer.TryCreateInstance(serializationContext, reader, partition) as ModeloClassWEB;
 								if (modelRoot != null && !serializationResult.Failed)
 								{
 									this.ReadRootElement(serializationContext, modelRoot, reader, schemaResolver);
@@ -535,9 +535,9 @@ namespace IPS.UMLSPF
 		/// be written out.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">UML instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the UML instance will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, UML modelRoot, string fileName)
+		/// <param name="modelRoot">ModeloClassWEB instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ModeloClassWEB instance will be saved.</param>
+		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ModeloClassWEB modelRoot, string fileName)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -546,10 +546,10 @@ namespace IPS.UMLSPF
 		/// Saves the given model to the given file, with default encoding (UTF-8).
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">UML instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the UML instance will be saved.</param>
+		/// <param name="modelRoot">ModeloClassWEB instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ModeloClassWEB instance will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, UML modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ModeloClassWEB modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -558,12 +558,12 @@ namespace IPS.UMLSPF
 		/// Saves the given model root to the given file, with specified encoding.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">UML instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the UML instance will be saved.</param>
-		/// <param name="encoding">Encoding to use when saving the UML instance.</param>
+		/// <param name="modelRoot">ModeloClassWEB instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ModeloClassWEB instance will be saved.</param>
+		/// <param name="encoding">Encoding to use when saving the ModeloClassWEB instance.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, UML modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ModeloClassWEB modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -598,13 +598,13 @@ namespace IPS.UMLSPF
 		/// both can be saved without error before writing the content to disk, so we serialize the model into a in-memory stream first.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">UML instance to be saved.</param>
-		/// <param name="fileName">Name of the file in which the UML instance will be saved.</param>
-		/// <param name="encoding">Encoding to use when saving the UML instance.</param>
+		/// <param name="modelRoot">ModeloClassWEB instance to be saved.</param>
+		/// <param name="fileName">Name of the file in which the ModeloClassWEB instance will be saved.</param>
+		/// <param name="encoding">Encoding to use when saving the ModeloClassWEB instance.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		/// <returns>In-memory stream containing the serialized UML instance.</returns>
+		/// <returns>In-memory stream containing the serialized ModeloClassWEB instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		internal global::System.IO.MemoryStream InternalSaveModel(DslModeling::SerializationResult serializationResult, UML modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal global::System.IO.MemoryStream InternalSaveModel(DslModeling::SerializationResult serializationResult, ModeloClassWEB modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			global::System.Diagnostics.Debug.Assert(serializationResult != null);
@@ -670,19 +670,19 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// Helper method to create and initialize a new UML.
+		/// Helper method to create and initialize a new ModeloClassWEB.
 		/// </summary>
-		internal protected virtual UML CreateModelHelper(DslModeling::Partition modelPartition)
+		internal protected virtual ModeloClassWEB CreateModelHelper(DslModeling::Partition modelPartition)
 		{
-			UML model = new UML(modelPartition);
+			ModeloClassWEB model = new ModeloClassWEB(modelPartition);
 			return model;
 		}
 		
 		/// <summary>
-		/// Loads a UML instance and its associated diagram file into the default partition of the given store, and ignore serialization result.
+		/// Loads a ModeloClassWEB instance and its associated diagram file into the default partition of the given store, and ignore serialization result.
 		/// </summary>
-		/// <param name="store">The new UML instance will be created into the default partition of this store.</param>
-		/// <param name="modelFileName">Name of the file from which the UML instance will be deserialized.</param>
+		/// <param name="store">The new ModeloClassWEB instance will be created into the default partition of this store.</param>
+		/// <param name="modelFileName">Name of the file from which the ModeloClassWEB instance will be deserialized.</param>
 		/// <param name="diagramFileName">Name of the file from which the UMLSPFDiagram instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
@@ -695,18 +695,18 @@ namespace IPS.UMLSPF
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded UML instance.</returns>
-		public virtual UML LoadModelAndDiagram(DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ModeloClassWEB instance.</returns>
+		public virtual ModeloClassWEB LoadModelAndDiagram(DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			return this.LoadModelAndDiagram(new DslModeling::SerializationResult(), store, modelFileName, diagramFileName, schemaResolver, validationController, serializerLocator);
 		}
 		
 		/// <summary>
-		/// Loads a UML instance and its associated diagram file into the default partition of the given store.
+		/// Loads a ModeloClassWEB instance and its associated diagram file into the default partition of the given store.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="store">The new UML instance will be created into the default partition of this store.</param>
-		/// <param name="modelFileName">Name of the file from which the UML instance will be deserialized.</param>
+		/// <param name="store">The new ModeloClassWEB instance will be created into the default partition of this store.</param>
+		/// <param name="modelFileName">Name of the file from which the ModeloClassWEB instance will be deserialized.</param>
 		/// <param name="diagramFileName">Name of the file from which the UMLSPFDiagram instance will be deserialized.</param>
 		/// <param name="schemaResolver">
 		/// An ISchemaResolver that allows the serializer to do schema validation on the root element (and everything inside it).
@@ -719,8 +719,8 @@ namespace IPS.UMLSPF
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded UML instance.</returns>
-		public virtual UML LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		/// <returns>The loaded ModeloClassWEB instance.</returns>
+		public virtual ModeloClassWEB LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null)
@@ -732,11 +732,11 @@ namespace IPS.UMLSPF
 		}
 			
 		/// <summary>
-		/// Loads a UML instance and its associated diagram file.
+		/// Loads a ModeloClassWEB instance and its associated diagram file.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the load operation.</param>
-		/// <param name="modelPartition">Partition in which the new UML instance will be created.</param>
-		/// <param name="modelFileName">Name of the file from which the UML instance will be deserialized.</param>
+		/// <param name="modelPartition">Partition in which the new ModeloClassWEB instance will be created.</param>
+		/// <param name="modelFileName">Name of the file from which the ModeloClassWEB instance will be deserialized.</param>
 		/// <param name="diagramPartition">Partition in which the new UMLSPFDiagram instance will be created.</param>
 		/// <param name="diagramFileName">Name of the file from which the UMLSPFDiagram instance will be deserialized.</param>
 		/// <param name="schemaResolver">
@@ -750,9 +750,9 @@ namespace IPS.UMLSPF
 		/// <param name="serializerLocator">
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
-		/// <returns>The loaded UML instance.</returns>
+		/// <returns>The loaded ModeloClassWEB instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
-		public virtual UML LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Partition modelPartition, string modelFileName, DslModeling::Partition diagramPartition, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		public virtual ModeloClassWEB LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Partition modelPartition, string modelFileName, DslModeling::Partition diagramPartition, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -765,7 +765,7 @@ namespace IPS.UMLSPF
 				throw new global::System.ArgumentNullException("diagramFileName");
 			#endregion
 	
-			UML modelRoot;
+			ModeloClassWEB modelRoot;
 	
 			// Ensure there is an outer transaction spanning both model and diagram load, so moniker resolution works properly.
 			if (!diagramPartition.Store.TransactionActive)
@@ -890,11 +890,11 @@ namespace IPS.UMLSPF
 		/// be written out.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">UML instance to be saved.</param>
+		/// <param name="modelRoot">ModeloClassWEB instance to be saved.</param>
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">UMLSPFDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, UML modelRoot, string modelFileName, UMLSPFDiagram diagram, string diagramFileName)
+		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ModeloClassWEB modelRoot, string modelFileName, UMLSPFDiagram diagram, string diagramFileName)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -903,28 +903,28 @@ namespace IPS.UMLSPF
 		/// Saves the given diagram to the given file, with default encoding (UTF-8).
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">UML instance to be saved.</param>
+		/// <param name="modelRoot">ModeloClassWEB instance to be saved.</param>
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">UMLSPFDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, UML modelRoot, string modelFileName, UMLSPFDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ModeloClassWEB modelRoot, string modelFileName, UMLSPFDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
 	
 		/// <summary>
-		/// Saves the given UML and UMLSPFDiagram to the given files, with specified encoding.
+		/// Saves the given ModeloClassWEB and UMLSPFDiagram to the given files, with specified encoding.
 		/// </summary>
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
-		/// <param name="modelRoot">UML instance to be saved.</param>
+		/// <param name="modelRoot">ModeloClassWEB instance to be saved.</param>
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">UMLSPFDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the diagram.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, UML modelRoot, string modelFileName, UMLSPFDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, ModeloClassWEB modelRoot, string modelFileName, UMLSPFDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -1296,7 +1296,7 @@ namespace IPS.UMLSPF
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::IPS.UMLSPF.UML modelRoot, global::System.Text.Encoding encoding)
+		public virtual string GetSerializedModelString(global::IPS.UMLSPF.ModeloClassWEB modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1499,7 +1499,7 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class UML
+	public partial class ModeloClassWEB
 	{
 		/// <summary>
 		/// Check to make sure all elements in the model will have unambiguous monikers when serialized.

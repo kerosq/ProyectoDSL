@@ -67,17 +67,19 @@ namespace IPS.UMLSPF
 		{
 			return new global::System.Type[]
 			{
-				typeof(UML),
+				typeof(ModeloClassWEB),
 				typeof(Clase),
 				typeof(Atributo),
 				typeof(Operaciones),
-				typeof(UMLHasClase),
+				typeof(ClaseEnriquecida),
+				typeof(ModeloClassWEBHasClase),
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasOperaciones),
 				typeof(ClaseReferencesTargetClase),
 				typeof(UMLSPFDiagram),
 				typeof(ConecClase),
 				typeof(CMPClase),
+				typeof(CMPClaseEnriquecida),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
 				typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged),
 				typeof(global::IPS.UMLSPF.CompartmentItemAddRule),
@@ -96,7 +98,7 @@ namespace IPS.UMLSPF
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(UML), "NombreUML", UML.NombreUMLDomainPropertyId, typeof(UML.NombreUMLPropertyHandler)),
+				new DomainMemberInfo(typeof(ModeloClassWEB), "NombreUML", ModeloClassWEB.NombreUMLDomainPropertyId, typeof(ModeloClassWEB.NombreUMLPropertyHandler)),
 				new DomainMemberInfo(typeof(Clase), "NombreClase", Clase.NombreClaseDomainPropertyId, typeof(Clase.NombreClasePropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "NombreAtributo", Atributo.NombreAtributoDomainPropertyId, typeof(Atributo.NombreAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "TipoAtributo", Atributo.TipoAtributoDomainPropertyId, typeof(Atributo.TipoAtributoPropertyHandler)),
@@ -114,8 +116,8 @@ namespace IPS.UMLSPF
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(UMLHasClase), "UML", UMLHasClase.UMLDomainRoleId),
-				new DomainRolePlayerInfo(typeof(UMLHasClase), "Clase", UMLHasClase.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModeloClassWEBHasClase), "ModeloClassWEB", ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModeloClassWEBHasClase), "Clase", ModeloClassWEBHasClase.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Clase", ClaseHasAtributo.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Atributo", ClaseHasAtributo.AtributoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasOperaciones), "Clase", ClaseHasOperaciones.ClaseDomainRoleId),
@@ -143,14 +145,16 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(7);
-				createElementMap.Add(typeof(UML), 0);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
+				createElementMap.Add(typeof(ModeloClassWEB), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
 				createElementMap.Add(typeof(Operaciones), 3);
-				createElementMap.Add(typeof(UMLSPFDiagram), 4);
-				createElementMap.Add(typeof(ConecClase), 5);
-				createElementMap.Add(typeof(CMPClase), 6);
+				createElementMap.Add(typeof(ClaseEnriquecida), 4);
+				createElementMap.Add(typeof(UMLSPFDiagram), 5);
+				createElementMap.Add(typeof(ConecClase), 6);
+				createElementMap.Add(typeof(CMPClase), 7);
+				createElementMap.Add(typeof(CMPClaseEnriquecida), 8);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -164,13 +168,15 @@ namespace IPS.UMLSPF
 			}
 			switch (index)
 			{
-				case 0: return new UML(partition, propertyAssignments);
+				case 0: return new ModeloClassWEB(partition, propertyAssignments);
 				case 1: return new Clase(partition, propertyAssignments);
 				case 2: return new Atributo(partition, propertyAssignments);
 				case 3: return new Operaciones(partition, propertyAssignments);
-				case 4: return new UMLSPFDiagram(partition, propertyAssignments);
-				case 5: return new ConecClase(partition, propertyAssignments);
-				case 6: return new CMPClase(partition, propertyAssignments);
+				case 4: return new ClaseEnriquecida(partition, propertyAssignments);
+				case 5: return new UMLSPFDiagram(partition, propertyAssignments);
+				case 6: return new ConecClase(partition, propertyAssignments);
+				case 7: return new CMPClase(partition, propertyAssignments);
+				case 8: return new CMPClaseEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -194,7 +200,7 @@ namespace IPS.UMLSPF
 			if (createElementLinkMap == null)
 			{
 				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4);
-				createElementLinkMap.Add(typeof(UMLHasClase), 0);
+				createElementLinkMap.Add(typeof(ModeloClassWEBHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperaciones), 2);
 				createElementLinkMap.Add(typeof(ClaseReferencesTargetClase), 3);
@@ -212,7 +218,7 @@ namespace IPS.UMLSPF
 			}
 			switch (index)
 			{
-				case 0: return new UMLHasClase(partition, roleAssignments, propertyAssignments);
+				case 0: return new ModeloClassWEBHasClase(partition, roleAssignments, propertyAssignments);
 				case 1: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
 				case 2: return new ClaseHasOperaciones(partition, roleAssignments, propertyAssignments);
 				case 3: return new ClaseReferencesTargetClase(partition, roleAssignments, propertyAssignments);
@@ -394,7 +400,7 @@ namespace IPS.UMLSPF
 		public UMLSPFDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::IPS.UMLSPF.UMLHasClase.ClaseDomainRoleId, true);
+			DomainRoles.Add(global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId, true);
 			DomainRoles.Add(global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId, true);
 			DomainRoles.Add(global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId, true);
 			#endregion

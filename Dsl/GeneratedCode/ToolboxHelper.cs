@@ -98,7 +98,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return 2;
+				return 3;
 			}
 		}
 		
@@ -179,6 +179,22 @@ namespace IPS.UMLSPF
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ConectarClasesFilterString)
+						});
+					break;
+				case "IPS.UMLSPF.ElementTool1ToolboxItem":
+					// Add ElementTool1 shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"IPS.UMLSPF.ElementTool1ToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						3, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ElementTool1ToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ElementTool1ToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ElementTool1", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ElementTool1ToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::IPS.UMLSPF.ClaseEnriquecida.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
 				default:

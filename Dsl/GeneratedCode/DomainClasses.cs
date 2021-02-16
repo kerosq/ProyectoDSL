@@ -12,20 +12,20 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainClass UML
+	/// DomainClass ModeloClassWEB
 	/// The root in which all other elements are embedded. Appears as a diagram.
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.UML.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.UML.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEB.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEB.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("b02e610b-5879-48eb-a2ed-4ea1dde69208")]
-	public partial class UML : DslModeling::ModelElement
+	public partial class ModeloClassWEB : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// UML domain class Id.
+		/// ModeloClassWEB domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb02e610b, 0x5879, 0x48eb, 0xa2, 0xed, 0x4e, 0xa1, 0xdd, 0xe6, 0x92, 0x08);
 		/// <summary>
@@ -33,7 +33,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public UML(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ModeloClassWEB(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -43,7 +43,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public UML(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ModeloClassWEB(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -62,10 +62,10 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreUML domain property.
-		/// Description for IPS.UMLSPF.UML.Nombre UML
+		/// Description for IPS.UMLSPF.ModeloClassWEB.Nombre UML
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.UML/NombreUML.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.UML/NombreUML.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEB/NombreUML.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEB/NombreUML.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("06a166ed-8c95-4dce-ae56-36d385bbe54d")]
 		public global::System.String NombreUML
 		{
@@ -81,19 +81,19 @@ namespace IPS.UMLSPF
 			}
 		}
 		/// <summary>
-		/// Value handler for the UML.NombreUML domain property.
+		/// Value handler for the ModeloClassWEB.NombreUML domain property.
 		/// </summary>
-		internal sealed partial class NombreUMLPropertyHandler : DslModeling::DomainPropertyValueHandler<UML, global::System.String>
+		internal sealed partial class NombreUMLPropertyHandler : DslModeling::DomainPropertyValueHandler<ModeloClassWEB, global::System.String>
 		{
 			private NombreUMLPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the UML.NombreUML domain property value handler.
+			/// Gets the singleton instance of the ModeloClassWEB.NombreUML domain property value handler.
 			/// </summary>
 			public static readonly NombreUMLPropertyHandler Instance = new NombreUMLPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the UML.NombreUML domain property.
+			/// Gets the Id of the ModeloClassWEB.NombreUML domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
@@ -109,7 +109,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(UML element)
+			public override sealed global::System.String GetValue(ModeloClassWEB element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.nombreUMLPropertyStorage;
@@ -120,7 +120,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(UML element, global::System.String newValue)
+			public override sealed void SetValue(ModeloClassWEB element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -139,14 +139,14 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets a list of Clase.
-		/// Description for IPS.UMLSPF.UMLHasClase.UML
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEB
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<Clase> Clase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.UMLHasClase.UMLDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId);
 			}
 		}
 		#endregion
@@ -202,7 +202,7 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Clase sourceClase1 = sourceElement as global::IPS.UMLSPF.Clase;
 			if (sourceClase1 != null)
 			{
-				// Create link for path UMLHasClase.Clase
+				// Create link for path ModeloClassWEBHasClase.Clase
 				this.Clase.Add(sourceClase1);
 
 				return;
@@ -233,12 +233,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Clase sourceClase1 = sourceElement as global::IPS.UMLSPF.Clase;
 			if (sourceClase1 != null)
 			{
-				// Delete link for path UMLHasClase.Clase
+				// Delete link for path ModeloClassWEBHasClase.Clase
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.UMLHasClase.GetLinks((global::IPS.UMLSPF.UML)this, sourceClase1))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ModeloClassWEBHasClase.GetLinks((global::IPS.UMLSPF.ModeloClassWEB)this, sourceClase1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.UMLHasClase.UMLDomainRoleId, global::IPS.UMLSPF.UMLHasClase.ClaseDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId);
 				}
 
 				return;
@@ -375,22 +375,22 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
-		#region UML opposite domain role accessor
+		#region ModeloClassWEB opposite domain role accessor
 		/// <summary>
-		/// Gets or sets UML.
-		/// Description for IPS.UMLSPF.UMLHasClase.Clase
+		/// Gets or sets ModeloClassWEB.
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase
 		/// </summary>
-		public virtual UML UML
+		public virtual ModeloClassWEB ModeloClassWEB
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.UMLHasClase.ClaseDomainRoleId) as UML;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId) as ModeloClassWEB;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.UMLHasClase.ClaseDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1177,6 +1177,47 @@ namespace IPS.UMLSPF
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId, value);
 			}
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass ClaseEnriquecida
+	/// Description for IPS.UMLSPF.ClaseEnriquecida
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("6f1d2bd9-7162-45f9-a6a0-3fa14d4bf656")]
+	public partial class ClaseEnriquecida : Clase
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ClaseEnriquecida domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6f1d2bd9, 0x7162, 0x45f9, 0xa6, 0xa0, 0x3f, 0xa1, 0x4d, 0x4b, 0xf6, 0x56);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ClaseEnriquecida(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ClaseEnriquecida(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
 		}
 		#endregion
 	}

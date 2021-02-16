@@ -294,6 +294,12 @@ namespace IPS.UMLSPF
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
+			if(element is global::IPS.UMLSPF.ClaseEnriquecida)
+			{
+				global::IPS.UMLSPF.CMPClaseEnriquecida newShape = new global::IPS.UMLSPF.CMPClaseEnriquecida(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::IPS.UMLSPF.Clase)
 			{
 				global::IPS.UMLSPF.CMPClase newShape = new global::IPS.UMLSPF.CMPClase(this.Partition);
@@ -317,6 +323,7 @@ namespace IPS.UMLSPF
 		{
 			base.InitializeShapeFields(shapeFields);
 			global::IPS.UMLSPF.CMPClase.DecoratorsInitialized += CMPClaseDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.CMPClaseEnriquecida.DecoratorsInitialized += CMPClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -334,6 +341,21 @@ namespace IPS.UMLSPF
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Clase.NombreClaseDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreClase").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for CMPClaseEnriquecida.
+		/// </summary>
+		internal static partial class CMPClaseEnriquecidaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for CMPClaseEnriquecida.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				CMPClaseDecoratorMap.OnDecoratorsInitialized(sender, e);
+				
 			}
 		}
 		
@@ -489,6 +511,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseReferencesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
@@ -506,6 +529,10 @@ namespace IPS.UMLSPF
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
+				if(childElement is global::IPS.UMLSPF.ClaseEnriquecida)
+				{
+					parentElement = GetParentForClaseEnriquecida((global::IPS.UMLSPF.ClaseEnriquecida)childElement);
+				} else
 				if(childElement is global::IPS.UMLSPF.Clase)
 				{
 					parentElement = GetParentForClase((global::IPS.UMLSPF.Clase)childElement);
@@ -519,10 +546,17 @@ namespace IPS.UMLSPF
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::IPS.UMLSPF.UML GetParentForClase( global::IPS.UMLSPF.Clase root )
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForClase( global::IPS.UMLSPF.Clase root )
 			{
 				// Segments 0 and 1
-				global::IPS.UMLSPF.UML result = root.UML;
+				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForClaseEnriquecida( global::IPS.UMLSPF.Clase root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
 				if ( result == null ) return null;
 				return result;
 			}

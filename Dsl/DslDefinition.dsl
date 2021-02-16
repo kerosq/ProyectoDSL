@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7a91aad3-79d8-4785-9189-816287d6827c" Description="Description for IPS.UMLSPF.UMLSPF" Name="UMLSPF" DisplayName="UMLSPF" Namespace="IPS.UMLSPF" ProductName="UMLSPF" CompanyName="IPS" PackageGuid="8212dcc1-81c2-480c-9772-e73f24604d12" PackageNamespace="IPS.UMLSPF" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="b02e610b-5879-48eb-a2ed-4ea1dde69208" Description="The root in which all other elements are embedded. Appears as a diagram." Name="UML" DisplayName="UML" Namespace="IPS.UMLSPF">
+    <DomainClass Id="b02e610b-5879-48eb-a2ed-4ea1dde69208" Description="The root in which all other elements are embedded. Appears as a diagram." Name="ModeloClassWEB" DisplayName="Modelo Class WEB" Namespace="IPS.UMLSPF">
       <Properties>
-        <DomainProperty Id="06a166ed-8c95-4dce-ae56-36d385bbe54d" Description="Description for IPS.UMLSPF.UML.Nombre UML" Name="NombreUML" DisplayName="Nombre UML">
+        <DomainProperty Id="06a166ed-8c95-4dce-ae56-36d385bbe54d" Description="Description for IPS.UMLSPF.ModeloClassWEB.Nombre UML" Name="NombreUML" DisplayName="Nombre UML">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -15,7 +15,7 @@
             <DomainClassMoniker Name="Clase" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>UMLHasClase.Clase</DomainPath>
+            <DomainPath>ModeloClassWEBHasClase.Clase</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -85,18 +85,23 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
+    <DomainClass Id="6f1d2bd9-7162-45f9-a6a0-3fa14d4bf656" Description="Description for IPS.UMLSPF.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" Namespace="IPS.UMLSPF">
+      <BaseClass>
+        <DomainClassMoniker Name="Clase" />
+      </BaseClass>
+    </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="a9b6e343-13d8-40ae-994b-012eafb94bff" Description="Description for IPS.UMLSPF.UMLHasClase" Name="UMLHasClase" DisplayName="UMLHas Clase" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="a9b6e343-13d8-40ae-994b-012eafb94bff" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase" Name="ModeloClassWEBHasClase" DisplayName="Modelo Class WEBHas Clase" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="cd62c36a-4feb-4c05-8a87-e735abd28795" Description="Description for IPS.UMLSPF.UMLHasClase.UML" Name="UML" DisplayName="UML" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
+        <DomainRole Id="cd62c36a-4feb-4c05-8a87-e735abd28795" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEB" Name="ModeloClassWEB" DisplayName="Modelo Class WEB" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
           <RolePlayer>
-            <DomainClassMoniker Name="UML" />
+            <DomainClassMoniker Name="ModeloClassWEB" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="7b20d996-b631-4d0a-bdc4-bfcf98092bc5" Description="Description for IPS.UMLSPF.UMLHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="UML" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="UML">
+        <DomainRole Id="7b20d996-b631-4d0a-bdc4-bfcf98092bc5" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="ModeloClassWEB" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Modelo Class WEB">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -180,20 +185,25 @@
       <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpAtributos" TitleFontStyle="Bold" Title="Atributos" TitleTextColor="Beige" />
       <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpOperaciones" TitleFontStyle="Bold, Italic" Title="Operaciones" TitleTextColor="Beige" />
     </CompartmentShape>
+    <CompartmentShape Id="f6158248-68f5-4832-8532-e860272c97be" Description="Description for IPS.UMLSPF.CMPClaseEnriquecida" Name="CMPClaseEnriquecida" DisplayName="CMPClase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase Enriquecida" InitialHeight="1" Geometry="Rectangle">
+      <BaseCompartmentShape>
+        <CompartmentShapeMoniker Name="CMPClase" />
+      </BaseCompartmentShape>
+    </CompartmentShape>
   </Shapes>
   <Connectors>
     <Connector Id="fc067f1a-076e-47d8-b155-ef171c2da590" Description="Description for IPS.UMLSPF.ConecClase" Name="ConecClase" DisplayName="Conec Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Clase" />
   </Connectors>
   <XmlSerializationBehavior Name="UMLSPFSerializationBehavior" Namespace="IPS.UMLSPF">
     <ClassData>
-      <XmlClassData TypeName="UML" MonikerAttributeName="" SerializeId="true" MonikerElementName="uMLMoniker" ElementName="uML" MonikerTypeName="UMLMoniker">
-        <DomainClassMoniker Name="UML" />
+      <XmlClassData TypeName="ModeloClassWEB" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBMoniker" ElementName="modeloClassWEB" MonikerTypeName="ModeloClassWEBMoniker">
+        <DomainClassMoniker Name="ModeloClassWEB" />
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="clase">
-            <DomainRelationshipMoniker Name="UMLHasClase" />
+            <DomainRelationshipMoniker Name="ModeloClassWEBHasClase" />
           </XmlRelationshipData>
           <XmlPropertyData XmlName="nombreUML">
-            <DomainPropertyMoniker Name="UML/NombreUML" />
+            <DomainPropertyMoniker Name="ModeloClassWEB/NombreUML" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -217,8 +227,8 @@
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="UMLHasClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="uMLHasClaseMoniker" ElementName="uMLHasClase" MonikerTypeName="UMLHasClaseMoniker">
-        <DomainRelationshipMoniker Name="UMLHasClase" />
+      <XmlClassData TypeName="ModeloClassWEBHasClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBHasClaseMoniker" ElementName="modeloClassWEBHasClase" MonikerTypeName="ModeloClassWEBHasClaseMoniker">
+        <DomainRelationshipMoniker Name="ModeloClassWEBHasClase" />
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
@@ -263,6 +273,12 @@
       <XmlClassData TypeName="ConecClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecClaseMoniker" ElementName="conecClase" MonikerTypeName="ConecClaseMoniker">
         <ConnectorMoniker Name="ConecClase" />
       </XmlClassData>
+      <XmlClassData TypeName="ClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaMoniker" ElementName="claseEnriquecida" MonikerTypeName="ClaseEnriquecidaMoniker">
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+      </XmlClassData>
+      <XmlClassData TypeName="CMPClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="cMPClaseEnriquecidaMoniker" ElementName="cMPClaseEnriquecida" MonikerTypeName="CMPClaseEnriquecidaMoniker">
+        <CompartmentShapeMoniker Name="CMPClaseEnriquecida" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="UMLSPFExplorer" />
@@ -289,13 +305,13 @@
   </ConnectionBuilders>
   <Diagram Id="f1ee146e-d981-4262-8e9d-ddacc33d3420" Description="Description for IPS.UMLSPF.UMLSPFDiagram" Name="UMLSPFDiagram" DisplayName="Minimal Language Diagram" Namespace="IPS.UMLSPF" FillColor="DimGray" TextColor="White">
     <Class>
-      <DomainClassMoniker Name="UML" />
+      <DomainClassMoniker Name="ModeloClassWEB" />
     </Class>
     <ShapeMaps>
       <CompartmentShapeMap>
         <DomainClassMoniker Name="Clase" />
         <ParentElementPath>
-          <DomainPath>UMLHasClase.UML/!UML</DomainPath>
+          <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="CMPClase/NombreClase" />
@@ -329,6 +345,13 @@
           </PropertyDisplayed>
         </CompartmentMap>
       </CompartmentShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+        <ParentElementPath>
+          <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <CompartmentShapeMoniker Name="CMPClaseEnriquecida" />
+      </CompartmentShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -339,7 +362,7 @@
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="kacqSPF" EditorGuid="096cb769-d340-4d6e-b06a-a2816f59d3a1">
     <RootClass>
-      <DomainClassMoniker Name="UML" />
+      <DomainClassMoniker Name="ModeloClassWEB" />
     </RootClass>
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="UMLSPFSerializationBehavior" />
@@ -351,6 +374,9 @@
       <ConnectionTool Name="ConectarClases" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarClases" Tooltip="Conectar Clases" HelpKeyword="ConectarClases">
         <ConnectionBuilderMoniker Name="UMLSPF/ClaseReferencesTargetClaseBuilder" />
       </ConnectionTool>
+      <ElementTool Name="ElementTool1" ToolboxIcon="Resources\IconoClase.bmp" Caption="ElementTool1" Tooltip="Element Tool1" HelpKeyword="ElementTool1">
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="UMLSPFDiagram" />

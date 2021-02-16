@@ -67,7 +67,7 @@ namespace IPS.UMLSPF
 		///</summary>
 		protected override global::System.Guid RootElementDomainClassId
 		{
-			get { return global::IPS.UMLSPF.UML.DomainClassId; }
+			get { return global::IPS.UMLSPF.ModeloClassWEB.DomainClassId; }
 		}
 		
 		/// <summary>

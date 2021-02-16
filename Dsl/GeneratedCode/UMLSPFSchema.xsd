@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsd:schema id="UMLSPFSchema" targetNamespace="http://schemas.microsoft.com/dsltools/UMLSPF" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
-  <!-- UML -->
-  <xsd:element name="uML" type="UML" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="UML">
+  <!-- ModeloClassWEB -->
+  <xsd:element name="modeloClassWEB" type="ModeloClassWEB" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModeloClassWEB">
     <xsd:annotation>
       <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: UMLHasClase -->
+          <!-- Relationship: ModeloClassWEBHasClase -->
           <xsd:element name="clase" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of UMLHasClase</xsd:documentation>
+              <xsd:documentation>Instances of ModeloClassWEBHasClase</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="uMLHasClase" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="modeloClassWEBHasClase" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of UMLHasClase needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ModeloClassWEBHasClase needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -44,11 +44,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- UML Moniker -->
-  <xsd:element name="uMLMoniker" type="UMLMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="UMLMoniker">
+  <!-- ModeloClassWEB Moniker -->
+  <xsd:element name="modeloClassWEBMoniker" type="ModeloClassWEBMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModeloClassWEBMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for UML instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ModeloClassWEB instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -214,9 +214,36 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- UMLHasClase -->
-  <xsd:element name="uMLHasClase" type="UMLHasClase" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="UMLHasClase">
+  <!-- ClaseEnriquecida -->
+  <xsd:element name="claseEnriquecida" type="ClaseEnriquecida" substitutionGroup="clase" />
+  <xsd:complexType name="ClaseEnriquecida">
+    <xsd:complexContent>
+      <xsd:extension base="Clase">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnriquecida Moniker -->
+  <xsd:element name="claseEnriquecidaMoniker" type="ClaseEnriquecidaMoniker" substitutionGroup="claseMoniker" />
+  <xsd:complexType name="ClaseEnriquecidaMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClaseEnriquecida instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ClaseMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModeloClassWEBHasClase -->
+  <xsd:element name="modeloClassWEBHasClase" type="ModeloClassWEBHasClase" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModeloClassWEBHasClase">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -237,11 +264,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- UMLHasClase Moniker -->
-  <xsd:element name="uMLHasClaseMoniker" type="UMLHasClaseMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="UMLHasClaseMoniker">
+  <!-- ModeloClassWEBHasClase Moniker -->
+  <xsd:element name="modeloClassWEBHasClaseMoniker" type="ModeloClassWEBHasClaseMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModeloClassWEBHasClaseMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for UMLHasClase instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ModeloClassWEBHasClase instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

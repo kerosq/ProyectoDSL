@@ -305,7 +305,7 @@ namespace IPS.UMLSPF
 		protected override void Load(string fileName, bool isReload)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::IPS.UMLSPF.UML modelRoot = null;
+			global::IPS.UMLSPF.ModeloClassWEB modelRoot = null;
 			DslModeling::ISchemaResolver schemaResolver = new DslShell::ModelingSchemaResolver(this.ServiceProvider);
 			//clear the current root element
 			this.SetRootElement(null);
@@ -391,7 +391,7 @@ namespace IPS.UMLSPF
 		protected virtual void OnDocumentLoaded()
 		{
 			// Enable CompartmentItems events.
-			global::IPS.UMLSPF.UML modelRoot = this.RootElement as global::IPS.UMLSPF.UML;
+			global::IPS.UMLSPF.ModeloClassWEB modelRoot = this.RootElement as global::IPS.UMLSPF.ModeloClassWEB;
 			if (modelRoot != null)
 			{
 				global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(modelRoot);
@@ -450,7 +450,7 @@ namespace IPS.UMLSPF
 		protected override void Save(string fileName)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::IPS.UMLSPF.UML modelRoot = (global::IPS.UMLSPF.UML)this.RootElement;
+			global::IPS.UMLSPF.ModeloClassWEB modelRoot = (global::IPS.UMLSPF.ModeloClassWEB)this.RootElement;
 
 			
 			// Only save the diagrams if
@@ -596,7 +596,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				global::IPS.UMLSPF.UML modelRoot = this.RootElement as global::IPS.UMLSPF.UML;
+				global::IPS.UMLSPF.ModeloClassWEB modelRoot = this.RootElement as global::IPS.UMLSPF.ModeloClassWEB;
 				string modelFile = string.Empty;
 				if (modelRoot != null)
 				{
