@@ -368,13 +368,13 @@
       <XmlSerializationBehaviorMoniker Name="UMLSPFSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="UMLSPF">
-      <ElementTool Name="IconsClass" ToolboxIcon="Resources\IconoClase.bmp" Caption="AgregarClase" Tooltip="Agregar Clase" HelpKeyword="AgregarClase">
+      <ElementTool Name="IconsClass" ToolboxIcon="Resources\IconoClase.bmp" Caption="Clase" Tooltip="Agregar Clase" HelpKeyword="Clase">
         <DomainClassMoniker Name="Clase" />
       </ElementTool>
       <ConnectionTool Name="ConectarClases" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarClases" Tooltip="Conectar Clases" HelpKeyword="ConectarClases">
         <ConnectionBuilderMoniker Name="UMLSPF/ClaseReferencesTargetClaseBuilder" />
       </ConnectionTool>
-      <ElementTool Name="ElementTool1" ToolboxIcon="Resources\IconoClase.bmp" Caption="ElementTool1" Tooltip="Element Tool1" HelpKeyword="ElementTool1">
+      <ElementTool Name="IconClassEnr" ToolboxIcon="Resources\IconoClase.bmp" Caption="ClaseEnriquecida" Tooltip="Agregar ClaseEnriquecida" HelpKeyword="ClaseEnriquecida">
         <DomainClassMoniker Name="ClaseEnriquecida" />
       </ElementTool>
     </ToolboxTab>

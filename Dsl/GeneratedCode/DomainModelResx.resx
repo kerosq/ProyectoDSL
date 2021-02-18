@@ -414,7 +414,7 @@
     <comment>Toolbox item tab name</comment>
   </data>
   <data name="IconsClassToolboxItem" xml:space="preserve">
-    <value>AgregarClase</value>
+    <value>Clase</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="IconsClassToolboxTooltip" xml:space="preserve">
@@ -429,12 +429,12 @@
     <value>Conectar Clases</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ElementTool1ToolboxItem" xml:space="preserve">
-    <value>ElementTool1</value>
+  <data name="IconClassEnrToolboxItem" xml:space="preserve">
+    <value>ClaseEnriquecida</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ElementTool1ToolboxTooltip" xml:space="preserve">
-    <value>Element Tool1</value>
+  <data name="IconClassEnrToolboxTooltip" xml:space="preserve">
+    <value>Agregar ClaseEnriquecida</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -574,7 +574,7 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\conectorArrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ElementTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="IconClassEnrToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\IconoClase.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

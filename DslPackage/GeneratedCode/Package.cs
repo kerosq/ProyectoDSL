@@ -33,7 +33,7 @@ namespace IPS.UMLSPF
 					"@IconsClassToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.IconsClassToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"AgregarClase", 
+					"Clase", 
 					"@IconsClassToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
@@ -46,11 +46,11 @@ namespace IPS.UMLSPF
 					0xff00ff,
 					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
-					"@ElementTool1ToolboxItem;IPS.UMLSPF.Dsl.dll", 
-					"IPS.UMLSPF.ElementTool1ToolboxItem", 
+					"@IconClassEnrToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.IconClassEnrToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ElementTool1", 
-					"@ElementTool1ToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					"ClaseEnriquecida", 
+					"@IconClassEnrToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 2)]
 	[VSShell::ProvideEditorFactory(typeof(UMLSPFEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
