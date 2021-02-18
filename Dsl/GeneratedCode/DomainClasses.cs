@@ -428,14 +428,14 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets a list of TargetClase.
-		/// Description for IPS.UMLSPF.ClaseReferencesTargetClase.SourceClase
+		/// Description for IPS.UMLSPF.conAsociacion.SourceClase
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<Clase> TargetClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.ClaseReferencesTargetClase.SourceClaseDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.conAsociacion.SourceClaseDomainRoleId);
 			}
 		}
 		#endregion
@@ -443,14 +443,14 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets a list of SourceClase.
-		/// Description for IPS.UMLSPF.ClaseReferencesTargetClase.TargetClase
+		/// Description for IPS.UMLSPF.conAsociacion.TargetClase
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<Clase> SourceClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.ClaseReferencesTargetClase.TargetClaseDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.conAsociacion.TargetClaseDomainRoleId);
 			}
 		}
 		#endregion

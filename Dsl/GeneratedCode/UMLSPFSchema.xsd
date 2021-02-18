@@ -97,16 +97,16 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: ClaseReferencesTargetClase -->
+          <!-- Relationship: conAsociacion -->
           <xsd:element name="targetClase" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClaseReferencesTargetClase</xsd:documentation>
+              <xsd:documentation>Instances of conAsociacion</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseReferencesTargetClase" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="conAsociacion" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClaseReferencesTargetClase needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of conAsociacion needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -361,9 +361,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseReferencesTargetClase -->
-  <xsd:element name="claseReferencesTargetClase" type="ClaseReferencesTargetClase" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClaseReferencesTargetClase">
+  <!-- conAsociacion -->
+  <xsd:element name="conAsociacion" type="ConAsociacion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ConAsociacion">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -384,11 +384,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseReferencesTargetClase Moniker -->
-  <xsd:element name="claseReferencesTargetClaseMoniker" type="ClaseReferencesTargetClaseMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ClaseReferencesTargetClaseMoniker">
+  <!-- conAsociacion Moniker -->
+  <xsd:element name="conAsociacionMoniker" type="ConAsociacionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ConAsociacionMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseReferencesTargetClase instance.</xsd:documentation>
+      <xsd:documentation>Moniker for conAsociacion instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

@@ -325,37 +325,37 @@
     <value>Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseReferencesTargetClase</value>
-    <comment>Description for DomainClass &apos;ClaseReferencesTargetClase&apos;</comment>
+  <data name="IPS.UMLSPF.conAsociacion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAsociacion</value>
+    <comment>Description for DomainClass &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase.DisplayName" xml:space="preserve">
-    <value>Clase References Target Clase</value>
-    <comment>DisplayName for DomainClass &apos;ClaseReferencesTargetClase&apos;</comment>
+  <data name="IPS.UMLSPF.conAsociacion.DisplayName" xml:space="preserve">
+    <value>Con Asociacion</value>
+    <comment>DisplayName for DomainClass &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/SourceClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseReferencesTargetClase.SourceClase</value>
-    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  <data name="IPS.UMLSPF.conAsociacion/SourceClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAsociacion.SourceClase</value>
+    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/SourceClase.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.conAsociacion/SourceClase.DisplayName" xml:space="preserve">
     <value>Source Clase</value>
-    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/SourceClase.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.conAsociacion/SourceClase.PropertyDisplayName" xml:space="preserve">
     <value>Target Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/TargetClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseReferencesTargetClase.TargetClase</value>
-    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+  <data name="IPS.UMLSPF.conAsociacion/TargetClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAsociacion.TargetClase</value>
+    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/TargetClase.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.conAsociacion/TargetClase.DisplayName" xml:space="preserve">
     <value>Target Clase</value>
-    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseReferencesTargetClase/TargetClase.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.conAsociacion/TargetClase.PropertyDisplayName" xml:space="preserve">
     <value>Source Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClase&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.CMPClase</value>

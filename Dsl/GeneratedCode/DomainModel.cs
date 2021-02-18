@@ -75,7 +75,7 @@ namespace IPS.UMLSPF
 				typeof(ModeloClassWEBHasClase),
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasOperaciones),
-				typeof(ClaseReferencesTargetClase),
+				typeof(conAsociacion),
 				typeof(UMLSPFDiagram),
 				typeof(ConecClase),
 				typeof(CMPClase),
@@ -122,8 +122,8 @@ namespace IPS.UMLSPF
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributo), "Atributo", ClaseHasAtributo.AtributoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasOperaciones), "Clase", ClaseHasOperaciones.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasOperaciones), "Operaciones", ClaseHasOperaciones.OperacionesDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseReferencesTargetClase), "SourceClase", ClaseReferencesTargetClase.SourceClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseReferencesTargetClase), "TargetClase", ClaseReferencesTargetClase.TargetClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(conAsociacion), "SourceClase", conAsociacion.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(conAsociacion), "TargetClase", conAsociacion.TargetClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -203,7 +203,7 @@ namespace IPS.UMLSPF
 				createElementLinkMap.Add(typeof(ModeloClassWEBHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperaciones), 2);
-				createElementLinkMap.Add(typeof(ClaseReferencesTargetClase), 3);
+				createElementLinkMap.Add(typeof(conAsociacion), 3);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -221,7 +221,7 @@ namespace IPS.UMLSPF
 				case 0: return new ModeloClassWEBHasClase(partition, roleAssignments, propertyAssignments);
 				case 1: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
 				case 2: return new ClaseHasOperaciones(partition, roleAssignments, propertyAssignments);
-				case 3: return new ClaseReferencesTargetClase(partition, roleAssignments, propertyAssignments);
+				case 3: return new conAsociacion(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}

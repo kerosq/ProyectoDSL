@@ -1035,7 +1035,7 @@ namespace IPS.UMLSPF
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </operaciones>
 						}
 						break;
-					case "targetClase":	// Relationship "ClaseReferencesTargetClase"
+					case "targetClase":	// Relationship "conAsociacion"
 						if (reader.IsEmptyElement)
 						{	// No instance of this relationship, just skip
 							DslModeling::SerializationUtilities.Skip(reader);
@@ -1043,7 +1043,7 @@ namespace IPS.UMLSPF
 						else
 						{
 							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <targetClase>
-							ReadClaseReferencesTargetClaseInstances(serializationContext, element, reader);
+							ReadconAsociacionInstances(serializationContext, element, reader);
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </targetClase>
 						}
 						break;
@@ -1146,7 +1146,7 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship ClaseReferencesTargetClase.
+		/// Reads all instances of relationship conAsociacion.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
@@ -1157,29 +1157,29 @@ namespace IPS.UMLSPF
 		/// <param name="element">In-memory Clase instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806")]
-		private static void ReadClaseReferencesTargetClaseInstances(DslModeling::SerializationContext serializationContext, Clase element, global::System.Xml.XmlReader reader)
+		private static void ReadconAsociacionInstances(DslModeling::SerializationContext serializationContext, Clase element, global::System.Xml.XmlReader reader)
 		{
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				DslModeling::DomainClassXmlSerializer newClaseReferencesTargetClaseSerializer = serializationContext.Directory.GetSerializer(ClaseReferencesTargetClase.DomainClassId);
-				global::System.Diagnostics.Debug.Assert(newClaseReferencesTargetClaseSerializer != null, "Cannot find serializer for ClaseReferencesTargetClase!");
-				ClaseReferencesTargetClase newClaseReferencesTargetClase = newClaseReferencesTargetClaseSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as ClaseReferencesTargetClase;
-				if (newClaseReferencesTargetClase != null)
+				DslModeling::DomainClassXmlSerializer newconAsociacionSerializer = serializationContext.Directory.GetSerializer(conAsociacion.DomainClassId);
+				global::System.Diagnostics.Debug.Assert(newconAsociacionSerializer != null, "Cannot find serializer for conAsociacion!");
+				conAsociacion newconAsociacion = newconAsociacionSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as conAsociacion;
+				if (newconAsociacion != null)
 				{
-					DslModeling::DomainRoleInfo.SetRolePlayer (newClaseReferencesTargetClase, ClaseReferencesTargetClase.SourceClaseDomainRoleId, element);
-					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newClaseReferencesTargetClase.GetDomainClass().Id);	
-					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newClaseReferencesTargetClase.GetDomainClass().Name + "!");
-					targetSerializer.Read(serializationContext, newClaseReferencesTargetClase, reader);
+					DslModeling::DomainRoleInfo.SetRolePlayer (newconAsociacion, conAsociacion.SourceClaseDomainRoleId, element);
+					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newconAsociacion.GetDomainClass().Id);	
+					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newconAsociacion.GetDomainClass().Name + "!");
+					targetSerializer.Read(serializationContext, newconAsociacion, reader);
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
-					DslModeling::DomainClassXmlSerializer newClaseMonikerOfClaseReferencesTargetClaseSerializer = serializationContext.Directory.GetSerializer(Clase.DomainClassId);
-					global::System.Diagnostics.Debug.Assert(newClaseMonikerOfClaseReferencesTargetClaseSerializer != null, "Cannot find serializer for Clase!");
-					DslModeling::Moniker newClaseMonikerOfClaseReferencesTargetClase = newClaseMonikerOfClaseReferencesTargetClaseSerializer.TryCreateMonikerInstance(serializationContext, reader, element, ClaseReferencesTargetClase.DomainClassId, element.Partition);
-					if (newClaseMonikerOfClaseReferencesTargetClase != null)
+					DslModeling::DomainClassXmlSerializer newClaseMonikerOfconAsociacionSerializer = serializationContext.Directory.GetSerializer(Clase.DomainClassId);
+					global::System.Diagnostics.Debug.Assert(newClaseMonikerOfconAsociacionSerializer != null, "Cannot find serializer for Clase!");
+					DslModeling::Moniker newClaseMonikerOfconAsociacion = newClaseMonikerOfconAsociacionSerializer.TryCreateMonikerInstance(serializationContext, reader, element, conAsociacion.DomainClassId, element.Partition);
+					if (newClaseMonikerOfconAsociacion != null)
 					{
-						UMLSPFSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(ClaseReferencesTargetClase));
-						new ClaseReferencesTargetClase(element.Partition, new DslModeling::RoleAssignment(ClaseReferencesTargetClase.SourceClaseDomainRoleId, element), new DslModeling::RoleAssignment(ClaseReferencesTargetClase.TargetClaseDomainRoleId, newClaseMonikerOfClaseReferencesTargetClase));
+						UMLSPFSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(conAsociacion));
+						new conAsociacion(element.Partition, new DslModeling::RoleAssignment(conAsociacion.SourceClaseDomainRoleId, element), new DslModeling::RoleAssignment(conAsociacion.TargetClaseDomainRoleId, newClaseMonikerOfconAsociacion));
 						DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
 					}
 					else
@@ -1667,19 +1667,19 @@ namespace IPS.UMLSPF
 				writer.WriteEndElement();
 			}
 	
-			// ClaseReferencesTargetClase
-			global::System.Collections.ObjectModel.ReadOnlyCollection<ClaseReferencesTargetClase> allClaseReferencesTargetClaseInstances = ClaseReferencesTargetClase.GetLinksToTargetClase(element);
-			if (!serializationContext.Result.Failed && allClaseReferencesTargetClaseInstances.Count > 0)
+			// conAsociacion
+			global::System.Collections.ObjectModel.ReadOnlyCollection<conAsociacion> allconAsociacionInstances = conAsociacion.GetLinksToTargetClase(element);
+			if (!serializationContext.Result.Failed && allconAsociacionInstances.Count > 0)
 			{
 				writer.WriteStartElement("targetClase");
-				foreach (ClaseReferencesTargetClase eachClaseReferencesTargetClaseInstance in allClaseReferencesTargetClaseInstances)
+				foreach (conAsociacion eachconAsociacionInstance in allconAsociacionInstances)
 				{
 					if (serializationContext.Result.Failed)
 						break;
 	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachClaseReferencesTargetClaseInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachClaseReferencesTargetClaseInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachClaseReferencesTargetClaseInstance, writer);
+					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachconAsociacionInstance.GetDomainClass().Id);
+					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachconAsociacionInstance.GetDomainClass().Name + "!");
+					relSerializer.Write(serializationContext, eachconAsociacionInstance, writer);
 				}
 				writer.WriteEndElement();
 			}
@@ -6048,15 +6048,15 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// Serializer ClaseReferencesTargetClaseSerializer for DomainClass ClaseReferencesTargetClase.
+	/// Serializer conAsociacionSerializer for DomainClass conAsociacion.
 	/// </summary>
-	public partial class ClaseReferencesTargetClaseSerializer : DslModeling::DomainRelationshipXmlSerializer
+	public partial class conAsociacionSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// ClaseReferencesTargetClaseSerializer Constructor
+		/// conAsociacionSerializer Constructor
 		/// </summary>
-		public ClaseReferencesTargetClaseSerializer ()
+		public conAsociacionSerializer ()
 			: base ()
 		{
 		}
@@ -6082,25 +6082,25 @@ namespace IPS.UMLSPF
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of ClaseReferencesTargetClase.
+		/// This is the XML tag name used to serialize an instance of conAsociacion.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"claseReferencesTargetClase"; }
+			get { return @"conAsociacion"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of ClaseReferencesTargetClase.
+		/// This is the XML tag name used to serialize a monikerized instance of conAsociacion.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"claseReferencesTargetClaseMoniker"; }
+			get { return @"conAsociacionMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of ClaseReferencesTargetClase in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of conAsociacion in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -6111,16 +6111,16 @@ namespace IPS.UMLSPF
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one ClaseReferencesTargetClase instance from XML.
+		/// Public Read() method that deserializes one conAsociacion instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the ClaseReferencesTargetClase element that is about to be deserialized. 
+		/// of the conAsociacion element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ClaseReferencesTargetClase instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory conAsociacion instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -6168,7 +6168,7 @@ namespace IPS.UMLSPF
 				}
 				else
 				{
-					UMLSPFSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "ClaseReferencesTargetClase");
+					UMLSPFSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "conAsociacion");
 				}
 			}
 	
@@ -6192,7 +6192,7 @@ namespace IPS.UMLSPF
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ClaseReferencesTargetClase instance that will link to the target Clase instance.</param>
+		/// <param name="element">In-memory conAsociacion instance that will link to the target Clase instance.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected virtual void ReadTargetRolePlayer(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -6215,11 +6215,11 @@ namespace IPS.UMLSPF
 	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				targetRoleMoniker = targetRoleSerializer.TryCreateMonikerInstance(serializationContext, reader, ((ClaseReferencesTargetClase)element).SourceClase, ClaseReferencesTargetClase.DomainClassId, element.Partition);
+				targetRoleMoniker = targetRoleSerializer.TryCreateMonikerInstance(serializationContext, reader, ((conAsociacion)element).SourceClase, conAsociacion.DomainClassId, element.Partition);
 				if (targetRoleMoniker != null)
 				{
 					// Attach the target role-player moniker.
-					DslModeling::DomainRoleInfo.SetRolePlayerMoniker (element as DslModeling::ElementLink, ClaseReferencesTargetClase.TargetClaseDomainRoleId, targetRoleMoniker);
+					DslModeling::DomainRoleInfo.SetRolePlayerMoniker (element as DslModeling::ElementLink, conAsociacion.TargetClaseDomainRoleId, targetRoleMoniker);
 					// Moniker tag has no child XML elements in it, so just skip to the next element.
 					DslModeling::SerializationUtilities.Skip(reader);
 					break;
@@ -6230,7 +6230,7 @@ namespace IPS.UMLSPF
 			}
 			if (targetRoleMoniker == null)
 			{
-				UMLSPFSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "ClaseReferencesTargetClase");
+				UMLSPFSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "conAsociacion");
 			}
 		}
 	
@@ -6242,7 +6242,7 @@ namespace IPS.UMLSPF
 		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ClaseReferencesTargetClase instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory conAsociacion instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
@@ -6267,7 +6267,7 @@ namespace IPS.UMLSPF
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ClaseReferencesTargetClase instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory conAsociacion instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected override void ReadElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -6278,8 +6278,8 @@ namespace IPS.UMLSPF
 	
 		#region TryCreateInstance & TryCreateDerivedInstance
 		/// <summary>
-		/// This method creates a correct instance of ClaseReferencesTargetClase based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized ClaseReferencesTargetClase, a new ClaseReferencesTargetClase instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of conAsociacion based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized conAsociacion, a new conAsociacion instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -6289,7 +6289,7 @@ namespace IPS.UMLSPF
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created ClaseReferencesTargetClase instance, or null if the reader is not pointing to a serialized ClaseReferencesTargetClase instance.</returns>
+		/// <returns>Created conAsociacion instance, or null if the reader is not pointing to a serialized conAsociacion instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -6308,9 +6308,9 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// This method creates a correct derived instance of ClaseReferencesTargetClase based on the tag currently pointed by the reader.
+		/// This method creates a correct derived instance of conAsociacion based on the tag currently pointed by the reader.
 		/// Note that the difference between this method and the above one is that this method will never create an instance of the
-		/// ClaseReferencesTargetClase type itself, only derived types are checked.
+		/// conAsociacion type itself, only derived types are checked.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -6319,7 +6319,7 @@ namespace IPS.UMLSPF
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>
-		/// <returns>Created instance that derives from ClaseReferencesTargetClase, or null if the reader is not pointing to such a serialized instance.</returns>
+		/// <returns>Created instance that derives from conAsociacion, or null if the reader is not pointing to such a serialized instance.</returns>
 		public override DslModeling::ElementLink TryCreateDerivedInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -6351,18 +6351,18 @@ namespace IPS.UMLSPF
 			{
 				string localName = reader.LocalName;
 				if (!derivedTypesOnly && string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ClaseReferencesTargetClase" instance.
+				{	// New "conAsociacion" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "ClaseReferencesTargetClase".
+				{	// Check for derived classes of "conAsociacion".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived relationship instance.
-						ClaseReferencesTargetClaseSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClaseReferencesTargetClaseSerializer;
+						conAsociacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as conAsociacionSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -6373,8 +6373,8 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// This method creates an instance of ClaseReferencesTargetClase based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of ClaseReferencesTargetClase.
+		/// This method creates an instance of conAsociacion based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of conAsociacion.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -6382,8 +6382,8 @@ namespace IPS.UMLSPF
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new ClaseReferencesTargetClase instance should be created.</param>	
-		/// <returns>Created ClaseReferencesTargetClase instance.</returns>
+		/// <param name="partition">Partition in which new conAsociacion instance should be created.</param>	
+		/// <returns>Created conAsociacion instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -6400,11 +6400,11 @@ namespace IPS.UMLSPF
 					id = new global::System.Guid (idStr);
 				}
 				// Create the link with place-holder role-players.
-				return new ClaseReferencesTargetClase(
+				return new conAsociacion(
 					partition,
 					new DslModeling::RoleAssignment[] {
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (ClaseReferencesTargetClase.SourceClaseDomainRoleId), 
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (ClaseReferencesTargetClase.TargetClaseDomainRoleId)
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (conAsociacion.SourceClaseDomainRoleId), 
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (conAsociacion.TargetClaseDomainRoleId)
 					},
 					new DslModeling::PropertyAssignment[] {
 						new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id)
@@ -6427,12 +6427,12 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from ClaseReferencesTargetClase, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from conAsociacion, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from ClaseReferencesTargetClase.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from conAsociacion.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -6441,7 +6441,7 @@ namespace IPS.UMLSPF
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClaseReferencesTargetClase.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(conAsociacion.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -6473,7 +6473,7 @@ namespace IPS.UMLSPF
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including ClaseReferencesTargetClase itself) instance of ClaseReferencesTargetClase based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including conAsociacion itself) instance of conAsociacion based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -6507,18 +6507,18 @@ namespace IPS.UMLSPF
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ClaseReferencesTargetClase" moniker instance.
+				{	// New "conAsociacion" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "ClaseReferencesTargetClase".
+				{	// Check for derived classes of "conAsociacion".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						ClaseReferencesTargetClaseSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ClaseReferencesTargetClaseSerializer;
+						conAsociacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as conAsociacionSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -6529,7 +6529,7 @@ namespace IPS.UMLSPF
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of ClaseReferencesTargetClase based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of conAsociacion based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -6554,7 +6554,7 @@ namespace IPS.UMLSPF
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, ClaseReferencesTargetClase.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, conAsociacion.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -6578,12 +6578,12 @@ namespace IPS.UMLSPF
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from ClaseReferencesTargetClase, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from conAsociacion, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from ClaseReferencesTargetClase.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from conAsociacion.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -6592,7 +6592,7 @@ namespace IPS.UMLSPF
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ClaseReferencesTargetClase.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(conAsociacion.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -6618,13 +6618,13 @@ namespace IPS.UMLSPF
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized ClaseReferencesTargetClase instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized conAsociacion instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ClaseReferencesTargetClase instance to be monikerized.</param>
+		/// <param name="element">conAsociacion instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the ClaseReferencesTargetClase instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the ClaseReferencesTargetClase instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the conAsociacion instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the conAsociacion instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -6653,10 +6653,10 @@ namespace IPS.UMLSPF
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one ClaseReferencesTargetClase instance into XML.
+		/// Public Write() method that serializes one conAsociacion instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ClaseReferencesTargetClase instance to be serialized.</param>
+		/// <param name="element">conAsociacion instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -6705,8 +6705,8 @@ namespace IPS.UMLSPF
 			}
 	
 			// Write the target role-player instance.
-			ClaseReferencesTargetClase instance = element as ClaseReferencesTargetClase;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ClaseReferencesTargetClase!");
+			conAsociacion instance = element as conAsociacion;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of conAsociacion!");
 	
 			DslModeling::ModelElement targetElement = instance.TargetClase;
 			DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer(targetElement.GetDomainClass().Id);
@@ -6726,7 +6726,7 @@ namespace IPS.UMLSPF
 		/// Write all properties that need to be serialized as XML attributes.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ClaseReferencesTargetClase instance to be serialized.</param>
+		/// <param name="element">conAsociacion instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param> 
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
@@ -6741,7 +6741,7 @@ namespace IPS.UMLSPF
 		/// This methods serializes 1) properties serialized as nested XML elements and 2) child model elements into XML. 
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ClaseReferencesTargetClase instance to be serialized.</param>
+		/// <param name="element">conAsociacion instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>        
 		protected override void WriteElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
 		{
@@ -6754,11 +6754,11 @@ namespace IPS.UMLSPF
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given ClaseReferencesTargetClase instance.
+		/// This method calculates a moniker to a given conAsociacion instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ClaseReferencesTargetClase instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the ClaseReferencesTargetClase instance.</returns>
+		/// <param name="element">conAsociacion instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the conAsociacion instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -6770,8 +6770,8 @@ namespace IPS.UMLSPF
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			ClaseReferencesTargetClase instance = element as ClaseReferencesTargetClase;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ClaseReferencesTargetClase!");
+			conAsociacion instance = element as conAsociacion;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of conAsociacion!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -6782,7 +6782,7 @@ namespace IPS.UMLSPF
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ClaseReferencesTargetClase instance to get moniker qualifier from.</param>
+		/// <param name="element">conAsociacion instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -6833,14 +6833,14 @@ namespace IPS.UMLSPF
 			DslModeling::MonikerKey key = null;
 			if (DslModeling::SimpleMonikerResolver.IsFullyQualified(monikerString))
 			{
-				key = new DslModeling::MonikerKey(monikerString, ClaseReferencesTargetClase.DomainClassId, domainClassId, store);
+				key = new DslModeling::MonikerKey(monikerString, conAsociacion.DomainClassId, domainClassId, store);
 			}
 			else
 			{
 				DslModeling::DomainClassXmlSerializer sourceSerializer = serializationContext.Directory.GetSerializer(sourceElement.GetDomainClass().Id);
 				global::System.Diagnostics.Debug.Assert(sourceSerializer != null, "Cannot find serializer for " + sourceElement.GetDomainClass().Name + "!");
 				string sourceQualifier = sourceSerializer.GetMonikerQualifier(serializationContext.Directory, sourceElement);
-				key = new DslModeling::MonikerKey(string.Format(global::System.Globalization.CultureInfo.CurrentCulture, "{0}/{1}", sourceQualifier, monikerString), ClaseReferencesTargetClase.DomainClassId, domainClassId, store);
+				key = new DslModeling::MonikerKey(string.Format(global::System.Globalization.CultureInfo.CurrentCulture, "{0}/{1}", sourceQualifier, monikerString), conAsociacion.DomainClassId, domainClassId, store);
 			}
 			return new DslModeling::Moniker(key, store);
 		}
@@ -9244,7 +9244,7 @@ namespace IPS.UMLSPF
 					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ModeloClassWEBHasClase.DomainClassId, typeof(ModeloClassWEBHasClaseSerializer)));
 					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseHasAtributo.DomainClassId, typeof(ClaseHasAtributoSerializer)));
 					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseHasOperaciones.DomainClassId, typeof(ClaseHasOperacionesSerializer)));
-					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ClaseReferencesTargetClase.DomainClassId, typeof(ClaseReferencesTargetClaseSerializer)));
+					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(conAsociacion.DomainClassId, typeof(conAsociacionSerializer)));
 					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(CMPClase.DomainClassId, typeof(CMPClaseSerializer)));
 					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(CMPClaseEnriquecida.DomainClassId, typeof(CMPClaseEnriquecidaSerializer)));
 					UMLSPFSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ConecClase.DomainClassId, typeof(ConecClaseSerializer)));

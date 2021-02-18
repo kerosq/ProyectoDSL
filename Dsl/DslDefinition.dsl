@@ -140,16 +140,16 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="6f46edc6-89a2-47b6-b489-b76d99a215bc" Description="Description for IPS.UMLSPF.ClaseReferencesTargetClase" Name="ClaseReferencesTargetClase" DisplayName="Clase References Target Clase" Namespace="IPS.UMLSPF">
+    <DomainRelationship Id="6f46edc6-89a2-47b6-b489-b76d99a215bc" Description="Description for IPS.UMLSPF.conAsociacion" Name="conAsociacion" DisplayName="Con Asociacion" Namespace="IPS.UMLSPF">
       <Source>
-        <DomainRole Id="7fd2a6d7-29f6-43ea-9cb2-497a0f0b345a" Description="Description for IPS.UMLSPF.ClaseReferencesTargetClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClase" PropertyDisplayName="Target Clase">
+        <DomainRole Id="7fd2a6d7-29f6-43ea-9cb2-497a0f0b345a" Description="Description for IPS.UMLSPF.conAsociacion.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClase" PropertyDisplayName="Target Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="67f5ef43-fd4f-4067-92ea-e47dcf72c744" Description="Description for IPS.UMLSPF.ClaseReferencesTargetClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="SourceClase" PropertyDisplayName="Source Clase">
+        <DomainRole Id="67f5ef43-fd4f-4067-92ea-e47dcf72c744" Description="Description for IPS.UMLSPF.conAsociacion.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="SourceClase" PropertyDisplayName="Source Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -223,7 +223,7 @@
             <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
-            <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+            <DomainRelationshipMoniker Name="conAsociacion" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -267,8 +267,8 @@
       <XmlClassData TypeName="ClaseHasOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasOperacionesMoniker" ElementName="claseHasOperaciones" MonikerTypeName="ClaseHasOperacionesMoniker">
         <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
       </XmlClassData>
-      <XmlClassData TypeName="ClaseReferencesTargetClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseReferencesTargetClaseMoniker" ElementName="claseReferencesTargetClase" MonikerTypeName="ClaseReferencesTargetClaseMoniker">
-        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+      <XmlClassData TypeName="ConAsociacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conAsociacionMoniker" ElementName="conAsociacion" MonikerTypeName="ConAsociacionMoniker">
+        <DomainRelationshipMoniker Name="conAsociacion" />
       </XmlClassData>
       <XmlClassData TypeName="ConecClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecClaseMoniker" ElementName="conecClase" MonikerTypeName="ConecClaseMoniker">
         <ConnectorMoniker Name="ConecClase" />
@@ -283,9 +283,9 @@
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="UMLSPFExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="ClaseReferencesTargetClaseBuilder">
+    <ConnectionBuilder Name="conAsociacionBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+        <DomainRelationshipMoniker Name="conAsociacion" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -356,7 +356,7 @@
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="ConecClase" />
-        <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
+        <DomainRelationshipMoniker Name="conAsociacion" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -372,7 +372,7 @@
         <DomainClassMoniker Name="Clase" />
       </ElementTool>
       <ConnectionTool Name="ConectarClases" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarClases" Tooltip="Conectar Clases" HelpKeyword="ConectarClases">
-        <ConnectionBuilderMoniker Name="UMLSPF/ClaseReferencesTargetClaseBuilder" />
+        <ConnectionBuilderMoniker Name="UMLSPF/conAsociacionBuilder" />
       </ConnectionTool>
       <ElementTool Name="IconClassEnr" ToolboxIcon="Resources\IconoClase.bmp" Caption="ClaseEnriquecida" Tooltip="Agregar ClaseEnriquecida" HelpKeyword="ClaseEnriquecida">
         <DomainClassMoniker Name="ClaseEnriquecida" />

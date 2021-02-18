@@ -15,7 +15,7 @@ namespace IPS.UMLSPF
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class ClaseReferencesTargetClaseBuilder
+	public static partial class conAsociacionBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -89,7 +89,7 @@ namespace IPS.UMLSPF
 					{
 						global::IPS.UMLSPF.Clase sourceClase = (global::IPS.UMLSPF.Clase)candidateSource;
 						global::IPS.UMLSPF.Clase targetClase = (global::IPS.UMLSPF.Clase)candidateTarget;
-						if(targetClase == null || sourceClase == null || global::IPS.UMLSPF.ClaseReferencesTargetClase.GetLinks(sourceClase, targetClase).Count > 0) return false;
+						if(targetClase == null || sourceClase == null || global::IPS.UMLSPF.conAsociacion.GetLinks(sourceClase, targetClase).Count > 0) return false;
 						return true;
 					}
 				}
@@ -127,7 +127,7 @@ namespace IPS.UMLSPF
 					{
 						global::IPS.UMLSPF.Clase sourceAccepted = (global::IPS.UMLSPF.Clase)source;
 						global::IPS.UMLSPF.Clase targetAccepted = (global::IPS.UMLSPF.Clase)target;
-						DslModeling::ElementLink result = new global::IPS.UMLSPF.ClaseReferencesTargetClase(sourceAccepted, targetAccepted);
+						DslModeling::ElementLink result = new global::IPS.UMLSPF.conAsociacion(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -220,7 +220,7 @@ namespace IPS.UMLSPF
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder ClaseReferencesTargetClaseBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder conAsociacionBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -246,11 +246,11 @@ namespace IPS.UMLSPF
 				{				
 					if(targetShapeElement == null)
 					{
-						return ClaseReferencesTargetClaseBuilder.CanAcceptSource(sourceElement);
+						return conAsociacionBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return ClaseReferencesTargetClaseBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return conAsociacionBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -275,7 +275,7 @@ namespace IPS.UMLSPF
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder ClaseReferencesTargetClaseBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder conAsociacionBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -289,7 +289,7 @@ namespace IPS.UMLSPF
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				ClaseReferencesTargetClaseBuilder.Connect(sourceElement, targetElement);
+				conAsociacionBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
