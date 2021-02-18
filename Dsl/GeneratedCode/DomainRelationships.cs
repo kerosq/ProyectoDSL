@@ -148,7 +148,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClase/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClase/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModeloClassWEB", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModeloClassWEB", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("7b20d996-b631-4d0a-bdc4-bfcf98092bc5")]
 		public virtual Clase Clase
 		{
@@ -936,6 +936,245 @@ namespace IPS.UMLSPF
 			foreach ( global::IPS.UMLSPF.conAsociacion link in links )
 			{
 				if ( target.Equals(link.TargetClase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship conComposicion
+	/// Description for IPS.UMLSPF.conComposicion
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("89962120-883f-43a1-8030-7055c29c48b7")]
+	public partial class conComposicion : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// conComposicion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x89962120, 0x883f, 0x43a1, 0x80, 0x30, 0x70, 0x55, 0xc2, 0x9c, 0x48, 0xb7);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a conComposicion link in the same Partition as the given Clase
+		/// </summary>
+		/// <param name="source">Clase to use as the source of the relationship.</param>
+		/// <param name="target">Clase to use as the target of the relationship.</param>
+		public conComposicion(Clase source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(conComposicion.CompSourceClaseDomainRoleId, source), new DslModeling::RoleAssignment(conComposicion.CompTargetClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public conComposicion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public conComposicion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public conComposicion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public conComposicion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region CompSourceClase domain role code
+		
+		/// <summary>
+		/// CompSourceClase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CompSourceClaseDomainRoleId = new global::System.Guid(0x9a7ed65b, 0xa40b, 0x450a, 0x93, 0xef, 0xf0, 0x52, 0x59, 0x32, 0xe0, 0x35);
+		
+		/// <summary>
+		/// DomainRole CompSourceClase
+		/// Description for IPS.UMLSPF.conComposicion.CompSourceClase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/CompSourceClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/CompSourceClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "CompTargetClase", PropertyDisplayNameKey="IPS.UMLSPF.conComposicion/CompSourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("9a7ed65b-a40b-450a-93ef-f0525932e035")]
+		public virtual Clase CompSourceClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, CompSourceClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CompSourceClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CompSourceClase of a Clase
+		/// <summary>
+		/// Gets CompSourceClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Clase GetCompSourceClase(Clase element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CompTargetClaseDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets CompSourceClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetCompSourceClase(Clase element, Clase newCompSourceClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, CompTargetClaseDomainRoleId, newCompSourceClase);
+		}
+		#endregion
+		#region CompTargetClase domain role code
+		
+		/// <summary>
+		/// CompTargetClase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid CompTargetClaseDomainRoleId = new global::System.Guid(0x95363e4f, 0x4255, 0x4f0d, 0x9b, 0x88, 0xa7, 0x5e, 0xa4, 0x61, 0xa6, 0xd4);
+		
+		/// <summary>
+		/// DomainRole CompTargetClase
+		/// Description for IPS.UMLSPF.conComposicion.CompTargetClase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/CompTargetClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/CompTargetClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "CompSourceClase", PropertyDisplayNameKey="IPS.UMLSPF.conComposicion/CompTargetClase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("95363e4f-4255-4f0d-9b88-a75ea461a6d4")]
+		public virtual Clase CompTargetClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, CompTargetClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, CompTargetClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access CompTargetClase of a Clase
+		/// <summary>
+		/// Gets a list of CompTargetClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetCompTargetClase(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, CompSourceClaseDomainRoleId);
+		}
+		#endregion
+		#region CompSourceClase link accessor
+		/// <summary>
+		/// Get the list of conComposicion links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.conComposicion> GetLinksToCompTargetClase ( global::IPS.UMLSPF.Clase compSourceClaseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conComposicion>(compSourceClaseInstance, global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId);
+		}
+		#endregion
+		#region CompTargetClase link accessor
+		/// <summary>
+		/// Get the conComposicion link to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.conComposicion GetLinkToCompSourceClase (global::IPS.UMLSPF.Clase compTargetClaseInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.conComposicion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conComposicion>(compTargetClaseInstance, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CompTargetClase not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region conComposicion instance accessors
+		
+		/// <summary>
+		/// Get any conComposicion links between a given Clase and a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.conComposicion> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.conComposicion> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.conComposicion>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.conComposicion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conComposicion>(source, global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.conComposicion link in links )
+			{
+				if ( target.Equals(link.CompTargetClase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one conComposicion link between a given Claseand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.conComposicion GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.conComposicion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conComposicion>(source, global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.conComposicion link in links )
+			{
+				if ( target.Equals(link.CompTargetClase) )
 				{
 					return link;
 				}

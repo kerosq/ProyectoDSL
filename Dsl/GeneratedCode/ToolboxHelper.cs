@@ -51,6 +51,10 @@ namespace IPS.UMLSPF
 		/// Toolbox item filter string used to identify ConectarClases connector tool.
 		/// </summary>
 		public const string ConectarClasesFilterString = "ConectarClases.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify ConectarComposicion connector tool.
+		/// </summary>
+		public const string ConectarComposicionFilterString = "ConectarComposicion.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -98,7 +102,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return 3;
+				return 4;
 			}
 		}
 		
@@ -195,6 +199,24 @@ namespace IPS.UMLSPF
 						CreateElementToolPrototype(store, global::IPS.UMLSPF.ClaseEnriquecida.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "IPS.UMLSPF.ConectarComposicionToolboxItem":
+
+					// Add ConectarComposicion connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"IPS.UMLSPF.ConectarComposicionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						4, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ConectarComposicionToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ConectarComposicionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ConectarComposicion", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ConectarComposicionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ConectarComposicionFilterString)
 						});
 					break;
 				default:

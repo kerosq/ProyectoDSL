@@ -76,8 +76,10 @@ namespace IPS.UMLSPF
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasOperaciones),
 				typeof(conAsociacion),
+				typeof(conComposicion),
 				typeof(UMLSPFDiagram),
 				typeof(ConecClase),
+				typeof(ConecComposicion),
 				typeof(CMPClase),
 				typeof(CMPClaseEnriquecida),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
@@ -124,6 +126,8 @@ namespace IPS.UMLSPF
 				new DomainRolePlayerInfo(typeof(ClaseHasOperaciones), "Operaciones", ClaseHasOperaciones.OperacionesDomainRoleId),
 				new DomainRolePlayerInfo(typeof(conAsociacion), "SourceClase", conAsociacion.SourceClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(conAsociacion), "TargetClase", conAsociacion.TargetClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(conComposicion), "CompSourceClase", conComposicion.CompSourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(conComposicion), "CompTargetClase", conComposicion.CompTargetClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -145,7 +149,7 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(10);
 				createElementMap.Add(typeof(ModeloClassWEB), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -153,8 +157,9 @@ namespace IPS.UMLSPF
 				createElementMap.Add(typeof(ClaseEnriquecida), 4);
 				createElementMap.Add(typeof(UMLSPFDiagram), 5);
 				createElementMap.Add(typeof(ConecClase), 6);
-				createElementMap.Add(typeof(CMPClase), 7);
-				createElementMap.Add(typeof(CMPClaseEnriquecida), 8);
+				createElementMap.Add(typeof(ConecComposicion), 7);
+				createElementMap.Add(typeof(CMPClase), 8);
+				createElementMap.Add(typeof(CMPClaseEnriquecida), 9);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -175,8 +180,9 @@ namespace IPS.UMLSPF
 				case 4: return new ClaseEnriquecida(partition, propertyAssignments);
 				case 5: return new UMLSPFDiagram(partition, propertyAssignments);
 				case 6: return new ConecClase(partition, propertyAssignments);
-				case 7: return new CMPClase(partition, propertyAssignments);
-				case 8: return new CMPClaseEnriquecida(partition, propertyAssignments);
+				case 7: return new ConecComposicion(partition, propertyAssignments);
+				case 8: return new CMPClase(partition, propertyAssignments);
+				case 9: return new CMPClaseEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -199,11 +205,12 @@ namespace IPS.UMLSPF
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
 				createElementLinkMap.Add(typeof(ModeloClassWEBHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperaciones), 2);
 				createElementLinkMap.Add(typeof(conAsociacion), 3);
+				createElementLinkMap.Add(typeof(conComposicion), 4);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -222,6 +229,7 @@ namespace IPS.UMLSPF
 				case 1: return new ClaseHasAtributo(partition, roleAssignments, propertyAssignments);
 				case 2: return new ClaseHasOperaciones(partition, roleAssignments, propertyAssignments);
 				case 3: return new conAsociacion(partition, roleAssignments, propertyAssignments);
+				case 4: return new conComposicion(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -403,6 +411,7 @@ namespace IPS.UMLSPF
 			DomainRoles.Add(global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId, true);
 			DomainRoles.Add(global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId, true);
 			DomainRoles.Add(global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId, true);
+			DomainRoles.Add(global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

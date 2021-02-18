@@ -311,6 +311,11 @@ namespace IPS.UMLSPF
 				global::IPS.UMLSPF.ConecClase newShape = new global::IPS.UMLSPF.ConecClase(this.Partition);
 				return newShape;
 			}
+			if(element is global::IPS.UMLSPF.conComposicion)
+			{
+				global::IPS.UMLSPF.ConecComposicion newShape = new global::IPS.UMLSPF.ConecComposicion(this.Partition);
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -364,6 +369,7 @@ namespace IPS.UMLSPF
 		#region Connect actions
 		private bool changingMouseAction;
 		private global::IPS.UMLSPF.ConectarClasesConnectAction conectarClasesConnectAction;
+		private global::IPS.UMLSPF.ConectarComposicionConnectAction conectarComposicionConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -394,6 +400,15 @@ namespace IPS.UMLSPF
 						this.conectarClasesConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
 					action = this.conectarClasesConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::IPS.UMLSPF.UMLSPFToolboxHelper.ConectarComposicionFilterString))
+				{
+					if (this.conectarComposicionConnectAction == null)
+					{
+						this.conectarComposicionConnectAction = new global::IPS.UMLSPF.ConectarComposicionConnectAction(this);
+						this.conectarComposicionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.conectarComposicionConnectAction;
 				} 
 				else
 				{
@@ -457,6 +472,11 @@ namespace IPS.UMLSPF
 						this.conectarClasesConnectAction.Dispose();
 						this.conectarClasesConnectAction = null;
 					}
+					if(this.conectarComposicionConnectAction != null)
+					{
+						this.conectarComposicionConnectAction.Dispose();
+						this.conectarComposicionConnectAction = null;
+					}
 					this.UnsubscribeCompartmentItemsEvents();
 				}
 			}
@@ -514,6 +534,7 @@ namespace IPS.UMLSPF
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conComposicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -931,6 +952,7 @@ namespace IPS.UMLSPF
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conComposicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

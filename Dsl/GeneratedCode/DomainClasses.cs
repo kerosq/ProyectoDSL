@@ -454,6 +454,40 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
+		#region CompTargetClase opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of CompTargetClase.
+		/// Description for IPS.UMLSPF.conComposicion.CompSourceClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> CompTargetClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region CompSourceClase opposite domain role accessor
+		/// <summary>
+		/// Gets or sets CompSourceClase.
+		/// Description for IPS.UMLSPF.conComposicion.CompTargetClase
+		/// </summary>
+		public virtual Clase CompSourceClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId, value);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -480,6 +514,11 @@ namespace IPS.UMLSPF
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Operaciones.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Clase.DomainClassId)) 
 				{
 					return true;
 				}
@@ -522,6 +561,15 @@ namespace IPS.UMLSPF
 			{
 				// Create link for path ClaseHasOperaciones.Operaciones
 				this.Operaciones.Add(sourceOperaciones2);
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.Clase sourceClase3 = sourceElement as global::IPS.UMLSPF.Clase;
+			if (sourceClase3 != null)
+			{
+				// Create link for path conComposicion.CompTargetClase
+				this.CompTargetClase.Add(sourceClase3);
 
 				return;
 			}
@@ -571,6 +619,20 @@ namespace IPS.UMLSPF
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.Clase sourceClase3 = sourceElement as global::IPS.UMLSPF.Clase;
+			if (sourceClase3 != null)
+			{
+				// Delete link for path conComposicion.CompTargetClase
+				
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.conComposicion.GetLinks((global::IPS.UMLSPF.Clase)this, sourceClase3))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId);
 				}
 
 				return;

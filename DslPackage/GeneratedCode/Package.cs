@@ -53,6 +53,14 @@ namespace IPS.UMLSPF
 					"@IconClassEnrToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ConectarComposicionToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ConectarComposicionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ConectarComposicion", 
+					"@ConectarComposicionToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideEditorFactory(typeof(UMLSPFEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(UMLSPFEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(UMLSPFEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

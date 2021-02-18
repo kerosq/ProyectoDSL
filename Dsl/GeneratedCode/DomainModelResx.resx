@@ -357,6 +357,38 @@
     <value>Source Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.conComposicion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conComposicion</value>
+    <comment>Description for DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion.DisplayName" xml:space="preserve">
+    <value>Con Composicion</value>
+    <comment>DisplayName for DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/CompSourceClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conComposicion.CompSourceClase</value>
+    <comment>Description for DomainRole &apos;CompSourceClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/CompSourceClase.DisplayName" xml:space="preserve">
+    <value>Comp Source Clase</value>
+    <comment>DisplayName for DomainRole &apos;CompSourceClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/CompSourceClase.PropertyDisplayName" xml:space="preserve">
+    <value>Comp Target Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CompSourceClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/CompTargetClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conComposicion.CompTargetClase</value>
+    <comment>Description for DomainRole &apos;CompTargetClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/CompTargetClase.DisplayName" xml:space="preserve">
+    <value>Comp Target Clase</value>
+    <comment>DisplayName for DomainRole &apos;CompTargetClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/CompTargetClase.PropertyDisplayName" xml:space="preserve">
+    <value>Comp Source Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CompTargetClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.CMPClase</value>
     <comment>Description for DomainClass &apos;CMPClase&apos;</comment>
@@ -392,6 +424,14 @@
   <data name="IPS.UMLSPF.ConecClase.DisplayName" xml:space="preserve">
     <value>Conec Clase</value>
     <comment>DisplayName for DomainClass &apos;ConecClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConecComposicion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ConecComposicion</value>
+    <comment>Description for DomainClass &apos;ConecComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConecComposicion.DisplayName" xml:space="preserve">
+    <value>Conec Composicion</value>
+    <comment>DisplayName for DomainClass &apos;ConecComposicion&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>UMLSPF (*.kacqSPF)|*.kacqSPF</value>
@@ -435,6 +475,14 @@
   </data>
   <data name="IconClassEnrToolboxTooltip" xml:space="preserve">
     <value>Agregar ClaseEnriquecida</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConectarComposicionToolboxItem" xml:space="preserve">
+    <value>ConectarComposicion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConectarComposicionToolboxTooltip" xml:space="preserve">
+    <value>Conectar Composicion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -576,6 +624,10 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="IconClassEnrToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\IconoClase.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConectarComposicionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectorArrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>
