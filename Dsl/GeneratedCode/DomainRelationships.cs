@@ -1185,3 +1185,223 @@ namespace IPS.UMLSPF
 		#endregion
 	}
 }
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship conAgregacion
+	/// Description for IPS.UMLSPF.conAgregacion
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("d8f51cbd-c973-4dd7-a8d8-68f9f0e7a26e")]
+	public partial class conAgregacion : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// conAgregacion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd8f51cbd, 0xc973, 0x4dd7, 0xa8, 0xd8, 0x68, 0xf9, 0xf0, 0xe7, 0xa2, 0x6e);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a conAgregacion link in the same Partition as the given Clase
+		/// </summary>
+		/// <param name="source">Clase to use as the source of the relationship.</param>
+		/// <param name="target">Clase to use as the target of the relationship.</param>
+		public conAgregacion(Clase source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(conAgregacion.SourceClaseDomainRoleId, source), new DslModeling::RoleAssignment(conAgregacion.TargetClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public conAgregacion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public conAgregacion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public conAgregacion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public conAgregacion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SourceClase domain role code
+		
+		/// <summary>
+		/// SourceClase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SourceClaseDomainRoleId = new global::System.Guid(0x88efde2e, 0x3c46, 0x47d5, 0xa8, 0xdc, 0x0e, 0xf9, 0xa8, 0xed, 0xb9, 0xd1);
+		
+		/// <summary>
+		/// DomainRole SourceClase
+		/// Description for IPS.UMLSPF.conAgregacion.SourceClase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/SourceClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/SourceClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AgreTargetClase", PropertyDisplayNameKey="IPS.UMLSPF.conAgregacion/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("88efde2e-3c46-47d5-a8dc-0ef9a8edb9d1")]
+		public virtual Clase SourceClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AgreSourceClase of a Clase
+		/// <summary>
+		/// Gets a list of AgreSourceClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetAgreSourceClase(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, TargetClaseDomainRoleId);
+		}
+		#endregion
+		#region TargetClase domain role code
+		
+		/// <summary>
+		/// TargetClase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TargetClaseDomainRoleId = new global::System.Guid(0x89f58eba, 0x60f9, 0x4812, 0x92, 0x14, 0x67, 0xcc, 0x87, 0x1e, 0xc4, 0x5a);
+		
+		/// <summary>
+		/// DomainRole TargetClase
+		/// Description for IPS.UMLSPF.conAgregacion.TargetClase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/TargetClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/TargetClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "AgreSourceClase", PropertyDisplayNameKey="IPS.UMLSPF.conAgregacion/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("89f58eba-60f9-4812-9214-67cc871ec45a")]
+		public virtual Clase TargetClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AgreTargetClase of a Clase
+		/// <summary>
+		/// Gets a list of AgreTargetClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetAgreTargetClase(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
+		}
+		#endregion
+		#region SourceClase link accessor
+		/// <summary>
+		/// Get the list of conAgregacion links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.conAgregacion> GetLinksToAgreTargetClase ( global::IPS.UMLSPF.Clase sourceClaseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conAgregacion>(sourceClaseInstance, global::IPS.UMLSPF.conAgregacion.SourceClaseDomainRoleId);
+		}
+		#endregion
+		#region TargetClase link accessor
+		/// <summary>
+		/// Get the list of conAgregacion links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.conAgregacion> GetLinksToAgreSourceClase ( global::IPS.UMLSPF.Clase targetClaseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conAgregacion>(targetClaseInstance, global::IPS.UMLSPF.conAgregacion.TargetClaseDomainRoleId);
+		}
+		#endregion
+		#region conAgregacion instance accessors
+		
+		/// <summary>
+		/// Get any conAgregacion links between a given Clase and a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.conAgregacion> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.conAgregacion> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.conAgregacion>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.conAgregacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conAgregacion>(source, global::IPS.UMLSPF.conAgregacion.SourceClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.conAgregacion link in links )
+			{
+				if ( target.Equals(link.TargetClase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one conAgregacion link between a given Claseand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.conAgregacion GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.conAgregacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.conAgregacion>(source, global::IPS.UMLSPF.conAgregacion.SourceClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.conAgregacion link in links )
+			{
+				if ( target.Equals(link.TargetClase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

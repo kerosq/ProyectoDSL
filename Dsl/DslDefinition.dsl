@@ -180,6 +180,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="d8f51cbd-c973-4dd7-a8d8-68f9f0e7a26e" Description="Description for IPS.UMLSPF.conAgregacion" Name="conAgregacion" DisplayName="Con Agregacion" Namespace="IPS.UMLSPF">
+      <Source>
+        <DomainRole Id="88efde2e-3c46-47d5-a8dc-0ef9a8edb9d1" Description="Description for IPS.UMLSPF.conAgregacion.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="AgreTargetClase" PropertyDisplayName="Agre Target Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="89f58eba-60f9-4812-9214-67cc871ec45a" Description="Description for IPS.UMLSPF.conAgregacion.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="AgreSourceClase" PropertyDisplayName="Agre Source Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -218,6 +234,7 @@
   <Connectors>
     <Connector Id="fc067f1a-076e-47d8-b155-ef171c2da590" Description="Description for IPS.UMLSPF.ConecClase" Name="ConecClase" DisplayName="Conec Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Clase" />
     <Connector Id="a9e5319f-d905-47eb-bf0a-337682bf1c83" Description="Description for IPS.UMLSPF.ConecComposicion" Name="ConecComposicion" DisplayName="Conec Composicion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Composicion" TargetEndStyle="FilledDiamond" targetEndWidth="0.3" targetEndHeight="0.3" />
+    <Connector Id="7d6f860e-97ab-458a-8451-ae6a1dbcc31f" Description="Description for IPS.UMLSPF.ConecAgregacion" Name="ConecAgregacion" DisplayName="Conec Agregacion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Agregacion" TargetEndStyle="EmptyDiamond" targetEndWidth="0.4" targetEndHeight="0.4" />
   </Connectors>
   <XmlSerializationBehavior Name="UMLSPFSerializationBehavior" Namespace="IPS.UMLSPF">
     <ClassData>
@@ -252,6 +269,9 @@
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="compTargetClase">
             <DomainRelationshipMoniker Name="conComposicion" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="agreTargetClase">
+            <DomainRelationshipMoniker Name="conAgregacion" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -313,6 +333,12 @@
       <XmlClassData TypeName="ConecComposicion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecComposicionMoniker" ElementName="conecComposicion" MonikerTypeName="ConecComposicionMoniker">
         <ConnectorMoniker Name="ConecComposicion" />
       </XmlClassData>
+      <XmlClassData TypeName="ConAgregacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conAgregacionMoniker" ElementName="conAgregacion" MonikerTypeName="ConAgregacionMoniker">
+        <DomainRelationshipMoniker Name="conAgregacion" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConecAgregacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecAgregacionMoniker" ElementName="conecAgregacion" MonikerTypeName="ConecAgregacionMoniker">
+        <ConnectorMoniker Name="ConecAgregacion" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="UMLSPFExplorer" />
@@ -339,6 +365,25 @@
     <ConnectionBuilder Name="conComposicionBuilder">
       <LinkConnectDirective>
         <DomainRelationshipMoniker Name="conComposicion" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="conAgregacionBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="conAgregacion" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -415,6 +460,10 @@
         <ConnectorMoniker Name="ConecComposicion" />
         <DomainRelationshipMoniker Name="conComposicion" />
       </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConecAgregacion" />
+        <DomainRelationshipMoniker Name="conAgregacion" />
+      </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="kacqSPF" EditorGuid="096cb769-d340-4d6e-b06a-a2816f59d3a1">
@@ -436,6 +485,9 @@
       </ElementTool>
       <ConnectionTool Name="ConectarComposicion" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarComposicion" Tooltip="Conectar Composicion" HelpKeyword="ConectarComposicion">
         <ConnectionBuilderMoniker Name="UMLSPF/conComposicionBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="ConectarAgregacion" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarAgregacion" Tooltip="Conectar Agregacion" HelpKeyword="ConectarAgregacion">
+        <ConnectionBuilderMoniker Name="UMLSPF/conAgregacionBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

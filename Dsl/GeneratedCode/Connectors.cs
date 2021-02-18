@@ -216,26 +216,12 @@ namespace IPS.UMLSPF
 		
 		#region Connector styles
 		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
-			textBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightCoral);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
-		
-		}
-		
-		/// <summary>
 		/// Initializes resources associated with this connector instance.
 		/// </summary>
 		protected override void InitializeInstanceResources()
 		{
 			base.InitializeInstanceResources();
-			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorFilledDiamond, new DslDiagrams::SizeD(0.7,0.7), false);
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorFilledDiamond, new DslDiagrams::SizeD(0.3,0.3), false);
 		}
 		
 		#endregion
@@ -262,6 +248,132 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
 		public ConecComposicion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass ConecAgregacion
+	/// Description for IPS.UMLSPF.ConecAgregacion
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ConecAgregacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ConecAgregacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("7d6f860e-97ab-458a-8451-ae6a1dbcc31f")]
+	public partial class ConecAgregacion : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ConecAgregacion.
+		/// </summary>
+		public static DslDiagrams::Decorator FindConecAgregacionDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorEmptyDiamond, new DslDiagrams::SizeD(0.4,0.4), false);
+		}
+		
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ConecAgregacion domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7d6f860e, 0x97ab, 0x458a, 0x84, 0x51, 0xae, 0x6a, 0x1d, 0xbc, 0xc3, 0x1f);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ConecAgregacion(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ConecAgregacion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
