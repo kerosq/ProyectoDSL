@@ -72,12 +72,22 @@ namespace IPS.UMLSPF
 				typeof(Atributo),
 				typeof(Operaciones),
 				typeof(ClaseEnriquecida),
+				typeof(EstilosClase),
+				typeof(EstiloAtributos),
+				typeof(EstiloMetodos),
+				typeof(Herencia),
 				typeof(ModeloClassWEBHasClase),
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasOperaciones),
 				typeof(conAsociacion),
 				typeof(conComposicion),
 				typeof(conAgregacion),
+				typeof(ClaseEnriquecidaHasEstilosClase),
+				typeof(ClaseEnriquecidaHasEstiloAtributos),
+				typeof(ClaseEnriquecidaHasEstiloMetodos),
+				typeof(ModeloClassWEBHasHerencia),
+				typeof(EsPadre),
+				typeof(EsHija),
 				typeof(UMLSPFDiagram),
 				typeof(ConecClase),
 				typeof(ConecComposicion),
@@ -110,6 +120,18 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(Operaciones), "NombreOperacion", Operaciones.NombreOperacionDomainPropertyId, typeof(Operaciones.NombreOperacionPropertyHandler)),
 				new DomainMemberInfo(typeof(Operaciones), "TipoOperacion", Operaciones.TipoOperacionDomainPropertyId, typeof(Operaciones.TipoOperacionPropertyHandler)),
 				new DomainMemberInfo(typeof(Operaciones), "MostrarOperacion", Operaciones.MostrarOperacionDomainPropertyId, typeof(Operaciones.MostrarOperacionPropertyHandler)),
+				new DomainMemberInfo(typeof(EstilosClase), "ColorFondo", EstilosClase.ColorFondoDomainPropertyId, typeof(EstilosClase.ColorFondoPropertyHandler)),
+				new DomainMemberInfo(typeof(EstilosClase), "ColorLetra", EstilosClase.ColorLetraDomainPropertyId, typeof(EstilosClase.ColorLetraPropertyHandler)),
+				new DomainMemberInfo(typeof(EstilosClase), "TipoLetra", EstilosClase.TipoLetraDomainPropertyId, typeof(EstilosClase.TipoLetraPropertyHandler)),
+				new DomainMemberInfo(typeof(EstilosClase), "Alineacion", EstilosClase.AlineacionDomainPropertyId, typeof(EstilosClase.AlineacionPropertyHandler)),
+				new DomainMemberInfo(typeof(EstilosClase), "MostrarEC", EstilosClase.MostrarECDomainPropertyId, typeof(EstilosClase.MostrarECPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloAtributos), "Tipoletra", EstiloAtributos.TipoletraDomainPropertyId, typeof(EstiloAtributos.TipoletraPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloAtributos), "ColorLetra", EstiloAtributos.ColorLetraDomainPropertyId, typeof(EstiloAtributos.ColorLetraPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloAtributos), "FormatoAtributo", EstiloAtributos.FormatoAtributoDomainPropertyId, typeof(EstiloAtributos.FormatoAtributoPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloAtributos), "MostrarEA", EstiloAtributos.MostrarEADomainPropertyId, typeof(EstiloAtributos.MostrarEAPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloMetodos), "TipoLetra", EstiloMetodos.TipoLetraDomainPropertyId, typeof(EstiloMetodos.TipoLetraPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloMetodos), "ColorLetra", EstiloMetodos.ColorLetraDomainPropertyId, typeof(EstiloMetodos.ColorLetraPropertyHandler)),
+				new DomainMemberInfo(typeof(EstiloMetodos), "MostrarEM", EstiloMetodos.MostrarEMDomainPropertyId, typeof(EstiloMetodos.MostrarEMPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -132,6 +154,18 @@ namespace IPS.UMLSPF
 				new DomainRolePlayerInfo(typeof(conComposicion), "CompTargetClase", conComposicion.CompTargetClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(conAgregacion), "SourceClase", conAgregacion.SourceClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(conAgregacion), "TargetClase", conAgregacion.TargetClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasEstilosClase), "ClaseEnriquecida", ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasEstilosClase), "EstilosClase", ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasEstiloAtributos), "ClaseEnriquecida", ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasEstiloAtributos), "EstiloAtributos", ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasEstiloMetodos), "ClaseEnriquecida", ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasEstiloMetodos), "EstiloMetodos", ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModeloClassWEBHasHerencia), "ModeloClassWEB", ModeloClassWEBHasHerencia.ModeloClassWEBDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ModeloClassWEBHasHerencia), "Herencia", ModeloClassWEBHasHerencia.HerenciaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EsPadre), "Herencia", EsPadre.HerenciaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EsPadre), "Clase", EsPadre.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EsHija), "Herencia", EsHija.HerenciaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EsHija), "Clase", EsHija.ClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -153,18 +187,22 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(11);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
 				createElementMap.Add(typeof(ModeloClassWEB), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
 				createElementMap.Add(typeof(Operaciones), 3);
 				createElementMap.Add(typeof(ClaseEnriquecida), 4);
-				createElementMap.Add(typeof(UMLSPFDiagram), 5);
-				createElementMap.Add(typeof(ConecClase), 6);
-				createElementMap.Add(typeof(ConecComposicion), 7);
-				createElementMap.Add(typeof(ConecAgregacion), 8);
-				createElementMap.Add(typeof(CMPClase), 9);
-				createElementMap.Add(typeof(CMPClaseEnriquecida), 10);
+				createElementMap.Add(typeof(EstilosClase), 5);
+				createElementMap.Add(typeof(EstiloAtributos), 6);
+				createElementMap.Add(typeof(EstiloMetodos), 7);
+				createElementMap.Add(typeof(Herencia), 8);
+				createElementMap.Add(typeof(UMLSPFDiagram), 9);
+				createElementMap.Add(typeof(ConecClase), 10);
+				createElementMap.Add(typeof(ConecComposicion), 11);
+				createElementMap.Add(typeof(ConecAgregacion), 12);
+				createElementMap.Add(typeof(CMPClase), 13);
+				createElementMap.Add(typeof(CMPClaseEnriquecida), 14);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -183,12 +221,16 @@ namespace IPS.UMLSPF
 				case 2: return new Atributo(partition, propertyAssignments);
 				case 3: return new Operaciones(partition, propertyAssignments);
 				case 4: return new ClaseEnriquecida(partition, propertyAssignments);
-				case 5: return new UMLSPFDiagram(partition, propertyAssignments);
-				case 6: return new ConecClase(partition, propertyAssignments);
-				case 7: return new ConecComposicion(partition, propertyAssignments);
-				case 8: return new ConecAgregacion(partition, propertyAssignments);
-				case 9: return new CMPClase(partition, propertyAssignments);
-				case 10: return new CMPClaseEnriquecida(partition, propertyAssignments);
+				case 5: return new EstilosClase(partition, propertyAssignments);
+				case 6: return new EstiloAtributos(partition, propertyAssignments);
+				case 7: return new EstiloMetodos(partition, propertyAssignments);
+				case 8: return new Herencia(partition, propertyAssignments);
+				case 9: return new UMLSPFDiagram(partition, propertyAssignments);
+				case 10: return new ConecClase(partition, propertyAssignments);
+				case 11: return new ConecComposicion(partition, propertyAssignments);
+				case 12: return new ConecAgregacion(partition, propertyAssignments);
+				case 13: return new CMPClase(partition, propertyAssignments);
+				case 14: return new CMPClaseEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -211,13 +253,19 @@ namespace IPS.UMLSPF
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
 				createElementLinkMap.Add(typeof(ModeloClassWEBHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperaciones), 2);
 				createElementLinkMap.Add(typeof(conAsociacion), 3);
 				createElementLinkMap.Add(typeof(conComposicion), 4);
 				createElementLinkMap.Add(typeof(conAgregacion), 5);
+				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasEstilosClase), 6);
+				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasEstiloAtributos), 7);
+				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasEstiloMetodos), 8);
+				createElementLinkMap.Add(typeof(ModeloClassWEBHasHerencia), 9);
+				createElementLinkMap.Add(typeof(EsPadre), 10);
+				createElementLinkMap.Add(typeof(EsHija), 11);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -238,6 +286,12 @@ namespace IPS.UMLSPF
 				case 3: return new conAsociacion(partition, roleAssignments, propertyAssignments);
 				case 4: return new conComposicion(partition, roleAssignments, propertyAssignments);
 				case 5: return new conAgregacion(partition, roleAssignments, propertyAssignments);
+				case 6: return new ClaseEnriquecidaHasEstilosClase(partition, roleAssignments, propertyAssignments);
+				case 7: return new ClaseEnriquecidaHasEstiloAtributos(partition, roleAssignments, propertyAssignments);
+				case 8: return new ClaseEnriquecidaHasEstiloMetodos(partition, roleAssignments, propertyAssignments);
+				case 9: return new ModeloClassWEBHasHerencia(partition, roleAssignments, propertyAssignments);
+				case 10: return new EsPadre(partition, roleAssignments, propertyAssignments);
+				case 11: return new EsHija(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -420,6 +474,10 @@ namespace IPS.UMLSPF
 			DomainRoles.Add(global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId, true);
 			DomainRoles.Add(global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId, true);
 			DomainRoles.Add(global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId, true);
+			DomainRoles.Add(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId, true);
+			DomainRoles.Add(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId, true);
+			DomainRoles.Add(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId, true);
+			DomainRoles.Add(global::IPS.UMLSPF.ModeloClassWEBHasHerencia.HerenciaDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

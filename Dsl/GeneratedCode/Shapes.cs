@@ -272,7 +272,6 @@ namespace IPS.UMLSPF
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Khaki), false,
 						titleFont, null,
 						false);
-					descriptor.TitleTextColor = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Beige);
 					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
 				}
 				{
@@ -285,7 +284,6 @@ namespace IPS.UMLSPF
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Khaki), false,
 						titleFont, null,
 						false);
-					descriptor.TitleTextColor = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Beige);
 					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 			}

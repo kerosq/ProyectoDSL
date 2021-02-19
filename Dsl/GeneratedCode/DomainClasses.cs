@@ -150,6 +150,21 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
+		#region Herencia opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Herencia.
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasHerencia.ModeloClassWEB
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Herencia> Herencia
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Herencia>, Herencia>(global::IPS.UMLSPF.ModeloClassWEBHasHerencia.ModeloClassWEBDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -171,6 +186,11 @@ namespace IPS.UMLSPF
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Clase.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Herencia.DomainClassId)) 
 				{
 					return true;
 				}
@@ -207,6 +227,15 @@ namespace IPS.UMLSPF
 
 				return;
 			}
+				
+			global::IPS.UMLSPF.Herencia sourceHerencia2 = sourceElement as global::IPS.UMLSPF.Herencia;
+			if (sourceHerencia2 != null)
+			{
+				// Create link for path ModeloClassWEBHasHerencia.Herencia
+				this.Herencia.Add(sourceHerencia2);
+
+				return;
+			}
 		
 			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
 			// during a "Paste".
@@ -239,6 +268,20 @@ namespace IPS.UMLSPF
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.Herencia sourceHerencia2 = sourceElement as global::IPS.UMLSPF.Herencia;
+			if (sourceHerencia2 != null)
+			{
+				// Delete link for path ModeloClassWEBHasHerencia.Herencia
+				
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ModeloClassWEBHasHerencia.GetLinks((global::IPS.UMLSPF.ModeloClassWEB)this, sourceHerencia2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::IPS.UMLSPF.ModeloClassWEBHasHerencia.ModeloClassWEBDomainRoleId, global::IPS.UMLSPF.ModeloClassWEBHasHerencia.HerenciaDomainRoleId);
 				}
 
 				return;
@@ -515,6 +558,36 @@ namespace IPS.UMLSPF
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.conAgregacion.TargetClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region HerenciaPadre opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of HerenciaPadre.
+		/// Description for IPS.UMLSPF.EsPadre.Clase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Herencia> HerenciaPadre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Herencia>, Herencia>(global::IPS.UMLSPF.EsPadre.ClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region HerenciaHija opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of HerenciaHija.
+		/// Description for IPS.UMLSPF.EsHija.Clase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Herencia> HerenciaHija
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Herencia>, Herencia>(global::IPS.UMLSPF.EsHija.ClaseDomainRoleId);
 			}
 		}
 		#endregion
@@ -1310,6 +1383,1518 @@ namespace IPS.UMLSPF
 		public ClaseEnriquecida(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
+		}
+		#endregion
+		#region EstilosClase opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of EstilosClase.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<EstilosClase> EstilosClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<EstilosClase>, EstilosClase>(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+			}
+		}
+		#endregion
+		#region EstiloAtributos opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of EstiloAtributos.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<EstiloAtributos> EstiloAtributos
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloAtributos>, EstiloAtributos>(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+			}
+		}
+		#endregion
+		#region EstiloMetodos opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of EstiloMetodos.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<EstiloMetodos> EstiloMetodos
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloMetodos>, EstiloMetodos>(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstilosClase.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstiloAtributos.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstiloMetodos.DomainClassId)) 
+				{
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::IPS.UMLSPF.EstilosClase sourceEstilosClase1 = sourceElement as global::IPS.UMLSPF.EstilosClase;
+			if (sourceEstilosClase1 != null)
+			{
+				// Create link for path ClaseEnriquecidaHasEstilosClase.EstilosClase
+				this.EstilosClase.Add(sourceEstilosClase1);
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.EstiloAtributos sourceEstiloAtributos2 = sourceElement as global::IPS.UMLSPF.EstiloAtributos;
+			if (sourceEstiloAtributos2 != null)
+			{
+				// Create link for path ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+				this.EstiloAtributos.Add(sourceEstiloAtributos2);
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.EstiloMetodos sourceEstiloMetodos3 = sourceElement as global::IPS.UMLSPF.EstiloMetodos;
+			if (sourceEstiloMetodos3 != null)
+			{
+				// Create link for path ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+				this.EstiloMetodos.Add(sourceEstiloMetodos3);
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::IPS.UMLSPF.EstilosClase sourceEstilosClase1 = sourceElement as global::IPS.UMLSPF.EstilosClase;
+			if (sourceEstilosClase1 != null)
+			{
+				// Delete link for path ClaseEnriquecidaHasEstilosClase.EstilosClase
+				
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstilosClase1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.EstiloAtributos sourceEstiloAtributos2 = sourceElement as global::IPS.UMLSPF.EstiloAtributos;
+			if (sourceEstiloAtributos2 != null)
+			{
+				// Delete link for path ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+				
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstiloAtributos2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.EstiloMetodos sourceEstiloMetodos3 = sourceElement as global::IPS.UMLSPF.EstiloMetodos;
+			if (sourceEstiloMetodos3 != null)
+			{
+				// Delete link for path ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+				
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstiloMetodos3))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass EstilosClase
+	/// Description for IPS.UMLSPF.EstilosClase
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("57a617fb-120c-4437-9a3a-7a8891341810")]
+	public partial class EstilosClase : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// EstilosClase domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x57a617fb, 0x120c, 0x4437, 0x9a, 0x3a, 0x7a, 0x88, 0x91, 0x34, 0x18, 0x10);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstilosClase(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstilosClase(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ColorFondo domain property code
+		
+		/// <summary>
+		/// ColorFondo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorFondoDomainPropertyId = new global::System.Guid(0xdbcbd7a7, 0x8e8f, 0x4fcb, 0x9e, 0x14, 0x17, 0x46, 0xd1, 0x11, 0x26, 0x33);
+		
+		/// <summary>
+		/// Storage for ColorFondo
+		/// </summary>
+		private global::System.String colorFondoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorFondo domain property.
+		/// Description for IPS.UMLSPF.EstilosClase.Color Fondo
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/ColorFondo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/ColorFondo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("dbcbd7a7-8e8f-4fcb-9e14-1746d1112633")]
+		public global::System.String ColorFondo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorFondoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorFondoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstilosClase.ColorFondo domain property.
+		/// </summary>
+		internal sealed partial class ColorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		{
+			private ColorFondoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstilosClase.ColorFondo domain property value handler.
+			/// </summary>
+			public static readonly ColorFondoPropertyHandler Instance = new ColorFondoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstilosClase.ColorFondo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorFondoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstilosClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorFondoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorFondoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetra domain property code
+		
+		/// <summary>
+		/// ColorLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraDomainPropertyId = new global::System.Guid(0x3a12762b, 0x1c2a, 0x4db1, 0x88, 0x0f, 0xca, 0x36, 0x39, 0x5f, 0x5f, 0x48);
+		
+		/// <summary>
+		/// Storage for ColorLetra
+		/// </summary>
+		private global::System.String colorLetraPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetra domain property.
+		/// Description for IPS.UMLSPF.EstilosClase.Color Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/ColorLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/ColorLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("3a12762b-1c2a-4db1-880f-ca36395f5f48")]
+		public global::System.String ColorLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstilosClase.ColorLetra domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		{
+			private ColorLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstilosClase.ColorLetra domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraPropertyHandler Instance = new ColorLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstilosClase.ColorLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstilosClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region TipoLetra domain property code
+		
+		/// <summary>
+		/// TipoLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoLetraDomainPropertyId = new global::System.Guid(0xc24892e3, 0xd2c0, 0x48eb, 0xbe, 0xd1, 0xfd, 0x4f, 0x9f, 0x6d, 0xed, 0x6c);
+		
+		/// <summary>
+		/// Storage for TipoLetra
+		/// </summary>
+		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoLetra domain property.
+		/// Description for IPS.UMLSPF.EstilosClase.Tipo Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/TipoLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/TipoLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c24892e3-d2c0-48eb-bed1-fd4f9f6ded6c")]
+		public global::System.String TipoLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstilosClase.TipoLetra domain property.
+		/// </summary>
+		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		{
+			private TipoLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstilosClase.TipoLetra domain property value handler.
+			/// </summary>
+			public static readonly TipoLetraPropertyHandler Instance = new TipoLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstilosClase.TipoLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstilosClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Alineacion domain property code
+		
+		/// <summary>
+		/// Alineacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid AlineacionDomainPropertyId = new global::System.Guid(0xa57287a4, 0xd92e, 0x484e, 0xab, 0x26, 0xd2, 0x8a, 0x92, 0x4e, 0xb0, 0xeb);
+		
+		/// <summary>
+		/// Storage for Alineacion
+		/// </summary>
+		private global::System.String alineacionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Alineacion domain property.
+		/// Description for IPS.UMLSPF.EstilosClase.Alineacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/Alineacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/Alineacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a57287a4-d92e-484e-ab26-d28a924eb0eb")]
+		public global::System.String Alineacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return alineacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				AlineacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstilosClase.Alineacion domain property.
+		/// </summary>
+		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		{
+			private AlineacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstilosClase.Alineacion domain property value handler.
+			/// </summary>
+			public static readonly AlineacionPropertyHandler Instance = new AlineacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstilosClase.Alineacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return AlineacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstilosClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.alineacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.alineacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region MostrarEC domain property code
+		
+		/// <summary>
+		/// MostrarEC domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid MostrarECDomainPropertyId = new global::System.Guid(0xae20741c, 0xdb87, 0x4625, 0x85, 0xd6, 0x54, 0xc5, 0xc9, 0x76, 0x3f, 0x09);
+		
+		/// <summary>
+		/// Storage for MostrarEC
+		/// </summary>
+		private global::System.String mostrarECPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of MostrarEC domain property.
+		/// Description for IPS.UMLSPF.EstilosClase.Mostrar EC
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/MostrarEC.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/MostrarEC.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ae20741c-db87-4625-85d6-54c5c9763f09")]
+		public global::System.String MostrarEC
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return mostrarECPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				MostrarECPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstilosClase.MostrarEC domain property.
+		/// </summary>
+		internal sealed partial class MostrarECPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		{
+			private MostrarECPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstilosClase.MostrarEC domain property value handler.
+			/// </summary>
+			public static readonly MostrarECPropertyHandler Instance = new MostrarECPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstilosClase.MostrarEC domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return MostrarECDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstilosClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.mostrarECPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.mostrarECPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ClaseEnriquecida opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ClaseEnriquecida.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClase
+		/// </summary>
+		public virtual ClaseEnriquecida ClaseEnriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId) as ClaseEnriquecida;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass EstiloAtributos
+	/// Description for IPS.UMLSPF.EstiloAtributos
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("c777e0f1-aa8a-4c8d-9fec-67757ad477f2")]
+	public partial class EstiloAtributos : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// EstiloAtributos domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc777e0f1, 0xaa8a, 0x4c8d, 0x9f, 0xec, 0x67, 0x75, 0x7a, 0xd4, 0x77, 0xf2);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstiloAtributos(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstiloAtributos(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Tipoletra domain property code
+		
+		/// <summary>
+		/// Tipoletra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoletraDomainPropertyId = new global::System.Guid(0xe1409060, 0x7733, 0x4f43, 0xa6, 0x6e, 0x31, 0x2b, 0x3a, 0xfd, 0x24, 0xa9);
+		
+		/// <summary>
+		/// Storage for Tipoletra
+		/// </summary>
+		private global::System.String tipoletraPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Tipoletra domain property.
+		/// Description for IPS.UMLSPF.EstiloAtributos.Tipoletra
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/Tipoletra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/Tipoletra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e1409060-7733-4f43-a66e-312b3afd24a9")]
+		public global::System.String Tipoletra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoletraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoletraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloAtributos.Tipoletra domain property.
+		/// </summary>
+		internal sealed partial class TipoletraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		{
+			private TipoletraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloAtributos.Tipoletra domain property value handler.
+			/// </summary>
+			public static readonly TipoletraPropertyHandler Instance = new TipoletraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloAtributos.Tipoletra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoletraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloAtributos element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoletraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoletraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetra domain property code
+		
+		/// <summary>
+		/// ColorLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraDomainPropertyId = new global::System.Guid(0x1d39572d, 0x7564, 0x4f66, 0xaf, 0x0e, 0x11, 0xc0, 0xb6, 0x94, 0x00, 0x49);
+		
+		/// <summary>
+		/// Storage for ColorLetra
+		/// </summary>
+		private global::System.String colorLetraPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetra domain property.
+		/// Description for IPS.UMLSPF.EstiloAtributos.Color Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/ColorLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/ColorLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1d39572d-7564-4f66-af0e-11c0b6940049")]
+		public global::System.String ColorLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloAtributos.ColorLetra domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		{
+			private ColorLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloAtributos.ColorLetra domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraPropertyHandler Instance = new ColorLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloAtributos.ColorLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloAtributos element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region FormatoAtributo domain property code
+		
+		/// <summary>
+		/// FormatoAtributo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid FormatoAtributoDomainPropertyId = new global::System.Guid(0x4b978335, 0xac2b, 0x4af7, 0x99, 0x4e, 0xee, 0x70, 0x04, 0xef, 0x4a, 0xbe);
+		
+		/// <summary>
+		/// Storage for FormatoAtributo
+		/// </summary>
+		private global::System.String formatoAtributoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of FormatoAtributo domain property.
+		/// Description for IPS.UMLSPF.EstiloAtributos.Formato Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/FormatoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/FormatoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("4b978335-ac2b-4af7-994e-ee7004ef4abe")]
+		public global::System.String FormatoAtributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return formatoAtributoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				FormatoAtributoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloAtributos.FormatoAtributo domain property.
+		/// </summary>
+		internal sealed partial class FormatoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		{
+			private FormatoAtributoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloAtributos.FormatoAtributo domain property value handler.
+			/// </summary>
+			public static readonly FormatoAtributoPropertyHandler Instance = new FormatoAtributoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloAtributos.FormatoAtributo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return FormatoAtributoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloAtributos element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.formatoAtributoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.formatoAtributoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region MostrarEA domain property code
+		
+		/// <summary>
+		/// MostrarEA domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid MostrarEADomainPropertyId = new global::System.Guid(0x4d655f1e, 0x020a, 0x4e1f, 0xb3, 0x9a, 0x5b, 0xd2, 0x21, 0x33, 0x25, 0x8f);
+		
+		/// <summary>
+		/// Storage for MostrarEA
+		/// </summary>
+		private global::System.String mostrarEAPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of MostrarEA domain property.
+		/// Description for IPS.UMLSPF.EstiloAtributos.Mostrar EA
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/MostrarEA.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/MostrarEA.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("4d655f1e-020a-4e1f-b39a-5bd22133258f")]
+		public global::System.String MostrarEA
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return mostrarEAPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				MostrarEAPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloAtributos.MostrarEA domain property.
+		/// </summary>
+		internal sealed partial class MostrarEAPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		{
+			private MostrarEAPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloAtributos.MostrarEA domain property value handler.
+			/// </summary>
+			public static readonly MostrarEAPropertyHandler Instance = new MostrarEAPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloAtributos.MostrarEA domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return MostrarEADomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloAtributos element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.mostrarEAPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.mostrarEAPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ClaseEnriquecida opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ClaseEnriquecida.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+		/// </summary>
+		public virtual ClaseEnriquecida ClaseEnriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId) as ClaseEnriquecida;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass EstiloMetodos
+	/// Description for IPS.UMLSPF.EstiloMetodos
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloMetodos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloMetodos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("917e44b7-36a7-4494-9bc8-58652b722e42")]
+	public partial class EstiloMetodos : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// EstiloMetodos domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x917e44b7, 0x36a7, 0x4494, 0x9b, 0xc8, 0x58, 0x65, 0x2b, 0x72, 0x2e, 0x42);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstiloMetodos(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstiloMetodos(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TipoLetra domain property code
+		
+		/// <summary>
+		/// TipoLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoLetraDomainPropertyId = new global::System.Guid(0x24b9417c, 0x4ef1, 0x4274, 0x90, 0x56, 0xaf, 0xdc, 0x70, 0xf8, 0xdf, 0xd1);
+		
+		/// <summary>
+		/// Storage for TipoLetra
+		/// </summary>
+		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoLetra domain property.
+		/// Description for IPS.UMLSPF.EstiloMetodos.Tipo Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloMetodos/TipoLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloMetodos/TipoLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("24b9417c-4ef1-4274-9056-afdc70f8dfd1")]
+		public global::System.String TipoLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloMetodos.TipoLetra domain property.
+		/// </summary>
+		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, global::System.String>
+		{
+			private TipoLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloMetodos.TipoLetra domain property value handler.
+			/// </summary>
+			public static readonly TipoLetraPropertyHandler Instance = new TipoLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloMetodos.TipoLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloMetodos element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloMetodos element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ColorLetra domain property code
+		
+		/// <summary>
+		/// ColorLetra domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ColorLetraDomainPropertyId = new global::System.Guid(0x38f8ed5d, 0x9974, 0x483e, 0xb2, 0x1d, 0xf4, 0xed, 0x13, 0x45, 0x5b, 0xac);
+		
+		/// <summary>
+		/// Storage for ColorLetra
+		/// </summary>
+		private global::System.String colorLetraPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of ColorLetra domain property.
+		/// Description for IPS.UMLSPF.EstiloMetodos.Color Letra
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloMetodos/ColorLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloMetodos/ColorLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("38f8ed5d-9974-483e-b21d-f4ed13455bac")]
+		public global::System.String ColorLetra
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ColorLetraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloMetodos.ColorLetra domain property.
+		/// </summary>
+		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, global::System.String>
+		{
+			private ColorLetraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloMetodos.ColorLetra domain property value handler.
+			/// </summary>
+			public static readonly ColorLetraPropertyHandler Instance = new ColorLetraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloMetodos.ColorLetra domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ColorLetraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloMetodos element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.colorLetraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloMetodos element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.colorLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region MostrarEM domain property code
+		
+		/// <summary>
+		/// MostrarEM domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid MostrarEMDomainPropertyId = new global::System.Guid(0xb5c90ffe, 0x9dda, 0x452a, 0x98, 0x48, 0x22, 0x07, 0x41, 0x35, 0xfd, 0x41);
+		
+		/// <summary>
+		/// Storage for MostrarEM
+		/// </summary>
+		private global::System.String mostrarEMPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of MostrarEM domain property.
+		/// Description for IPS.UMLSPF.EstiloMetodos.Mostrar EM
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloMetodos/MostrarEM.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloMetodos/MostrarEM.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b5c90ffe-9dda-452a-9848-22074135fd41")]
+		public global::System.String MostrarEM
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return mostrarEMPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				MostrarEMPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloMetodos.MostrarEM domain property.
+		/// </summary>
+		internal sealed partial class MostrarEMPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, global::System.String>
+		{
+			private MostrarEMPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloMetodos.MostrarEM domain property value handler.
+			/// </summary>
+			public static readonly MostrarEMPropertyHandler Instance = new MostrarEMPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloMetodos.MostrarEM domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return MostrarEMDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloMetodos element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.mostrarEMPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloMetodos element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.mostrarEMPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ClaseEnriquecida opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ClaseEnriquecida.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+		/// </summary>
+		public virtual ClaseEnriquecida ClaseEnriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId) as ClaseEnriquecida;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass Herencia
+	/// Description for IPS.UMLSPF.Herencia
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.Herencia.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.Herencia.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("f953e01b-ccf2-470d-9867-9e0f1a8f2025")]
+	public partial class Herencia : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Herencia domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf953e01b, 0xccf2, 0x470d, 0x98, 0x67, 0x9e, 0x0f, 0x1a, 0x8f, 0x20, 0x25);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Herencia(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Herencia(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ModeloClassWEB opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ModeloClassWEB.
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasHerencia.Herencia
+		/// </summary>
+		public virtual ModeloClassWEB ModeloClassWEB
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasHerencia.HerenciaDomainRoleId) as ModeloClassWEB;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasHerencia.HerenciaDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ClasePadre opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClasePadre.
+		/// Description for IPS.UMLSPF.EsPadre.Herencia
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClasePadre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId);
+			}
+		}
+		#endregion
+		#region ClaseHija opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseHija.
+		/// Description for IPS.UMLSPF.EsHija.Herencia
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseHija
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.EsHija.HerenciaDomainRoleId);
+			}
 		}
 		#endregion
 	}

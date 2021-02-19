@@ -1405,3 +1405,1399 @@ namespace IPS.UMLSPF
 		#endregion
 	}
 }
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship ClaseEnriquecidaHasEstilosClase
+	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("262c7f2b-659c-4761-bf32-55514e4a6aee")]
+	public partial class ClaseEnriquecidaHasEstilosClase : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseEnriquecidaHasEstilosClase domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x262c7f2b, 0x659c, 0x4761, 0xbf, 0x32, 0x55, 0x51, 0x4e, 0x4a, 0x6a, 0xee);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseEnriquecidaHasEstilosClase link in the same Partition as the given ClaseEnriquecida
+		/// </summary>
+		/// <param name="source">ClaseEnriquecida to use as the source of the relationship.</param>
+		/// <param name="target">EstilosClase to use as the target of the relationship.</param>
+		public ClaseEnriquecidaHasEstilosClase(ClaseEnriquecida source, EstilosClase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasEstilosClase(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasEstilosClase(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasEstilosClase(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasEstilosClase(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClaseEnriquecida domain role code
+		
+		/// <summary>
+		/// ClaseEnriquecida domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseEnriquecidaDomainRoleId = new global::System.Guid(0x58dd85a2, 0x24a3, 0x4e37, 0x95, 0x6a, 0x3b, 0x70, 0x62, 0xf9, 0xe7, 0x2c);
+		
+		/// <summary>
+		/// DomainRole ClaseEnriquecida
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstilosClase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("58dd85a2-24a3-4e37-956a-3b7062f9e72c")]
+		public virtual ClaseEnriquecida ClaseEnriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseEnriquecida)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseEnriquecidaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseEnriquecidaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseEnriquecida of a EstilosClase
+		/// <summary>
+		/// Gets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClaseEnriquecida GetClaseEnriquecida(EstilosClase element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EstilosClaseDomainRoleId) as ClaseEnriquecida;
+		}
+		
+		/// <summary>
+		/// Sets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClaseEnriquecida(EstilosClase element, ClaseEnriquecida newClaseEnriquecida)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EstilosClaseDomainRoleId, newClaseEnriquecida);
+		}
+		#endregion
+		#region EstilosClase domain role code
+		
+		/// <summary>
+		/// EstilosClase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EstilosClaseDomainRoleId = new global::System.Guid(0x7d7a8e6c, 0x2d8d, 0x4895, 0xa1, 0x2b, 0x8f, 0x41, 0xc5, 0x43, 0xbd, 0xfb);
+		
+		/// <summary>
+		/// DomainRole EstilosClase
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("7d7a8e6c-2d8d-4895-a12b-8f41c543bdfb")]
+		public virtual EstilosClase EstilosClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (EstilosClase)DslModeling::DomainRoleInfo.GetRolePlayer(this, EstilosClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EstilosClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access EstilosClase of a ClaseEnriquecida
+		/// <summary>
+		/// Gets a list of EstilosClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<EstilosClase> GetEstilosClase(ClaseEnriquecida element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<EstilosClase>, EstilosClase>(element, ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region ClaseEnriquecida link accessor
+		/// <summary>
+		/// Get the list of ClaseEnriquecidaHasEstilosClase links to a ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> GetLinksToEstilosClase ( global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region EstilosClase link accessor
+		/// <summary>
+		/// Get the ClaseEnriquecidaHasEstilosClase link to a EstilosClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstilosClase estilosClaseInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(estilosClaseInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstilosClase not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseEnriquecidaHasEstilosClase instance accessors
+		
+		/// <summary>
+		/// Get any ClaseEnriquecidaHasEstilosClase links between a given ClaseEnriquecida and a EstilosClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstilosClase target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase link in links )
+			{
+				if ( target.Equals(link.EstilosClase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseEnriquecidaHasEstilosClase link between a given ClaseEnriquecidaand a EstilosClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstilosClase target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase link in links )
+			{
+				if ( target.Equals(link.EstilosClase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship ClaseEnriquecidaHasEstiloAtributos
+	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("152ed9dc-919b-4fdc-b705-6edaee7103e1")]
+	public partial class ClaseEnriquecidaHasEstiloAtributos : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseEnriquecidaHasEstiloAtributos domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x152ed9dc, 0x919b, 0x4fdc, 0xb7, 0x05, 0x6e, 0xda, 0xee, 0x71, 0x03, 0xe1);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseEnriquecidaHasEstiloAtributos link in the same Partition as the given ClaseEnriquecida
+		/// </summary>
+		/// <param name="source">ClaseEnriquecida to use as the source of the relationship.</param>
+		/// <param name="target">EstiloAtributos to use as the target of the relationship.</param>
+		public ClaseEnriquecidaHasEstiloAtributos(ClaseEnriquecida source, EstiloAtributos target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClaseEnriquecida domain role code
+		
+		/// <summary>
+		/// ClaseEnriquecida domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseEnriquecidaDomainRoleId = new global::System.Guid(0x6d6592a5, 0xcdcd, 0x4603, 0xa5, 0x35, 0xe2, 0x43, 0xaa, 0x27, 0xbb, 0xf1);
+		
+		/// <summary>
+		/// DomainRole ClaseEnriquecida
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloAtributos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("6d6592a5-cdcd-4603-a535-e243aa27bbf1")]
+		public virtual ClaseEnriquecida ClaseEnriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseEnriquecida)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseEnriquecidaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseEnriquecidaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseEnriquecida of a EstiloAtributos
+		/// <summary>
+		/// Gets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClaseEnriquecida GetClaseEnriquecida(EstiloAtributos element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EstiloAtributosDomainRoleId) as ClaseEnriquecida;
+		}
+		
+		/// <summary>
+		/// Sets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClaseEnriquecida(EstiloAtributos element, ClaseEnriquecida newClaseEnriquecida)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EstiloAtributosDomainRoleId, newClaseEnriquecida);
+		}
+		#endregion
+		#region EstiloAtributos domain role code
+		
+		/// <summary>
+		/// EstiloAtributos domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EstiloAtributosDomainRoleId = new global::System.Guid(0x2c53b122, 0xa1ac, 0x4777, 0xbd, 0x05, 0x9a, 0x86, 0xfa, 0x7a, 0x40, 0xa2);
+		
+		/// <summary>
+		/// DomainRole EstiloAtributos
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("2c53b122-a1ac-4777-bd05-9a86fa7a40a2")]
+		public virtual EstiloAtributos EstiloAtributos
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (EstiloAtributos)DslModeling::DomainRoleInfo.GetRolePlayer(this, EstiloAtributosDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EstiloAtributosDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access EstiloAtributos of a ClaseEnriquecida
+		/// <summary>
+		/// Gets a list of EstiloAtributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<EstiloAtributos> GetEstiloAtributos(ClaseEnriquecida element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloAtributos>, EstiloAtributos>(element, ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region ClaseEnriquecida link accessor
+		/// <summary>
+		/// Get the list of ClaseEnriquecidaHasEstiloAtributos links to a ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> GetLinksToEstiloAtributos ( global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region EstiloAtributos link accessor
+		/// <summary>
+		/// Get the ClaseEnriquecidaHasEstiloAtributos link to a EstiloAtributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstiloAtributos estiloAtributosInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(estiloAtributosInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstiloAtributos not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseEnriquecidaHasEstiloAtributos instance accessors
+		
+		/// <summary>
+		/// Get any ClaseEnriquecidaHasEstiloAtributos links between a given ClaseEnriquecida and a EstiloAtributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloAtributos target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos link in links )
+			{
+				if ( target.Equals(link.EstiloAtributos) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseEnriquecidaHasEstiloAtributos link between a given ClaseEnriquecidaand a EstiloAtributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloAtributos target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos link in links )
+			{
+				if ( target.Equals(link.EstiloAtributos) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship ClaseEnriquecidaHasEstiloMetodos
+	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("252fa143-b76c-42ec-817f-02aec7ac9bca")]
+	public partial class ClaseEnriquecidaHasEstiloMetodos : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseEnriquecidaHasEstiloMetodos domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x252fa143, 0xb76c, 0x42ec, 0x81, 0x7f, 0x02, 0xae, 0xc7, 0xac, 0x9b, 0xca);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseEnriquecidaHasEstiloMetodos link in the same Partition as the given ClaseEnriquecida
+		/// </summary>
+		/// <param name="source">ClaseEnriquecida to use as the source of the relationship.</param>
+		/// <param name="target">EstiloMetodos to use as the target of the relationship.</param>
+		public ClaseEnriquecidaHasEstiloMetodos(ClaseEnriquecida source, EstiloMetodos target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClaseEnriquecida domain role code
+		
+		/// <summary>
+		/// ClaseEnriquecida domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseEnriquecidaDomainRoleId = new global::System.Guid(0x6cc245b0, 0x5f75, 0x4340, 0x80, 0x14, 0x6f, 0x24, 0xde, 0xca, 0x6c, 0xa2);
+		
+		/// <summary>
+		/// DomainRole ClaseEnriquecida
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloMetodos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("6cc245b0-5f75-4340-8014-6f24deca6ca2")]
+		public virtual ClaseEnriquecida ClaseEnriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseEnriquecida)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseEnriquecidaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseEnriquecidaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseEnriquecida of a EstiloMetodos
+		/// <summary>
+		/// Gets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClaseEnriquecida GetClaseEnriquecida(EstiloMetodos element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EstiloMetodosDomainRoleId) as ClaseEnriquecida;
+		}
+		
+		/// <summary>
+		/// Sets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClaseEnriquecida(EstiloMetodos element, ClaseEnriquecida newClaseEnriquecida)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EstiloMetodosDomainRoleId, newClaseEnriquecida);
+		}
+		#endregion
+		#region EstiloMetodos domain role code
+		
+		/// <summary>
+		/// EstiloMetodos domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EstiloMetodosDomainRoleId = new global::System.Guid(0x303110db, 0xfde9, 0x43fd, 0x81, 0x9f, 0x57, 0xfd, 0x2f, 0x17, 0x9d, 0xa5);
+		
+		/// <summary>
+		/// DomainRole EstiloMetodos
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("303110db-fde9-43fd-819f-57fd2f179da5")]
+		public virtual EstiloMetodos EstiloMetodos
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (EstiloMetodos)DslModeling::DomainRoleInfo.GetRolePlayer(this, EstiloMetodosDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EstiloMetodosDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access EstiloMetodos of a ClaseEnriquecida
+		/// <summary>
+		/// Gets a list of EstiloMetodos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<EstiloMetodos> GetEstiloMetodos(ClaseEnriquecida element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloMetodos>, EstiloMetodos>(element, ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region ClaseEnriquecida link accessor
+		/// <summary>
+		/// Get the list of ClaseEnriquecidaHasEstiloMetodos links to a ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> GetLinksToEstiloMetodos ( global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region EstiloMetodos link accessor
+		/// <summary>
+		/// Get the ClaseEnriquecidaHasEstiloMetodos link to a EstiloMetodos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstiloMetodos estiloMetodosInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(estiloMetodosInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstiloMetodos not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseEnriquecidaHasEstiloMetodos instance accessors
+		
+		/// <summary>
+		/// Get any ClaseEnriquecidaHasEstiloMetodos links between a given ClaseEnriquecida and a EstiloMetodos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloMetodos target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos link in links )
+			{
+				if ( target.Equals(link.EstiloMetodos) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseEnriquecidaHasEstiloMetodos link between a given ClaseEnriquecidaand a EstiloMetodos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloMetodos target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos link in links )
+			{
+				if ( target.Equals(link.EstiloMetodos) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship ModeloClassWEBHasHerencia
+	/// Description for IPS.UMLSPF.ModeloClassWEBHasHerencia
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasHerencia.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasHerencia.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("24d780d1-507c-4024-bc17-001de12d9553")]
+	public partial class ModeloClassWEBHasHerencia : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ModeloClassWEBHasHerencia domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x24d780d1, 0x507c, 0x4024, 0xbc, 0x17, 0x00, 0x1d, 0xe1, 0x2d, 0x95, 0x53);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ModeloClassWEBHasHerencia link in the same Partition as the given ModeloClassWEB
+		/// </summary>
+		/// <param name="source">ModeloClassWEB to use as the source of the relationship.</param>
+		/// <param name="target">Herencia to use as the target of the relationship.</param>
+		public ModeloClassWEBHasHerencia(ModeloClassWEB source, Herencia target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModeloClassWEBHasHerencia.ModeloClassWEBDomainRoleId, source), new DslModeling::RoleAssignment(ModeloClassWEBHasHerencia.HerenciaDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModeloClassWEBHasHerencia(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModeloClassWEBHasHerencia(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ModeloClassWEBHasHerencia(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ModeloClassWEBHasHerencia(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ModeloClassWEB domain role code
+		
+		/// <summary>
+		/// ModeloClassWEB domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ModeloClassWEBDomainRoleId = new global::System.Guid(0x40c44201, 0x2684, 0x45e3, 0x9a, 0xb4, 0x9e, 0x77, 0xb2, 0xa7, 0xe5, 0x0e);
+		
+		/// <summary>
+		/// DomainRole ModeloClassWEB
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasHerencia.ModeloClassWEB
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasHerencia/ModeloClassWEB.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasHerencia/ModeloClassWEB.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Herencia", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasHerencia/ModeloClassWEB.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("40c44201-2684-45e3-9ab4-9e77b2a7e50e")]
+		public virtual ModeloClassWEB ModeloClassWEB
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ModeloClassWEB)DslModeling::DomainRoleInfo.GetRolePlayer(this, ModeloClassWEBDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ModeloClassWEBDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ModeloClassWEB of a Herencia
+		/// <summary>
+		/// Gets ModeloClassWEB.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ModeloClassWEB GetModeloClassWEB(Herencia element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, HerenciaDomainRoleId) as ModeloClassWEB;
+		}
+		
+		/// <summary>
+		/// Sets ModeloClassWEB.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetModeloClassWEB(Herencia element, ModeloClassWEB newModeloClassWEB)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, HerenciaDomainRoleId, newModeloClassWEB);
+		}
+		#endregion
+		#region Herencia domain role code
+		
+		/// <summary>
+		/// Herencia domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid HerenciaDomainRoleId = new global::System.Guid(0xd88b4270, 0x3988, 0x4315, 0x89, 0xab, 0xad, 0x58, 0x67, 0x86, 0x16, 0xa9);
+		
+		/// <summary>
+		/// DomainRole Herencia
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasHerencia.Herencia
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasHerencia/Herencia.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasHerencia/Herencia.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModeloClassWEB", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasHerencia/Herencia.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("d88b4270-3988-4315-89ab-ad58678616a9")]
+		public virtual Herencia Herencia
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Herencia)DslModeling::DomainRoleInfo.GetRolePlayer(this, HerenciaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, HerenciaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Herencia of a ModeloClassWEB
+		/// <summary>
+		/// Gets a list of Herencia.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Herencia> GetHerencia(ModeloClassWEB element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Herencia>, Herencia>(element, ModeloClassWEBDomainRoleId);
+		}
+		#endregion
+		#region ModeloClassWEB link accessor
+		/// <summary>
+		/// Get the list of ModeloClassWEBHasHerencia links to a ModeloClassWEB.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ModeloClassWEBHasHerencia> GetLinksToHerencia ( global::IPS.UMLSPF.ModeloClassWEB modeloClassWEBInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasHerencia>(modeloClassWEBInstance, global::IPS.UMLSPF.ModeloClassWEBHasHerencia.ModeloClassWEBDomainRoleId);
+		}
+		#endregion
+		#region Herencia link accessor
+		/// <summary>
+		/// Get the ModeloClassWEBHasHerencia link to a Herencia.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ModeloClassWEBHasHerencia GetLinkToModeloClassWEB (global::IPS.UMLSPF.Herencia herenciaInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasHerencia> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasHerencia>(herenciaInstance, global::IPS.UMLSPF.ModeloClassWEBHasHerencia.HerenciaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Herencia not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ModeloClassWEBHasHerencia instance accessors
+		
+		/// <summary>
+		/// Get any ModeloClassWEBHasHerencia links between a given ModeloClassWEB and a Herencia.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ModeloClassWEBHasHerencia> GetLinks( global::IPS.UMLSPF.ModeloClassWEB source, global::IPS.UMLSPF.Herencia target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ModeloClassWEBHasHerencia> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ModeloClassWEBHasHerencia>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasHerencia> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasHerencia>(source, global::IPS.UMLSPF.ModeloClassWEBHasHerencia.ModeloClassWEBDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ModeloClassWEBHasHerencia link in links )
+			{
+				if ( target.Equals(link.Herencia) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ModeloClassWEBHasHerencia link between a given ModeloClassWEBand a Herencia.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ModeloClassWEBHasHerencia GetLink( global::IPS.UMLSPF.ModeloClassWEB source, global::IPS.UMLSPF.Herencia target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasHerencia> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasHerencia>(source, global::IPS.UMLSPF.ModeloClassWEBHasHerencia.ModeloClassWEBDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ModeloClassWEBHasHerencia link in links )
+			{
+				if ( target.Equals(link.Herencia) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship EsPadre
+	/// Description for IPS.UMLSPF.EsPadre
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.EsPadre.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.EsPadre.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("2332c0eb-ffb1-4991-a149-87c7d8fb3f24")]
+	public partial class EsPadre : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// EsPadre domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2332c0eb, 0xffb1, 0x4991, 0xa1, 0x49, 0x87, 0xc7, 0xd8, 0xfb, 0x3f, 0x24);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a EsPadre link in the same Partition as the given Herencia
+		/// </summary>
+		/// <param name="source">Herencia to use as the source of the relationship.</param>
+		/// <param name="target">Clase to use as the target of the relationship.</param>
+		public EsPadre(Herencia source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EsPadre.HerenciaDomainRoleId, source), new DslModeling::RoleAssignment(EsPadre.ClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EsPadre(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EsPadre(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EsPadre(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EsPadre(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Herencia domain role code
+		
+		/// <summary>
+		/// Herencia domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid HerenciaDomainRoleId = new global::System.Guid(0xbc8350d8, 0xc103, 0x4725, 0x8c, 0x38, 0xf2, 0xb3, 0xa1, 0x06, 0x5d, 0x16);
+		
+		/// <summary>
+		/// DomainRole Herencia
+		/// Description for IPS.UMLSPF.EsPadre.Herencia
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EsPadre/Herencia.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EsPadre/Herencia.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClasePadre", PropertyDisplayNameKey="IPS.UMLSPF.EsPadre/Herencia.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("bc8350d8-c103-4725-8c38-f2b3a1065d16")]
+		public virtual Herencia Herencia
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Herencia)DslModeling::DomainRoleInfo.GetRolePlayer(this, HerenciaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, HerenciaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access HerenciaPadre of a Clase
+		/// <summary>
+		/// Gets a list of HerenciaPadre.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Herencia> GetHerenciaPadre(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Herencia>, Herencia>(element, ClaseDomainRoleId);
+		}
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0xa303e521, 0xffca, 0x4795, 0xa4, 0x20, 0x6b, 0x76, 0x27, 0xf1, 0x71, 0xc4);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for IPS.UMLSPF.EsPadre.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EsPadre/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EsPadre/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "HerenciaPadre", PropertyDisplayNameKey="IPS.UMLSPF.EsPadre/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("a303e521-ffca-4795-a420-6b7627f171c4")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClasePadre of a Herencia
+		/// <summary>
+		/// Gets a list of ClasePadre.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetClasePadre(Herencia element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, HerenciaDomainRoleId);
+		}
+		#endregion
+		#region Herencia link accessor
+		/// <summary>
+		/// Get the list of EsPadre links to a Herencia.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.EsPadre> GetLinksToClasePadre ( global::IPS.UMLSPF.Herencia herenciaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsPadre>(herenciaInstance, global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the list of EsPadre links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.EsPadre> GetLinksToHerenciaPadre ( global::IPS.UMLSPF.Clase claseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsPadre>(claseInstance, global::IPS.UMLSPF.EsPadre.ClaseDomainRoleId);
+		}
+		#endregion
+		#region EsPadre instance accessors
+		
+		/// <summary>
+		/// Get any EsPadre links between a given Herencia and a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.EsPadre> GetLinks( global::IPS.UMLSPF.Herencia source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.EsPadre> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.EsPadre>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.EsPadre> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsPadre>(source, global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.EsPadre link in links )
+			{
+				if ( target.Equals(link.Clase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one EsPadre link between a given Herenciaand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.EsPadre GetLink( global::IPS.UMLSPF.Herencia source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.EsPadre> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsPadre>(source, global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.EsPadre link in links )
+			{
+				if ( target.Equals(link.Clase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship EsHija
+	/// Description for IPS.UMLSPF.EsHija
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.EsHija.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.EsHija.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("462ccd63-3ec4-4df2-8c85-503acc13624e")]
+	public partial class EsHija : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// EsHija domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x462ccd63, 0x3ec4, 0x4df2, 0x8c, 0x85, 0x50, 0x3a, 0xcc, 0x13, 0x62, 0x4e);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a EsHija link in the same Partition as the given Herencia
+		/// </summary>
+		/// <param name="source">Herencia to use as the source of the relationship.</param>
+		/// <param name="target">Clase to use as the target of the relationship.</param>
+		public EsHija(Herencia source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EsHija.HerenciaDomainRoleId, source), new DslModeling::RoleAssignment(EsHija.ClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EsHija(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EsHija(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EsHija(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EsHija(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Herencia domain role code
+		
+		/// <summary>
+		/// Herencia domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid HerenciaDomainRoleId = new global::System.Guid(0xdf28bd66, 0xeb0e, 0x4e70, 0xba, 0xe5, 0xdf, 0xcf, 0x1b, 0xef, 0x82, 0x0f);
+		
+		/// <summary>
+		/// DomainRole Herencia
+		/// Description for IPS.UMLSPF.EsHija.Herencia
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EsHija/Herencia.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EsHija/Herencia.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseHija", PropertyDisplayNameKey="IPS.UMLSPF.EsHija/Herencia.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("df28bd66-eb0e-4e70-bae5-dfcf1bef820f")]
+		public virtual Herencia Herencia
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Herencia)DslModeling::DomainRoleInfo.GetRolePlayer(this, HerenciaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, HerenciaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access HerenciaHija of a Clase
+		/// <summary>
+		/// Gets a list of HerenciaHija.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Herencia> GetHerenciaHija(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Herencia>, Herencia>(element, ClaseDomainRoleId);
+		}
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0x19c44922, 0x5ef0, 0x4b7d, 0xa4, 0xfb, 0xa5, 0x6d, 0xc4, 0x65, 0xe5, 0x5b);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for IPS.UMLSPF.EsHija.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EsHija/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EsHija/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "HerenciaHija", PropertyDisplayNameKey="IPS.UMLSPF.EsHija/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("19c44922-5ef0-4b7d-a4fb-a56dc465e55b")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseHija of a Herencia
+		/// <summary>
+		/// Gets a list of ClaseHija.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetClaseHija(Herencia element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, HerenciaDomainRoleId);
+		}
+		#endregion
+		#region Herencia link accessor
+		/// <summary>
+		/// Get the list of EsHija links to a Herencia.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.EsHija> GetLinksToClaseHija ( global::IPS.UMLSPF.Herencia herenciaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsHija>(herenciaInstance, global::IPS.UMLSPF.EsHija.HerenciaDomainRoleId);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the list of EsHija links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.EsHija> GetLinksToHerenciaHija ( global::IPS.UMLSPF.Clase claseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsHija>(claseInstance, global::IPS.UMLSPF.EsHija.ClaseDomainRoleId);
+		}
+		#endregion
+		#region EsHija instance accessors
+		
+		/// <summary>
+		/// Get any EsHija links between a given Herencia and a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.EsHija> GetLinks( global::IPS.UMLSPF.Herencia source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.EsHija> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.EsHija>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.EsHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsHija>(source, global::IPS.UMLSPF.EsHija.HerenciaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.EsHija link in links )
+			{
+				if ( target.Equals(link.Clase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one EsHija link between a given Herenciaand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.EsHija GetLink( global::IPS.UMLSPF.Herencia source, global::IPS.UMLSPF.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.EsHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsHija>(source, global::IPS.UMLSPF.EsHija.HerenciaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.EsHija link in links )
+			{
+				if ( target.Equals(link.Clase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

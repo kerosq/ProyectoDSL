@@ -132,9 +132,78 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="57a617fb-120c-4437-9a3a-7a8891341810" Description="Description for IPS.UMLSPF.EstilosClase" Name="EstilosClase" DisplayName="Estilos Clase" Namespace="IPS.UMLSPF" />
-    <DomainClass Id="c777e0f1-aa8a-4c8d-9fec-67757ad477f2" Description="Description for IPS.UMLSPF.EstiloAtributos" Name="EstiloAtributos" DisplayName="Estilo Atributos" Namespace="IPS.UMLSPF" />
-    <DomainClass Id="917e44b7-36a7-4494-9bc8-58652b722e42" Description="Description for IPS.UMLSPF.EstiloMetodos" Name="EstiloMetodos" DisplayName="Estilo Metodos" Namespace="IPS.UMLSPF" />
+    <DomainClass Id="57a617fb-120c-4437-9a3a-7a8891341810" Description="Description for IPS.UMLSPF.EstilosClase" Name="EstilosClase" DisplayName="Estilos Clase" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="dbcbd7a7-8e8f-4fcb-9e14-1746d1112633" Description="Description for IPS.UMLSPF.EstilosClase.Color Fondo" Name="ColorFondo" DisplayName="Color Fondo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="3a12762b-1c2a-4db1-880f-ca36395f5f48" Description="Description for IPS.UMLSPF.EstilosClase.Color Letra" Name="ColorLetra" DisplayName="Color Letra">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="c24892e3-d2c0-48eb-bed1-fd4f9f6ded6c" Description="Description for IPS.UMLSPF.EstilosClase.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a57287a4-d92e-484e-ab26-d28a924eb0eb" Description="Description for IPS.UMLSPF.EstilosClase.Alineacion" Name="Alineacion" DisplayName="Alineacion">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ae20741c-db87-4625-85d6-54c5c9763f09" Description="Description for IPS.UMLSPF.EstilosClase.Mostrar EC" Name="MostrarEC" DisplayName="Mostrar EC">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="c777e0f1-aa8a-4c8d-9fec-67757ad477f2" Description="Description for IPS.UMLSPF.EstiloAtributos" Name="EstiloAtributos" DisplayName="Estilo Atributos" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="e1409060-7733-4f43-a66e-312b3afd24a9" Description="Description for IPS.UMLSPF.EstiloAtributos.Tipoletra" Name="Tipoletra" DisplayName="Tipoletra">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1d39572d-7564-4f66-af0e-11c0b6940049" Description="Description for IPS.UMLSPF.EstiloAtributos.Color Letra" Name="ColorLetra" DisplayName="Color Letra">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="4b978335-ac2b-4af7-994e-ee7004ef4abe" Description="Description for IPS.UMLSPF.EstiloAtributos.Formato Atributo" Name="FormatoAtributo" DisplayName="Formato Atributo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="4d655f1e-020a-4e1f-b39a-5bd22133258f" Description="Description for IPS.UMLSPF.EstiloAtributos.Mostrar EA" Name="MostrarEA" DisplayName="Mostrar EA">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="917e44b7-36a7-4494-9bc8-58652b722e42" Description="Description for IPS.UMLSPF.EstiloMetodos" Name="EstiloMetodos" DisplayName="Estilo Metodos" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="24b9417c-4ef1-4274-9056-afdc70f8dfd1" Description="Description for IPS.UMLSPF.EstiloMetodos.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="38f8ed5d-9974-483e-b21d-f4ed13455bac" Description="Description for IPS.UMLSPF.EstiloMetodos.Color Letra" Name="ColorLetra" DisplayName="Color Letra">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b5c90ffe-9dda-452a-9848-22074135fd41" Description="Description for IPS.UMLSPF.EstiloMetodos.Mostrar EM" Name="MostrarEM" DisplayName="Mostrar EM">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
     <DomainClass Id="f953e01b-ccf2-470d-9867-9e0f1a8f2025" Description="Description for IPS.UMLSPF.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="IPS.UMLSPF" />
   </Classes>
   <Relationships>
@@ -356,8 +425,8 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconDecoClase" DisplayName="Icon Clase" DefaultIcon="Resources\IconoDecoClaseU.bmp" />
       </ShapeHasDecorators>
-      <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpAtributos" TitleFontStyle="Bold" Title="Atributos" TitleTextColor="Beige" />
-      <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpOperaciones" TitleFontStyle="Bold, Italic" Title="Operaciones" TitleTextColor="Beige" />
+      <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpAtributos" TitleFontStyle="Bold" Title="Atributos" />
+      <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpOperaciones" TitleFontStyle="Bold, Italic" Title="Operaciones" />
     </CompartmentShape>
     <CompartmentShape Id="f6158248-68f5-4832-8532-e860272c97be" Description="Description for IPS.UMLSPF.CMPClaseEnriquecida" Name="CMPClaseEnriquecida" DisplayName="CMPClase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase Enriquecida" InitialHeight="1" Geometry="Rectangle">
       <BaseCompartmentShape>
@@ -489,18 +558,60 @@
       </XmlClassData>
       <XmlClassData TypeName="EstilosClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="estilosClaseMoniker" ElementName="estilosClase" MonikerTypeName="EstilosClaseMoniker">
         <DomainClassMoniker Name="EstilosClase" />
+        <ElementData>
+          <XmlPropertyData XmlName="colorFondo">
+            <DomainPropertyMoniker Name="EstilosClase/ColorFondo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetra">
+            <DomainPropertyMoniker Name="EstilosClase/ColorLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoLetra">
+            <DomainPropertyMoniker Name="EstilosClase/TipoLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="alineacion">
+            <DomainPropertyMoniker Name="EstilosClase/Alineacion" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="mostrarEC">
+            <DomainPropertyMoniker Name="EstilosClase/MostrarEC" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseEnriquecidaHasEstilosClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasEstilosClaseMoniker" ElementName="claseEnriquecidaHasEstilosClase" MonikerTypeName="ClaseEnriquecidaHasEstilosClaseMoniker">
         <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstilosClase" />
       </XmlClassData>
       <XmlClassData TypeName="EstiloAtributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloAtributosMoniker" ElementName="estiloAtributos" MonikerTypeName="EstiloAtributosMoniker">
         <DomainClassMoniker Name="EstiloAtributos" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoletra">
+            <DomainPropertyMoniker Name="EstiloAtributos/Tipoletra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetra">
+            <DomainPropertyMoniker Name="EstiloAtributos/ColorLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="formatoAtributo">
+            <DomainPropertyMoniker Name="EstiloAtributos/FormatoAtributo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="mostrarEA">
+            <DomainPropertyMoniker Name="EstiloAtributos/MostrarEA" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseEnriquecidaHasEstiloAtributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasEstiloAtributosMoniker" ElementName="claseEnriquecidaHasEstiloAtributos" MonikerTypeName="ClaseEnriquecidaHasEstiloAtributosMoniker">
         <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstiloAtributos" />
       </XmlClassData>
       <XmlClassData TypeName="EstiloMetodos" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloMetodosMoniker" ElementName="estiloMetodos" MonikerTypeName="EstiloMetodosMoniker">
         <DomainClassMoniker Name="EstiloMetodos" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoLetra">
+            <DomainPropertyMoniker Name="EstiloMetodos/TipoLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetra">
+            <DomainPropertyMoniker Name="EstiloMetodos/ColorLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="mostrarEM">
+            <DomainPropertyMoniker Name="EstiloMetodos/MostrarEM" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseEnriquecidaHasEstiloMetodos" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasEstiloMetodosMoniker" ElementName="claseEnriquecidaHasEstiloMetodos" MonikerTypeName="ClaseEnriquecidaHasEstiloMetodosMoniker">
         <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstiloMetodos" />

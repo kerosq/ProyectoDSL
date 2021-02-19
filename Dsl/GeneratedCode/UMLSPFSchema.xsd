@@ -25,6 +25,21 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: ModeloClassWEBHasHerencia -->
+          <xsd:element name="herencia" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ModeloClassWEBHasHerencia</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="modeloClassWEBHasHerencia" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ModeloClassWEBHasHerencia needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -249,6 +264,53 @@
   <xsd:complexType name="ClaseEnriquecida">
     <xsd:complexContent>
       <xsd:extension base="Clase">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ClaseEnriquecidaHasEstilosClase -->
+          <xsd:element name="estilosClase" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ClaseEnriquecidaHasEstilosClase</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="claseEnriquecidaHasEstilosClase" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ClaseEnriquecidaHasEstilosClase needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ClaseEnriquecidaHasEstiloAtributos -->
+          <xsd:element name="estiloAtributos" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ClaseEnriquecidaHasEstiloAtributos</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="claseEnriquecidaHasEstiloAtributos" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ClaseEnriquecidaHasEstiloAtributos needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ClaseEnriquecidaHasEstiloMetodos -->
+          <xsd:element name="estiloMetodos" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ClaseEnriquecidaHasEstiloMetodos</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="claseEnriquecidaHasEstiloMetodos" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ClaseEnriquecidaHasEstiloMetodos needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -267,6 +329,190 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ClaseMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EstilosClase -->
+  <xsd:element name="estilosClase" type="EstilosClase" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EstilosClase">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ColorFondo -->
+        <xsd:attribute name="colorFondo" type="xsd:string" />
+        <!-- Property: ColorLetra -->
+        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <!-- Property: TipoLetra -->
+        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <!-- Property: Alineacion -->
+        <xsd:attribute name="alineacion" type="xsd:string" />
+        <!-- Property: MostrarEC -->
+        <xsd:attribute name="mostrarEC" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EstilosClase Moniker -->
+  <xsd:element name="estilosClaseMoniker" type="EstilosClaseMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EstilosClaseMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EstilosClase instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EstiloAtributos -->
+  <xsd:element name="estiloAtributos" type="EstiloAtributos" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EstiloAtributos">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Tipoletra -->
+        <xsd:attribute name="tipoletra" type="xsd:string" />
+        <!-- Property: ColorLetra -->
+        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <!-- Property: FormatoAtributo -->
+        <xsd:attribute name="formatoAtributo" type="xsd:string" />
+        <!-- Property: MostrarEA -->
+        <xsd:attribute name="mostrarEA" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EstiloAtributos Moniker -->
+  <xsd:element name="estiloAtributosMoniker" type="EstiloAtributosMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EstiloAtributosMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EstiloAtributos instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EstiloMetodos -->
+  <xsd:element name="estiloMetodos" type="EstiloMetodos" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EstiloMetodos">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TipoLetra -->
+        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <!-- Property: ColorLetra -->
+        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <!-- Property: MostrarEM -->
+        <xsd:attribute name="mostrarEM" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EstiloMetodos Moniker -->
+  <xsd:element name="estiloMetodosMoniker" type="EstiloMetodosMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EstiloMetodosMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EstiloMetodos instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Herencia -->
+  <xsd:element name="herencia" type="Herencia" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Herencia">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: EsPadre -->
+          <xsd:element name="clasePadre" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of EsPadre</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="esPadre" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of EsPadre needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: EsHija -->
+          <xsd:element name="claseHija" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of EsHija</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="esHija" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of EsHija needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Herencia Moniker -->
+  <xsd:element name="herenciaMoniker" type="HerenciaMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="HerenciaMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Herencia instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -499,6 +745,246 @@
   <xsd:complexType name="ConAgregacionMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for conAgregacion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnriquecidaHasEstilosClase -->
+  <xsd:element name="claseEnriquecidaHasEstilosClase" type="ClaseEnriquecidaHasEstilosClase" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnriquecidaHasEstilosClase">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end EstilosClase -->
+          <xsd:element ref="estilosClase" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnriquecidaHasEstilosClase Moniker -->
+  <xsd:element name="claseEnriquecidaHasEstilosClaseMoniker" type="ClaseEnriquecidaHasEstilosClaseMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnriquecidaHasEstilosClaseMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClaseEnriquecidaHasEstilosClase instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnriquecidaHasEstiloAtributos -->
+  <xsd:element name="claseEnriquecidaHasEstiloAtributos" type="ClaseEnriquecidaHasEstiloAtributos" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnriquecidaHasEstiloAtributos">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end EstiloAtributos -->
+          <xsd:element ref="estiloAtributos" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnriquecidaHasEstiloAtributos Moniker -->
+  <xsd:element name="claseEnriquecidaHasEstiloAtributosMoniker" type="ClaseEnriquecidaHasEstiloAtributosMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnriquecidaHasEstiloAtributosMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClaseEnriquecidaHasEstiloAtributos instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnriquecidaHasEstiloMetodos -->
+  <xsd:element name="claseEnriquecidaHasEstiloMetodos" type="ClaseEnriquecidaHasEstiloMetodos" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnriquecidaHasEstiloMetodos">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end EstiloMetodos -->
+          <xsd:element ref="estiloMetodos" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnriquecidaHasEstiloMetodos Moniker -->
+  <xsd:element name="claseEnriquecidaHasEstiloMetodosMoniker" type="ClaseEnriquecidaHasEstiloMetodosMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnriquecidaHasEstiloMetodosMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClaseEnriquecidaHasEstiloMetodos instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModeloClassWEBHasHerencia -->
+  <xsd:element name="modeloClassWEBHasHerencia" type="ModeloClassWEBHasHerencia" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModeloClassWEBHasHerencia">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Herencia -->
+          <xsd:element ref="herencia" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModeloClassWEBHasHerencia Moniker -->
+  <xsd:element name="modeloClassWEBHasHerenciaMoniker" type="ModeloClassWEBHasHerenciaMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModeloClassWEBHasHerenciaMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModeloClassWEBHasHerencia instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EsPadre -->
+  <xsd:element name="esPadre" type="EsPadre" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EsPadre">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Clase -->
+          <xsd:element ref="claseMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EsPadre Moniker -->
+  <xsd:element name="esPadreMoniker" type="EsPadreMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EsPadreMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EsPadre instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EsHija -->
+  <xsd:element name="esHija" type="EsHija" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EsHija">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Clase -->
+          <xsd:element ref="claseMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EsHija Moniker -->
+  <xsd:element name="esHijaMoniker" type="EsHijaMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EsHijaMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EsHija instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
