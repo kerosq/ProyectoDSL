@@ -571,11 +571,47 @@ namespace IPS.UMLSPF
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[0+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[3+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
+				}
+				{
+					DslDiagrams::FontSettings titleFont = new DslDiagrams::FontSettings();
+					titleFont.Style =  global::System.Drawing.FontStyle.Bold ;
+					titleFont.Size = 8/72.0F;
+					string title = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClaseEnriquecidacmpEstilosClaseTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("cmpEstilosClase", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
+						titleFont, null,
+						false);
+					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
+				}
+				{
+					DslDiagrams::FontSettings titleFont = new DslDiagrams::FontSettings();
+					titleFont.Style =  global::System.Drawing.FontStyle.Bold ;
+					titleFont.Size = 8/72.0F;
+					string title = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClaseEnriquecidacmpEstiloAtributosTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("cmpEstiloAtributos", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
+						titleFont, null,
+						false);
+					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
+				}
+				{
+					DslDiagrams::FontSettings titleFont = new DslDiagrams::FontSettings();
+					titleFont.Style =  global::System.Drawing.FontStyle.Bold ;
+					titleFont.Size = 8/72.0F;
+					string title = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClaseEnriquecidacmpEstiloMetodosTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("cmpEstiloMetodos", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
+						titleFont, null,
+						false);
+					compartmentDescriptions[localCompartmentsOffset+2] = descriptor;
 				}
 			}
 			
@@ -609,12 +645,36 @@ namespace IPS.UMLSPF
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[0+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[3+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
 						baseMappings.CopyTo(mappings, 0);
 					}
+					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
+																				"cmpEstilosClase", 
+																				global::IPS.UMLSPF.EstilosClase.MostrarECDomainPropertyId, 
+																				global::IPS.UMLSPF.EstilosClase.DomainClassId, 
+																				GetElementsFromClaseEnriquecidaForcmpEstilosClase,
+																				null,
+																				null,
+																				null);
+					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
+																				"cmpEstiloAtributos", 
+																				global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId, 
+																				global::IPS.UMLSPF.EstiloAtributos.DomainClassId, 
+																				GetElementsFromClaseEnriquecidaForcmpEstiloAtributos,
+																				null,
+																				null,
+																				null);
+					mappings[localCompartmentMappingsOffset+2] = new DslDiagrams::ElementListCompartmentMapping(
+																				"cmpEstiloMetodos", 
+																				global::IPS.UMLSPF.EstiloMetodos.MostrarEMDomainPropertyId, 
+																				global::IPS.UMLSPF.EstiloMetodos.DomainClassId, 
+																				GetElementsFromClaseEnriquecidaForcmpEstiloMetodos,
+																				null,
+																				null,
+																				null);
 					compartmentMappings.Add(typeof(global::IPS.UMLSPF.ClaseEnriquecida), mappings);
 				}
 			}
@@ -644,6 +704,27 @@ namespace IPS.UMLSPF
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
+			internal static global::System.Collections.IList GetElementsFromClaseEnriquecidaForcmpEstilosClase(DslModeling::ModelElement rootElement)
+			{
+				global::IPS.UMLSPF.ClaseEnriquecida root = (global::IPS.UMLSPF.ClaseEnriquecida)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::IPS.UMLSPF.EstilosClase> result = root.EstilosClase;
+				return result;
+			}
+			internal static global::System.Collections.IList GetElementsFromClaseEnriquecidaForcmpEstiloAtributos(DslModeling::ModelElement rootElement)
+			{
+				global::IPS.UMLSPF.ClaseEnriquecida root = (global::IPS.UMLSPF.ClaseEnriquecida)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::IPS.UMLSPF.EstiloAtributos> result = root.EstiloAtributos;
+				return result;
+			}
+			internal static global::System.Collections.IList GetElementsFromClaseEnriquecidaForcmpEstiloMetodos(DslModeling::ModelElement rootElement)
+			{
+				global::IPS.UMLSPF.ClaseEnriquecida root = (global::IPS.UMLSPF.ClaseEnriquecida)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::IPS.UMLSPF.EstiloMetodos> result = root.EstiloMetodos;
+				return result;
+			}
 			#endregion
 		
 		#endregion

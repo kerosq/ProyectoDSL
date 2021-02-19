@@ -154,7 +154,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="ae20741c-db87-4625-85d6-54c5c9763f09" Description="Description for IPS.UMLSPF.EstilosClase.Mostrar EC" Name="MostrarEC" DisplayName="Mostrar EC">
+        <DomainProperty Id="ae20741c-db87-4625-85d6-54c5c9763f09" Description="Description for IPS.UMLSPF.EstilosClase.Mostrar EC" Name="MostrarEC" DisplayName="Mostrar EC" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -178,7 +178,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="4d655f1e-020a-4e1f-b39a-5bd22133258f" Description="Description for IPS.UMLSPF.EstiloAtributos.Mostrar EA" Name="MostrarEA" DisplayName="Mostrar EA">
+        <DomainProperty Id="4d655f1e-020a-4e1f-b39a-5bd22133258f" Description="Description for IPS.UMLSPF.EstiloAtributos.Mostrar EA" Name="MostrarEA" DisplayName="Mostrar EA" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -197,7 +197,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="b5c90ffe-9dda-452a-9848-22074135fd41" Description="Description for IPS.UMLSPF.EstiloMetodos.Mostrar EM" Name="MostrarEM" DisplayName="Mostrar EM">
+        <DomainProperty Id="b5c90ffe-9dda-452a-9848-22074135fd41" Description="Description for IPS.UMLSPF.EstiloMetodos.Mostrar EM" Name="MostrarEM" DisplayName="Mostrar EM" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -432,6 +432,9 @@
       <BaseCompartmentShape>
         <CompartmentShapeMoniker Name="CMPClase" />
       </BaseCompartmentShape>
+      <Compartment Name="cmpEstilosClase" TitleFontStyle="Bold" Title="EstiloClase" />
+      <Compartment Name="cmpEstiloAtributos" TitleFontStyle="Bold" Title="EstiloAtributos" />
+      <Compartment Name="cmpEstiloMetodos" TitleFontStyle="Bold" Title="EstiloMetodos" />
     </CompartmentShape>
   </Shapes>
   <Connectors>
@@ -571,7 +574,7 @@
           <XmlPropertyData XmlName="alineacion">
             <DomainPropertyMoniker Name="EstilosClase/Alineacion" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="mostrarEC">
+          <XmlPropertyData XmlName="mostrarEC" Representation="Ignore">
             <DomainPropertyMoniker Name="EstilosClase/MostrarEC" />
           </XmlPropertyData>
         </ElementData>
@@ -591,7 +594,7 @@
           <XmlPropertyData XmlName="formatoAtributo">
             <DomainPropertyMoniker Name="EstiloAtributos/FormatoAtributo" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="mostrarEA">
+          <XmlPropertyData XmlName="mostrarEA" Representation="Ignore">
             <DomainPropertyMoniker Name="EstiloAtributos/MostrarEA" />
           </XmlPropertyData>
         </ElementData>
@@ -608,7 +611,7 @@
           <XmlPropertyData XmlName="colorLetra">
             <DomainPropertyMoniker Name="EstiloMetodos/ColorLetra" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="mostrarEM">
+          <XmlPropertyData XmlName="mostrarEM" Representation="Ignore">
             <DomainPropertyMoniker Name="EstiloMetodos/MostrarEM" />
           </XmlPropertyData>
         </ElementData>
@@ -784,6 +787,39 @@
           <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <CompartmentShapeMoniker Name="CMPClaseEnriquecida" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="CMPClaseEnriquecida/cmpEstilosClase" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseEnriquecidaHasEstilosClase.EstilosClase/!EstilosClase</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstilosClase/MostrarEC" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="CMPClaseEnriquecida/cmpEstiloAtributos" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos/!EstiloAtributos</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloAtributos/MostrarEA" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="CMPClaseEnriquecida/cmpEstiloMetodos" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos/!EstiloMetodos</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloMetodos/MostrarEM" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
       </CompartmentShapeMap>
     </ShapeMaps>
     <ConnectorMaps>

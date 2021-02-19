@@ -769,6 +769,18 @@
     <value>CMPClase Enriquecida</value>
     <comment>DisplayName for DomainClass &apos;CMPClaseEnriquecida&apos;</comment>
   </data>
+  <data name="CMPClaseEnriquecidacmpEstilosClaseTitle" xml:space="preserve">
+    <value>EstiloClase</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CMPClaseEnriquecidacmpEstiloAtributosTitle" xml:space="preserve">
+    <value>EstiloAtributos</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CMPClaseEnriquecidacmpEstiloMetodosTitle" xml:space="preserve">
+    <value>EstiloMetodos</value>
+    <comment>Compartment title</comment>
+  </data>
   <data name="IPS.UMLSPF.ConecClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConecClase</value>
     <comment>Description for DomainClass &apos;ConecClase&apos;</comment>

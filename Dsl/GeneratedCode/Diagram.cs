@@ -692,6 +692,9 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
 		{
 			/// <summary>
@@ -717,6 +720,21 @@ namespace IPS.UMLSPF
 				{
 					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
 					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
 				}
 			}
 			
@@ -746,6 +764,48 @@ namespace IPS.UMLSPF
 			{
 				// Segments 1 and 0
 				global::IPS.UMLSPF.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase root)
+			{
+				// Segment 0
+				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase(global::IPS.UMLSPF.EstilosClase root)
+			{
+				// Segments 1 and 0
+				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos root)
+			{
+				// Segment 0
+				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos(global::IPS.UMLSPF.EstiloAtributos root)
+			{
+				// Segments 1 and 0
+				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos root)
+			{
+				// Segment 0
+				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos(global::IPS.UMLSPF.EstiloMetodos root)
+			{
+				// Segments 1 and 0
+				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
@@ -796,6 +856,9 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
 		{
 			/// <summary>
@@ -820,6 +883,21 @@ namespace IPS.UMLSPF
 					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
 				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
+				}
 			}
 		}
 		
@@ -828,6 +906,9 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Operaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
 		{
 			/// <summary>
@@ -852,6 +933,21 @@ namespace IPS.UMLSPF
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
 				}
+				if(e.ModelElement is global::IPS.UMLSPF.EstilosClase && e.DomainProperty.Id == global::IPS.UMLSPF.EstilosClase.MostrarECDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase((global::IPS.UMLSPF.EstilosClase)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.EstiloAtributos && e.DomainProperty.Id == global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.EstiloMetodos && e.DomainProperty.Id == global::IPS.UMLSPF.EstiloMetodos.MostrarEMDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
+				}
 			}
 		}
 		
@@ -860,6 +956,9 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
 		{
 			/// <summary>
@@ -928,6 +1027,87 @@ namespace IPS.UMLSPF
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
 					}
 				}
+				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.EstilosClase)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::IPS.UMLSPF.CMPClaseEnriquecida compartmentShape = pel as global::IPS.UMLSPF.CMPClaseEnriquecida;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase((global::IPS.UMLSPF.EstilosClase)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.EstiloAtributos)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::IPS.UMLSPF.CMPClaseEnriquecida compartmentShape = pel as global::IPS.UMLSPF.CMPClaseEnriquecida;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.EstiloMetodos)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::IPS.UMLSPF.CMPClaseEnriquecida compartmentShape = pel as global::IPS.UMLSPF.CMPClaseEnriquecida;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
+					}
+				}
 			}
 		}
 	
@@ -936,6 +1116,9 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
 		{
 			/// <summary>
@@ -964,6 +1147,30 @@ namespace IPS.UMLSPF
 					{
 						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.CounterpartRolePlayer);
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase((global::IPS.UMLSPF.EstilosClase)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
 					}
 				}
 			}

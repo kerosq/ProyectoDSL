@@ -4443,23 +4443,6 @@ namespace IPS.UMLSPF
 					}
 				}
 			}
-			// MostrarEC
-			if (!serializationContext.Result.Failed)
-			{
-				string attribMostrarEC = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "mostrarEC");
-				if (attribMostrarEC != null)
-				{
-					global::System.String valueOfMostrarEC;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribMostrarEC, out valueOfMostrarEC))
-					{
-						instanceOfEstilosClase.MostrarEC = valueOfMostrarEC;
-					}
-					else
-					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "mostrarEC", typeof(global::System.String), attribMostrarEC);
-					}
-				}
-			}
 		}
 	
 		/// <summary>
@@ -4929,17 +4912,6 @@ namespace IPS.UMLSPF
 	
 				}
 			}
-			// MostrarEC
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfEstilosClase.MostrarEC;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "mostrarEC", propValue);
-	
-				}
-			}
 		}
 	
 		/// <summary>
@@ -5201,23 +5173,6 @@ namespace IPS.UMLSPF
 					else
 					{	// Invalid property value, ignored.
 						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "formatoAtributo", typeof(global::System.String), attribFormatoAtributo);
-					}
-				}
-			}
-			// MostrarEA
-			if (!serializationContext.Result.Failed)
-			{
-				string attribMostrarEA = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "mostrarEA");
-				if (attribMostrarEA != null)
-				{
-					global::System.String valueOfMostrarEA;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribMostrarEA, out valueOfMostrarEA))
-					{
-						instanceOfEstiloAtributos.MostrarEA = valueOfMostrarEA;
-					}
-					else
-					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "mostrarEA", typeof(global::System.String), attribMostrarEA);
 					}
 				}
 			}
@@ -5679,17 +5634,6 @@ namespace IPS.UMLSPF
 	
 				}
 			}
-			// MostrarEA
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfEstiloAtributos.MostrarEA;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "mostrarEA", propValue);
-	
-				}
-			}
 		}
 	
 		/// <summary>
@@ -5934,23 +5878,6 @@ namespace IPS.UMLSPF
 					else
 					{	// Invalid property value, ignored.
 						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(global::System.String), attribColorLetra);
-					}
-				}
-			}
-			// MostrarEM
-			if (!serializationContext.Result.Failed)
-			{
-				string attribMostrarEM = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "mostrarEM");
-				if (attribMostrarEM != null)
-				{
-					global::System.String valueOfMostrarEM;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribMostrarEM, out valueOfMostrarEM))
-					{
-						instanceOfEstiloMetodos.MostrarEM = valueOfMostrarEM;
-					}
-					else
-					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "mostrarEM", typeof(global::System.String), attribMostrarEM);
 					}
 				}
 			}
@@ -6398,17 +6325,6 @@ namespace IPS.UMLSPF
 				{
 					if (!string.IsNullOrEmpty(propValue))
 						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", propValue);
-	
-				}
-			}
-			// MostrarEM
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfEstiloMetodos.MostrarEM;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "mostrarEM", propValue);
 	
 				}
 			}

@@ -1980,34 +1980,27 @@ namespace IPS.UMLSPF
 		public static readonly global::System.Guid MostrarECDomainPropertyId = new global::System.Guid(0xae20741c, 0xdb87, 0x4625, 0x85, 0xd6, 0x54, 0xc5, 0xc9, 0x76, 0x3f, 0x09);
 		
 		/// <summary>
-		/// Storage for MostrarEC
-		/// </summary>
-		private global::System.String mostrarECPropertyStorage = string.Empty;
-		
-		/// <summary>
 		/// Gets or sets the value of MostrarEC domain property.
 		/// Description for IPS.UMLSPF.EstilosClase.Mostrar EC
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/MostrarEC.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/MostrarEC.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("ae20741c-db87-4625-85d6-54c5c9763f09")]
 		public global::System.String MostrarEC
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return mostrarECPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				MostrarECPropertyHandler.Instance.SetValue(this, value);
+				return MostrarECPropertyHandler.Instance.GetValue(this);
 			}
 		}
 		/// <summary>
 		/// Value handler for the EstilosClase.MostrarEC domain property.
 		/// </summary>
-		internal sealed partial class MostrarECPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		internal sealed partial class MostrarECPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstilosClase, global::System.String>
 		{
 			private MostrarECPropertyHandler() { }
 		
@@ -2036,26 +2029,12 @@ namespace IPS.UMLSPF
 			public override sealed global::System.String GetValue(EstilosClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.mostrarECPropertyStorage;
+				// There is no storage for MostrarEC because its Kind is
+				// set to Calculated. Please provide the GetMostrarECValue()
+				// method on the domain class.
+				return element.GetMostrarECValue();
 			}
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.mostrarECPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
 		}
 		
 		#endregion
@@ -2388,34 +2367,27 @@ namespace IPS.UMLSPF
 		public static readonly global::System.Guid MostrarEADomainPropertyId = new global::System.Guid(0x4d655f1e, 0x020a, 0x4e1f, 0xb3, 0x9a, 0x5b, 0xd2, 0x21, 0x33, 0x25, 0x8f);
 		
 		/// <summary>
-		/// Storage for MostrarEA
-		/// </summary>
-		private global::System.String mostrarEAPropertyStorage = string.Empty;
-		
-		/// <summary>
 		/// Gets or sets the value of MostrarEA domain property.
 		/// Description for IPS.UMLSPF.EstiloAtributos.Mostrar EA
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/MostrarEA.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/MostrarEA.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("4d655f1e-020a-4e1f-b39a-5bd22133258f")]
 		public global::System.String MostrarEA
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return mostrarEAPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				MostrarEAPropertyHandler.Instance.SetValue(this, value);
+				return MostrarEAPropertyHandler.Instance.GetValue(this);
 			}
 		}
 		/// <summary>
 		/// Value handler for the EstiloAtributos.MostrarEA domain property.
 		/// </summary>
-		internal sealed partial class MostrarEAPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		internal sealed partial class MostrarEAPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloAtributos, global::System.String>
 		{
 			private MostrarEAPropertyHandler() { }
 		
@@ -2444,26 +2416,12 @@ namespace IPS.UMLSPF
 			public override sealed global::System.String GetValue(EstiloAtributos element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.mostrarEAPropertyStorage;
+				// There is no storage for MostrarEA because its Kind is
+				// set to Calculated. Please provide the GetMostrarEAValue()
+				// method on the domain class.
+				return element.GetMostrarEAValue();
 			}
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.mostrarEAPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
 		}
 		
 		#endregion
@@ -2709,34 +2667,27 @@ namespace IPS.UMLSPF
 		public static readonly global::System.Guid MostrarEMDomainPropertyId = new global::System.Guid(0xb5c90ffe, 0x9dda, 0x452a, 0x98, 0x48, 0x22, 0x07, 0x41, 0x35, 0xfd, 0x41);
 		
 		/// <summary>
-		/// Storage for MostrarEM
-		/// </summary>
-		private global::System.String mostrarEMPropertyStorage = string.Empty;
-		
-		/// <summary>
 		/// Gets or sets the value of MostrarEM domain property.
 		/// Description for IPS.UMLSPF.EstiloMetodos.Mostrar EM
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloMetodos/MostrarEM.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloMetodos/MostrarEM.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("b5c90ffe-9dda-452a-9848-22074135fd41")]
 		public global::System.String MostrarEM
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return mostrarEMPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				MostrarEMPropertyHandler.Instance.SetValue(this, value);
+				return MostrarEMPropertyHandler.Instance.GetValue(this);
 			}
 		}
 		/// <summary>
 		/// Value handler for the EstiloMetodos.MostrarEM domain property.
 		/// </summary>
-		internal sealed partial class MostrarEMPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, global::System.String>
+		internal sealed partial class MostrarEMPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloMetodos, global::System.String>
 		{
 			private MostrarEMPropertyHandler() { }
 		
@@ -2765,26 +2716,12 @@ namespace IPS.UMLSPF
 			public override sealed global::System.String GetValue(EstiloMetodos element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.mostrarEMPropertyStorage;
+				// There is no storage for MostrarEM because its Kind is
+				// set to Calculated. Please provide the GetMostrarEMValue()
+				// method on the domain class.
+				return element.GetMostrarEMValue();
 			}
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloMetodos element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.mostrarEMPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
 		}
 		
 		#endregion

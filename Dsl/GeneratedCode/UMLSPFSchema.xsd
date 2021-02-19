@@ -352,8 +352,6 @@
         <xsd:attribute name="tipoLetra" type="xsd:string" />
         <!-- Property: Alineacion -->
         <xsd:attribute name="alineacion" type="xsd:string" />
-        <!-- Property: MostrarEC -->
-        <xsd:attribute name="mostrarEC" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -392,8 +390,6 @@
         <xsd:attribute name="colorLetra" type="xsd:string" />
         <!-- Property: FormatoAtributo -->
         <xsd:attribute name="formatoAtributo" type="xsd:string" />
-        <!-- Property: MostrarEA -->
-        <xsd:attribute name="mostrarEA" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -430,8 +426,6 @@
         <xsd:attribute name="tipoLetra" type="xsd:string" />
         <!-- Property: ColorLetra -->
         <xsd:attribute name="colorLetra" type="xsd:string" />
-        <!-- Property: MostrarEM -->
-        <xsd:attribute name="mostrarEM" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
