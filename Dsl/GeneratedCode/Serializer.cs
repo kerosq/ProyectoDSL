@@ -6490,7 +6490,7 @@ namespace IPS.UMLSPF
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-				
+	
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
 			{
@@ -6538,7 +6538,43 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			// There is no property to read; do nothing
+			Herencia instanceOfHerencia = element as Herencia;
+			global::System.Diagnostics.Debug.Assert(instanceOfHerencia != null, "Expecting an instance of Herencia");
+	
+			// Generalizacion1
+			if (!serializationContext.Result.Failed)
+			{
+				string attribGeneralizacion1 = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "generalizacion1");
+				if (attribGeneralizacion1 != null)
+				{
+					global::System.String valueOfGeneralizacion1;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribGeneralizacion1, out valueOfGeneralizacion1))
+					{
+						instanceOfHerencia.Generalizacion1 = valueOfGeneralizacion1;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "generalizacion1", typeof(global::System.String), attribGeneralizacion1);
+					}
+				}
+			}
+			// Generalizacion2
+			if (!serializationContext.Result.Failed)
+			{
+				string attribGeneralizacion2 = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "generalizacion2");
+				if (attribGeneralizacion2 != null)
+				{
+					global::System.String valueOfGeneralizacion2;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribGeneralizacion2, out valueOfGeneralizacion2))
+					{
+						instanceOfHerencia.Generalizacion2 = valueOfGeneralizacion2;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "generalizacion2", typeof(global::System.String), attribGeneralizacion2);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -7108,7 +7144,31 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			// There are no properties; do nothing
+			Herencia instanceOfHerencia = element as Herencia;
+			global::System.Diagnostics.Debug.Assert(instanceOfHerencia != null, "Expecting an instance of Herencia");
+	
+			// Generalizacion1
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfHerencia.Generalizacion1;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "generalizacion1", propValue);
+	
+				}
+			}
+			// Generalizacion2
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfHerencia.Generalizacion2;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "generalizacion2", propValue);
+	
+				}
+			}
 		}
 	
 		/// <summary>
@@ -9678,7 +9738,7 @@ namespace IPS.UMLSPF
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-				
+	
 			// Read nested XML elements, which include at least the monikerized instance of target role-player TargetClase
 			if (!serializationContext.Result.Failed)
 			{
@@ -9790,7 +9850,43 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			// There is no property to read; do nothing
+			conAsociacion instanceOfconAsociacion = element as conAsociacion;
+			global::System.Diagnostics.Debug.Assert(instanceOfconAsociacion != null, "Expecting an instance of conAsociacion");
+	
+			// refD
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrefD = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refD");
+				if (attribrefD != null)
+				{
+					global::System.String valueOfrefD;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefD, out valueOfrefD))
+					{
+						instanceOfconAsociacion.refD = valueOfrefD;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(global::System.String), attribrefD);
+					}
+				}
+			}
+			// refI
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrefI = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refI");
+				if (attribrefI != null)
+				{
+					global::System.String valueOfrefI;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefI, out valueOfrefI))
+					{
+						instanceOfconAsociacion.refI = valueOfrefI;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(global::System.String), attribrefI);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -10274,7 +10370,31 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			// There are no properties; do nothing
+			conAsociacion instanceOfconAsociacion = element as conAsociacion;
+			global::System.Diagnostics.Debug.Assert(instanceOfconAsociacion != null, "Expecting an instance of conAsociacion");
+	
+			// refD
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconAsociacion.refD;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", propValue);
+	
+				}
+			}
+			// refI
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconAsociacion.refI;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", propValue);
+	
+				}
+			}
 		}
 	
 		/// <summary>
@@ -10552,7 +10672,7 @@ namespace IPS.UMLSPF
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-				
+	
 			// Read nested XML elements, which include at least the instance of target role-player CompTargetClase
 			if (!serializationContext.Result.Failed)
 			{
@@ -10666,7 +10786,43 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			// There is no property to read; do nothing
+			conComposicion instanceOfconComposicion = element as conComposicion;
+			global::System.Diagnostics.Debug.Assert(instanceOfconComposicion != null, "Expecting an instance of conComposicion");
+	
+			// refD
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrefD = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refD");
+				if (attribrefD != null)
+				{
+					global::System.String valueOfrefD;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefD, out valueOfrefD))
+					{
+						instanceOfconComposicion.refD = valueOfrefD;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(global::System.String), attribrefD);
+					}
+				}
+			}
+			// refI
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrefI = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refI");
+				if (attribrefI != null)
+				{
+					global::System.String valueOfrefI;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefI, out valueOfrefI))
+					{
+						instanceOfconComposicion.refI = valueOfrefI;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(global::System.String), attribrefI);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -11150,7 +11306,31 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			// There are no properties; do nothing
+			conComposicion instanceOfconComposicion = element as conComposicion;
+			global::System.Diagnostics.Debug.Assert(instanceOfconComposicion != null, "Expecting an instance of conComposicion");
+	
+			// refD
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconComposicion.refD;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", propValue);
+	
+				}
+			}
+			// refI
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconComposicion.refI;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", propValue);
+	
+				}
+			}
 		}
 	
 		/// <summary>
@@ -11337,7 +11517,7 @@ namespace IPS.UMLSPF
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-				
+	
 			// Read nested XML elements, which include at least the monikerized instance of target role-player TargetClase
 			if (!serializationContext.Result.Failed)
 			{
@@ -11449,7 +11629,43 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			// There is no property to read; do nothing
+			conAgregacion instanceOfconAgregacion = element as conAgregacion;
+			global::System.Diagnostics.Debug.Assert(instanceOfconAgregacion != null, "Expecting an instance of conAgregacion");
+	
+			// refD
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrefD = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refD");
+				if (attribrefD != null)
+				{
+					global::System.String valueOfrefD;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefD, out valueOfrefD))
+					{
+						instanceOfconAgregacion.refD = valueOfrefD;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(global::System.String), attribrefD);
+					}
+				}
+			}
+			// refI
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrefI = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refI");
+				if (attribrefI != null)
+				{
+					global::System.String valueOfrefI;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefI, out valueOfrefI))
+					{
+						instanceOfconAgregacion.refI = valueOfrefI;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(global::System.String), attribrefI);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -11933,7 +12149,31 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			// There are no properties; do nothing
+			conAgregacion instanceOfconAgregacion = element as conAgregacion;
+			global::System.Diagnostics.Debug.Assert(instanceOfconAgregacion != null, "Expecting an instance of conAgregacion");
+	
+			// refD
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconAgregacion.refD;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", propValue);
+	
+				}
+			}
+			// refI
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconAgregacion.refI;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", propValue);
+	
+				}
+			}
 		}
 	
 		/// <summary>

@@ -1,18 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<uMLSPFDiagram dslVersion="1.0.0.0" Id="e8f2062a-c99f-47dd-b100-1f5c7654708f" absoluteBounds="0, 0, 11, 8.5" name="Sample">
-  <exampleModelMoniker Id="3758d621-d62b-477d-8b15-18d91518be40" />
+<uMLSPFDiagram dslVersion="1.0.0.0" Id="e8f2062a-c99f-47dd-b100-1f5c7654708f" absoluteBounds="0, 0, 11.875, 8.875" name="Sample">
+  <modeloClassWEBMoniker Id="8a5b10dc-80fe-4d1a-91c3-27db53f92ee6" />
   <nestedChildShapes>
-    <exampleShape Id="d34d2fbd-4919-4504-9ee6-b7823175defb" absoluteBounds="0.5, 1.75, 2, 0.75">
-      <exampleElementMoniker name="/3758d621-d62b-477d-8b15-18d91518be40/ExampleElement1" />
-    </exampleShape>
-    <exampleShape Id="f751a4a9-47e6-40f1-8ca9-be4a87b1ff06" absoluteBounds="3, 0.5, 2, 0.75">
-      <exampleElementMoniker name="/3758d621-d62b-477d-8b15-18d91518be40/ExampleElement2" />
-    </exampleShape>
-    <exampleConnector Id="479247b9-c574-4fdc-b4cd-1095a6f4b559" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="a3167e78-567f-4682-9926-3b1154b9ff80">
+    <cMPClase Id="45d23837-3b39-458b-92d2-23fcd548d338" absoluteBounds="4.25, 2.75, 2, 2.2556607923905041">
+      <claseMoniker Id="259bfd3c-01ec-4309-9963-cad229fa9e5f" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf1dd95c-32e8-400a-8c72-2d6fa7f36d1b" absoluteBounds="4.265, 4.26, 1.9700000000000002, 0.2216796800494194" name="cmpAtributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a258b1b5-584f-4739-8ce4-213801cc34d1" absoluteBounds="4.265, 4.491679680049419, 1.9700000000000002, 0.41398111234108603" name="cmpOperaciones" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </cMPClase>
+    <cMPClaseEnriquecida Id="b53ebcea-24aa-43f5-a377-eb5d158fe415" absoluteBounds="0.625, 5.875, 2, 2.7583984002470974">
+      <claseEnriquecidaMoniker Id="095df3e6-2f24-4fe7-b27f-388f1cf7605c" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f67599a1-2e78-4523-a8a1-cfc7829d245e" absoluteBounds="0.63999999999999968, 7.385, 1.9700000000000002, 0.2216796800494194" name="cmpAtributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="45ae0888-7ca7-438f-8cd5-1ac05a79a255" absoluteBounds="0.63999999999999968, 7.616679680049419, 1.9700000000000002, 0.2216796800494194" name="cmpOperaciones" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0f3427c7-11da-455d-b681-eef064dad3b7" absoluteBounds="0.63999999999999968, 7.84835936009884, 1.9700000000000002, 0.2216796800494194" name="cmpEstilosClase" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8f190470-867e-46cd-af76-fa9fc7ccba44" absoluteBounds="0.63999999999999968, 8.0800390401482574, 1.9700000000000002, 0.2216796800494194" name="cmpEstiloAtributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="7bf470d8-0cc3-4740-b375-164bd05f2c71" absoluteBounds="0.63999999999999968, 8.3117187201976783, 1.9700000000000002, 0.2216796800494194" name="cmpEstiloMetodos" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </cMPClaseEnriquecida>
+    <iMGHerencia Id="b79b14ab-8c24-425d-af62-8a527c413944" absoluteBounds="5.625, 6.25, 0.55548608303070068, 0.54159897565841675">
+      <herenciaMoniker Id="78c321fb-e03c-4bb9-a175-286b3b028482" />
+    </iMGHerencia>
+    <conEsPadre Id="8685345e-4a44-4dd3-bb5e-eaaf9aedd546" edgePoints="[(5.90274304151535 : 6.25); (5.90274304151535 : 5.0056607923905)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <esPadreMoniker Id="96c570d5-083e-4d5f-ad3f-2da1212b681d" />
       <nodes>
-        <exampleShapeMoniker Id="d34d2fbd-4919-4504-9ee6-b7823175defb" />
-        <exampleShapeMoniker Id="f751a4a9-47e6-40f1-8ca9-be4a87b1ff06" />
+        <iMGHerenciaMoniker Id="b79b14ab-8c24-425d-af62-8a527c413944" />
+        <cMPClaseMoniker Id="45d23837-3b39-458b-92d2-23fcd548d338" />
       </nodes>
-    </exampleConnector>
+    </conEsPadre>
+    <conEsHijo Id="fb302c9e-4ad7-4c6b-b386-7cb3f5a409b7" edgePoints="[(5.625 : 6.52079948782921); (2.625 : 6.52079948782921)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <esHijaMoniker Id="7c009544-b8e6-419d-977b-3144d5dd5d82" />
+      <nodes>
+        <iMGHerenciaMoniker Id="b79b14ab-8c24-425d-af62-8a527c413944" />
+        <cMPClaseEnriquecidaMoniker Id="b53ebcea-24aa-43f5-a377-eb5d158fe415" />
+      </nodes>
+    </conEsHijo>
+    <cMPClase Id="72f2b772-2d23-472a-b697-d12ba050ed17" absoluteBounds="9.625, 3.25, 2, 2.063359360098838">
+      <claseMoniker Id="c88b7916-013e-426d-aaab-710a60a3c16a" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1518e0d5-6481-4f25-a30c-e49224275e4a" absoluteBounds="9.64, 4.76, 1.9700000000000002, 0.2216796800494194" name="cmpAtributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a21209b3-98c7-4317-bbaf-b8ef17198b26" absoluteBounds="9.64, 4.991679680049419, 1.9700000000000002, 0.2216796800494194" name="cmpOperaciones" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </cMPClase>
+    <conecClase Id="70cfbc70-3f0c-4ce6-83c1-ea31cf879d75" edgePoints="[(9.625 : 4.12783039619525); (6.25 : 4.12783039619525)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <conAsociacionMoniker Id="9d38e232-c2ab-45c2-b751-0f26790459d0" />
+      <relativeChildShapes />
+      <nodes>
+        <cMPClaseMoniker Id="72f2b772-2d23-472a-b697-d12ba050ed17" />
+        <cMPClaseMoniker Id="45d23837-3b39-458b-92d2-23fcd548d338" />
+      </nodes>
+    </conecClase>
+    <cMPClase Id="274ee698-2b60-4ca8-b0a8-a287b7661305" absoluteBounds="4.25, 0.5, 2, 2.0633593600988389">
+      <claseMoniker Id="607039ed-3126-47ba-8b6a-293608699b31" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6395f1c3-d8c2-4240-8ac3-2c49da421470" absoluteBounds="4.2650000000000006, 2.01, 1.9700000000000002, 0.2216796800494194" name="cmpAtributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b1cc0e55-d139-47ea-940d-603a395eecb5" absoluteBounds="4.2650000000000006, 2.2416796800494194, 1.9700000000000002, 0.2216796800494194" name="cmpOperaciones" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </cMPClase>
+    <conecAgregacion Id="9c9e568e-c28d-4a4e-bccd-9cf3d80f7389" edgePoints="[(10.625 : 3.25); (10.625 : 1.53167968004942); (6.25 : 1.53167968004942)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <conAgregacionMoniker Id="630ca27d-4a96-4a36-bf3d-1215385f7ca7" />
+      <relativeChildShapes />
+      <nodes>
+        <cMPClaseMoniker Id="72f2b772-2d23-472a-b697-d12ba050ed17" />
+        <cMPClaseMoniker Id="274ee698-2b60-4ca8-b0a8-a287b7661305" />
+      </nodes>
+    </conecAgregacion>
   </nestedChildShapes>
 </uMLSPFDiagram>

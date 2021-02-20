@@ -1,11 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="3758d621-d62b-477d-8b15-18d91518be40" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF">
-  <elements>
-    <exampleElement Id="84e6dce6-2c58-44ec-adf7-5aea75f44ed3" name="ExampleElement1">
-      <targets>
-        <exampleElementMoniker name="/3758d621-d62b-477d-8b15-18d91518be40/ExampleElement2" />
-      </targets>
-    </exampleElement>
-    <exampleElement Id="986302a9-5f1e-4d97-991d-40df592b65cb" name="ExampleElement2" />
-  </elements>
-</exampleModel>
+<modeloClassWEB xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8a5b10dc-80fe-4d1a-91c3-27db53f92ee6" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF">
+  <clase>
+    <modeloClassWEBHasClase Id="52d18008-3cec-4b40-95ec-83e55d9f7163">
+      <clase Id="259bfd3c-01ec-4309-9963-cad229fa9e5f">
+        <operaciones>
+          <claseHasOperaciones Id="c3db202e-6de4-4c37-9980-ea662768b872">
+            <operaciones Id="81f0a272-cf42-4952-a653-2f10cc138984" />
+          </claseHasOperaciones>
+        </operaciones>
+      </clase>
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="8d5b0bb3-11b0-4288-966b-64bd91d3cdbd">
+      <claseEnriquecida Id="095df3e6-2f24-4fe7-b27f-388f1cf7605c" />
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="8c9c6aaf-3f05-4258-b0d1-6118f4019c29">
+      <clase Id="c88b7916-013e-426d-aaab-710a60a3c16a">
+        <targetClase>
+          <conAsociacion Id="9d38e232-c2ab-45c2-b751-0f26790459d0" refD="a" refI="s">
+            <claseMoniker Id="259bfd3c-01ec-4309-9963-cad229fa9e5f" />
+          </conAsociacion>
+        </targetClase>
+        <agreTargetClase>
+          <conAgregacion Id="630ca27d-4a96-4a36-bf3d-1215385f7ca7" refD="S" refI="D">
+            <claseMoniker Id="607039ed-3126-47ba-8b6a-293608699b31" />
+          </conAgregacion>
+        </agreTargetClase>
+      </clase>
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="aba88d52-a63c-47e1-9f15-a481fce2473d">
+      <clase Id="607039ed-3126-47ba-8b6a-293608699b31" />
+    </modeloClassWEBHasClase>
+  </clase>
+  <herencia>
+    <modeloClassWEBHasHerencia Id="780f2114-2b4f-4012-a447-8757463aeb59">
+      <herencia Id="78c321fb-e03c-4bb9-a175-286b3b028482" generalizacion1="azxczczxc" generalizacion2="azcczxc">
+        <clasePadre>
+          <esPadre Id="96c570d5-083e-4d5f-ad3f-2da1212b681d">
+            <claseMoniker Id="259bfd3c-01ec-4309-9963-cad229fa9e5f" />
+          </esPadre>
+        </clasePadre>
+        <claseHija>
+          <esHija Id="7c009544-b8e6-419d-977b-3144d5dd5d82">
+            <claseEnriquecidaMoniker Id="095df3e6-2f24-4fe7-b27f-388f1cf7605c" />
+          </esHija>
+        </claseHija>
+      </herencia>
+    </modeloClassWEBHasHerencia>
+  </herencia>
+</modeloClassWEB>

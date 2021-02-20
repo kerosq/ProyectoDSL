@@ -198,7 +198,6 @@ namespace IPS.UMLSPF
 			return base.GetAsyncToolWindowFactory(toolWindowType);
 		}
 	}
-
 }
 
 //

@@ -490,6 +490,10 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: Generalizacion1 -->
+        <xsd:attribute name="generalizacion1" type="xsd:string" />
+        <!-- Property: Generalizacion2 -->
+        <xsd:attribute name="generalizacion2" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -650,6 +654,10 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: refD -->
+        <xsd:attribute name="refD" type="xsd:string" />
+        <!-- Property: refI -->
+        <xsd:attribute name="refI" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -690,6 +698,10 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: refD -->
+        <xsd:attribute name="refD" type="xsd:string" />
+        <!-- Property: refI -->
+        <xsd:attribute name="refI" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -730,6 +742,10 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: refD -->
+        <xsd:attribute name="refD" type="xsd:string" />
+        <!-- Property: refI -->
+        <xsd:attribute name="refI" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

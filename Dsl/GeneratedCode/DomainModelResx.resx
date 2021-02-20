@@ -357,6 +357,22 @@
     <value>Herencia</value>
     <comment>DisplayName for DomainClass &apos;Herencia&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion1.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Herencia.Generalizacion1</value>
+    <comment>Description for DomainProperty &apos;Generalizacion1&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion1.DisplayName" xml:space="preserve">
+    <value>Generalizacion1</value>
+    <comment>DisplayName for DomainProperty &apos;Generalizacion1&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion2.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Herencia.Generalizacion2</value>
+    <comment>Description for DomainProperty &apos;Generalizacion2&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion2.DisplayName" xml:space="preserve">
+    <value>Generalizacion2</value>
+    <comment>DisplayName for DomainProperty &apos;Generalizacion2&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.ModeloClassWEBHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase</value>
     <comment>Description for DomainClass &apos;ModeloClassWEBHasClase&apos;</comment>
@@ -461,6 +477,22 @@
     <value>Con Asociacion</value>
     <comment>DisplayName for DomainClass &apos;conAsociacion&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.conAsociacion/refD.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAsociacion.Ref D</value>
+    <comment>Description for DomainProperty &apos;refD&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAsociacion/refD.DisplayName" xml:space="preserve">
+    <value>Ref D</value>
+    <comment>DisplayName for DomainProperty &apos;refD&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAsociacion/refI.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAsociacion.Ref I</value>
+    <comment>Description for DomainProperty &apos;refI&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAsociacion/refI.DisplayName" xml:space="preserve">
+    <value>Ref I</value>
+    <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.conAsociacion/SourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conAsociacion.SourceClase</value>
     <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
@@ -493,6 +525,22 @@
     <value>Con Composicion</value>
     <comment>DisplayName for DomainClass &apos;conComposicion&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.conComposicion/refD.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conComposicion.Ref D</value>
+    <comment>Description for DomainProperty &apos;refD&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/refD.DisplayName" xml:space="preserve">
+    <value>Ref D</value>
+    <comment>DisplayName for DomainProperty &apos;refD&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/refI.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conComposicion.Ref I</value>
+    <comment>Description for DomainProperty &apos;refI&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/refI.DisplayName" xml:space="preserve">
+    <value>Ref I</value>
+    <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.conComposicion/CompSourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conComposicion.CompSourceClase</value>
     <comment>Description for DomainRole &apos;CompSourceClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
@@ -524,6 +572,22 @@
   <data name="IPS.UMLSPF.conAgregacion.DisplayName" xml:space="preserve">
     <value>Con Agregacion</value>
     <comment>DisplayName for DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/refD.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAgregacion.Ref D</value>
+    <comment>Description for DomainProperty &apos;refD&apos; on DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/refD.DisplayName" xml:space="preserve">
+    <value>Ref D</value>
+    <comment>DisplayName for DomainProperty &apos;refD&apos; on DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/refI.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAgregacion.Ref I</value>
+    <comment>Description for DomainProperty &apos;refI&apos; on DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/refI.DisplayName" xml:space="preserve">
+    <value>Ref I</value>
+    <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/SourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conAgregacion.SourceClase</value>
@@ -789,6 +853,14 @@
     <value>IMGHerencia</value>
     <comment>DisplayName for DomainClass &apos;IMGHerencia&apos;</comment>
   </data>
+  <data name="IMGHerenciaMGeneralizacion1DefaultText" xml:space="preserve">
+    <value>MGeneralizacion1</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IMGHerenciaMGeneralizacion2DefaultText" xml:space="preserve">
+    <value>MGeneralizacion2</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="IPS.UMLSPF.ConecClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConecClase</value>
     <comment>Description for DomainClass &apos;ConecClase&apos;</comment>
@@ -796,6 +868,14 @@
   <data name="IPS.UMLSPF.ConecClase.DisplayName" xml:space="preserve">
     <value>Conec Clase</value>
     <comment>DisplayName for DomainClass &apos;ConecClase&apos;</comment>
+  </data>
+  <data name="ConecClaserefDCLDefaultText" xml:space="preserve">
+    <value>refDCL</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConecClaserefICLDefaultText" xml:space="preserve">
+    <value>refICL</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ConecComposicion.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConecComposicion</value>
@@ -805,6 +885,14 @@
     <value>Conec Composicion</value>
     <comment>DisplayName for DomainClass &apos;ConecComposicion&apos;</comment>
   </data>
+  <data name="ConecComposicionrefDCODefaultText" xml:space="preserve">
+    <value>refDCO</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConecComposicionrefICODefaultText" xml:space="preserve">
+    <value>refICO</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="IPS.UMLSPF.ConecAgregacion.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConecAgregacion</value>
     <comment>Description for DomainClass &apos;ConecAgregacion&apos;</comment>
@@ -812,6 +900,14 @@
   <data name="IPS.UMLSPF.ConecAgregacion.DisplayName" xml:space="preserve">
     <value>Conec Agregacion</value>
     <comment>DisplayName for DomainClass &apos;ConecAgregacion&apos;</comment>
+  </data>
+  <data name="ConecAgregacionrefDCADefaultText" xml:space="preserve">
+    <value>refDCA</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConecAgregacionrefICADefaultText" xml:space="preserve">
+    <value>refICA</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ConEsPadre.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConEsPadre</value>
@@ -1071,11 +1167,11 @@ A DomainClass can be serialized as a moniker only if
     <comment>Toolbox item image</comment>
   </data>
   <data name="ConectarPadreToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\herenciaICON.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\conectorArrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ConectarHijoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\herenciaICON.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\conectorArrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

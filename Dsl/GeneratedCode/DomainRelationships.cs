@@ -883,6 +883,180 @@ namespace IPS.UMLSPF
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
 		}
 		#endregion
+		#region refD domain property code
+		
+		/// <summary>
+		/// refD domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid refDDomainPropertyId = new global::System.Guid(0x7de83d71, 0xad8f, 0x4919, 0x86, 0x8f, 0xd0, 0xe6, 0x8c, 0xaf, 0xa9, 0x6c);
+		
+		/// <summary>
+		/// Storage for refD
+		/// </summary>
+		private global::System.String refDPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of refD domain property.
+		/// Description for IPS.UMLSPF.conAsociacion.Ref D
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("7de83d71-ad8f-4919-868f-d0e68cafa96c")]
+		public global::System.String refD
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return refDPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				refDPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAsociacion.refD domain property.
+		/// </summary>
+		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, global::System.String>
+		{
+			private refDPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAsociacion.refD domain property value handler.
+			/// </summary>
+			public static readonly refDPropertyHandler Instance = new refDPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAsociacion.refD domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return refDDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAsociacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.refDPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAsociacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.refDPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region refI domain property code
+		
+		/// <summary>
+		/// refI domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid refIDomainPropertyId = new global::System.Guid(0x979cb249, 0x5e5a, 0x4ad9, 0xa7, 0xf4, 0xdb, 0x1d, 0xdd, 0xac, 0xce, 0x9d);
+		
+		/// <summary>
+		/// Storage for refI
+		/// </summary>
+		private global::System.String refIPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of refI domain property.
+		/// Description for IPS.UMLSPF.conAsociacion.Ref I
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("979cb249-5e5a-4ad9-a7f4-db1dddacce9d")]
+		public global::System.String refI
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return refIPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				refIPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAsociacion.refI domain property.
+		/// </summary>
+		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, global::System.String>
+		{
+			private refIPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAsociacion.refI domain property value handler.
+			/// </summary>
+			public static readonly refIPropertyHandler Instance = new refIPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAsociacion.refI domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return refIDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAsociacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.refIPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAsociacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.refIPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region SourceClase link accessor
 		/// <summary>
 		/// Get the list of conAsociacion links to a Clase.
@@ -1113,6 +1287,180 @@ namespace IPS.UMLSPF
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, CompSourceClaseDomainRoleId);
 		}
 		#endregion
+		#region refD domain property code
+		
+		/// <summary>
+		/// refD domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid refDDomainPropertyId = new global::System.Guid(0x9039dabe, 0x0f78, 0x4246, 0xba, 0xc7, 0xeb, 0x56, 0xf7, 0xd6, 0x23, 0x5c);
+		
+		/// <summary>
+		/// Storage for refD
+		/// </summary>
+		private global::System.String refDPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of refD domain property.
+		/// Description for IPS.UMLSPF.conComposicion.Ref D
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("9039dabe-0f78-4246-bac7-eb56f7d6235c")]
+		public global::System.String refD
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return refDPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				refDPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conComposicion.refD domain property.
+		/// </summary>
+		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, global::System.String>
+		{
+			private refDPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conComposicion.refD domain property value handler.
+			/// </summary>
+			public static readonly refDPropertyHandler Instance = new refDPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conComposicion.refD domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return refDDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conComposicion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.refDPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conComposicion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.refDPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region refI domain property code
+		
+		/// <summary>
+		/// refI domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid refIDomainPropertyId = new global::System.Guid(0x06d54d4e, 0xfe3b, 0x499c, 0x8d, 0xf1, 0xc2, 0xad, 0x02, 0xfa, 0x35, 0x63);
+		
+		/// <summary>
+		/// Storage for refI
+		/// </summary>
+		private global::System.String refIPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of refI domain property.
+		/// Description for IPS.UMLSPF.conComposicion.Ref I
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("06d54d4e-fe3b-499c-8df1-c2ad02fa3563")]
+		public global::System.String refI
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return refIPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				refIPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conComposicion.refI domain property.
+		/// </summary>
+		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, global::System.String>
+		{
+			private refIPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conComposicion.refI domain property value handler.
+			/// </summary>
+			public static readonly refIPropertyHandler Instance = new refIPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conComposicion.refI domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return refIDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conComposicion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.refIPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conComposicion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.refIPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region CompSourceClase link accessor
 		/// <summary>
 		/// Get the list of conComposicion links to a Clase.
@@ -1341,6 +1689,180 @@ namespace IPS.UMLSPF
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
 		}
+		#endregion
+		#region refD domain property code
+		
+		/// <summary>
+		/// refD domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid refDDomainPropertyId = new global::System.Guid(0x834c8a5f, 0x3b35, 0x4cc2, 0xaf, 0xc5, 0x32, 0xfa, 0x1c, 0xf6, 0x04, 0x17);
+		
+		/// <summary>
+		/// Storage for refD
+		/// </summary>
+		private global::System.String refDPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of refD domain property.
+		/// Description for IPS.UMLSPF.conAgregacion.Ref D
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("834c8a5f-3b35-4cc2-afc5-32fa1cf60417")]
+		public global::System.String refD
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return refDPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				refDPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAgregacion.refD domain property.
+		/// </summary>
+		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, global::System.String>
+		{
+			private refDPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAgregacion.refD domain property value handler.
+			/// </summary>
+			public static readonly refDPropertyHandler Instance = new refDPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAgregacion.refD domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return refDDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAgregacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.refDPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAgregacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.refDPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region refI domain property code
+		
+		/// <summary>
+		/// refI domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid refIDomainPropertyId = new global::System.Guid(0x53aaf2a8, 0x97d0, 0x4d25, 0x85, 0x5a, 0x5c, 0x0e, 0xe7, 0x33, 0x44, 0xa8);
+		
+		/// <summary>
+		/// Storage for refI
+		/// </summary>
+		private global::System.String refIPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of refI domain property.
+		/// Description for IPS.UMLSPF.conAgregacion.Ref I
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("53aaf2a8-97d0-4d25-855a-5c0ee73344a8")]
+		public global::System.String refI
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return refIPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				refIPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAgregacion.refI domain property.
+		/// </summary>
+		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, global::System.String>
+		{
+			private refIPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAgregacion.refI domain property value handler.
+			/// </summary>
+			public static readonly refIPropertyHandler Instance = new refIPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAgregacion.refI domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return refIDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAgregacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.refIPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAgregacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.refIPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 		#region SourceClase link accessor
 		/// <summary>

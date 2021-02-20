@@ -204,7 +204,20 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="f953e01b-ccf2-470d-9867-9e0f1a8f2025" Description="Description for IPS.UMLSPF.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="IPS.UMLSPF" />
+    <DomainClass Id="f953e01b-ccf2-470d-9867-9e0f1a8f2025" Description="Description for IPS.UMLSPF.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="4264dfc4-08d1-479f-9ced-e57a9bf26674" Description="Description for IPS.UMLSPF.Herencia.Generalizacion1" Name="Generalizacion1" DisplayName="Generalizacion1">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="f20bdf78-9a0c-4d0f-97dd-5171e312c164" Description="Description for IPS.UMLSPF.Herencia.Generalizacion2" Name="Generalizacion2" DisplayName="Generalizacion2">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="a9b6e343-13d8-40ae-994b-012eafb94bff" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase" Name="ModeloClassWEBHasClase" DisplayName="Modelo Class WEBHas Clase" Namespace="IPS.UMLSPF" IsEmbedding="true">
@@ -256,6 +269,18 @@
       </Target>
     </DomainRelationship>
     <DomainRelationship Id="6f46edc6-89a2-47b6-b489-b76d99a215bc" Description="Description for IPS.UMLSPF.conAsociacion" Name="conAsociacion" DisplayName="Con Asociacion" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="7de83d71-ad8f-4919-868f-d0e68cafa96c" Description="Description for IPS.UMLSPF.conAsociacion.Ref D" Name="refD" DisplayName="Ref D">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="979cb249-5e5a-4ad9-a7f4-db1dddacce9d" Description="Description for IPS.UMLSPF.conAsociacion.Ref I" Name="refI" DisplayName="Ref I">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <Source>
         <DomainRole Id="7fd2a6d7-29f6-43ea-9cb2-497a0f0b345a" Description="Description for IPS.UMLSPF.conAsociacion.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClase" PropertyDisplayName="Target Clase">
           <RolePlayer>
@@ -272,6 +297,18 @@
       </Target>
     </DomainRelationship>
     <DomainRelationship Id="89962120-883f-43a1-8030-7055c29c48b7" Description="Description for IPS.UMLSPF.conComposicion" Name="conComposicion" DisplayName="Con Composicion" Namespace="IPS.UMLSPF" IsEmbedding="true">
+      <Properties>
+        <DomainProperty Id="9039dabe-0f78-4246-bac7-eb56f7d6235c" Description="Description for IPS.UMLSPF.conComposicion.Ref D" Name="refD" DisplayName="Ref D">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="06d54d4e-fe3b-499c-8df1-c2ad02fa3563" Description="Description for IPS.UMLSPF.conComposicion.Ref I" Name="refI" DisplayName="Ref I">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <Source>
         <DomainRole Id="9a7ed65b-a40b-450a-93ef-f0525932e035" Description="Description for IPS.UMLSPF.conComposicion.CompSourceClase" Name="CompSourceClase" DisplayName="Comp Source Clase" PropertyName="CompTargetClase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Comp Target Clase">
           <RolePlayer>
@@ -288,6 +325,18 @@
       </Target>
     </DomainRelationship>
     <DomainRelationship Id="d8f51cbd-c973-4dd7-a8d8-68f9f0e7a26e" Description="Description for IPS.UMLSPF.conAgregacion" Name="conAgregacion" DisplayName="Con Agregacion" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="834c8a5f-3b35-4cc2-afc5-32fa1cf60417" Description="Description for IPS.UMLSPF.conAgregacion.Ref D" Name="refD" DisplayName="Ref D">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="53aaf2a8-97d0-4d25-855a-5c0ee73344a8" Description="Description for IPS.UMLSPF.conAgregacion.Ref I" Name="refI" DisplayName="Ref I">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <Source>
         <DomainRole Id="88efde2e-3c46-47d5-a8dc-0ef9a8edb9d1" Description="Description for IPS.UMLSPF.conAgregacion.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="AgreTargetClase" PropertyDisplayName="Agre Target Clase">
           <RolePlayer>
@@ -436,12 +485,40 @@
       <Compartment Name="cmpEstiloAtributos" TitleFontStyle="Bold" Title="EstiloAtributos" />
       <Compartment Name="cmpEstiloMetodos" TitleFontStyle="Bold" Title="EstiloMetodos" />
     </CompartmentShape>
-    <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png" />
+    <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="MGeneralizacion1" DisplayName="MGeneralizacion1" DefaultText="MGeneralizacion1" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerBottomCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="MGeneralizacion2" DisplayName="MGeneralizacion2" DefaultText="MGeneralizacion2" />
+      </ShapeHasDecorators>
+    </ImageShape>
   </Shapes>
   <Connectors>
-    <Connector Id="fc067f1a-076e-47d8-b155-ef171c2da590" Description="Description for IPS.UMLSPF.ConecClase" Name="ConecClase" DisplayName="Conec Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Clase" />
-    <Connector Id="a9e5319f-d905-47eb-bf0a-337682bf1c83" Description="Description for IPS.UMLSPF.ConecComposicion" Name="ConecComposicion" DisplayName="Conec Composicion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Composicion" TargetEndStyle="FilledDiamond" targetEndWidth="0.3" targetEndHeight="0.3" />
-    <Connector Id="7d6f860e-97ab-458a-8451-ae6a1dbcc31f" Description="Description for IPS.UMLSPF.ConecAgregacion" Name="ConecAgregacion" DisplayName="Conec Agregacion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Agregacion" TargetEndStyle="EmptyDiamond" targetEndWidth="0.4" targetEndHeight="0.4" />
+    <Connector Id="fc067f1a-076e-47d8-b155-ef171c2da590" Description="Description for IPS.UMLSPF.ConecClase" Name="ConecClase" DisplayName="Conec Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Clase">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="refDCL" DisplayName="Ref DCL" DefaultText="refDCL" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="refICL" DisplayName="Ref ICL" DefaultText="refICL" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="a9e5319f-d905-47eb-bf0a-337682bf1c83" Description="Description for IPS.UMLSPF.ConecComposicion" Name="ConecComposicion" DisplayName="Conec Composicion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Composicion" TargetEndStyle="FilledDiamond" targetEndWidth="0.3" targetEndHeight="0.3">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="refDCO" DisplayName="Ref DCO" DefaultText="refDCO" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="refICO" DisplayName="Ref ICO" DefaultText="refICO" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="7d6f860e-97ab-458a-8451-ae6a1dbcc31f" Description="Description for IPS.UMLSPF.ConecAgregacion" Name="ConecAgregacion" DisplayName="Conec Agregacion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Agregacion" TargetEndStyle="EmptyDiamond" targetEndWidth="0.4" targetEndHeight="0.4">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="refDCA" DisplayName="Ref DCA" DefaultText="refDCA" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="refICA" DisplayName="Ref ICA" DefaultText="refICA" />
+      </ConnectorHasDecorators>
+    </Connector>
     <Connector Id="2537b36f-c6cf-43bf-8e81-4bda4c31ce83" Description="Description for IPS.UMLSPF.ConEsPadre" Name="ConEsPadre" DisplayName="Con Es Padre" Namespace="IPS.UMLSPF" FixedTooltipText="Con Es Padre" />
     <Connector Id="f7f86333-f819-4792-9df1-508064a7c008" Description="Description for IPS.UMLSPF.ConEsHijo" Name="ConEsHijo" DisplayName="Con Es Hijo" Namespace="IPS.UMLSPF" FixedTooltipText="Con Es Hijo" />
   </Connectors>
@@ -529,6 +606,14 @@
       </XmlClassData>
       <XmlClassData TypeName="ConAsociacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conAsociacionMoniker" ElementName="conAsociacion" MonikerTypeName="ConAsociacionMoniker">
         <DomainRelationshipMoniker Name="conAsociacion" />
+        <ElementData>
+          <XmlPropertyData XmlName="refD">
+            <DomainPropertyMoniker Name="conAsociacion/refD" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="refI">
+            <DomainPropertyMoniker Name="conAsociacion/refI" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ConecClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecClaseMoniker" ElementName="conecClase" MonikerTypeName="ConecClaseMoniker">
         <ConnectorMoniker Name="ConecClase" />
@@ -552,12 +637,28 @@
       </XmlClassData>
       <XmlClassData TypeName="ConComposicion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conComposicionMoniker" ElementName="conComposicion" MonikerTypeName="ConComposicionMoniker">
         <DomainRelationshipMoniker Name="conComposicion" />
+        <ElementData>
+          <XmlPropertyData XmlName="refD">
+            <DomainPropertyMoniker Name="conComposicion/refD" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="refI">
+            <DomainPropertyMoniker Name="conComposicion/refI" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ConecComposicion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecComposicionMoniker" ElementName="conecComposicion" MonikerTypeName="ConecComposicionMoniker">
         <ConnectorMoniker Name="ConecComposicion" />
       </XmlClassData>
       <XmlClassData TypeName="ConAgregacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conAgregacionMoniker" ElementName="conAgregacion" MonikerTypeName="ConAgregacionMoniker">
         <DomainRelationshipMoniker Name="conAgregacion" />
+        <ElementData>
+          <XmlPropertyData XmlName="refD">
+            <DomainPropertyMoniker Name="conAgregacion/refD" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="refI">
+            <DomainPropertyMoniker Name="conAgregacion/refI" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ConecAgregacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecAgregacionMoniker" ElementName="conecAgregacion" MonikerTypeName="ConecAgregacionMoniker">
         <ConnectorMoniker Name="ConecAgregacion" />
@@ -631,6 +732,12 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="claseHija">
             <DomainRelationshipMoniker Name="EsHija" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="generalizacion1">
+            <DomainPropertyMoniker Name="Herencia/Generalizacion1" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="generalizacion2">
+            <DomainPropertyMoniker Name="Herencia/Generalizacion2" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ModeloClassWEBHasHerencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBHasHerenciaMoniker" ElementName="modeloClassWEBHasHerencia" MonikerTypeName="ModeloClassWEBHasHerenciaMoniker">
@@ -838,6 +945,24 @@
         <ParentElementPath>
           <DomainPath>ModeloClassWEBHasHerencia.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="IMGHerencia/MGeneralizacion1" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Herencia/Generalizacion1" />
+              <DomainPath />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="IMGHerencia/MGeneralizacion2" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Herencia/Generalizacion2" />
+              <DomainPath />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <ImageShapeMoniker Name="IMGHerencia" />
       </ShapeMap>
     </ShapeMaps>
@@ -845,14 +970,62 @@
       <ConnectorMap>
         <ConnectorMoniker Name="ConecClase" />
         <DomainRelationshipMoniker Name="conAsociacion" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConecClase/refDCL" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="conAsociacion/refD" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConecClase/refICL" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="conAsociacion/refI" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConecComposicion" />
         <DomainRelationshipMoniker Name="conComposicion" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConecComposicion/refDCO" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="conComposicion/refD" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConecComposicion/refICO" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="conComposicion/refI" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConecAgregacion" />
         <DomainRelationshipMoniker Name="conAgregacion" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConecAgregacion/refDCA" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="conAgregacion/refD" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConecAgregacion/refICA" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="conAgregacion/refI" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConEsPadre" />

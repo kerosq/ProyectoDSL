@@ -98,6 +98,7 @@ namespace IPS.UMLSPF
 				typeof(CMPClaseEnriquecida),
 				typeof(IMGHerencia),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
+				typeof(global::IPS.UMLSPF.DecoratorPropertyChanged),
 				typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged),
 				typeof(global::IPS.UMLSPF.CompartmentItemAddRule),
 				typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule),
@@ -135,6 +136,14 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(EstiloMetodos), "TipoLetra", EstiloMetodos.TipoLetraDomainPropertyId, typeof(EstiloMetodos.TipoLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloMetodos), "ColorLetra", EstiloMetodos.ColorLetraDomainPropertyId, typeof(EstiloMetodos.ColorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloMetodos), "MostrarEM", EstiloMetodos.MostrarEMDomainPropertyId, typeof(EstiloMetodos.MostrarEMPropertyHandler)),
+				new DomainMemberInfo(typeof(Herencia), "Generalizacion1", Herencia.Generalizacion1DomainPropertyId, typeof(Herencia.Generalizacion1PropertyHandler)),
+				new DomainMemberInfo(typeof(Herencia), "Generalizacion2", Herencia.Generalizacion2DomainPropertyId, typeof(Herencia.Generalizacion2PropertyHandler)),
+				new DomainMemberInfo(typeof(conAsociacion), "refD", conAsociacion.refDDomainPropertyId, typeof(conAsociacion.refDPropertyHandler)),
+				new DomainMemberInfo(typeof(conAsociacion), "refI", conAsociacion.refIDomainPropertyId, typeof(conAsociacion.refIPropertyHandler)),
+				new DomainMemberInfo(typeof(conComposicion), "refD", conComposicion.refDDomainPropertyId, typeof(conComposicion.refDPropertyHandler)),
+				new DomainMemberInfo(typeof(conComposicion), "refI", conComposicion.refIDomainPropertyId, typeof(conComposicion.refIPropertyHandler)),
+				new DomainMemberInfo(typeof(conAgregacion), "refD", conAgregacion.refDDomainPropertyId, typeof(conAgregacion.refDPropertyHandler)),
+				new DomainMemberInfo(typeof(conAgregacion), "refI", conAgregacion.refIDomainPropertyId, typeof(conAgregacion.refIPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -421,6 +430,7 @@ namespace IPS.UMLSPF
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.DecoratorPropertyChanged));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemAddRule));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule));
@@ -438,6 +448,7 @@ namespace IPS.UMLSPF
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.DecoratorPropertyChanged));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemAddRule));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule));
