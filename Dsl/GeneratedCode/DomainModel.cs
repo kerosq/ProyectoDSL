@@ -92,8 +92,11 @@ namespace IPS.UMLSPF
 				typeof(ConecClase),
 				typeof(ConecComposicion),
 				typeof(ConecAgregacion),
+				typeof(ConEsPadre),
+				typeof(ConEsHijo),
 				typeof(CMPClase),
 				typeof(CMPClaseEnriquecida),
+				typeof(IMGHerencia),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
 				typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged),
 				typeof(global::IPS.UMLSPF.CompartmentItemAddRule),
@@ -187,7 +190,7 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
 				createElementMap.Add(typeof(ModeloClassWEB), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -201,8 +204,11 @@ namespace IPS.UMLSPF
 				createElementMap.Add(typeof(ConecClase), 10);
 				createElementMap.Add(typeof(ConecComposicion), 11);
 				createElementMap.Add(typeof(ConecAgregacion), 12);
-				createElementMap.Add(typeof(CMPClase), 13);
-				createElementMap.Add(typeof(CMPClaseEnriquecida), 14);
+				createElementMap.Add(typeof(ConEsPadre), 13);
+				createElementMap.Add(typeof(ConEsHijo), 14);
+				createElementMap.Add(typeof(CMPClase), 15);
+				createElementMap.Add(typeof(CMPClaseEnriquecida), 16);
+				createElementMap.Add(typeof(IMGHerencia), 17);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -229,8 +235,11 @@ namespace IPS.UMLSPF
 				case 10: return new ConecClase(partition, propertyAssignments);
 				case 11: return new ConecComposicion(partition, propertyAssignments);
 				case 12: return new ConecAgregacion(partition, propertyAssignments);
-				case 13: return new CMPClase(partition, propertyAssignments);
-				case 14: return new CMPClaseEnriquecida(partition, propertyAssignments);
+				case 13: return new ConEsPadre(partition, propertyAssignments);
+				case 14: return new ConEsHijo(partition, propertyAssignments);
+				case 15: return new CMPClase(partition, propertyAssignments);
+				case 16: return new CMPClaseEnriquecida(partition, propertyAssignments);
+				case 17: return new IMGHerencia(partition, propertyAssignments);
 				default: return null;
 			}
 		}

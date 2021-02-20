@@ -306,6 +306,12 @@ namespace IPS.UMLSPF
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::IPS.UMLSPF.Herencia)
+			{
+				global::IPS.UMLSPF.IMGHerencia newShape = new global::IPS.UMLSPF.IMGHerencia(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::IPS.UMLSPF.conAsociacion)
 			{
 				global::IPS.UMLSPF.ConecClase newShape = new global::IPS.UMLSPF.ConecClase(this.Partition);
@@ -319,6 +325,16 @@ namespace IPS.UMLSPF
 			if(element is global::IPS.UMLSPF.conAgregacion)
 			{
 				global::IPS.UMLSPF.ConecAgregacion newShape = new global::IPS.UMLSPF.ConecAgregacion(this.Partition);
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.EsPadre)
+			{
+				global::IPS.UMLSPF.ConEsPadre newShape = new global::IPS.UMLSPF.ConEsPadre(this.Partition);
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.EsHija)
+			{
+				global::IPS.UMLSPF.ConEsHijo newShape = new global::IPS.UMLSPF.ConEsHijo(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -376,6 +392,8 @@ namespace IPS.UMLSPF
 		private global::IPS.UMLSPF.ConectarClasesConnectAction conectarClasesConnectAction;
 		private global::IPS.UMLSPF.ConectarComposicionConnectAction conectarComposicionConnectAction;
 		private global::IPS.UMLSPF.ConectarAgregacionConnectAction conectarAgregacionConnectAction;
+		private global::IPS.UMLSPF.ConectarPadreConnectAction conectarPadreConnectAction;
+		private global::IPS.UMLSPF.ConectarHijoConnectAction conectarHijoConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -424,6 +442,24 @@ namespace IPS.UMLSPF
 						this.conectarAgregacionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
 					action = this.conectarAgregacionConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::IPS.UMLSPF.UMLSPFToolboxHelper.ConectarPadreFilterString))
+				{
+					if (this.conectarPadreConnectAction == null)
+					{
+						this.conectarPadreConnectAction = new global::IPS.UMLSPF.ConectarPadreConnectAction(this);
+						this.conectarPadreConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.conectarPadreConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::IPS.UMLSPF.UMLSPFToolboxHelper.ConectarHijoFilterString))
+				{
+					if (this.conectarHijoConnectAction == null)
+					{
+						this.conectarHijoConnectAction = new global::IPS.UMLSPF.ConectarHijoConnectAction(this);
+						this.conectarHijoConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.conectarHijoConnectAction;
 				} 
 				else
 				{
@@ -497,6 +533,16 @@ namespace IPS.UMLSPF
 						this.conectarAgregacionConnectAction.Dispose();
 						this.conectarAgregacionConnectAction = null;
 					}
+					if(this.conectarPadreConnectAction != null)
+					{
+						this.conectarPadreConnectAction.Dispose();
+						this.conectarPadreConnectAction = null;
+					}
+					if(this.conectarHijoConnectAction != null)
+					{
+						this.conectarHijoConnectAction.Dispose();
+						this.conectarHijoConnectAction = null;
+					}
 					this.UnsubscribeCompartmentItemsEvents();
 				}
 			}
@@ -553,9 +599,12 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Herencia), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conComposicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAgregacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsPadre), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -579,6 +628,10 @@ namespace IPS.UMLSPF
 				{
 					parentElement = GetParentForClase((global::IPS.UMLSPF.Clase)childElement);
 				} else
+				if(childElement is global::IPS.UMLSPF.Herencia)
+				{
+					parentElement = GetParentForHerencia((global::IPS.UMLSPF.Herencia)childElement);
+				} else
 				{
 					parentElement = null;
 				}
@@ -596,6 +649,13 @@ namespace IPS.UMLSPF
 				return result;
 			}
 			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForClaseEnriquecida( global::IPS.UMLSPF.Clase root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForHerencia( global::IPS.UMLSPF.Herencia root )
 			{
 				// Segments 0 and 1
 				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
@@ -1182,6 +1242,8 @@ namespace IPS.UMLSPF
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conComposicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAgregacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsPadre), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

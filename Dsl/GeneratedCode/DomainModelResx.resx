@@ -781,6 +781,14 @@
     <value>EstiloMetodos</value>
     <comment>Compartment title</comment>
   </data>
+  <data name="IPS.UMLSPF.IMGHerencia.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.IMGHerencia</value>
+    <comment>Description for DomainClass &apos;IMGHerencia&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.IMGHerencia.DisplayName" xml:space="preserve">
+    <value>IMGHerencia</value>
+    <comment>DisplayName for DomainClass &apos;IMGHerencia&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.ConecClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConecClase</value>
     <comment>Description for DomainClass &apos;ConecClase&apos;</comment>
@@ -804,6 +812,22 @@
   <data name="IPS.UMLSPF.ConecAgregacion.DisplayName" xml:space="preserve">
     <value>Conec Agregacion</value>
     <comment>DisplayName for DomainClass &apos;ConecAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConEsPadre.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ConEsPadre</value>
+    <comment>Description for DomainClass &apos;ConEsPadre&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConEsPadre.DisplayName" xml:space="preserve">
+    <value>Con Es Padre</value>
+    <comment>DisplayName for DomainClass &apos;ConEsPadre&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConEsHijo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ConEsHijo</value>
+    <comment>Description for DomainClass &apos;ConEsHijo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ConEsHijo.DisplayName" xml:space="preserve">
+    <value>Con Es Hijo</value>
+    <comment>DisplayName for DomainClass &apos;ConEsHijo&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>UMLSPF (*.kacqSPF)|*.kacqSPF</value>
@@ -863,6 +887,30 @@
   </data>
   <data name="ConectarAgregacionToolboxTooltip" xml:space="preserve">
     <value>Conectar Agregacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="IconHerenciaToolboxItem" xml:space="preserve">
+    <value>Herencia</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="IconHerenciaToolboxTooltip" xml:space="preserve">
+    <value>Agregar Herencia</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConectarPadreToolboxItem" xml:space="preserve">
+    <value>ConectarPadre</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConectarPadreToolboxTooltip" xml:space="preserve">
+    <value>Conectar Padre</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConectarHijoToolboxItem" xml:space="preserve">
+    <value>ConectarHijo</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConectarHijoToolboxTooltip" xml:space="preserve">
+    <value>Conectar Hijo</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -994,6 +1042,10 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\IconoDecoClaseU.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
+  <data name="IMGHerenciaImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\HERENCIA.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>IMGHerencia shape image</comment>
+  </data>
   <data name="IconsClassToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\IconoDecoClaseU.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -1012,6 +1064,18 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="ConectarAgregacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectorArrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="IconHerenciaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\herenciaICON.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConectarPadreToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\herenciaICON.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConectarHijoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\herenciaICON.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

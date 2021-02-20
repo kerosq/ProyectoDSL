@@ -436,11 +436,14 @@
       <Compartment Name="cmpEstiloAtributos" TitleFontStyle="Bold" Title="EstiloAtributos" />
       <Compartment Name="cmpEstiloMetodos" TitleFontStyle="Bold" Title="EstiloMetodos" />
     </CompartmentShape>
+    <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png" />
   </Shapes>
   <Connectors>
     <Connector Id="fc067f1a-076e-47d8-b155-ef171c2da590" Description="Description for IPS.UMLSPF.ConecClase" Name="ConecClase" DisplayName="Conec Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Clase" />
     <Connector Id="a9e5319f-d905-47eb-bf0a-337682bf1c83" Description="Description for IPS.UMLSPF.ConecComposicion" Name="ConecComposicion" DisplayName="Conec Composicion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Composicion" TargetEndStyle="FilledDiamond" targetEndWidth="0.3" targetEndHeight="0.3" />
     <Connector Id="7d6f860e-97ab-458a-8451-ae6a1dbcc31f" Description="Description for IPS.UMLSPF.ConecAgregacion" Name="ConecAgregacion" DisplayName="Conec Agregacion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Agregacion" TargetEndStyle="EmptyDiamond" targetEndWidth="0.4" targetEndHeight="0.4" />
+    <Connector Id="2537b36f-c6cf-43bf-8e81-4bda4c31ce83" Description="Description for IPS.UMLSPF.ConEsPadre" Name="ConEsPadre" DisplayName="Con Es Padre" Namespace="IPS.UMLSPF" FixedTooltipText="Con Es Padre" />
+    <Connector Id="f7f86333-f819-4792-9df1-508064a7c008" Description="Description for IPS.UMLSPF.ConEsHijo" Name="ConEsHijo" DisplayName="Con Es Hijo" Namespace="IPS.UMLSPF" FixedTooltipText="Con Es Hijo" />
   </Connectors>
   <XmlSerializationBehavior Name="UMLSPFSerializationBehavior" Namespace="IPS.UMLSPF">
     <ClassData>
@@ -639,6 +642,15 @@
       <XmlClassData TypeName="EsHija" MonikerAttributeName="" SerializeId="true" MonikerElementName="esHijaMoniker" ElementName="esHija" MonikerTypeName="EsHijaMoniker">
         <DomainRelationshipMoniker Name="EsHija" />
       </XmlClassData>
+      <XmlClassData TypeName="IMGHerencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="iMGHerenciaMoniker" ElementName="iMGHerencia" MonikerTypeName="IMGHerenciaMoniker">
+        <ImageShapeMoniker Name="IMGHerencia" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConEsPadre" MonikerAttributeName="" SerializeId="true" MonikerElementName="conEsPadreMoniker" ElementName="conEsPadre" MonikerTypeName="ConEsPadreMoniker">
+        <ConnectorMoniker Name="ConEsPadre" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConEsHijo" MonikerAttributeName="" SerializeId="true" MonikerElementName="conEsHijoMoniker" ElementName="conEsHijo" MonikerTypeName="ConEsHijoMoniker">
+        <ConnectorMoniker Name="ConEsHijo" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="UMLSPFExplorer" />
@@ -821,6 +833,13 @@
           </PropertyDisplayed>
         </CompartmentMap>
       </CompartmentShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Herencia" />
+        <ParentElementPath>
+          <DomainPath>ModeloClassWEBHasHerencia.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <ImageShapeMoniker Name="IMGHerencia" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -834,6 +853,14 @@
       <ConnectorMap>
         <ConnectorMoniker Name="ConecAgregacion" />
         <DomainRelationshipMoniker Name="conAgregacion" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConEsPadre" />
+        <DomainRelationshipMoniker Name="EsPadre" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConEsHijo" />
+        <DomainRelationshipMoniker Name="EsHija" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -859,6 +886,15 @@
       </ConnectionTool>
       <ConnectionTool Name="ConectarAgregacion" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarAgregacion" Tooltip="Conectar Agregacion" HelpKeyword="ConectarAgregacion">
         <ConnectionBuilderMoniker Name="UMLSPF/conAgregacionBuilder" />
+      </ConnectionTool>
+      <ElementTool Name="IconHerencia" ToolboxIcon="Resources\herenciaICON.bmp" Caption="Herencia" Tooltip="Agregar Herencia" HelpKeyword="Herencia">
+        <DomainClassMoniker Name="Herencia" />
+      </ElementTool>
+      <ConnectionTool Name="ConectarPadre" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarPadre" Tooltip="Conectar Padre" HelpKeyword="ConectarPadre">
+        <ConnectionBuilderMoniker Name="UMLSPF/EsPadreBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="ConectarHijo" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarHijo" Tooltip="Conectar Hijo" HelpKeyword="ConectarHijo">
+        <ConnectionBuilderMoniker Name="UMLSPF/EsHijaBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

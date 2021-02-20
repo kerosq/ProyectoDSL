@@ -69,6 +69,30 @@ namespace IPS.UMLSPF
 					"@ConectarAgregacionToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 4)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@IconHerenciaToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.IconHerenciaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Herencia", 
+					"@IconHerenciaToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ConectarPadreToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ConectarPadreToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ConectarPadre", 
+					"@ConectarPadreToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ConectarHijoToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ConectarHijoToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ConectarHijo", 
+					"@ConectarHijoToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
 	[VSShell::ProvideEditorFactory(typeof(UMLSPFEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(UMLSPFEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(UMLSPFEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
