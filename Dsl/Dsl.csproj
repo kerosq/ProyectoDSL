@@ -82,6 +82,7 @@
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
     <Compile Include="DesignerCustomization\Atributo.cs" />
+    <Compile Include="DesignerCustomization\AtributoIdentificador.cs" />
     <Compile Include="DesignerCustomization\EstiloAtributos.cs" />
     <Compile Include="DesignerCustomization\EstiloMetodos.cs" />
     <Compile Include="DesignerCustomization\EstilosClase.cs" />

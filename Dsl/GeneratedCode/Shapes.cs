@@ -256,7 +256,7 @@ namespace IPS.UMLSPF
 				{
 					localCompartmentsOffset = baseCompartmentDescriptions.Length;
 				}
-				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[2+localCompartmentsOffset];
+				compartmentDescriptions = new DslDiagrams::ElementListCompartmentDescription[3+localCompartmentsOffset];
 				
 				if(baseCompartmentDescriptions!=null)
 				{
@@ -285,6 +285,15 @@ namespace IPS.UMLSPF
 						titleFont, null,
 						false);
 					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
+				}
+				{
+					string title = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("CMPClasecmpAtributoIDTitle");
+					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("cmpAtributoID", title, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
+						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
+						null, null,
+						false);
+					compartmentDescriptions[localCompartmentsOffset+2] = descriptor;
 				}
 			}
 			
@@ -318,7 +327,7 @@ namespace IPS.UMLSPF
 					{
 						localCompartmentMappingsOffset = baseMappings.Length;
 					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[2+localCompartmentMappingsOffset];
+					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[3+localCompartmentMappingsOffset];
 					
 					if(baseMappings!=null)
 					{
@@ -337,6 +346,14 @@ namespace IPS.UMLSPF
 																				global::IPS.UMLSPF.Operaciones.MostrarOperacionDomainPropertyId, 
 																				global::IPS.UMLSPF.Operaciones.DomainClassId, 
 																				GetElementsFromClaseForcmpOperaciones,
+																				null,
+																				null,
+																				null);
+					mappings[localCompartmentMappingsOffset+2] = new DslDiagrams::ElementListCompartmentMapping(
+																				"cmpAtributoID", 
+																				global::IPS.UMLSPF.AtributoIdentificador.MostrarAtributoIDDomainPropertyId, 
+																				global::IPS.UMLSPF.AtributoIdentificador.DomainClassId, 
+																				GetElementsFromClaseForcmpAtributoID,
 																				null,
 																				null,
 																				null);
@@ -381,6 +398,13 @@ namespace IPS.UMLSPF
 				global::IPS.UMLSPF.Clase root = (global::IPS.UMLSPF.Clase)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::IPS.UMLSPF.Operaciones> result = root.Operaciones;
+				return result;
+			}
+			internal static global::System.Collections.IList GetElementsFromClaseForcmpAtributoID(DslModeling::ModelElement rootElement)
+			{
+				global::IPS.UMLSPF.Clase root = (global::IPS.UMLSPF.Clase)rootElement;
+					// Segments 0 and 1
+					DslModeling::LinkedElementCollection<global::IPS.UMLSPF.AtributoIdentificador> result = root.AtributoIdentificador;
 				return result;
 			}
 			#endregion

@@ -10,5 +10,29 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
+namespace IPS.UMLSPF
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class Clase
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateClaseMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.AtributoIdentificador.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Clase", "", "AtributoIdentificador"),
+						"DSL0001", this);
+			}
+		} // ValidateClaseMultiplicity
+	} // class Clase
+} // IPS.UMLSPF
+
 	
  

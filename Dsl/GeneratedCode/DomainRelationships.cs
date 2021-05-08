@@ -1057,6 +1057,93 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
+		#region NombreRelacion domain property code
+		
+		/// <summary>
+		/// NombreRelacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreRelacionDomainPropertyId = new global::System.Guid(0xffff40d9, 0xa340, 0x4e2a, 0xa3, 0x66, 0x94, 0xa7, 0x4e, 0xeb, 0x24, 0x86);
+		
+		/// <summary>
+		/// Storage for NombreRelacion
+		/// </summary>
+		private global::System.String nombreRelacionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreRelacion domain property.
+		/// Description for IPS.UMLSPF.conAsociacion.Nombre Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/NombreRelacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/NombreRelacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ffff40d9-a340-4e2a-a366-94a74eeb2486")]
+		public global::System.String NombreRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreRelacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreRelacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAsociacion.NombreRelacion domain property.
+		/// </summary>
+		internal sealed partial class NombreRelacionPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, global::System.String>
+		{
+			private NombreRelacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAsociacion.NombreRelacion domain property value handler.
+			/// </summary>
+			public static readonly NombreRelacionPropertyHandler Instance = new NombreRelacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAsociacion.NombreRelacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreRelacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAsociacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreRelacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAsociacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreRelacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region SourceClase link accessor
 		/// <summary>
 		/// Get the list of conAsociacion links to a Clase.
@@ -1461,6 +1548,93 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
+		#region NombreRelacion domain property code
+		
+		/// <summary>
+		/// NombreRelacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreRelacionDomainPropertyId = new global::System.Guid(0x7a612a76, 0x013c, 0x43b9, 0xa7, 0xd1, 0xef, 0xff, 0x38, 0xb1, 0xb1, 0x15);
+		
+		/// <summary>
+		/// Storage for NombreRelacion
+		/// </summary>
+		private global::System.String nombreRelacionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreRelacion domain property.
+		/// Description for IPS.UMLSPF.conComposicion.Nombre Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/NombreRelacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/NombreRelacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("7a612a76-013c-43b9-a7d1-efff38b1b115")]
+		public global::System.String NombreRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreRelacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreRelacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conComposicion.NombreRelacion domain property.
+		/// </summary>
+		internal sealed partial class NombreRelacionPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, global::System.String>
+		{
+			private NombreRelacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conComposicion.NombreRelacion domain property value handler.
+			/// </summary>
+			public static readonly NombreRelacionPropertyHandler Instance = new NombreRelacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conComposicion.NombreRelacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreRelacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conComposicion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreRelacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conComposicion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreRelacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region CompSourceClase link accessor
 		/// <summary>
 		/// Get the list of conComposicion links to a Clase.
@@ -1858,6 +2032,93 @@ namespace IPS.UMLSPF
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.refIPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NombreRelacion domain property code
+		
+		/// <summary>
+		/// NombreRelacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreRelacionDomainPropertyId = new global::System.Guid(0x7ae22ee7, 0x47b6, 0x4b93, 0x8b, 0x76, 0x05, 0xae, 0x1c, 0x01, 0xff, 0xf3);
+		
+		/// <summary>
+		/// Storage for NombreRelacion
+		/// </summary>
+		private global::System.String nombreRelacionPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreRelacion domain property.
+		/// Description for IPS.UMLSPF.conAgregacion.Nombre Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/NombreRelacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/NombreRelacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("7ae22ee7-47b6-4b93-8b76-05ae1c01fff3")]
+		public global::System.String NombreRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreRelacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreRelacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAgregacion.NombreRelacion domain property.
+		/// </summary>
+		internal sealed partial class NombreRelacionPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, global::System.String>
+		{
+			private NombreRelacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAgregacion.NombreRelacion domain property value handler.
+			/// </summary>
+			public static readonly NombreRelacionPropertyHandler Instance = new NombreRelacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAgregacion.NombreRelacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreRelacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAgregacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreRelacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAgregacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreRelacionPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -3313,6 +3574,245 @@ namespace IPS.UMLSPF
 			foreach ( global::IPS.UMLSPF.EsHija link in links )
 			{
 				if ( target.Equals(link.Clase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship ClaseHasAtributoIdentificador
+	/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributoIdentificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributoIdentificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("c01259a4-025d-4d30-a785-216b7d4b748d")]
+	public partial class ClaseHasAtributoIdentificador : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseHasAtributoIdentificador domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc01259a4, 0x025d, 0x4d30, 0xa7, 0x85, 0x21, 0x6b, 0x7d, 0x4b, 0x74, 0x8d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseHasAtributoIdentificador link in the same Partition as the given Clase
+		/// </summary>
+		/// <param name="source">Clase to use as the source of the relationship.</param>
+		/// <param name="target">AtributoIdentificador to use as the target of the relationship.</param>
+		public ClaseHasAtributoIdentificador(Clase source, AtributoIdentificador target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasAtributoIdentificador.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasAtributoIdentificador(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasAtributoIdentificador(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasAtributoIdentificador(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasAtributoIdentificador(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0x53d76716, 0xd806, 0x403a, 0x91, 0xf5, 0x91, 0x07, 0x47, 0x17, 0x15, 0x8d);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoIdentificador", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainObjectId("53d76716-d806-403a-91f5-91074717158d")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Clase of a AtributoIdentificador
+		/// <summary>
+		/// Gets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Clase GetClase(AtributoIdentificador element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoIdentificadorDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClase(AtributoIdentificador element, Clase newClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoIdentificadorDomainRoleId, newClase);
+		}
+		#endregion
+		#region AtributoIdentificador domain role code
+		
+		/// <summary>
+		/// AtributoIdentificador domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoIdentificadorDomainRoleId = new global::System.Guid(0xb05cceef, 0xad7d, 0x4400, 0xbd, 0xed, 0x4e, 0x9c, 0x15, 0xb2, 0xb8, 0x81);
+		
+		/// <summary>
+		/// DomainRole AtributoIdentificador
+		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificador
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("b05cceef-ad7d-4400-bded-4e9c15b2b881")]
+		public virtual AtributoIdentificador AtributoIdentificador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AtributoIdentificador)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoIdentificadorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoIdentificadorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AtributoIdentificador of a Clase
+		/// <summary>
+		/// Gets a list of AtributoIdentificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AtributoIdentificador> GetAtributoIdentificador(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoIdentificador>, AtributoIdentificador>(element, ClaseDomainRoleId);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the list of ClaseHasAtributoIdentificador links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> GetLinksToAtributoIdentificador ( global::IPS.UMLSPF.Clase claseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(claseInstance, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+		}
+		#endregion
+		#region AtributoIdentificador link accessor
+		/// <summary>
+		/// Get the ClaseHasAtributoIdentificador link to a AtributoIdentificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseHasAtributoIdentificador GetLinkToClase (global::IPS.UMLSPF.AtributoIdentificador atributoIdentificadorInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(atributoIdentificadorInstance, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AtributoIdentificador not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseHasAtributoIdentificador instance accessors
+		
+		/// <summary>
+		/// Get any ClaseHasAtributoIdentificador links between a given Clase and a AtributoIdentificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.AtributoIdentificador target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(source, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtributoIdentificador link in links )
+			{
+				if ( target.Equals(link.AtributoIdentificador) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseHasAtributoIdentificador link between a given Claseand a AtributoIdentificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.ClaseHasAtributoIdentificador GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.AtributoIdentificador target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(source, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtributoIdentificador link in links )
+			{
+				if ( target.Equals(link.AtributoIdentificador) )
 				{
 					return link;
 				}

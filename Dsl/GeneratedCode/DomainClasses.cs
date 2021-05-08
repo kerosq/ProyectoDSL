@@ -591,6 +591,21 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
+		#region AtributoIdentificador opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of AtributoIdentificador.
+		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<AtributoIdentificador> AtributoIdentificador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoIdentificador>, AtributoIdentificador>(global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -622,6 +637,11 @@ namespace IPS.UMLSPF
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Clase.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.AtributoIdentificador.DomainClassId)) 
 				{
 					return true;
 				}
@@ -673,6 +693,15 @@ namespace IPS.UMLSPF
 			{
 				// Create link for path conComposicion.CompTargetClase
 				this.CompTargetClase.Add(sourceClase3);
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador4 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
+			if (sourceAtributoIdentificador4 != null)
+			{
+				// Create link for path ClaseHasAtributoIdentificador.AtributoIdentificador
+				this.AtributoIdentificador.Add(sourceAtributoIdentificador4);
 
 				return;
 			}
@@ -736,6 +765,20 @@ namespace IPS.UMLSPF
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador4 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
+			if (sourceAtributoIdentificador4 != null)
+			{
+				// Delete link for path ClaseHasAtributoIdentificador.AtributoIdentificador
+				
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasAtributoIdentificador.GetLinks((global::IPS.UMLSPF.Clase)this, sourceAtributoIdentificador4))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId);
 				}
 
 				return;
@@ -3005,6 +3048,306 @@ namespace IPS.UMLSPF
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.EsHija.HerenciaDomainRoleId);
+			}
+		}
+		#endregion
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainClass AtributoIdentificador
+	/// Description for IPS.UMLSPF.AtributoIdentificador
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("8e986070-39d3-4084-9b30-cd3e53097af3")]
+	public partial class AtributoIdentificador : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// AtributoIdentificador domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x8e986070, 0x39d3, 0x4084, 0x9b, 0x30, 0xcd, 0x3e, 0x53, 0x09, 0x7a, 0xf3);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoIdentificador(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public AtributoIdentificador(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region NombreAtributo domain property code
+		
+		/// <summary>
+		/// NombreAtributo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NombreAtributoDomainPropertyId = new global::System.Guid(0xa5025d40, 0x3f8f, 0x41dd, 0xa0, 0x98, 0x7a, 0xa5, 0x15, 0xc2, 0x9c, 0xee);
+		
+		/// <summary>
+		/// Storage for NombreAtributo
+		/// </summary>
+		private global::System.String nombreAtributoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NombreAtributo domain property.
+		/// Description for IPS.UMLSPF.AtributoIdentificador.Nombre Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/NombreAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/NombreAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a5025d40-3f8f-41dd-a098-7aa515c29cee")]
+		public global::System.String NombreAtributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreAtributoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NombreAtributoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoIdentificador.NombreAtributo domain property.
+		/// </summary>
+		internal sealed partial class NombreAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, global::System.String>
+		{
+			private NombreAtributoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoIdentificador.NombreAtributo domain property value handler.
+			/// </summary>
+			public static readonly NombreAtributoPropertyHandler Instance = new NombreAtributoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoIdentificador.NombreAtributo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NombreAtributoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(AtributoIdentificador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreAtributoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoIdentificador element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreAtributoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region TipoAtributo domain property code
+		
+		/// <summary>
+		/// TipoAtributo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoAtributoDomainPropertyId = new global::System.Guid(0xf8db26c1, 0xce0e, 0x4193, 0x93, 0xdb, 0x64, 0x54, 0xd7, 0xb7, 0xfc, 0xbe);
+		
+		/// <summary>
+		/// Storage for TipoAtributo
+		/// </summary>
+		private global::System.String tipoAtributoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoAtributo domain property.
+		/// Description for IPS.UMLSPF.AtributoIdentificador.Tipo Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/TipoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/TipoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("f8db26c1-ce0e-4193-93db-6454d7b7fcbe")]
+		public global::System.String TipoAtributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoAtributoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoAtributoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoIdentificador.TipoAtributo domain property.
+		/// </summary>
+		internal sealed partial class TipoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, global::System.String>
+		{
+			private TipoAtributoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoIdentificador.TipoAtributo domain property value handler.
+			/// </summary>
+			public static readonly TipoAtributoPropertyHandler Instance = new TipoAtributoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoIdentificador.TipoAtributo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoAtributoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(AtributoIdentificador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoAtributoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoIdentificador element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoAtributoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region MostrarAtributoID domain property code
+		
+		/// <summary>
+		/// MostrarAtributoID domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid MostrarAtributoIDDomainPropertyId = new global::System.Guid(0xb17a373b, 0xa4a0, 0x4987, 0xa4, 0x15, 0xf8, 0x56, 0x72, 0xe8, 0x17, 0xb9);
+		
+		/// <summary>
+		/// Gets or sets the value of MostrarAtributoID domain property.
+		/// Description for IPS.UMLSPF.AtributoIdentificador.Mostrar Atributo ID
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/MostrarAtributoID.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/MostrarAtributoID.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("b17a373b-a4a0-4987-a415-f85672e817b9")]
+		public global::System.String MostrarAtributoID
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return MostrarAtributoIDPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoIdentificador.MostrarAtributoID domain property.
+		/// </summary>
+		internal sealed partial class MostrarAtributoIDPropertyHandler : DslModeling::CalculatedPropertyValueHandler<AtributoIdentificador, global::System.String>
+		{
+			private MostrarAtributoIDPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoIdentificador.MostrarAtributoID domain property value handler.
+			/// </summary>
+			public static readonly MostrarAtributoIDPropertyHandler Instance = new MostrarAtributoIDPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoIdentificador.MostrarAtributoID domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return MostrarAtributoIDDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(AtributoIdentificador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for MostrarAtributoID because its Kind is
+				// set to Calculated. Please provide the GetMostrarAtributoIDValue()
+				// method on the domain class.
+				return element.GetMostrarAtributoIDValue();
+			}
+		
+		}
+		
+		#endregion
+		#region Clase opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Clase.
+		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificador
+		/// </summary>
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId, value);
 			}
 		}
 		#endregion

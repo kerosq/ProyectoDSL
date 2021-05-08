@@ -373,6 +373,38 @@
     <value>Generalizacion2</value>
     <comment>DisplayName for DomainProperty &apos;Generalizacion2&apos; on DomainClass &apos;Herencia&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.AtributoIdentificador</value>
+    <comment>Description for DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador.DisplayName" xml:space="preserve">
+    <value>Atributo Identificador</value>
+    <comment>DisplayName for DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/NombreAtributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.AtributoIdentificador.Nombre Atributo</value>
+    <comment>Description for DomainProperty &apos;NombreAtributo&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/NombreAtributo.DisplayName" xml:space="preserve">
+    <value>Nombre Atributo</value>
+    <comment>DisplayName for DomainProperty &apos;NombreAtributo&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/TipoAtributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.AtributoIdentificador.Tipo Atributo</value>
+    <comment>Description for DomainProperty &apos;TipoAtributo&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/TipoAtributo.DisplayName" xml:space="preserve">
+    <value>Tipo Atributo</value>
+    <comment>DisplayName for DomainProperty &apos;TipoAtributo&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/MostrarAtributoID.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.AtributoIdentificador.Mostrar Atributo ID</value>
+    <comment>Description for DomainProperty &apos;MostrarAtributoID&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/MostrarAtributoID.DisplayName" xml:space="preserve">
+    <value>Mostrar Atributo ID</value>
+    <comment>DisplayName for DomainProperty &apos;MostrarAtributoID&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.ModeloClassWEBHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase</value>
     <comment>Description for DomainClass &apos;ModeloClassWEBHasClase&apos;</comment>
@@ -493,6 +525,14 @@
     <value>Ref I</value>
     <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conAsociacion&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.conAsociacion/NombreRelacion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAsociacion.Nombre Relacion</value>
+    <comment>Description for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAsociacion/NombreRelacion.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion</value>
+    <comment>DisplayName for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.conAsociacion/SourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conAsociacion.SourceClase</value>
     <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
@@ -541,6 +581,14 @@
     <value>Ref I</value>
     <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conComposicion&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.conComposicion/NombreRelacion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conComposicion.Nombre Relacion</value>
+    <comment>Description for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/NombreRelacion.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion</value>
+    <comment>DisplayName for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.conComposicion/CompSourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conComposicion.CompSourceClase</value>
     <comment>Description for DomainRole &apos;CompSourceClase&apos; on DomainRelationship &apos;conComposicion&apos;</comment>
@@ -588,6 +636,14 @@
   <data name="IPS.UMLSPF.conAgregacion/refI.DisplayName" xml:space="preserve">
     <value>Ref I</value>
     <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/NombreRelacion.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.conAgregacion.Nombre Relacion</value>
+    <comment>Description for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/NombreRelacion.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion</value>
+    <comment>DisplayName for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/SourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conAgregacion.SourceClase</value>
@@ -805,6 +861,38 @@
     <value>Herencia Hija</value>
     <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;EsHija&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtributoIdentificador</value>
+    <comment>Description for DomainClass &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador.DisplayName" xml:space="preserve">
+    <value>Clase Has Atributo Identificador</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.DisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Identificador</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificador</value>
+    <comment>Description for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.DisplayName" xml:space="preserve">
+    <value>Atributo Identificador</value>
+    <comment>DisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.PropertyDisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.CMPClase</value>
     <comment>Description for DomainClass &apos;CMPClase&apos;</comment>
@@ -819,6 +907,10 @@
   </data>
   <data name="CMPClasecmpOperacionesTitle" xml:space="preserve">
     <value>Operaciones</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CMPClasecmpAtributoIDTitle" xml:space="preserve">
+    <value></value>
     <comment>Compartment title</comment>
   </data>
   <data name="CMPClaseNombreClaseDefaultText" xml:space="preserve">
@@ -877,6 +969,10 @@
     <value>refICL</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="ConecClaseNombreRelacionDefaultText" xml:space="preserve">
+    <value>NombreRelacion</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="IPS.UMLSPF.ConecComposicion.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConecComposicion</value>
     <comment>Description for DomainClass &apos;ConecComposicion&apos;</comment>
@@ -893,6 +989,10 @@
     <value>refICO</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="ConecComposicionCANombreRelacionDefaultText" xml:space="preserve">
+    <value>CANombreRelacion</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="IPS.UMLSPF.ConecAgregacion.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ConecAgregacion</value>
     <comment>Description for DomainClass &apos;ConecAgregacion&apos;</comment>
@@ -907,6 +1007,10 @@
   </data>
   <data name="ConecAgregacionrefICADefaultText" xml:space="preserve">
     <value>refICA</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConecAgregacionCANombreRelacionDefaultText" xml:space="preserve">
+    <value>CANombreRelacion</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ConEsPadre.Description" xml:space="preserve">

@@ -428,6 +428,9 @@ namespace IPS.UMLSPF
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAsociacion.refIDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refICL").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAsociacion.NombreRelacionDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -449,6 +452,9 @@ namespace IPS.UMLSPF
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conComposicion.refIDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refICO").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conComposicion.NombreRelacionDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CANombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -465,11 +471,17 @@ namespace IPS.UMLSPF
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.NombreRelacionDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CANombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
+				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.refDDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refDCA").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.refIDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refICA").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.NombreRelacionDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CANombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -840,6 +852,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -868,6 +881,11 @@ namespace IPS.UMLSPF
 				{
 					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
 					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasAtributoIdentificador)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.ClaseHasAtributoIdentificador)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
 				}
 				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)
 				{
@@ -909,6 +927,20 @@ namespace IPS.UMLSPF
 				return new DslModeling::ModelElement[] {result};
 			}
 			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpOperaciones(global::IPS.UMLSPF.Operaciones root)
+			{
+				// Segments 1 and 0
+				global::IPS.UMLSPF.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpAtributoIDFromLastLink(global::IPS.UMLSPF.ClaseHasAtributoIdentificador root)
+			{
+				// Segment 0
+				global::IPS.UMLSPF.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpAtributoID(global::IPS.UMLSPF.AtributoIdentificador root)
 			{
 				// Segments 1 and 0
 				global::IPS.UMLSPF.Clase result = root.Clase;
@@ -1004,6 +1036,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1031,6 +1064,11 @@ namespace IPS.UMLSPF
 					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
 				}
+				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasAtributoIdentificador)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.ClaseHasAtributoIdentificador)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
+				}
 				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)
 				{
 					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)e.ModelElement);
@@ -1054,6 +1092,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Operaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.AtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1081,6 +1120,11 @@ namespace IPS.UMLSPF
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
 				}
+				if(e.ModelElement is global::IPS.UMLSPF.AtributoIdentificador && e.DomainProperty.Id == global::IPS.UMLSPF.AtributoIdentificador.MostrarAtributoIDDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoID((global::IPS.UMLSPF.AtributoIdentificador)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
+				}
 				if(e.ModelElement is global::IPS.UMLSPF.EstilosClase && e.DomainProperty.Id == global::IPS.UMLSPF.EstilosClase.MostrarECDomainPropertyId)
 				{
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase((global::IPS.UMLSPF.EstilosClase)e.ModelElement);
@@ -1104,6 +1148,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1173,6 +1218,33 @@ namespace IPS.UMLSPF
 					{
 						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.NewRolePlayer);
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.AtributoIdentificador)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::IPS.UMLSPF.CMPClase compartmentShape = pel as global::IPS.UMLSPF.CMPClase;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.ClaseHasAtributoIdentificador)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoID((global::IPS.UMLSPF.AtributoIdentificador)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
 					}
 				}
 				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
@@ -1264,6 +1336,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
@@ -1295,6 +1368,14 @@ namespace IPS.UMLSPF
 					{
 						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.CounterpartRolePlayer);
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
+					}
+				}
+				if(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoID((global::IPS.UMLSPF.AtributoIdentificador)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
 					}
 				}
 				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
@@ -1354,6 +1435,14 @@ namespace IPS.UMLSPF
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAsociacion.DomainClassId);
 					}
 				}
+				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAsociacion.NombreRelacionDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecClase.FindConecClaseDecorator("NombreRelacion");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAsociacion.DomainClassId);
+					}
+				}
 				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conComposicion.refDDomainPropertyId)
 				{
 					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecComposicion.FindConecComposicionDecorator("refDCO");
@@ -1368,6 +1457,27 @@ namespace IPS.UMLSPF
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conComposicion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conComposicion.NombreRelacionDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecComposicion.FindConecComposicionDecorator("CANombreRelacion");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conComposicion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAgregacion.NombreRelacionDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecAgregacion.FindConecAgregacionDecorator("CANombreRelacion");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAgregacion.DomainClassId);
+					}
+					decorator = global::IPS.UMLSPF.ConecAgregacion.FindConecAgregacionDecorator("CANombreRelacion");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAgregacion.DomainClassId);
 					}
 				}
 				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAgregacion.refDDomainPropertyId)

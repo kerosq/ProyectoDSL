@@ -156,6 +156,16 @@ namespace IPS.UMLSPF
 			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator2);
 				
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("NombreRelacion");
+			field3.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ConecClaseNombreRelacionDefaultText");
+			field3.DefaultFocusable = true;
+			field3.DefaultAutoSize = true;
+			field3.AnchoringBehavior.MinimumHeightInLines = 1;
+			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator3);
+				
 		}
 		
 		#endregion
@@ -342,6 +352,16 @@ namespace IPS.UMLSPF
 			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator2);
 				
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("CANombreRelacion");
+			field3.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ConecComposicionCANombreRelacionDefaultText");
+			field3.DefaultFocusable = true;
+			field3.DefaultAutoSize = true;
+			field3.AnchoringBehavior.MinimumHeightInLines = 1;
+			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator3);
+				
 		}
 		
 		#endregion
@@ -527,6 +547,16 @@ namespace IPS.UMLSPF
 			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
 			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator2);
+				
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("CANombreRelacion");
+			field3.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ConecAgregacionCANombreRelacionDefaultText");
+			field3.DefaultFocusable = true;
+			field3.DefaultAutoSize = true;
+			field3.AnchoringBehavior.MinimumHeightInLines = 1;
+			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator3);
 				
 		}
 		
