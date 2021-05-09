@@ -274,7 +274,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="ec9f2951-dfa3-4fcd-a0ad-fe60abbf0255" Description="Description for IPS.UMLSPF.Parametros.Mostrar Parametro" Name="MostrarParametro" DisplayName="Mostrar Parametro">
+        <DomainProperty Id="ec9f2951-dfa3-4fcd-a0ad-fe60abbf0255" Description="Description for IPS.UMLSPF.Parametros.Mostrar Parametro" Name="MostrarParametro" DisplayName="Mostrar Parametro" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -551,28 +551,6 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <CompartmentShape Id="86de9b4d-d826-45c7-be05-d815713d3985" Description="Description for IPS.UMLSPF.CMPClase" Name="CMPClase" DisplayName="CMPClase" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase" FillColor="PaleGoldenrod" OutlineColor="OrangeRed" InitialWidth="2" InitialHeight="1.5" FillGradientMode="None" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" FontStyle="Bold" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <IconDecorator Name="IconDecoClase" DisplayName="Icon Clase" DefaultIcon="Resources\IconoDecoClaseU.bmp" />
-      </ShapeHasDecorators>
-      <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpAtributos" TitleFontStyle="Bold" Title="Atributos" />
-      <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpOperaciones" TitleFontStyle="Bold, Italic" Title="Operaciones" />
-      <Compartment Name="cmpAtributoID" Title="Atributo ID" />
-    </CompartmentShape>
-    <CompartmentShape Id="f6158248-68f5-4832-8532-e860272c97be" Description="Description for IPS.UMLSPF.CMPClaseEnriquecida" Name="CMPClaseEnriquecida" DisplayName="CMPClase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase Enriquecida" InitialHeight="1" Geometry="Rectangle">
-      <BaseCompartmentShape>
-        <CompartmentShapeMoniker Name="CMPClase" />
-      </BaseCompartmentShape>
-      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
-        <IconDecorator Name="InconDecoClase" DisplayName="Incon Deco Clase" DefaultIcon="Resources\ClaseEnriquecida.bmp" />
-      </ShapeHasDecorators>
-      <Compartment Name="cmpEstilosClase" TitleFontStyle="Bold" Title="EstiloClase" />
-      <Compartment Name="cmpEstiloAtributos" TitleFontStyle="Bold" Title="EstiloAtributos" />
-      <Compartment Name="cmpEstiloMetodos" TitleFontStyle="Bold" Title="EstiloMetodos" />
-    </CompartmentShape>
     <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MGeneralizacion1" DisplayName="MGeneralizacion1" DefaultText="MGeneralizacion1" />
@@ -581,6 +559,31 @@
         <TextDecorator Name="MGeneralizacion2" DisplayName="MGeneralizacion2" DefaultText="MGeneralizacion2" />
       </ShapeHasDecorators>
     </ImageShape>
+    <GeometryShape Id="80f16035-0f4d-433e-97b2-8d9dd064235d" Description="Description for IPS.UMLSPF.ShapeOperaciones" Name="ShapeOperaciones" DisplayName="Shape Operaciones" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Operaciones" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NombreOperacion" DisplayName="Nombre Operacion" DefaultText="NombreOperacion" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Shape Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="aa852645-0b9c-4538-ae24-5d9dead62e9c" Description="Description for IPS.UMLSPF.ShapeParametro" Name="ShapeParametro" DisplayName="Shape Parametro" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Parametro" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="MostrarParametros" DisplayName="Mostrar Parametros" DefaultText="MostrarParametros" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="63e7553f-3a36-4fc3-88fa-8a28ef62a3d3" Description="Description for IPS.UMLSPF.ShapeAtributoID" Name="ShapeAtributoID" DisplayName="Shape Atributo ID" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo ID" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="MostrarAtributoID" DisplayName="Mostrar Atributo ID" DefaultText="MostrarAtributoID" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="7788902f-f865-4d4f-bebe-efaeaa1ba962" Description="Description for IPS.UMLSPF.ShapeAtributo" Name="ShapeAtributo" DisplayName="Shape Atributo" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="MostrarAtributo" DisplayName="Mostrar Atributo" DefaultText="MostrarAtributo" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="fc067f1a-076e-47d8-b155-ef171c2da590" Description="Description for IPS.UMLSPF.ConecClase" Name="ConecClase" DisplayName="Conec Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Clase">
@@ -665,9 +668,6 @@
       <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
         <DomainRelationshipMoniker Name="ClaseHasAtributo" />
       </XmlClassData>
-      <XmlClassData TypeName="CMPClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="cMPClaseMoniker" ElementName="cMPClase" MonikerTypeName="CMPClaseMoniker">
-        <CompartmentShapeMoniker Name="CMPClase" />
-      </XmlClassData>
       <XmlClassData TypeName="Operaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionesMoniker" ElementName="operaciones" MonikerTypeName="OperacionesMoniker">
         <DomainClassMoniker Name="Operaciones" />
         <ElementData>
@@ -727,9 +727,6 @@
             <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstiloMetodos" />
           </XmlRelationshipData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="CMPClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="cMPClaseEnriquecidaMoniker" ElementName="cMPClaseEnriquecida" MonikerTypeName="CMPClaseEnriquecidaMoniker">
-        <CompartmentShapeMoniker Name="CMPClaseEnriquecida" />
       </XmlClassData>
       <XmlClassData TypeName="EstilosClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="estilosClaseMoniker" ElementName="estilosClase" MonikerTypeName="EstilosClaseMoniker">
         <DomainClassMoniker Name="EstilosClase" />
@@ -855,13 +852,28 @@
           <XmlPropertyData XmlName="nombreParametro">
             <DomainPropertyMoniker Name="Parametros/NombreParametro" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="mostrarParametro">
+          <XmlPropertyData XmlName="mostrarParametro" Representation="Ignore">
             <DomainPropertyMoniker Name="Parametros/MostrarParametro" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="OperacionesHasParametros" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionesHasParametrosMoniker" ElementName="operacionesHasParametros" MonikerTypeName="OperacionesHasParametrosMoniker">
         <DomainRelationshipMoniker Name="OperacionesHasParametros" />
+      </XmlClassData>
+      <XmlClassData TypeName="ShapeOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeOperacionesMoniker" ElementName="shapeOperaciones" MonikerTypeName="ShapeOperacionesMoniker">
+        <GeometryShapeMoniker Name="ShapeOperaciones" />
+      </XmlClassData>
+      <XmlClassData TypeName="ShapeClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeClaseMoniker" ElementName="shapeClase" MonikerTypeName="ShapeClaseMoniker">
+        <GeometryShapeMoniker Name="ShapeClase" />
+      </XmlClassData>
+      <XmlClassData TypeName="ShapeParametro" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeParametroMoniker" ElementName="shapeParametro" MonikerTypeName="ShapeParametroMoniker">
+        <GeometryShapeMoniker Name="ShapeParametro" />
+      </XmlClassData>
+      <XmlClassData TypeName="ShapeAtributoID" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeAtributoIDMoniker" ElementName="shapeAtributoID" MonikerTypeName="ShapeAtributoIDMoniker">
+        <GeometryShapeMoniker Name="ShapeAtributoID" />
+      </XmlClassData>
+      <XmlClassData TypeName="ShapeAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeAtributoMoniker" ElementName="shapeAtributo" MonikerTypeName="ShapeAtributoMoniker">
+        <GeometryShapeMoniker Name="ShapeAtributo" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -930,94 +942,6 @@
       <DomainClassMoniker Name="ModeloClassWEB" />
     </Class>
     <ShapeMaps>
-      <CompartmentShapeMap>
-        <DomainClassMoniker Name="Clase" />
-        <ParentElementPath>
-          <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="CMPClase/NombreClase" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Clase/NombreClase" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <CompartmentShapeMoniker Name="CMPClase" />
-        <CompartmentMap>
-          <CompartmentMoniker Name="CMPClase/cmpAtributos" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/MostrarAtributo" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-        <CompartmentMap>
-          <CompartmentMoniker Name="CMPClase/cmpOperaciones" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseHasOperaciones.Operaciones/!Operaciones</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Operaciones/MostrarOperacion" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-        <CompartmentMap>
-          <CompartmentMoniker Name="CMPClase/cmpAtributoID" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseHasAtributoIdentificador.AtributoIdentificador/!AtributoIdentificador</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="AtributoIdentificador/MostrarAtributoID" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-      </CompartmentShapeMap>
-      <CompartmentShapeMap>
-        <DomainClassMoniker Name="ClaseEnriquecida" />
-        <ParentElementPath>
-          <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
-        </ParentElementPath>
-        <CompartmentShapeMoniker Name="CMPClaseEnriquecida" />
-        <CompartmentMap>
-          <CompartmentMoniker Name="CMPClaseEnriquecida/cmpEstilosClase" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseEnriquecidaHasEstilosClase.EstilosClase/!EstilosClase</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EstilosClase/MostrarEC" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-        <CompartmentMap>
-          <CompartmentMoniker Name="CMPClaseEnriquecida/cmpEstiloAtributos" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos/!EstiloAtributos</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EstiloAtributos/MostrarEA" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-        <CompartmentMap>
-          <CompartmentMoniker Name="CMPClaseEnriquecida/cmpEstiloMetodos" />
-          <ElementsDisplayed>
-            <DomainPath>ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos/!EstiloMetodos</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EstiloMetodos/MostrarEM" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-      </CompartmentShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="Herencia" />
         <ParentElementPath>
@@ -1042,6 +966,81 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <ImageShapeMoniker Name="IMGHerencia" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Operaciones" />
+        <ParentElementPath>
+          <DomainPath>ClaseHasOperaciones.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ShapeOperaciones/NombreOperacion" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operaciones/MostrarOperacion" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ShapeOperaciones" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Clase" />
+        <ParentElementPath>
+          <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ShapeClase/NombreClase" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Clase/NombreClase" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ShapeClase" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Parametros" />
+        <ParentElementPath>
+          <DomainPath>OperacionesHasParametros.Operaciones/!Operaciones/ClaseHasOperaciones.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ShapeParametro/MostrarParametros" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Parametros/MostrarParametro" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ShapeParametro" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AtributoIdentificador" />
+        <ParentElementPath>
+          <DomainPath>ClaseHasAtributoIdentificador.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ShapeAtributoID/MostrarAtributoID" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoIdentificador/MostrarAtributoID" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ShapeAtributoID" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Atributo" />
+        <ParentElementPath>
+          <DomainPath>ClaseHasAtributo.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ShapeAtributo/MostrarAtributo" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/MostrarAtributo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ShapeAtributo" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -1125,6 +1124,21 @@
       <ConnectionTool Name="ConectarHijo" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarHijo" Tooltip="Conectar Hijo" HelpKeyword="ConectarHijo">
         <ConnectionBuilderMoniker Name="UMLSPF/EsHijaBuilder" />
       </ConnectionTool>
+      <ElementTool Name="AgregarMetodo" ToolboxIcon="Resources\template.bmp" Caption="AgregarMetodo" Tooltip="Agregar Metodo" HelpKeyword="AgregarMetodo">
+        <DomainClassMoniker Name="Operaciones" />
+      </ElementTool>
+      <ElementTool Name="ShapeClase" ToolboxIcon="Resources\IconoDecoClaseU.bmp" Caption="ShapeClase" Tooltip="Shape Clase" HelpKeyword="ShapeClase">
+        <DomainClassMoniker Name="Clase" />
+      </ElementTool>
+      <ElementTool Name="ShapeParametro" ToolboxIcon="Resources\Atributo.bmp" Caption="ShapeParametro" Tooltip="Shape Parametro" HelpKeyword="ShapeParametro">
+        <DomainClassMoniker Name="Parametros" />
+      </ElementTool>
+      <ElementTool Name="ShapeAtributoID" ToolboxIcon="Resources\AtributoIDicon.bmp" Caption="ShapeAtributoID" Tooltip="Shape Atributo ID" HelpKeyword="ShapeAtributoID">
+        <DomainClassMoniker Name="AtributoIdentificador" />
+      </ElementTool>
+      <ElementTool Name="ShapeAtributo" ToolboxIcon="Resources\Atributos.bmp" Caption="ShapeAtributo" Tooltip="Shape Atributo" HelpKeyword="ShapeAtributo">
+        <DomainClassMoniker Name="Atributo" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="UMLSPFDiagram" />

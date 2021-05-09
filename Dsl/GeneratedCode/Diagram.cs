@@ -107,88 +107,6 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region Compartment support
-		/// <summary>
-		/// Whether compartment items change events are subscribed to.
-		/// </summary>
-		private bool subscribedCompartmentItemsEvents;
-		
-		/// <summary>
-		/// Subscribe to events fired when compartment items changes.
-		/// </summary>
-		public void SubscribeCompartmentItemsEvents()
-		{
-			if (!subscribedCompartmentItemsEvents && this.Store != null)
-			{
-				subscribedCompartmentItemsEvents = true;
-				this.Store.EventManagerDirectory.ElementAdded.Add(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
-				this.Store.EventManagerDirectory.ElementDeleted.Add(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
-				this.Store.EventManagerDirectory.ElementPropertyChanged.Add(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
-				this.Store.EventManagerDirectory.RolePlayerChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
-				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
-			}
-		}
-		
-		/// <summary>
-		/// Unsubscribe to events fired when compartment items changes.
-		/// </summary>
-		public void UnsubscribeCompartmentItemsEvents()
-		{
-			if (subscribedCompartmentItemsEvents)
-			{
-				this.Store.EventManagerDirectory.ElementAdded.Remove(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
-				this.Store.EventManagerDirectory.ElementDeleted.Remove(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
-				this.Store.EventManagerDirectory.ElementPropertyChanged.Remove(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
-				this.Store.EventManagerDirectory.RolePlayerChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
-				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
-				subscribedCompartmentItemsEvents = false;
-			}
-		}
-		
-		#region Event handlers
-		/// <summary>
-		/// Event for element added.
-		/// </summary>
-		private void CompartmentItemAdded(object sender, DslModeling::ElementAddedEventArgs e)
-		{
-			// If in Undo, Redo or Rollback the compartment item rules are not run so we must refresh the compartment list at this point if required
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemAddRule.ElementAdded(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for element deleted.
-		/// </summary>
-		private void CompartmentItemDeleted(object sender, DslModeling::ElementDeletedEventArgs e)
-		{
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemDeleteRule.ElementDeleted(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for element property changed.
-		/// </summary>
-		private void CompartmentItemPropertyChanged(object sender, DslModeling::ElementPropertyChangedEventArgs e)
-		{
-			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
-			CompartmentItemChangeRule.ElementPropertyChanged(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for role-player changed.
-		/// </summary>
-		private void CompartmentItemRolePlayerChanged(object sender, DslModeling::RolePlayerChangedEventArgs e)
-		{
-			bool repaintOnly = !e.ElementLink.Store.InUndoRedoOrRollback;
-			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, repaintOnly);
-		}
-		/// <summary>
-		/// Event for role-player order changed.
-		/// </summary>
-		private void CompartmentItemRolePlayerOrderChanged(object sender, DslModeling::RolePlayerOrderChangedEventArgs e)
-		{
-			bool repaintOnly = !e.Link.Store.InUndoRedoOrRollback;
-			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, repaintOnly);
-		}
-		#endregion
-		#endregion
 		#region Shape mapping
 		/// <summary>
 		/// Called during view fixup to ask the parent whether a shape should be created for the given child element.
@@ -294,21 +212,39 @@ namespace IPS.UMLSPF
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::IPS.UMLSPF.ClaseEnriquecida)
+			if(element is global::IPS.UMLSPF.Herencia)
 			{
-				global::IPS.UMLSPF.CMPClaseEnriquecida newShape = new global::IPS.UMLSPF.CMPClaseEnriquecida(this.Partition);
+				global::IPS.UMLSPF.IMGHerencia newShape = new global::IPS.UMLSPF.IMGHerencia(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.Operaciones)
+			{
+				global::IPS.UMLSPF.ShapeOperaciones newShape = new global::IPS.UMLSPF.ShapeOperaciones(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
 			if(element is global::IPS.UMLSPF.Clase)
 			{
-				global::IPS.UMLSPF.CMPClase newShape = new global::IPS.UMLSPF.CMPClase(this.Partition);
+				global::IPS.UMLSPF.ShapeClase newShape = new global::IPS.UMLSPF.ShapeClase(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::IPS.UMLSPF.Herencia)
+			if(element is global::IPS.UMLSPF.Parametros)
 			{
-				global::IPS.UMLSPF.IMGHerencia newShape = new global::IPS.UMLSPF.IMGHerencia(this.Partition);
+				global::IPS.UMLSPF.ShapeParametro newShape = new global::IPS.UMLSPF.ShapeParametro(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.AtributoIdentificador)
+			{
+				global::IPS.UMLSPF.ShapeAtributoID newShape = new global::IPS.UMLSPF.ShapeAtributoID(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.Atributo)
+			{
+				global::IPS.UMLSPF.ShapeAtributo newShape = new global::IPS.UMLSPF.ShapeAtributo(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -338,43 +274,13 @@ namespace IPS.UMLSPF
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::IPS.UMLSPF.CMPClase.DecoratorsInitialized += CMPClaseDecoratorMap.OnDecoratorsInitialized;
-			global::IPS.UMLSPF.CMPClaseEnriquecida.DecoratorsInitialized += CMPClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.IMGHerencia.DecoratorsInitialized += IMGHerenciaDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeOperaciones.DecoratorsInitialized += ShapeOperacionesDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeClase.DecoratorsInitialized += ShapeClaseDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeParametro.DecoratorsInitialized += ShapeParametroDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeAtributoID.DecoratorsInitialized += ShapeAtributoIDDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeAtributo.DecoratorsInitialized += ShapeAtributoDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ConecClase.DecoratorsInitialized += ConecClaseDecoratorMap.OnDecoratorsInitialized;
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for CMPClase.
-		/// </summary>
-		internal static partial class CMPClaseDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for CMPClase.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Clase.NombreClaseDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreClase").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for CMPClaseEnriquecida.
-		/// </summary>
-		internal static partial class CMPClaseEnriquecidaDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for CMPClaseEnriquecida.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				CMPClaseDecoratorMap.OnDecoratorsInitialized(sender, e);
-				
-			}
 		}
 		
 		/// <summary>
@@ -395,6 +301,96 @@ namespace IPS.UMLSPF
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Herencia.Generalizacion2DomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MGeneralizacion2").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeOperaciones.
+		/// </summary>
+		internal static partial class ShapeOperacionesDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeOperaciones.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Operaciones.MostrarOperacionDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreOperacion").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeClase.
+		/// </summary>
+		internal static partial class ShapeClaseDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeClase.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Clase.NombreClaseDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreClase").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeParametro.
+		/// </summary>
+		internal static partial class ShapeParametroDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeParametro.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Parametros.MostrarParametroDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarParametros").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeAtributoID.
+		/// </summary>
+		internal static partial class ShapeAtributoIDDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeAtributoID.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.AtributoIdentificador.MostrarAtributoIDDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarAtributoID").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeAtributo.
+		/// </summary>
+		internal static partial class ShapeAtributoDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeAtributo.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Atributo.MostrarAtributoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarAtributo").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -556,7 +552,6 @@ namespace IPS.UMLSPF
 						this.conectarHijoConnectAction.Dispose();
 						this.conectarHijoConnectAction = null;
 					}
-					this.UnsubscribeCompartmentItemsEvents();
 				}
 			}
 			finally
@@ -610,9 +605,12 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Herencia), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Operaciones), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Parametros), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.AtributoIdentificador), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsPadre), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -631,17 +629,29 @@ namespace IPS.UMLSPF
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::IPS.UMLSPF.ClaseEnriquecida)
+				if(childElement is global::IPS.UMLSPF.Herencia)
 				{
-					parentElement = GetParentForClaseEnriquecida((global::IPS.UMLSPF.ClaseEnriquecida)childElement);
+					parentElement = GetParentForHerencia((global::IPS.UMLSPF.Herencia)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.Operaciones)
+				{
+					parentElement = GetParentForOperaciones((global::IPS.UMLSPF.Operaciones)childElement);
 				} else
 				if(childElement is global::IPS.UMLSPF.Clase)
 				{
 					parentElement = GetParentForClase((global::IPS.UMLSPF.Clase)childElement);
 				} else
-				if(childElement is global::IPS.UMLSPF.Herencia)
+				if(childElement is global::IPS.UMLSPF.Parametros)
 				{
-					parentElement = GetParentForHerencia((global::IPS.UMLSPF.Herencia)childElement);
+					parentElement = GetParentForParametros((global::IPS.UMLSPF.Parametros)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.AtributoIdentificador)
+				{
+					parentElement = GetParentForAtributoIdentificador((global::IPS.UMLSPF.AtributoIdentificador)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.Atributo)
+				{
+					parentElement = GetParentForAtributo((global::IPS.UMLSPF.Atributo)childElement);
 				} else
 				{
 					parentElement = null;
@@ -652,6 +662,23 @@ namespace IPS.UMLSPF
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForHerencia( global::IPS.UMLSPF.Herencia root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForOperaciones( global::IPS.UMLSPF.Operaciones root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.Clase root2 = root.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
 			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForClase( global::IPS.UMLSPF.Clase root )
 			{
 				// Segments 0 and 1
@@ -659,17 +686,36 @@ namespace IPS.UMLSPF
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForClaseEnriquecida( global::IPS.UMLSPF.Clase root )
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForParametros( global::IPS.UMLSPF.Parametros root )
 			{
 				// Segments 0 and 1
-				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
+				global::IPS.UMLSPF.Operaciones root2 = root.Operaciones;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::IPS.UMLSPF.Clase root4 = root2.Clase;
+				if ( root4 == null ) return null;
+				// Segments 4 and 5
+				global::IPS.UMLSPF.ModeloClassWEB result = root4.ModeloClassWEB;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForHerencia( global::IPS.UMLSPF.Herencia root )
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForAtributoIdentificador( global::IPS.UMLSPF.AtributoIdentificador root )
 			{
 				// Segments 0 and 1
-				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
+				global::IPS.UMLSPF.Clase root2 = root.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForAtributo( global::IPS.UMLSPF.Atributo root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.Clase root2 = root.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -758,563 +804,6 @@ namespace IPS.UMLSPF
 			}
 		}
 		
-		/// <summary>
-		/// Rule to update compartments when an item is added to the list
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
-		{
-			/// <summary>
-			/// Called when an element is added. 
-			/// </summary>
-			/// <param name="e"></param>
-			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
-			{
-				ElementAdded(e, false);
-			}
-	
-			internal static void ElementAdded(DslModeling::ElementAddedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if (e.ModelElement.IsDeleted)
-					return;
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasAtributo)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpAtributosFromLastLink((global::IPS.UMLSPF.ClaseHasAtributo)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasOperaciones)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasAtributoIdentificador)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.ClaseHasAtributoIdentificador)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)
-				{
-					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
-				}
-			}
-			
-			#region static DomainPath traversal methods to get the list of compartments to update
-			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpAtributosFromLastLink(global::IPS.UMLSPF.ClaseHasAtributo root)
-			{
-				// Segment 0
-				global::IPS.UMLSPF.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpAtributos(global::IPS.UMLSPF.Atributo root)
-			{
-				// Segments 1 and 0
-				global::IPS.UMLSPF.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpOperacionesFromLastLink(global::IPS.UMLSPF.ClaseHasOperaciones root)
-			{
-				// Segment 0
-				global::IPS.UMLSPF.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpOperaciones(global::IPS.UMLSPF.Operaciones root)
-			{
-				// Segments 1 and 0
-				global::IPS.UMLSPF.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpAtributoIDFromLastLink(global::IPS.UMLSPF.ClaseHasAtributoIdentificador root)
-			{
-				// Segment 0
-				global::IPS.UMLSPF.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseForCMPClasecmpAtributoID(global::IPS.UMLSPF.AtributoIdentificador root)
-			{
-				// Segments 1 and 0
-				global::IPS.UMLSPF.Clase result = root.Clase;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase root)
-			{
-				// Segment 0
-				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase(global::IPS.UMLSPF.EstilosClase root)
-			{
-				// Segments 1 and 0
-				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos root)
-			{
-				// Segment 0
-				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos(global::IPS.UMLSPF.EstiloAtributos root)
-			{
-				// Segments 1 and 0
-				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos root)
-			{
-				// Segment 0
-				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			internal static global::System.Collections.ICollection GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos(global::IPS.UMLSPF.EstiloMetodos root)
-			{
-				// Segments 1 and 0
-				global::IPS.UMLSPF.ClaseEnriquecida result = root.ClaseEnriquecida;
-				if ( result == null ) return new DslModeling::ModelElement[0];
-				return new DslModeling::ModelElement[] {result};
-			}
-			#endregion
-	
-			#region helper method to update compartments 
-			/// <summary>
-			/// Updates the compartments for the shapes associated to the given list of model elements
-			/// </summary>
-			/// <param name="elements">List of model elements</param>
-			/// <param name="shapeType">The type of shape that needs updating</param>
-			/// <param name="compartmentName">The name of the compartment to update</param>
-			/// <param name="repaintOnly">If true, the method will only invalidate the shape for a repaint, without re-initializing the shape.</param>
-			internal static void UpdateCompartments(global::System.Collections.IEnumerable elements, global::System.Type shapeType, string compartmentName, bool repaintOnly)
-			{
-				foreach (DslModeling::ModelElement element in elements)
-				{
-					DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-					foreach (DslDiagrams::PresentationElement pel in pels)
-					{
-						DslDiagrams::CompartmentShape compartmentShape = pel as DslDiagrams::CompartmentShape;
-						if (compartmentShape != null && shapeType.IsAssignableFrom(compartmentShape.GetType()))
-						{
-							if (repaintOnly)
-							{
-								compartmentShape.Invalidate();
-							}
-							else
-							{
-								foreach(DslDiagrams::CompartmentMapping mapping in compartmentShape.GetCompartmentMappings())
-								{
-									if(mapping.CompartmentId==compartmentName)
-									{
-										mapping.InitializeCompartmentShape(compartmentShape);
-										break;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			#endregion
-		}
-		
-		/// <summary>
-		/// Rule to update compartments when an items is removed from the list
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
-		{
-			/// <summary>
-			/// Called when an element is deleted
-			/// </summary>
-			/// <param name="e"></param>
-			public override void ElementDeleted(DslModeling::ElementDeletedEventArgs e)
-			{
-				ElementDeleted(e, false);
-			}
-			
-			internal static void ElementDeleted(DslModeling::ElementDeletedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasAtributo)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributosFromLastLink((global::IPS.UMLSPF.ClaseHasAtributo)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasOperaciones)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseHasAtributoIdentificador)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.ClaseHasAtributoIdentificador)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)
-				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
-				}
-			}
-		}
-		
-		/// <summary>
-		/// Rule to update compartments when the property on an item being displayed changes.
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Operaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.AtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
-		{
-			/// <summary>
-			/// Called when an element is changed
-			/// </summary>
-			/// <param name="e"></param>
-			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
-			{
-				ElementPropertyChanged(e, false);
-			}
-			
-			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::IPS.UMLSPF.Atributo && e.DomainProperty.Id == global::IPS.UMLSPF.Atributo.MostrarAtributoDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributos((global::IPS.UMLSPF.Atributo)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.Operaciones && e.DomainProperty.Id == global::IPS.UMLSPF.Operaciones.MostrarOperacionDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.AtributoIdentificador && e.DomainProperty.Id == global::IPS.UMLSPF.AtributoIdentificador.MostrarAtributoIDDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoID((global::IPS.UMLSPF.AtributoIdentificador)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.EstilosClase && e.DomainProperty.Id == global::IPS.UMLSPF.EstilosClase.MostrarECDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase((global::IPS.UMLSPF.EstilosClase)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.EstiloAtributos && e.DomainProperty.Id == global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
-				}
-				if(e.ModelElement is global::IPS.UMLSPF.EstiloMetodos && e.DomainProperty.Id == global::IPS.UMLSPF.EstiloMetodos.MostrarEMDomainPropertyId)
-				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
-				}
-			}
-		}
-		
-		/// <summary>
-		/// Rule to update compartments when a roleplayer change happens
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
-		{
-			/// <summary>
-			/// Called when the roleplayer on a link changes.
-			/// </summary>
-			/// <param name="e"></param>
-			public override void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e)
-			{
-				RolePlayerChanged(e, false);
-			}
-			
-			internal static void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::IPS.UMLSPF.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributosFromLastLink((global::IPS.UMLSPF.Atributo)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::IPS.UMLSPF.CMPClase compartmentShape = pel as global::IPS.UMLSPF.CMPClase;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributosFromLastLink((global::IPS.UMLSPF.ClaseHasAtributo)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributos((global::IPS.UMLSPF.Atributo)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseHasOperaciones).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.Operaciones)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::IPS.UMLSPF.CMPClase compartmentShape = pel as global::IPS.UMLSPF.CMPClase;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperacionesFromLastLink((global::IPS.UMLSPF.ClaseHasOperaciones)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.AtributoIdentificador)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::IPS.UMLSPF.CMPClase compartmentShape = pel as global::IPS.UMLSPF.CMPClase;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoIDFromLastLink((global::IPS.UMLSPF.ClaseHasAtributoIdentificador)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoID((global::IPS.UMLSPF.AtributoIdentificador)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.EstilosClase)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::IPS.UMLSPF.CMPClaseEnriquecida compartmentShape = pel as global::IPS.UMLSPF.CMPClaseEnriquecida;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClaseFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase((global::IPS.UMLSPF.EstilosClase)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.EstiloAtributos)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::IPS.UMLSPF.CMPClaseEnriquecida compartmentShape = pel as global::IPS.UMLSPF.CMPClaseEnriquecida;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.EstiloMetodos)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::IPS.UMLSPF.CMPClaseEnriquecida compartmentShape = pel as global::IPS.UMLSPF.CMPClaseEnriquecida;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodosFromLastLink((global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
-					}
-				}
-			}
-		}
-	
-		/// <summary>
-		/// Rule to update compartments when the order of items in the list changes.
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
-		{
-			/// <summary>
-			/// Called when the order of a roleplayer in a relationship changes
-			/// </summary>
-			/// <param name="e"></param>
-			public override void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e)
-			{
-				RolePlayerPositionChanged(e, false);
-			}
-			
-			internal static void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e, bool repaintOnly)
-			{
-				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::IPS.UMLSPF.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributos((global::IPS.UMLSPF.Atributo)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributos", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseHasOperaciones).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpOperaciones((global::IPS.UMLSPF.Operaciones)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpOperaciones", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseHasAtributoIdentificador).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForCMPClasecmpAtributoID((global::IPS.UMLSPF.AtributoIdentificador)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClase), "cmpAtributoID", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstilosClase((global::IPS.UMLSPF.EstilosClase)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstilosClase", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloAtributos", repaintOnly);
-					}
-				}
-				if(typeof(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(!e.CounterpartDomainRole.IsSource)
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForCMPClaseEnriquecidacmpEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::IPS.UMLSPF.CMPClaseEnriquecida), "cmpEstiloMetodos", repaintOnly);
-					}
-				}
-			}
-		}
 	
 		/// <summary>
 		/// A rule which fires when data mapped to outer text decorators has changed,

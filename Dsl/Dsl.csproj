@@ -87,6 +87,7 @@
     <Compile Include="DesignerCustomization\EstiloMetodos.cs" />
     <Compile Include="DesignerCustomization\EstilosClase.cs" />
     <Compile Include="DesignerCustomization\Operaciones.cs" />
+    <Compile Include="DesignerCustomization\Parametros.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

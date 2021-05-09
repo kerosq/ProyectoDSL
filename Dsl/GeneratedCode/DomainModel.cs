@@ -94,17 +94,15 @@ namespace IPS.UMLSPF
 				typeof(ConecClase),
 				typeof(ConEsPadre),
 				typeof(ConEsHijo),
-				typeof(CMPClase),
-				typeof(CMPClaseEnriquecida),
+				typeof(ShapeOperaciones),
+				typeof(ShapeClase),
+				typeof(ShapeParametro),
+				typeof(ShapeAtributoID),
+				typeof(ShapeAtributo),
 				typeof(IMGHerencia),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
 				typeof(global::IPS.UMLSPF.DecoratorPropertyChanged),
 				typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged),
-				typeof(global::IPS.UMLSPF.CompartmentItemAddRule),
-				typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule),
-				typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerChangeRule),
-				typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerPositionChangeRule),
-				typeof(global::IPS.UMLSPF.CompartmentItemChangeRule),
 			};
 		}
 		/// <summary>
@@ -147,7 +145,6 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(Parametros), "TipoDato", Parametros.TipoDatoDomainPropertyId, typeof(Parametros.TipoDatoPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametros), "NombreParametro", Parametros.NombreParametroDomainPropertyId, typeof(Parametros.NombreParametroPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametros), "MostrarParametro", Parametros.MostrarParametroDomainPropertyId, typeof(Parametros.MostrarParametroPropertyHandler)),
-				new DomainMemberInfo(typeof(Parametros), "ModificadorParametro", Parametros.ModificadorParametroDomainPropertyId, typeof(Parametros.ModificadorParametroPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "refD", conAsociacion.refDDomainPropertyId, typeof(conAsociacion.refDPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "refI", conAsociacion.refIDomainPropertyId, typeof(conAsociacion.refIPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "NombreRelacion", conAsociacion.NombreRelacionDomainPropertyId, typeof(conAsociacion.NombreRelacionPropertyHandler)),
@@ -208,7 +205,7 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(21);
 				createElementMap.Add(typeof(ModeloClassWEB), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -224,9 +221,12 @@ namespace IPS.UMLSPF
 				createElementMap.Add(typeof(ConecClase), 12);
 				createElementMap.Add(typeof(ConEsPadre), 13);
 				createElementMap.Add(typeof(ConEsHijo), 14);
-				createElementMap.Add(typeof(CMPClase), 15);
-				createElementMap.Add(typeof(CMPClaseEnriquecida), 16);
-				createElementMap.Add(typeof(IMGHerencia), 17);
+				createElementMap.Add(typeof(ShapeOperaciones), 15);
+				createElementMap.Add(typeof(ShapeClase), 16);
+				createElementMap.Add(typeof(ShapeParametro), 17);
+				createElementMap.Add(typeof(ShapeAtributoID), 18);
+				createElementMap.Add(typeof(ShapeAtributo), 19);
+				createElementMap.Add(typeof(IMGHerencia), 20);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -255,9 +255,12 @@ namespace IPS.UMLSPF
 				case 12: return new ConecClase(partition, propertyAssignments);
 				case 13: return new ConEsPadre(partition, propertyAssignments);
 				case 14: return new ConEsHijo(partition, propertyAssignments);
-				case 15: return new CMPClase(partition, propertyAssignments);
-				case 16: return new CMPClaseEnriquecida(partition, propertyAssignments);
-				case 17: return new IMGHerencia(partition, propertyAssignments);
+				case 15: return new ShapeOperaciones(partition, propertyAssignments);
+				case 16: return new ShapeClase(partition, propertyAssignments);
+				case 17: return new ShapeParametro(partition, propertyAssignments);
+				case 18: return new ShapeAtributoID(partition, propertyAssignments);
+				case 19: return new ShapeAtributo(partition, propertyAssignments);
+				case 20: return new IMGHerencia(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -441,11 +444,6 @@ namespace IPS.UMLSPF
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.DecoratorPropertyChanged));
 			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged));
-			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemAddRule));
-			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule));
-			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerChangeRule));
-			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerPositionChangeRule));
-			ruleManager.EnableRule(typeof(global::IPS.UMLSPF.CompartmentItemChangeRule));
 		}
 		
 		/// <summary>
@@ -459,11 +457,6 @@ namespace IPS.UMLSPF
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.FixUpDiagram));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.DecoratorPropertyChanged));
 			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.ConnectorRolePlayerChanged));
-			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemAddRule));
-			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemDeleteRule));
-			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerChangeRule));
-			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemRolePlayerPositionChangeRule));
-			ruleManager.DisableRule(typeof(global::IPS.UMLSPF.CompartmentItemChangeRule));
 		}
 		#endregion
 	}

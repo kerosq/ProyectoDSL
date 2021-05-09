@@ -614,10 +614,6 @@
         <xsd:attribute name="tipoDato" type="tipodato" />
         <!-- Property: NombreParametro -->
         <xsd:attribute name="nombreParametro" type="xsd:string" />
-        <!-- Property: MostrarParametro -->
-        <xsd:attribute name="mostrarParametro" type="xsd:string" />
-        <!-- Property: ModificadorParametro -->
-        <xsd:attribute name="modificadorParametro" type="Modificadores" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

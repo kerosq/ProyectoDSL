@@ -461,14 +461,6 @@
     <value>Mostrar Parametro</value>
     <comment>DisplayName for DomainProperty &apos;MostrarParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.Parametros/ModificadorParametro.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.Parametros.Modificador Parametro</value>
-    <comment>Description for DomainProperty &apos;ModificadorParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.Parametros/ModificadorParametro.DisplayName" xml:space="preserve">
-    <value>Modificador Parametro</value>
-    <comment>DisplayName for DomainProperty &apos;ModificadorParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
-  </data>
   <data name="IPS.UMLSPF.ModeloClassWEBHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase</value>
     <comment>Description for DomainClass &apos;ModeloClassWEBHasClase&apos;</comment>
@@ -1005,50 +997,6 @@
     <value>Description for IPS.UMLSPF.ConexionTipos.Composicion</value>
     <comment>Description for EnumerationLiteral &apos;Composicion&apos; on DomainEnumeration &apos;ConexionTipos&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.CMPClase</value>
-    <comment>Description for DomainClass &apos;CMPClase&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.CMPClase.DisplayName" xml:space="preserve">
-    <value>CMPClase</value>
-    <comment>DisplayName for DomainClass &apos;CMPClase&apos;</comment>
-  </data>
-  <data name="CMPClasecmpAtributosTitle" xml:space="preserve">
-    <value>Atributos</value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="CMPClasecmpOperacionesTitle" xml:space="preserve">
-    <value>Operaciones</value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="CMPClasecmpAtributoIDTitle" xml:space="preserve">
-    <value>Atributo ID</value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="CMPClaseNombreClaseDefaultText" xml:space="preserve">
-    <value>NombreClase</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="IPS.UMLSPF.CMPClaseEnriquecida.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.CMPClaseEnriquecida</value>
-    <comment>Description for DomainClass &apos;CMPClaseEnriquecida&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.CMPClaseEnriquecida.DisplayName" xml:space="preserve">
-    <value>CMPClase Enriquecida</value>
-    <comment>DisplayName for DomainClass &apos;CMPClaseEnriquecida&apos;</comment>
-  </data>
-  <data name="CMPClaseEnriquecidacmpEstilosClaseTitle" xml:space="preserve">
-    <value>EstiloClase</value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="CMPClaseEnriquecidacmpEstiloAtributosTitle" xml:space="preserve">
-    <value>EstiloAtributos</value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="CMPClaseEnriquecidacmpEstiloMetodosTitle" xml:space="preserve">
-    <value>EstiloMetodos</value>
-    <comment>Compartment title</comment>
-  </data>
   <data name="IPS.UMLSPF.IMGHerencia.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.IMGHerencia</value>
     <comment>Description for DomainClass &apos;IMGHerencia&apos;</comment>
@@ -1063,6 +1011,66 @@
   </data>
   <data name="IMGHerenciaMGeneralizacion2DefaultText" xml:space="preserve">
     <value>MGeneralizacion2</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeOperaciones.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ShapeOperaciones</value>
+    <comment>Description for DomainClass &apos;ShapeOperaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeOperaciones.DisplayName" xml:space="preserve">
+    <value>Shape Operaciones</value>
+    <comment>DisplayName for DomainClass &apos;ShapeOperaciones&apos;</comment>
+  </data>
+  <data name="ShapeOperacionesNombreOperacionDefaultText" xml:space="preserve">
+    <value>NombreOperacion</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ShapeClase</value>
+    <comment>Description for DomainClass &apos;ShapeClase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeClase.DisplayName" xml:space="preserve">
+    <value>Shape Clase</value>
+    <comment>DisplayName for DomainClass &apos;ShapeClase&apos;</comment>
+  </data>
+  <data name="ShapeClaseNombreClaseDefaultText" xml:space="preserve">
+    <value>NombreClase</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeParametro.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ShapeParametro</value>
+    <comment>Description for DomainClass &apos;ShapeParametro&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeParametro.DisplayName" xml:space="preserve">
+    <value>Shape Parametro</value>
+    <comment>DisplayName for DomainClass &apos;ShapeParametro&apos;</comment>
+  </data>
+  <data name="ShapeParametroMostrarParametrosDefaultText" xml:space="preserve">
+    <value>MostrarParametros</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeAtributoID.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ShapeAtributoID</value>
+    <comment>Description for DomainClass &apos;ShapeAtributoID&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeAtributoID.DisplayName" xml:space="preserve">
+    <value>Shape Atributo ID</value>
+    <comment>DisplayName for DomainClass &apos;ShapeAtributoID&apos;</comment>
+  </data>
+  <data name="ShapeAtributoIDMostrarAtributoIDDefaultText" xml:space="preserve">
+    <value>MostrarAtributoID</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeAtributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ShapeAtributo</value>
+    <comment>Description for DomainClass &apos;ShapeAtributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeAtributo.DisplayName" xml:space="preserve">
+    <value>Shape Atributo</value>
+    <comment>DisplayName for DomainClass &apos;ShapeAtributo&apos;</comment>
+  </data>
+  <data name="ShapeAtributoMostrarAtributoDefaultText" xml:space="preserve">
+    <value>MostrarAtributo</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ConecClase.Description" xml:space="preserve">
@@ -1175,6 +1183,46 @@
   </data>
   <data name="ConectarHijoToolboxTooltip" xml:space="preserve">
     <value>Conectar Hijo</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AgregarMetodoToolboxItem" xml:space="preserve">
+    <value>AgregarMetodo</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AgregarMetodoToolboxTooltip" xml:space="preserve">
+    <value>Agregar Metodo</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ShapeClaseToolboxItem" xml:space="preserve">
+    <value>ShapeClase</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ShapeClaseToolboxTooltip" xml:space="preserve">
+    <value>Shape Clase</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ShapeParametroToolboxItem" xml:space="preserve">
+    <value>ShapeParametro</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ShapeParametroToolboxTooltip" xml:space="preserve">
+    <value>Shape Parametro</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ShapeAtributoIDToolboxItem" xml:space="preserve">
+    <value>ShapeAtributoID</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ShapeAtributoIDToolboxTooltip" xml:space="preserve">
+    <value>Shape Atributo ID</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ShapeAtributoToolboxItem" xml:space="preserve">
+    <value>ShapeAtributo</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ShapeAtributoToolboxTooltip" xml:space="preserve">
+    <value>Shape Atributo</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1302,14 +1350,6 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CMPClaseIconDecoClaseDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\IconoDecoClaseU.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Icon decorator default image</comment>
-  </data>
-  <data name="CMPClaseEnriquecidaInconDecoClaseDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ClaseEnriquecida.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Icon decorator default image</comment>
-  </data>
   <data name="IMGHerenciaImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\HERENCIA.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>IMGHerencia shape image</comment>
@@ -1336,6 +1376,26 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="ConectarHijoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectorArrow.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AgregarMetodoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\template.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ShapeClaseToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\IconoDecoClaseU.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ShapeParametroToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ShapeAtributoIDToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\AtributoIDicon.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ShapeAtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Atributos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

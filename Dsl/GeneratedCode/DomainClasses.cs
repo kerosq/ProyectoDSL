@@ -3855,34 +3855,27 @@ namespace IPS.UMLSPF
 		public static readonly global::System.Guid MostrarParametroDomainPropertyId = new global::System.Guid(0xec9f2951, 0xdfa3, 0x4fcd, 0xa0, 0xad, 0xfe, 0x60, 0xab, 0xbf, 0x02, 0x55);
 		
 		/// <summary>
-		/// Storage for MostrarParametro
-		/// </summary>
-		private global::System.String mostrarParametroPropertyStorage = string.Empty;
-		
-		/// <summary>
 		/// Gets or sets the value of MostrarParametro domain property.
 		/// Description for IPS.UMLSPF.Parametros.Mostrar Parametro
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Parametros/MostrarParametro.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Parametros/MostrarParametro.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("ec9f2951-dfa3-4fcd-a0ad-fe60abbf0255")]
 		public global::System.String MostrarParametro
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return mostrarParametroPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				MostrarParametroPropertyHandler.Instance.SetValue(this, value);
+				return MostrarParametroPropertyHandler.Instance.GetValue(this);
 			}
 		}
 		/// <summary>
 		/// Value handler for the Parametros.MostrarParametro domain property.
 		/// </summary>
-		internal sealed partial class MostrarParametroPropertyHandler : DslModeling::DomainPropertyValueHandler<Parametros, global::System.String>
+		internal sealed partial class MostrarParametroPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Parametros, global::System.String>
 		{
 			private MostrarParametroPropertyHandler() { }
 		
@@ -3911,113 +3904,12 @@ namespace IPS.UMLSPF
 			public override sealed global::System.String GetValue(Parametros element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.mostrarParametroPropertyStorage;
+				// There is no storage for MostrarParametro because its Kind is
+				// set to Calculated. Please provide the GetMostrarParametroValue()
+				// method on the domain class.
+				return element.GetMostrarParametroValue();
 			}
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Parametros element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.mostrarParametroPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region ModificadorParametro domain property code
-		
-		/// <summary>
-		/// ModificadorParametro domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid ModificadorParametroDomainPropertyId = new global::System.Guid(0xd924d344, 0x7352, 0x47e4, 0x9b, 0xa1, 0x65, 0xf9, 0x1c, 0x8e, 0x24, 0xaf);
-		
-		/// <summary>
-		/// Storage for ModificadorParametro
-		/// </summary>
-		private Modificadores modificadorParametroPropertyStorage;
-		
-		/// <summary>
-		/// Gets or sets the value of ModificadorParametro domain property.
-		/// Description for IPS.UMLSPF.Parametros.Modificador Parametro
-		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.Parametros/ModificadorParametro.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.Parametros/ModificadorParametro.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("d924d344-7352-47e4-9ba1-65f91c8e24af")]
-		public Modificadores ModificadorParametro
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return modificadorParametroPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				ModificadorParametroPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Parametros.ModificadorParametro domain property.
-		/// </summary>
-		internal sealed partial class ModificadorParametroPropertyHandler : DslModeling::DomainPropertyValueHandler<Parametros, Modificadores>
-		{
-			private ModificadorParametroPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Parametros.ModificadorParametro domain property value handler.
-			/// </summary>
-			public static readonly ModificadorParametroPropertyHandler Instance = new ModificadorParametroPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Parametros.ModificadorParametro domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return ModificadorParametroDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed Modificadores GetValue(Parametros element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.modificadorParametroPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Parametros element, Modificadores newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				Modificadores oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.modificadorParametroPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
 		}
 		
 		#endregion
