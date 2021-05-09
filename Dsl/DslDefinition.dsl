@@ -30,7 +30,7 @@
     </DomainClass>
     <DomainClass Id="7d6bb19e-078c-44f5-9d97-925326da3444" Description="Description for IPS.UMLSPF.Clase" Name="Clase" DisplayName="Clase" Namespace="IPS.UMLSPF">
       <Properties>
-        <DomainProperty Id="ce0f14fa-0c97-4f94-a87a-255a923384ba" Description="Description for IPS.UMLSPF.Clase.Nombre Clase" Name="NombreClase" DisplayName="Nombre Clase">
+        <DomainProperty Id="ce0f14fa-0c97-4f94-a87a-255a923384ba" Description="Nombre de la  Clase" Name="NombreClase" DisplayName="Nombre Clase">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -73,12 +73,12 @@
     </DomainClass>
     <DomainClass Id="15e0cb84-72cd-496c-a7d5-96c0af55648a" Description="Description for IPS.UMLSPF.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="IPS.UMLSPF">
       <Properties>
-        <DomainProperty Id="1d278e7f-8906-4b8e-ac0c-347b317e0024" Description="Description for IPS.UMLSPF.Atributo.Nombre Atributo" Name="NombreAtributo" DisplayName="Nombre Atributo">
+        <DomainProperty Id="1d278e7f-8906-4b8e-ac0c-347b317e0024" Description="Nombre del Atributo" Name="NombreAtributo" DisplayName="Nombre Atributo">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="ff823fe5-1d5e-43e5-9cef-c1b8535d4ad9" Description="Description for IPS.UMLSPF.Atributo.Tipo Atributo" Name="TipoAtributo" DisplayName="Tipo Atributo">
+        <DomainProperty Id="ff823fe5-1d5e-43e5-9cef-c1b8535d4ad9" Description="Tipo de dato del Atributo" Name="TipoAtributo" DisplayName="Tipo de dato">
           <Type>
             <DomainEnumerationMoniker Name="tipodato" />
           </Type>
@@ -88,7 +88,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="18bcd027-4d9e-49ca-aef1-891172051881" Description="Description for IPS.UMLSPF.Atributo.Modificador" Name="Modificador" DisplayName="Modificador">
+        <DomainProperty Id="18bcd027-4d9e-49ca-aef1-891172051881" Description="Modificador del Atributo" Name="Modificador" DisplayName="Modificador">
           <Type>
             <DomainEnumerationMoniker Name="Modificadores" />
           </Type>
@@ -97,12 +97,12 @@
     </DomainClass>
     <DomainClass Id="87bb9588-ec65-4d28-b5cc-545cea7713b9" Description="Description for IPS.UMLSPF.Operaciones" Name="Operaciones" DisplayName="Operaciones" Namespace="IPS.UMLSPF">
       <Properties>
-        <DomainProperty Id="086b3a63-8cd2-4187-99ce-e4068891c035" Description="Description for IPS.UMLSPF.Operaciones.Nombre Operacion" Name="NombreOperacion" DisplayName="Nombre Operacion">
+        <DomainProperty Id="086b3a63-8cd2-4187-99ce-e4068891c035" Description="Nombre del metodo" Name="NombreOperacion" DisplayName="Nombre Operacion">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="fc97e0b4-f8b7-4ff6-a2d9-46ceb9095f20" Description="Description for IPS.UMLSPF.Operaciones.Tipo Operacion" Name="TipoOperacion" DisplayName="Tipo Operacion">
+        <DomainProperty Id="fc97e0b4-f8b7-4ff6-a2d9-46ceb9095f20" Description="Tipo de dato del metodo" Name="TipoOperacion" DisplayName="Tipo dato">
           <Type>
             <DomainEnumerationMoniker Name="tipodato" />
           </Type>
@@ -112,7 +112,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="25e09def-510c-4d1d-918f-094e7307ec64" Description="Description for IPS.UMLSPF.Operaciones.Modificador" Name="Modificador" DisplayName="Modificador">
+        <DomainProperty Id="25e09def-510c-4d1d-918f-094e7307ec64" Description="Modificador del Metodo" Name="Modificador" DisplayName="Modificador">
           <Type>
             <DomainEnumerationMoniker Name="Modificadores" />
           </Type>
@@ -238,12 +238,12 @@
     </DomainClass>
     <DomainClass Id="8e986070-39d3-4084-9b30-cd3e53097af3" Description="Description for IPS.UMLSPF.AtributoIdentificador" Name="AtributoIdentificador" DisplayName="Atributo Identificador" Namespace="IPS.UMLSPF">
       <Properties>
-        <DomainProperty Id="a5025d40-3f8f-41dd-a098-7aa515c29cee" Description="Description for IPS.UMLSPF.AtributoIdentificador.Nombre Atributo" Name="NombreAtributo" DisplayName="Nombre Atributo">
+        <DomainProperty Id="a5025d40-3f8f-41dd-a098-7aa515c29cee" Description="Nombre del Atributo" Name="NombreAtributo" DisplayName="Nombre Atributo">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="f8db26c1-ce0e-4193-93db-6454d7b7fcbe" Description="Description for IPS.UMLSPF.AtributoIdentificador.Tipo Atributo" Name="TipoAtributo" DisplayName="Tipo Atributo">
+        <DomainProperty Id="f8db26c1-ce0e-4193-93db-6454d7b7fcbe" Description="Tipo de dato del Atributo" Name="TipoAtributo" DisplayName="Tipo de dato">
           <Type>
             <DomainEnumerationMoniker Name="tipodato" />
           </Type>
@@ -253,7 +253,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="8058cdfb-decc-40b6-9828-9181ecdd5514" Description="Description for IPS.UMLSPF.AtributoIdentificador.Modificador" Name="Modificador" DisplayName="Modificador">
+        <DomainProperty Id="8058cdfb-decc-40b6-9828-9181ecdd5514" Description="Modificador del Atributo" Name="Modificador" DisplayName="Modificador">
           <Type>
             <DomainEnumerationMoniker Name="Modificadores" />
           </Type>
@@ -587,7 +587,7 @@
       </ShapeHasDecorators>
       <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpAtributos" TitleFontStyle="Bold" Title="Atributos" />
       <Compartment FillColor="Khaki" TitleFillColor="Beige" Name="cmpOperaciones" TitleFontStyle="Bold, Italic" Title="Operaciones" />
-      <Compartment Name="cmpAtributoID" />
+      <Compartment Name="cmpAtributoID" Title="Atributo ID" />
     </CompartmentShape>
     <CompartmentShape Id="f6158248-68f5-4832-8532-e860272c97be" Description="Description for IPS.UMLSPF.CMPClaseEnriquecida" Name="CMPClaseEnriquecida" DisplayName="CMPClase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase Enriquecida" InitialHeight="1" Geometry="Rectangle">
       <BaseCompartmentShape>

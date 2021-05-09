@@ -345,7 +345,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreClase domain property.
-		/// Description for IPS.UMLSPF.Clase.Nombre Clase
+		/// Nombre de la  Clase
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Clase/NombreClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Clase/NombreClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -842,7 +842,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreAtributo domain property.
-		/// Description for IPS.UMLSPF.Atributo.Nombre Atributo
+		/// Nombre del Atributo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Atributo/NombreAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Atributo/NombreAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -929,7 +929,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of TipoAtributo domain property.
-		/// Description for IPS.UMLSPF.Atributo.Tipo Atributo
+		/// Tipo de dato del Atributo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Atributo/TipoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Atributo/TipoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1082,7 +1082,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of Modificador domain property.
-		/// Description for IPS.UMLSPF.Atributo.Modificador
+		/// Modificador del Atributo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Atributo/Modificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Atributo/Modificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1229,7 +1229,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreOperacion domain property.
-		/// Description for IPS.UMLSPF.Operaciones.Nombre Operacion
+		/// Nombre del metodo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/NombreOperacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/NombreOperacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1316,7 +1316,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of TipoOperacion domain property.
-		/// Description for IPS.UMLSPF.Operaciones.Tipo Operacion
+		/// Tipo de dato del metodo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/TipoOperacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/TipoOperacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1469,7 +1469,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of Modificador domain property.
-		/// Description for IPS.UMLSPF.Operaciones.Modificador
+		/// Modificador del Metodo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/Modificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/Modificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -3280,7 +3280,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreAtributo domain property.
-		/// Description for IPS.UMLSPF.AtributoIdentificador.Nombre Atributo
+		/// Nombre del Atributo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/NombreAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/NombreAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -3367,7 +3367,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of TipoAtributo domain property.
-		/// Description for IPS.UMLSPF.AtributoIdentificador.Tipo Atributo
+		/// Tipo de dato del Atributo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/TipoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/TipoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -3520,7 +3520,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of Modificador domain property.
-		/// Description for IPS.UMLSPF.AtributoIdentificador.Modificador
+		/// Modificador del Atributo
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/Modificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/Modificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]

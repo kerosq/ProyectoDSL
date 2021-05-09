@@ -180,7 +180,11 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: NombreClase -->
-        <xsd:attribute name="nombreClase" type="xsd:string" />
+        <xsd:attribute name="nombreClase" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Nombre de la  Clase</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -214,11 +218,23 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: NombreAtributo -->
-        <xsd:attribute name="nombreAtributo" type="xsd:string" />
+        <xsd:attribute name="nombreAtributo" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Nombre del Atributo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: TipoAtributo -->
-        <xsd:attribute name="tipoAtributo" type="tipodato" />
+        <xsd:attribute name="tipoAtributo" type="tipodato" >
+          <xsd:annotation>
+            <xsd:documentation>Tipo de dato del Atributo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: Modificador -->
-        <xsd:attribute name="modificador" type="Modificadores" />
+        <xsd:attribute name="modificador" type="Modificadores" >
+          <xsd:annotation>
+            <xsd:documentation>Modificador del Atributo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -252,11 +268,23 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: NombreOperacion -->
-        <xsd:attribute name="nombreOperacion" type="xsd:string" />
+        <xsd:attribute name="nombreOperacion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Nombre del metodo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: TipoOperacion -->
-        <xsd:attribute name="tipoOperacion" type="tipodato" />
+        <xsd:attribute name="tipoOperacion" type="tipodato" >
+          <xsd:annotation>
+            <xsd:documentation>Tipo de dato del metodo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: Modificador -->
-        <xsd:attribute name="modificador" type="Modificadores" />
+        <xsd:attribute name="modificador" type="Modificadores" >
+          <xsd:annotation>
+            <xsd:documentation>Modificador del Metodo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -546,11 +574,23 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: NombreAtributo -->
-        <xsd:attribute name="nombreAtributo" type="xsd:string" />
+        <xsd:attribute name="nombreAtributo" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Nombre del Atributo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: TipoAtributo -->
-        <xsd:attribute name="tipoAtributo" type="tipodato" />
+        <xsd:attribute name="tipoAtributo" type="tipodato" >
+          <xsd:annotation>
+            <xsd:documentation>Tipo de dato del Atributo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: Modificador -->
-        <xsd:attribute name="modificador" type="Modificadores" />
+        <xsd:attribute name="modificador" type="Modificadores" >
+          <xsd:annotation>
+            <xsd:documentation>Modificador del Atributo</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
