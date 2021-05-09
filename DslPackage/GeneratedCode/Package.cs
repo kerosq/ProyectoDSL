@@ -30,21 +30,13 @@ namespace IPS.UMLSPF
 	[VSShell::ProvideToolWindowVisibility(typeof(UMLSPFExplorerToolWindow), Constants.UMLSPFEditorFactoryId)]
 	[VSShell::ProvideStaticToolboxGroup("@UMLSPFToolboxTab;IPS.UMLSPF.Dsl.dll", "IPS.UMLSPF.UMLSPFToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
-					"@IconsClassToolboxItem;IPS.UMLSPF.Dsl.dll", 
-					"IPS.UMLSPF.IconsClassToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"Clase", 
-					"@IconsClassToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
-					0xff00ff,
-					Index = 0)]
-	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ConectarClasesToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ConectarClasesToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ConectarClases", 
 					"@ConectarClasesToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 1)]
+					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@IconClassEnrToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.IconClassEnrToolboxItem", 
@@ -52,7 +44,7 @@ namespace IPS.UMLSPF
 					"ClaseEnriquecida", 
 					"@IconClassEnrToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 2)]
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@IconHerenciaToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.IconHerenciaToolboxItem", 
@@ -60,7 +52,7 @@ namespace IPS.UMLSPF
 					"Herencia", 
 					"@IconHerenciaToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 3)]
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ConectarPadreToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ConectarPadreToolboxItem", 
@@ -68,7 +60,7 @@ namespace IPS.UMLSPF
 					"ConectarPadre", 
 					"@ConectarPadreToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 4)]
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ConectarHijoToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ConectarHijoToolboxItem", 
@@ -76,7 +68,7 @@ namespace IPS.UMLSPF
 					"ConectarHijo", 
 					"@ConectarHijoToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 5)]
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@AgregarMetodoToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.AgregarMetodoToolboxItem", 
@@ -84,7 +76,7 @@ namespace IPS.UMLSPF
 					"AgregarMetodo", 
 					"@AgregarMetodoToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 6)]
+					Index = 5)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ShapeClaseToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeClaseToolboxItem", 
@@ -92,7 +84,7 @@ namespace IPS.UMLSPF
 					"ShapeClase", 
 					"@ShapeClaseToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 7)]
+					Index = 6)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ShapeParametroToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeParametroToolboxItem", 
@@ -100,7 +92,7 @@ namespace IPS.UMLSPF
 					"ShapeParametro", 
 					"@ShapeParametroToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 8)]
+					Index = 7)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ShapeAtributoIDToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeAtributoIDToolboxItem", 
@@ -108,7 +100,7 @@ namespace IPS.UMLSPF
 					"ShapeAtributoID", 
 					"@ShapeAtributoIDToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 9)]
+					Index = 8)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ShapeAtributoToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeAtributoToolboxItem", 
@@ -116,7 +108,39 @@ namespace IPS.UMLSPF
 					"ShapeAtributo", 
 					"@ShapeAtributoToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
+					Index = 9)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ShapeClaseEToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ShapeClaseEToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ShapeClaseE", 
+					"@ShapeClaseEToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
 					Index = 10)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ShapeEstiloClasesToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ShapeEstiloClasesToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ShapeEstiloClases", 
+					"@ShapeEstiloClasesToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 11)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ShapeEstilosAtributosToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ShapeEstilosAtributosToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ShapeEstilosAtributos", 
+					"@ShapeEstilosAtributosToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 12)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ShapeEstilosMetodosToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ShapeEstilosMetodosToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ShapeEstilosMetodos", 
+					"@ShapeEstilosMetodosToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 13)]
 	[VSShell::ProvideEditorFactory(typeof(UMLSPFEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(UMLSPFEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(UMLSPFEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

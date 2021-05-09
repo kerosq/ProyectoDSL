@@ -8,10 +8,10 @@ namespace IPS.UMLSPF
 {
     public partial class EstilosClase
     {
-        public string GetMostrarECValue()
+        public string GetMostrarEstilosClaseValue()
         {
-            //return string.Format("{0} : {1}",this.NombreAtributo,this.TipoAtributo);
-            return this.ColorFondo.Trim() + " : " + this.ColorLetra.Trim() + " : " + this.TipoLetra.Trim() + " : " + this.Alineacion.Trim();
+            return string.Format("{0} : {1} : {2} : {3}", this.ColorFondo.Trim(), this.ColorLetra.Trim(), this.TipoLetra.Trim(), this.Alineacion.Trim());
+            //return this.ColorFondo.Trim() + " : " + this.ColorLetra.Trim() + " : " + this.TipoLetra.Trim() + " : " + this.Alineacion.Trim();
         }
     }
 }

@@ -2209,52 +2209,52 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
-		#region MostrarEC domain property code
+		#region MostrarEstilosClase domain property code
 		
 		/// <summary>
-		/// MostrarEC domain property Id.
+		/// MostrarEstilosClase domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid MostrarECDomainPropertyId = new global::System.Guid(0xae20741c, 0xdb87, 0x4625, 0x85, 0xd6, 0x54, 0xc5, 0xc9, 0x76, 0x3f, 0x09);
+		public static readonly global::System.Guid MostrarEstilosClaseDomainPropertyId = new global::System.Guid(0x3b106316, 0xf333, 0x45ea, 0x8d, 0x81, 0xfd, 0x5b, 0x9f, 0x6d, 0xa1, 0x06);
 		
 		/// <summary>
-		/// Gets or sets the value of MostrarEC domain property.
-		/// Description for IPS.UMLSPF.EstilosClase.Mostrar EC
+		/// Gets or sets the value of MostrarEstilosClase domain property.
+		/// Description for IPS.UMLSPF.EstilosClase.Mostrar Estilos Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/MostrarEC.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/MostrarEC.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/MostrarEstilosClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/MostrarEstilosClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
-		[DslModeling::DomainObjectId("ae20741c-db87-4625-85d6-54c5c9763f09")]
-		public global::System.String MostrarEC
+		[DslModeling::DomainObjectId("3b106316-f333-45ea-8d81-fd5b9f6da106")]
+		public global::System.String MostrarEstilosClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return MostrarECPropertyHandler.Instance.GetValue(this);
+				return MostrarEstilosClasePropertyHandler.Instance.GetValue(this);
 			}
 		}
 		/// <summary>
-		/// Value handler for the EstilosClase.MostrarEC domain property.
+		/// Value handler for the EstilosClase.MostrarEstilosClase domain property.
 		/// </summary>
-		internal sealed partial class MostrarECPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstilosClase, global::System.String>
+		internal sealed partial class MostrarEstilosClasePropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstilosClase, global::System.String>
 		{
-			private MostrarECPropertyHandler() { }
+			private MostrarEstilosClasePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the EstilosClase.MostrarEC domain property value handler.
+			/// Gets the singleton instance of the EstilosClase.MostrarEstilosClase domain property value handler.
 			/// </summary>
-			public static readonly MostrarECPropertyHandler Instance = new MostrarECPropertyHandler();
+			public static readonly MostrarEstilosClasePropertyHandler Instance = new MostrarEstilosClasePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the EstilosClase.MostrarEC domain property.
+			/// Gets the Id of the EstilosClase.MostrarEstilosClase domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return MostrarECDomainPropertyId;
+					return MostrarEstilosClaseDomainPropertyId;
 				}
 			}
 			
@@ -2266,10 +2266,10 @@ namespace IPS.UMLSPF
 			public override sealed global::System.String GetValue(EstilosClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				// There is no storage for MostrarEC because its Kind is
-				// set to Calculated. Please provide the GetMostrarECValue()
+				// There is no storage for MostrarEstilosClase because its Kind is
+				// set to Calculated. Please provide the GetMostrarEstilosClaseValue()
 				// method on the domain class.
-				return element.GetMostrarECValue();
+				return element.GetMostrarEstilosClaseValue();
 			}
 		
 		}

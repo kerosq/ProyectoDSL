@@ -212,6 +212,12 @@ namespace IPS.UMLSPF
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
+			if(element is global::IPS.UMLSPF.ClaseEnriquecida)
+			{
+				global::IPS.UMLSPF.ShapeClaseEnriquecida newShape = new global::IPS.UMLSPF.ShapeClaseEnriquecida(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::IPS.UMLSPF.Herencia)
 			{
 				global::IPS.UMLSPF.IMGHerencia newShape = new global::IPS.UMLSPF.IMGHerencia(this.Partition);
@@ -248,6 +254,24 @@ namespace IPS.UMLSPF
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::IPS.UMLSPF.EstilosClase)
+			{
+				global::IPS.UMLSPF.ShapeEstiloClase newShape = new global::IPS.UMLSPF.ShapeEstiloClase(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.EstiloAtributos)
+			{
+				global::IPS.UMLSPF.ShapeEstiloAtributos newShape = new global::IPS.UMLSPF.ShapeEstiloAtributos(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.EstiloMetodos)
+			{
+				global::IPS.UMLSPF.ShapeEstiloMetodos newShape = new global::IPS.UMLSPF.ShapeEstiloMetodos(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::IPS.UMLSPF.conAsociacion)
 			{
 				global::IPS.UMLSPF.ConecClase newShape = new global::IPS.UMLSPF.ConecClase(this.Partition);
@@ -280,6 +304,10 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.ShapeParametro.DecoratorsInitialized += ShapeParametroDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeAtributoID.DecoratorsInitialized += ShapeAtributoIDDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeAtributo.DecoratorsInitialized += ShapeAtributoDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeClaseEnriquecida.DecoratorsInitialized += ShapeClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeEstiloClase.DecoratorsInitialized += ShapeEstiloClaseDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeEstiloAtributos.DecoratorsInitialized += ShapeEstiloAtributosDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeEstiloMetodos.DecoratorsInitialized += ShapeEstiloMetodosDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ConecClase.DecoratorsInitialized += ConecClaseDecoratorMap.OnDecoratorsInitialized;
 		}
 		
@@ -391,6 +419,78 @@ namespace IPS.UMLSPF
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Atributo.MostrarAtributoDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarAtributo").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeClaseEnriquecida.
+		/// </summary>
+		internal static partial class ShapeClaseEnriquecidaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeClaseEnriquecida.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Clase.NombreClaseDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreClase").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeEstiloClase.
+		/// </summary>
+		internal static partial class ShapeEstiloClaseDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeEstiloClase.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstilosClase.MostrarEstilosClaseDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarEstilosClase").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeEstiloAtributos.
+		/// </summary>
+		internal static partial class ShapeEstiloAtributosDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeEstiloAtributos.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarEAs").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeEstiloMetodos.
+		/// </summary>
+		internal static partial class ShapeEstiloMetodosDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeEstiloMetodos.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloMetodos.MostrarEMDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarEMs").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -605,12 +705,16 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Herencia), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Operaciones), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Parametros), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.AtributoIdentificador), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstilosClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloAtributos), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloMetodos), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsPadre), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -628,6 +732,10 @@ namespace IPS.UMLSPF
 				if(childElement is DslModeling::ElementLink)
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.ClaseEnriquecida)
+				{
+					parentElement = GetParentForClaseEnriquecida((global::IPS.UMLSPF.ClaseEnriquecida)childElement);
 				} else
 				if(childElement is global::IPS.UMLSPF.Herencia)
 				{
@@ -652,6 +760,18 @@ namespace IPS.UMLSPF
 				if(childElement is global::IPS.UMLSPF.Atributo)
 				{
 					parentElement = GetParentForAtributo((global::IPS.UMLSPF.Atributo)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.EstilosClase)
+				{
+					parentElement = GetParentForEstilosClase((global::IPS.UMLSPF.EstilosClase)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.EstiloAtributos)
+				{
+					parentElement = GetParentForEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.EstiloMetodos)
+				{
+					parentElement = GetParentForEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)childElement);
 				} else
 				{
 					parentElement = null;
@@ -713,6 +833,43 @@ namespace IPS.UMLSPF
 			{
 				// Segments 0 and 1
 				global::IPS.UMLSPF.Clase root2 = root.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForClaseEnriquecida( global::IPS.UMLSPF.Clase root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.ModeloClassWEB result = root.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForEstilosClase( global::IPS.UMLSPF.EstilosClase root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.Clase root2 = root.ClaseEnriquecida as global::IPS.UMLSPF.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForEstiloAtributos( global::IPS.UMLSPF.EstiloAtributos root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.Clase root2 = root.ClaseEnriquecida as global::IPS.UMLSPF.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForEstiloMetodos( global::IPS.UMLSPF.EstiloMetodos root )
+			{
+				// Segments 0 and 1
+				global::IPS.UMLSPF.Clase root2 = root.ClaseEnriquecida as global::IPS.UMLSPF.Clase;
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;

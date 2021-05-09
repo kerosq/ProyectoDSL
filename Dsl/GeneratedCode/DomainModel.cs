@@ -99,6 +99,10 @@ namespace IPS.UMLSPF
 				typeof(ShapeParametro),
 				typeof(ShapeAtributoID),
 				typeof(ShapeAtributo),
+				typeof(ShapeClaseEnriquecida),
+				typeof(ShapeEstiloClase),
+				typeof(ShapeEstiloAtributos),
+				typeof(ShapeEstiloMetodos),
 				typeof(IMGHerencia),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
 				typeof(global::IPS.UMLSPF.DecoratorPropertyChanged),
@@ -128,7 +132,7 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(EstilosClase), "ColorLetra", EstilosClase.ColorLetraDomainPropertyId, typeof(EstilosClase.ColorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstilosClase), "TipoLetra", EstilosClase.TipoLetraDomainPropertyId, typeof(EstilosClase.TipoLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstilosClase), "Alineacion", EstilosClase.AlineacionDomainPropertyId, typeof(EstilosClase.AlineacionPropertyHandler)),
-				new DomainMemberInfo(typeof(EstilosClase), "MostrarEC", EstilosClase.MostrarECDomainPropertyId, typeof(EstilosClase.MostrarECPropertyHandler)),
+				new DomainMemberInfo(typeof(EstilosClase), "MostrarEstilosClase", EstilosClase.MostrarEstilosClaseDomainPropertyId, typeof(EstilosClase.MostrarEstilosClasePropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloAtributos), "Tipoletra", EstiloAtributos.TipoletraDomainPropertyId, typeof(EstiloAtributos.TipoletraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloAtributos), "ColorLetra", EstiloAtributos.ColorLetraDomainPropertyId, typeof(EstiloAtributos.ColorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloAtributos), "FormatoAtributo", EstiloAtributos.FormatoAtributoDomainPropertyId, typeof(EstiloAtributos.FormatoAtributoPropertyHandler)),
@@ -205,7 +209,7 @@ namespace IPS.UMLSPF
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(21);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(25);
 				createElementMap.Add(typeof(ModeloClassWEB), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -226,7 +230,11 @@ namespace IPS.UMLSPF
 				createElementMap.Add(typeof(ShapeParametro), 17);
 				createElementMap.Add(typeof(ShapeAtributoID), 18);
 				createElementMap.Add(typeof(ShapeAtributo), 19);
-				createElementMap.Add(typeof(IMGHerencia), 20);
+				createElementMap.Add(typeof(ShapeClaseEnriquecida), 20);
+				createElementMap.Add(typeof(ShapeEstiloClase), 21);
+				createElementMap.Add(typeof(ShapeEstiloAtributos), 22);
+				createElementMap.Add(typeof(ShapeEstiloMetodos), 23);
+				createElementMap.Add(typeof(IMGHerencia), 24);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -260,7 +268,11 @@ namespace IPS.UMLSPF
 				case 17: return new ShapeParametro(partition, propertyAssignments);
 				case 18: return new ShapeAtributoID(partition, propertyAssignments);
 				case 19: return new ShapeAtributo(partition, propertyAssignments);
-				case 20: return new IMGHerencia(partition, propertyAssignments);
+				case 20: return new ShapeClaseEnriquecida(partition, propertyAssignments);
+				case 21: return new ShapeEstiloClase(partition, propertyAssignments);
+				case 22: return new ShapeEstiloAtributos(partition, propertyAssignments);
+				case 23: return new ShapeEstiloMetodos(partition, propertyAssignments);
+				case 24: return new IMGHerencia(partition, propertyAssignments);
 				default: return null;
 			}
 		}

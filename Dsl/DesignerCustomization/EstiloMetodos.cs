@@ -10,8 +10,8 @@ namespace IPS.UMLSPF
     {
         public string GetMostrarEMValue()
         {
-            //return string.Format("{0} : {1}",this.NombreAtributo,this.TipoAtributo);
-            return this.TipoLetra.Trim() + " : " + this.ColorLetra.Trim();
+            return string.Format("{0} : {1}", this.TipoLetra.Trim() , this.ColorLetra.Trim());
+            //return this.TipoLetra.Trim() + " : " + this.ColorLetra.Trim();
         }
     }
 }
