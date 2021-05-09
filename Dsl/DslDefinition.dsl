@@ -521,6 +521,9 @@
       <BaseCompartmentShape>
         <CompartmentShapeMoniker Name="CMPClase" />
       </BaseCompartmentShape>
+      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="InconDecoClase" DisplayName="Incon Deco Clase" DefaultIcon="Resources\ClaseEnriquecida.bmp" />
+      </ShapeHasDecorators>
       <Compartment Name="cmpEstilosClase" TitleFontStyle="Bold" Title="EstiloClase" />
       <Compartment Name="cmpEstiloAtributos" TitleFontStyle="Bold" Title="EstiloAtributos" />
       <Compartment Name="cmpEstiloMetodos" TitleFontStyle="Bold" Title="EstiloMetodos" />
@@ -549,7 +552,7 @@
         <TextDecorator Name="NombreRelacionIZ" DisplayName="Nombre Relacion IZ" DefaultText="NombreRelacionIZ" />
       </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="RelacionTipo" DisplayName="Relacion Tipo" DefaultText="RelacionTipo" />
+        <TextDecorator Name="RelacionTipo" DisplayName="Relacion Tipo" DefaultText="RelacionTipo" FontSize="1" />
       </ConnectorHasDecorators>
     </Connector>
     <Connector Id="2537b36f-c6cf-43bf-8e81-4bda4c31ce83" Description="Description for IPS.UMLSPF.ConEsPadre" Name="ConEsPadre" DisplayName="Con Es Padre" Namespace="IPS.UMLSPF" FixedTooltipText="Con Es Padre" />

@@ -116,6 +116,22 @@ namespace IPS.UMLSPF
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Custom font styles
+			DslDiagrams::FontSettings fontSettings;
+			fontSettings = new DslDiagrams::FontSettings();
+			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
+			fontSettings.Size = 1/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular1"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
+		}
+		
 		#endregion
 		
 		#region Decorators
@@ -183,6 +199,7 @@ namespace IPS.UMLSPF
 			field5.AnchoringBehavior.MinimumHeightInLines = 1;
 			field5.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field5.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			field5.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular1");			
 			DslDiagrams::Decorator decorator5 = new DslDiagrams::ConnectorDecorator(field5, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator5);
 				
