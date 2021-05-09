@@ -279,11 +279,6 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="d924d344-7352-47e4-9ba1-65f91c8e24af" Description="Description for IPS.UMLSPF.Parametros.Modificador Parametro" Name="ModificadorParametro" DisplayName="Modificador Parametro">
-          <Type>
-            <DomainEnumerationMoniker Name="Modificadores" />
-          </Type>
-        </DomainProperty>
       </Properties>
     </DomainClass>
   </Classes>
@@ -862,9 +857,6 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="mostrarParametro">
             <DomainPropertyMoniker Name="Parametros/MostrarParametro" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="modificadorParametro">
-            <DomainPropertyMoniker Name="Parametros/ModificadorParametro" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
