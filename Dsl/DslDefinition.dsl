@@ -312,17 +312,22 @@
     </DomainRelationship>
     <DomainRelationship Id="6f46edc6-89a2-47b6-b489-b76d99a215bc" Description="Description for IPS.UMLSPF.conAsociacion" Name="conAsociacion" DisplayName="Con Asociacion" Namespace="IPS.UMLSPF">
       <Properties>
-        <DomainProperty Id="7de83d71-ad8f-4919-868f-d0e68cafa96c" Description="Description for IPS.UMLSPF.conAsociacion.Ref D" Name="refD" DisplayName="Ref D">
+        <DomainProperty Id="7de83d71-ad8f-4919-868f-d0e68cafa96c" Description="Establecer cardinalidad entre clases" Name="refD" DisplayName="Cardinalidad DE">
           <Type>
             <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="979cb249-5e5a-4ad9-a7f4-db1dddacce9d" Description="Description for IPS.UMLSPF.conAsociacion.Ref I" Name="refI" DisplayName="Ref I">
+        <DomainProperty Id="979cb249-5e5a-4ad9-a7f4-db1dddacce9d" Description="Establecer cardinalidad entre clases" Name="refI" DisplayName="Cardinalidad IZ">
           <Type>
             <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="ffff40d9-a340-4e2a-a366-94a74eeb2486" Description="Description for IPS.UMLSPF.conAsociacion.Nombre Relacion" Name="NombreRelacion" DisplayName="Nombre Relacion">
+        <DomainProperty Id="ffff40d9-a340-4e2a-a366-94a74eeb2486" Description="Establecer nonbre relacion entre las clases" Name="NombreRelacion" DisplayName="Nombre Relacion DE">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="94402480-f913-48fc-8d09-b3086c5840b6" Description="Establecer nonbre relacion entre las clases" Name="NameRelation" DisplayName="Nombre Relacion IZ">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -345,17 +350,22 @@
     </DomainRelationship>
     <DomainRelationship Id="89962120-883f-43a1-8030-7055c29c48b7" Description="Description for IPS.UMLSPF.conComposicion" Name="conComposicion" DisplayName="Con Composicion" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Properties>
-        <DomainProperty Id="9039dabe-0f78-4246-bac7-eb56f7d6235c" Description="Description for IPS.UMLSPF.conComposicion.Ref D" Name="refD" DisplayName="Ref D">
+        <DomainProperty Id="9039dabe-0f78-4246-bac7-eb56f7d6235c" Description="Establecer cardinalidad entre clases" Name="refD" DisplayName="Cardinalidad DE">
           <Type>
             <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="06d54d4e-fe3b-499c-8df1-c2ad02fa3563" Description="Description for IPS.UMLSPF.conComposicion.Ref I" Name="refI" DisplayName="Ref I">
+        <DomainProperty Id="06d54d4e-fe3b-499c-8df1-c2ad02fa3563" Description="Establecer cardinalidad entre clases" Name="refI" DisplayName="Cardinalidad IZ">
           <Type>
             <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="7a612a76-013c-43b9-a7d1-efff38b1b115" Description="Description for IPS.UMLSPF.conComposicion.Nombre Relacion" Name="NombreRelacion" DisplayName="Nombre Relacion">
+        <DomainProperty Id="7a612a76-013c-43b9-a7d1-efff38b1b115" Description="Establecer nonbre relacion entre las clases" Name="NombreRelacion" DisplayName="Nombre Relacion DE">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="73a19669-d92f-4db5-b01a-bc50c827565a" Description="Establecer nonbre relacion entre las clases" Name="NameRelation" DisplayName="Nombre Relacion IZ">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -378,17 +388,22 @@
     </DomainRelationship>
     <DomainRelationship Id="d8f51cbd-c973-4dd7-a8d8-68f9f0e7a26e" Description="Description for IPS.UMLSPF.conAgregacion" Name="conAgregacion" DisplayName="Con Agregacion" Namespace="IPS.UMLSPF">
       <Properties>
-        <DomainProperty Id="834c8a5f-3b35-4cc2-afc5-32fa1cf60417" Description="Description for IPS.UMLSPF.conAgregacion.Ref D" Name="refD" DisplayName="Ref D">
+        <DomainProperty Id="834c8a5f-3b35-4cc2-afc5-32fa1cf60417" Description="Establecer cardinalidad entre clases" Name="refD" DisplayName="Cardinalidad DE">
           <Type>
             <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="53aaf2a8-97d0-4d25-855a-5c0ee73344a8" Description="Description for IPS.UMLSPF.conAgregacion.Ref I" Name="refI" DisplayName="Ref I">
+        <DomainProperty Id="53aaf2a8-97d0-4d25-855a-5c0ee73344a8" Description="Establecer cardinalidad entre clases" Name="refI" DisplayName="Cardinalidad IZ">
           <Type>
             <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="7ae22ee7-47b6-4b93-8b76-05ae1c01fff3" Description="Description for IPS.UMLSPF.conAgregacion.Nombre Relacion" Name="NombreRelacion" DisplayName="Nombre Relacion">
+        <DomainProperty Id="7ae22ee7-47b6-4b93-8b76-05ae1c01fff3" Description="Establecer nonbre relacion entre las clases" Name="NombreRelacion" DisplayName="Nombre Relacion DE">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="df53e9ae-7772-4c6b-83a2-5c1e6e9b2883" Description="Establecer nonbre relacion entre las clases" Name="NameRelation" DisplayName="Nombre Relacion IZ">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -596,11 +611,14 @@
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="refDCL" DisplayName="Ref DCL" DefaultText="refDCL" />
       </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="refICL" DisplayName="Ref ICL" DefaultText="refICL" />
       </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="SourceBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="NombreRelacionDE" DisplayName="Nombre Relacion DE" DefaultText="NombreRelacionDE" />
+      </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="NombreRelacion" DisplayName="Nombre Relacion" DefaultText="NombreRelacion" />
+        <TextDecorator Name="NombreRelacionIZ" DisplayName="Nombre Relacion IZ" DefaultText="NombreRelacionIZ" />
       </ConnectorHasDecorators>
     </Connector>
     <Connector Id="a9e5319f-d905-47eb-bf0a-337682bf1c83" Description="Description for IPS.UMLSPF.ConecComposicion" Name="ConecComposicion" DisplayName="Conec Composicion" Namespace="IPS.UMLSPF" FixedTooltipText="Conec Composicion" TargetEndStyle="FilledDiamond" targetEndWidth="0.3" targetEndHeight="0.3">
@@ -731,6 +749,9 @@
           <XmlPropertyData XmlName="nombreRelacion">
             <DomainPropertyMoniker Name="conAsociacion/NombreRelacion" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="nameRelation">
+            <DomainPropertyMoniker Name="conAsociacion/NameRelation" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ConecClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecClaseMoniker" ElementName="conecClase" MonikerTypeName="ConecClaseMoniker">
@@ -765,6 +786,9 @@
           <XmlPropertyData XmlName="nombreRelacion">
             <DomainPropertyMoniker Name="conComposicion/NombreRelacion" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="nameRelation">
+            <DomainPropertyMoniker Name="conComposicion/NameRelation" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ConecComposicion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conecComposicionMoniker" ElementName="conecComposicion" MonikerTypeName="ConecComposicionMoniker">
@@ -781,6 +805,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="nombreRelacion">
             <DomainPropertyMoniker Name="conAgregacion/NombreRelacion" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nameRelation">
+            <DomainPropertyMoniker Name="conAgregacion/NameRelation" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -1142,10 +1169,18 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="ConecClase/NombreRelacion" />
+          <TextDecoratorMoniker Name="ConecClase/NombreRelacionDE" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="conAsociacion/NombreRelacion" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConecClase/NombreRelacionIZ" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="conAsociacion/NameRelation" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

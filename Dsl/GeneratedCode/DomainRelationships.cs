@@ -897,7 +897,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of refD domain property.
-		/// Description for IPS.UMLSPF.conAsociacion.Ref D
+		/// Establecer cardinalidad entre clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -984,7 +984,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of refI domain property.
-		/// Description for IPS.UMLSPF.conAsociacion.Ref I
+		/// Establecer cardinalidad entre clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1071,7 +1071,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreRelacion domain property.
-		/// Description for IPS.UMLSPF.conAsociacion.Nombre Relacion
+		/// Establecer nonbre relacion entre las clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/NombreRelacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/NombreRelacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1138,6 +1138,93 @@ namespace IPS.UMLSPF
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.nombreRelacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NameRelation domain property code
+		
+		/// <summary>
+		/// NameRelation domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameRelationDomainPropertyId = new global::System.Guid(0x94402480, 0xf913, 0x48fc, 0x8d, 0x09, 0xb3, 0x08, 0x6c, 0x58, 0x40, 0xb6);
+		
+		/// <summary>
+		/// Storage for NameRelation
+		/// </summary>
+		private global::System.String nameRelationPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NameRelation domain property.
+		/// Establecer nonbre relacion entre las clases
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/NameRelation.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/NameRelation.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("94402480-f913-48fc-8d09-b3086c5840b6")]
+		public global::System.String NameRelation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nameRelationPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NameRelationPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAsociacion.NameRelation domain property.
+		/// </summary>
+		internal sealed partial class NameRelationPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, global::System.String>
+		{
+			private NameRelationPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAsociacion.NameRelation domain property value handler.
+			/// </summary>
+			public static readonly NameRelationPropertyHandler Instance = new NameRelationPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAsociacion.NameRelation domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameRelationDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAsociacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nameRelationPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAsociacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nameRelationPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1388,7 +1475,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of refD domain property.
-		/// Description for IPS.UMLSPF.conComposicion.Ref D
+		/// Establecer cardinalidad entre clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1475,7 +1562,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of refI domain property.
-		/// Description for IPS.UMLSPF.conComposicion.Ref I
+		/// Establecer cardinalidad entre clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1562,7 +1649,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreRelacion domain property.
-		/// Description for IPS.UMLSPF.conComposicion.Nombre Relacion
+		/// Establecer nonbre relacion entre las clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/NombreRelacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/NombreRelacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1629,6 +1716,93 @@ namespace IPS.UMLSPF
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.nombreRelacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NameRelation domain property code
+		
+		/// <summary>
+		/// NameRelation domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameRelationDomainPropertyId = new global::System.Guid(0x73a19669, 0xd92f, 0x4db5, 0xb0, 0x1a, 0xbc, 0x50, 0xc8, 0x27, 0x56, 0x5a);
+		
+		/// <summary>
+		/// Storage for NameRelation
+		/// </summary>
+		private global::System.String nameRelationPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NameRelation domain property.
+		/// Establecer nonbre relacion entre las clases
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/NameRelation.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/NameRelation.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("73a19669-d92f-4db5-b01a-bc50c827565a")]
+		public global::System.String NameRelation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nameRelationPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NameRelationPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conComposicion.NameRelation domain property.
+		/// </summary>
+		internal sealed partial class NameRelationPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, global::System.String>
+		{
+			private NameRelationPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conComposicion.NameRelation domain property value handler.
+			/// </summary>
+			public static readonly NameRelationPropertyHandler Instance = new NameRelationPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conComposicion.NameRelation domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameRelationDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conComposicion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nameRelationPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conComposicion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nameRelationPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1878,7 +2052,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of refD domain property.
-		/// Description for IPS.UMLSPF.conAgregacion.Ref D
+		/// Establecer cardinalidad entre clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -1965,7 +2139,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of refI domain property.
-		/// Description for IPS.UMLSPF.conAgregacion.Ref I
+		/// Establecer cardinalidad entre clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -2052,7 +2226,7 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// Gets or sets the value of NombreRelacion domain property.
-		/// Description for IPS.UMLSPF.conAgregacion.Nombre Relacion
+		/// Establecer nonbre relacion entre las clases
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/NombreRelacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/NombreRelacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
@@ -2119,6 +2293,93 @@ namespace IPS.UMLSPF
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.nombreRelacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region NameRelation domain property code
+		
+		/// <summary>
+		/// NameRelation domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameRelationDomainPropertyId = new global::System.Guid(0xdf53e9ae, 0x7772, 0x4c6b, 0x83, 0xa2, 0x5c, 0x1e, 0x6e, 0x9b, 0x28, 0x83);
+		
+		/// <summary>
+		/// Storage for NameRelation
+		/// </summary>
+		private global::System.String nameRelationPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of NameRelation domain property.
+		/// Establecer nonbre relacion entre las clases
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/NameRelation.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/NameRelation.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("df53e9ae-7772-4c6b-83a2-5c1e6e9b2883")]
+		public global::System.String NameRelation
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nameRelationPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NameRelationPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the conAgregacion.NameRelation domain property.
+		/// </summary>
+		internal sealed partial class NameRelationPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, global::System.String>
+		{
+			private NameRelationPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the conAgregacion.NameRelation domain property value handler.
+			/// </summary>
+			public static readonly NameRelationPropertyHandler Instance = new NameRelationPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the conAgregacion.NameRelation domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameRelationDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(conAgregacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nameRelationPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(conAgregacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nameRelationPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

@@ -430,7 +430,10 @@ namespace IPS.UMLSPF
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refICL").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAsociacion.NombreRelacionDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreRelacionDE").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAsociacion.NameRelationDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreRelacionIZ").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -1437,7 +1440,15 @@ namespace IPS.UMLSPF
 				}
 				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAsociacion.NombreRelacionDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecClase.FindConecClaseDecorator("NombreRelacion");
+					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecClase.FindConecClaseDecorator("NombreRelacionDE");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAsociacion.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAsociacion.NameRelationDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecClase.FindConecClaseDecorator("NombreRelacionIZ");
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAsociacion.DomainClassId);

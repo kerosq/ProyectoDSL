@@ -5,7 +5,7 @@
       <clase Id="259bfd3c-01ec-4309-9963-cad229fa9e5f">
         <operaciones>
           <claseHasOperaciones Id="c3db202e-6de4-4c37-9980-ea662768b872">
-            <operaciones Id="81f0a272-cf42-4952-a653-2f10cc138984" />
+            <operaciones Id="81f0a272-cf42-4952-a653-2f10cc138984" tipoOperacion="Int" modificador="Public" />
           </claseHasOperaciones>
         </operaciones>
       </clase>
@@ -16,12 +16,12 @@
     <modeloClassWEBHasClase Id="8c9c6aaf-3f05-4258-b0d1-6118f4019c29">
       <clase Id="c88b7916-013e-426d-aaab-710a60a3c16a">
         <targetClase>
-          <conAsociacion Id="9d38e232-c2ab-45c2-b751-0f26790459d0" refD="a" refI="s">
+          <conAsociacion Id="9d38e232-c2ab-45c2-b751-0f26790459d0" refD="c1N" refI="c1N">
             <claseMoniker Id="259bfd3c-01ec-4309-9963-cad229fa9e5f" />
           </conAsociacion>
         </targetClase>
         <agreTargetClase>
-          <conAgregacion Id="630ca27d-4a96-4a36-bf3d-1215385f7ca7" refD="S" refI="D">
+          <conAgregacion Id="630ca27d-4a96-4a36-bf3d-1215385f7ca7" refD="c1N" refI="c1N">
             <claseMoniker Id="607039ed-3126-47ba-8b6a-293608699b31" />
           </conAgregacion>
         </agreTargetClase>
@@ -29,6 +29,9 @@
     </modeloClassWEBHasClase>
     <modeloClassWEBHasClase Id="aba88d52-a63c-47e1-9f15-a481fce2473d">
       <clase Id="607039ed-3126-47ba-8b6a-293608699b31" />
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="73404eaa-d452-41da-88e6-488dba27fa1d">
+      <clase Id="3e14d53b-a8b4-443e-ba51-5e080a64bbf0" />
     </modeloClassWEBHasClase>
   </clase>
   <herencia>
@@ -42,6 +45,9 @@
         <claseHija>
           <esHija Id="7c009544-b8e6-419d-977b-3144d5dd5d82">
             <claseEnriquecidaMoniker Id="095df3e6-2f24-4fe7-b27f-388f1cf7605c" />
+          </esHija>
+          <esHija Id="90236cb1-b395-4e3f-97d6-db6fb83b5349">
+            <claseMoniker Id="3e14d53b-a8b4-443e-ba51-5e080a64bbf0" />
           </esHija>
         </claseHija>
       </herencia>

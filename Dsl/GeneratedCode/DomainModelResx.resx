@@ -534,28 +534,36 @@
     <comment>DisplayName for DomainClass &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion/refD.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conAsociacion.Ref D</value>
+    <value>Establecer cardinalidad entre clases</value>
     <comment>Description for DomainProperty &apos;refD&apos; on DomainClass &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion/refD.DisplayName" xml:space="preserve">
-    <value>Ref D</value>
+    <value>Cardinalidad DE</value>
     <comment>DisplayName for DomainProperty &apos;refD&apos; on DomainClass &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion/refI.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conAsociacion.Ref I</value>
+    <value>Establecer cardinalidad entre clases</value>
     <comment>Description for DomainProperty &apos;refI&apos; on DomainClass &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion/refI.DisplayName" xml:space="preserve">
-    <value>Ref I</value>
+    <value>Cardinalidad IZ</value>
     <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion/NombreRelacion.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conAsociacion.Nombre Relacion</value>
+    <value>Establecer nonbre relacion entre las clases</value>
     <comment>Description for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion/NombreRelacion.DisplayName" xml:space="preserve">
-    <value>Nombre Relacion</value>
+    <value>Nombre Relacion DE</value>
     <comment>DisplayName for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAsociacion/NameRelation.Description" xml:space="preserve">
+    <value>Establecer nonbre relacion entre las clases</value>
+    <comment>Description for DomainProperty &apos;NameRelation&apos; on DomainClass &apos;conAsociacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAsociacion/NameRelation.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion IZ</value>
+    <comment>DisplayName for DomainProperty &apos;NameRelation&apos; on DomainClass &apos;conAsociacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion/SourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conAsociacion.SourceClase</value>
@@ -590,28 +598,36 @@
     <comment>DisplayName for DomainClass &apos;conComposicion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conComposicion/refD.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conComposicion.Ref D</value>
+    <value>Establecer cardinalidad entre clases</value>
     <comment>Description for DomainProperty &apos;refD&apos; on DomainClass &apos;conComposicion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conComposicion/refD.DisplayName" xml:space="preserve">
-    <value>Ref D</value>
+    <value>Cardinalidad DE</value>
     <comment>DisplayName for DomainProperty &apos;refD&apos; on DomainClass &apos;conComposicion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conComposicion/refI.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conComposicion.Ref I</value>
+    <value>Establecer cardinalidad entre clases</value>
     <comment>Description for DomainProperty &apos;refI&apos; on DomainClass &apos;conComposicion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conComposicion/refI.DisplayName" xml:space="preserve">
-    <value>Ref I</value>
+    <value>Cardinalidad IZ</value>
     <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conComposicion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conComposicion/NombreRelacion.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conComposicion.Nombre Relacion</value>
+    <value>Establecer nonbre relacion entre las clases</value>
     <comment>Description for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conComposicion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conComposicion/NombreRelacion.DisplayName" xml:space="preserve">
-    <value>Nombre Relacion</value>
+    <value>Nombre Relacion DE</value>
     <comment>DisplayName for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/NameRelation.Description" xml:space="preserve">
+    <value>Establecer nonbre relacion entre las clases</value>
+    <comment>Description for DomainProperty &apos;NameRelation&apos; on DomainClass &apos;conComposicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conComposicion/NameRelation.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion IZ</value>
+    <comment>DisplayName for DomainProperty &apos;NameRelation&apos; on DomainClass &apos;conComposicion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conComposicion/CompSourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conComposicion.CompSourceClase</value>
@@ -646,28 +662,36 @@
     <comment>DisplayName for DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/refD.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conAgregacion.Ref D</value>
+    <value>Establecer cardinalidad entre clases</value>
     <comment>Description for DomainProperty &apos;refD&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/refD.DisplayName" xml:space="preserve">
-    <value>Ref D</value>
+    <value>Cardinalidad DE</value>
     <comment>DisplayName for DomainProperty &apos;refD&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/refI.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conAgregacion.Ref I</value>
+    <value>Establecer cardinalidad entre clases</value>
     <comment>Description for DomainProperty &apos;refI&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/refI.DisplayName" xml:space="preserve">
-    <value>Ref I</value>
+    <value>Cardinalidad IZ</value>
     <comment>DisplayName for DomainProperty &apos;refI&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/NombreRelacion.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.conAgregacion.Nombre Relacion</value>
+    <value>Establecer nonbre relacion entre las clases</value>
     <comment>Description for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/NombreRelacion.DisplayName" xml:space="preserve">
-    <value>Nombre Relacion</value>
+    <value>Nombre Relacion DE</value>
     <comment>DisplayName for DomainProperty &apos;NombreRelacion&apos; on DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/NameRelation.Description" xml:space="preserve">
+    <value>Establecer nonbre relacion entre las clases</value>
+    <comment>Description for DomainProperty &apos;NameRelation&apos; on DomainClass &apos;conAgregacion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.conAgregacion/NameRelation.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion IZ</value>
+    <comment>DisplayName for DomainProperty &apos;NameRelation&apos; on DomainClass &apos;conAgregacion&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAgregacion/SourceClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conAgregacion.SourceClase</value>
@@ -1081,8 +1105,12 @@
     <value>refICL</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="ConecClaseNombreRelacionDefaultText" xml:space="preserve">
-    <value>NombreRelacion</value>
+  <data name="ConecClaseNombreRelacionDEDefaultText" xml:space="preserve">
+    <value>NombreRelacionDE</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConecClaseNombreRelacionIZDefaultText" xml:space="preserve">
+    <value>NombreRelacionIZ</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ConecComposicion.Description" xml:space="preserve">

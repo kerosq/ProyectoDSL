@@ -10751,6 +10751,23 @@ namespace IPS.UMLSPF
 					}
 				}
 			}
+			// NameRelation
+			if (!serializationContext.Result.Failed)
+			{
+				string attribNameRelation = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nameRelation");
+				if (attribNameRelation != null)
+				{
+					global::System.String valueOfNameRelation;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribNameRelation, out valueOfNameRelation))
+					{
+						instanceOfconAsociacion.NameRelation = valueOfNameRelation;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nameRelation", typeof(global::System.String), attribNameRelation);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -11268,6 +11285,17 @@ namespace IPS.UMLSPF
 	
 				}
 			}
+			// NameRelation
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconAsociacion.NameRelation;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nameRelation", propValue);
+	
+				}
+			}
 		}
 	
 		/// <summary>
@@ -11710,6 +11738,23 @@ namespace IPS.UMLSPF
 					else
 					{	// Invalid property value, ignored.
 						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreRelacion", typeof(global::System.String), attribNombreRelacion);
+					}
+				}
+			}
+			// NameRelation
+			if (!serializationContext.Result.Failed)
+			{
+				string attribNameRelation = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nameRelation");
+				if (attribNameRelation != null)
+				{
+					global::System.String valueOfNameRelation;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribNameRelation, out valueOfNameRelation))
+					{
+						instanceOfconComposicion.NameRelation = valueOfNameRelation;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nameRelation", typeof(global::System.String), attribNameRelation);
 					}
 				}
 			}
@@ -12230,6 +12275,17 @@ namespace IPS.UMLSPF
 	
 				}
 			}
+			// NameRelation
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconComposicion.NameRelation;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nameRelation", propValue);
+	
+				}
+			}
 		}
 	
 		/// <summary>
@@ -12579,6 +12635,23 @@ namespace IPS.UMLSPF
 					else
 					{	// Invalid property value, ignored.
 						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreRelacion", typeof(global::System.String), attribNombreRelacion);
+					}
+				}
+			}
+			// NameRelation
+			if (!serializationContext.Result.Failed)
+			{
+				string attribNameRelation = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nameRelation");
+				if (attribNameRelation != null)
+				{
+					global::System.String valueOfNameRelation;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribNameRelation, out valueOfNameRelation))
+					{
+						instanceOfconAgregacion.NameRelation = valueOfNameRelation;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nameRelation", typeof(global::System.String), attribNameRelation);
 					}
 				}
 			}
@@ -13096,6 +13169,17 @@ namespace IPS.UMLSPF
 				{
 					if (!string.IsNullOrEmpty(propValue))
 						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreRelacion", propValue);
+	
+				}
+			}
+			// NameRelation
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfconAgregacion.NameRelation;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nameRelation", propValue);
 	
 				}
 			}

@@ -153,18 +153,28 @@ namespace IPS.UMLSPF
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
 			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.TargetTop, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator2);
 				
-			DslDiagrams::TextField field3 = new DslDiagrams::TextField("NombreRelacion");
-			field3.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ConecClaseNombreRelacionDefaultText");
+			DslDiagrams::TextField field3 = new DslDiagrams::TextField("NombreRelacionDE");
+			field3.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ConecClaseNombreRelacionDEDefaultText");
 			field3.DefaultFocusable = true;
 			field3.DefaultAutoSize = true;
 			field3.AnchoringBehavior.MinimumHeightInLines = 1;
 			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.SourceBottom, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator3);
+				
+			DslDiagrams::TextField field4 = new DslDiagrams::TextField("NombreRelacionIZ");
+			field4.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ConecClaseNombreRelacionIZDefaultText");
+			field4.DefaultFocusable = true;
+			field4.DefaultAutoSize = true;
+			field4.AnchoringBehavior.MinimumHeightInLines = 1;
+			field4.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field4.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator4 = new DslDiagrams::ConnectorDecorator(field4, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator4);
 				
 		}
 		

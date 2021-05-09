@@ -149,12 +149,15 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(conAsociacion), "refD", conAsociacion.refDDomainPropertyId, typeof(conAsociacion.refDPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "refI", conAsociacion.refIDomainPropertyId, typeof(conAsociacion.refIPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "NombreRelacion", conAsociacion.NombreRelacionDomainPropertyId, typeof(conAsociacion.NombreRelacionPropertyHandler)),
+				new DomainMemberInfo(typeof(conAsociacion), "NameRelation", conAsociacion.NameRelationDomainPropertyId, typeof(conAsociacion.NameRelationPropertyHandler)),
 				new DomainMemberInfo(typeof(conComposicion), "refD", conComposicion.refDDomainPropertyId, typeof(conComposicion.refDPropertyHandler)),
 				new DomainMemberInfo(typeof(conComposicion), "refI", conComposicion.refIDomainPropertyId, typeof(conComposicion.refIPropertyHandler)),
 				new DomainMemberInfo(typeof(conComposicion), "NombreRelacion", conComposicion.NombreRelacionDomainPropertyId, typeof(conComposicion.NombreRelacionPropertyHandler)),
+				new DomainMemberInfo(typeof(conComposicion), "NameRelation", conComposicion.NameRelationDomainPropertyId, typeof(conComposicion.NameRelationPropertyHandler)),
 				new DomainMemberInfo(typeof(conAgregacion), "refD", conAgregacion.refDDomainPropertyId, typeof(conAgregacion.refDPropertyHandler)),
 				new DomainMemberInfo(typeof(conAgregacion), "refI", conAgregacion.refIDomainPropertyId, typeof(conAgregacion.refIPropertyHandler)),
 				new DomainMemberInfo(typeof(conAgregacion), "NombreRelacion", conAgregacion.NombreRelacionDomainPropertyId, typeof(conAgregacion.NombreRelacionPropertyHandler)),
+				new DomainMemberInfo(typeof(conAgregacion), "NameRelation", conAgregacion.NameRelationDomainPropertyId, typeof(conAgregacion.NameRelationPropertyHandler)),
 			};
 		}
 		/// <summary>

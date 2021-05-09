@@ -712,11 +712,29 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: refD -->
-        <xsd:attribute name="refD" type="Cardinalidades" />
+        <xsd:attribute name="refD" type="Cardinalidades" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: refI -->
-        <xsd:attribute name="refI" type="Cardinalidades" />
+        <xsd:attribute name="refI" type="Cardinalidades" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: NombreRelacion -->
-        <xsd:attribute name="nombreRelacion" type="xsd:string" />
+        <xsd:attribute name="nombreRelacion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: NameRelation -->
+        <xsd:attribute name="nameRelation" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -758,11 +776,29 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: refD -->
-        <xsd:attribute name="refD" type="Cardinalidades" />
+        <xsd:attribute name="refD" type="Cardinalidades" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: refI -->
-        <xsd:attribute name="refI" type="Cardinalidades" />
+        <xsd:attribute name="refI" type="Cardinalidades" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: NombreRelacion -->
-        <xsd:attribute name="nombreRelacion" type="xsd:string" />
+        <xsd:attribute name="nombreRelacion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: NameRelation -->
+        <xsd:attribute name="nameRelation" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -804,11 +840,29 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: refD -->
-        <xsd:attribute name="refD" type="Cardinalidades" />
+        <xsd:attribute name="refD" type="Cardinalidades" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: refI -->
-        <xsd:attribute name="refI" type="Cardinalidades" />
+        <xsd:attribute name="refI" type="Cardinalidades" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
         <!-- Property: NombreRelacion -->
-        <xsd:attribute name="nombreRelacion" type="xsd:string" />
+        <xsd:attribute name="nombreRelacion" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: NameRelation -->
+        <xsd:attribute name="nameRelation" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
