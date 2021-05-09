@@ -429,6 +429,46 @@
     <value>Modificador</value>
     <comment>DisplayName for DomainProperty &apos;Modificador&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Parametros.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Parametros</value>
+    <comment>Description for DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros.DisplayName" xml:space="preserve">
+    <value>Parametros</value>
+    <comment>DisplayName for DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/TipoDato.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Parametros.Tipo Dato</value>
+    <comment>Description for DomainProperty &apos;TipoDato&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/TipoDato.DisplayName" xml:space="preserve">
+    <value>Tipo Dato</value>
+    <comment>DisplayName for DomainProperty &apos;TipoDato&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/NombreParametro.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Parametros.Nombre Parametro</value>
+    <comment>Description for DomainProperty &apos;NombreParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/NombreParametro.DisplayName" xml:space="preserve">
+    <value>Nombre Parametro</value>
+    <comment>DisplayName for DomainProperty &apos;NombreParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/MostrarParametro.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Parametros.Mostrar Parametro</value>
+    <comment>Description for DomainProperty &apos;MostrarParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/MostrarParametro.DisplayName" xml:space="preserve">
+    <value>Mostrar Parametro</value>
+    <comment>DisplayName for DomainProperty &apos;MostrarParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/ModificadorParametro.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Parametros.Modificador Parametro</value>
+    <comment>Description for DomainProperty &apos;ModificadorParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Parametros/ModificadorParametro.DisplayName" xml:space="preserve">
+    <value>Modificador Parametro</value>
+    <comment>DisplayName for DomainProperty &apos;ModificadorParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.ModeloClassWEBHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase</value>
     <comment>Description for DomainClass &apos;ModeloClassWEBHasClase&apos;</comment>
@@ -820,6 +860,38 @@
   <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.PropertyDisplayName" xml:space="preserve">
     <value>Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.OperacionesHasParametros</value>
+    <comment>Description for DomainClass &apos;OperacionesHasParametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros.DisplayName" xml:space="preserve">
+    <value>Operaciones Has Parametros</value>
+    <comment>DisplayName for DomainClass &apos;OperacionesHasParametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros/Operaciones.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.OperacionesHasParametros.Operaciones</value>
+    <comment>Description for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros/Operaciones.DisplayName" xml:space="preserve">
+    <value>Operaciones</value>
+    <comment>DisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros/Operaciones.PropertyDisplayName" xml:space="preserve">
+    <value>Parametros</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros/Parametros.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.OperacionesHasParametros.Parametros</value>
+    <comment>Description for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros/Parametros.DisplayName" xml:space="preserve">
+    <value>Parametros</value>
+    <comment>DisplayName for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParametros/Parametros.PropertyDisplayName" xml:space="preserve">
+    <value>Operaciones</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.tipodato/Int.DisplayName" xml:space="preserve">
     <value>Int</value>

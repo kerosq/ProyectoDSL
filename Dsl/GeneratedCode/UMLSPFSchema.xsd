@@ -231,6 +231,23 @@
   <xsd:complexType name="Operaciones">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: OperacionesHasParametros -->
+          <xsd:element name="parametros" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of OperacionesHasParametros</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="operacionesHasParametros" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of OperacionesHasParametros needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -570,6 +587,46 @@
   <xsd:complexType name="AtributoIdentificadorMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for AtributoIdentificador instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Parametros -->
+  <xsd:element name="parametros" type="Parametros" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Parametros">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: TipoDato -->
+        <xsd:attribute name="tipoDato" type="tipodato" />
+        <!-- Property: NombreParametro -->
+        <xsd:attribute name="nombreParametro" type="xsd:string" />
+        <!-- Property: MostrarParametro -->
+        <xsd:attribute name="mostrarParametro" type="xsd:string" />
+        <!-- Property: ModificadorParametro -->
+        <xsd:attribute name="modificadorParametro" type="Modificadores" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Parametros Moniker -->
+  <xsd:element name="parametrosMoniker" type="ParametrosMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ParametrosMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Parametros instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -1040,6 +1097,46 @@
   <xsd:complexType name="ClaseHasAtributoIdentificadorMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for ClaseHasAtributoIdentificador instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperacionesHasParametros -->
+  <xsd:element name="operacionesHasParametros" type="OperacionesHasParametros" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="OperacionesHasParametros">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Parametros -->
+          <xsd:element ref="parametros" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperacionesHasParametros Moniker -->
+  <xsd:element name="operacionesHasParametrosMoniker" type="OperacionesHasParametrosMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="OperacionesHasParametrosMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for OperacionesHasParametros instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

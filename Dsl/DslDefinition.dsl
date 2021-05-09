@@ -110,6 +110,16 @@
           </Type>
         </DomainProperty>
       </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Parametros" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>OperacionesHasParametros.Parametros</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="6f1d2bd9-7162-45f9-a6a0-3fa14d4bf656" Description="Description for IPS.UMLSPF.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" Namespace="IPS.UMLSPF">
       <BaseClass>
@@ -246,6 +256,30 @@
           </Type>
         </DomainProperty>
         <DomainProperty Id="8058cdfb-decc-40b6-9828-9181ecdd5514" Description="Modificador del Atributo" Name="Modificador" DisplayName="Modificador">
+          <Type>
+            <DomainEnumerationMoniker Name="Modificadores" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="1120806c-2345-4ac5-a15c-f1891546fa92" Description="Description for IPS.UMLSPF.Parametros" Name="Parametros" DisplayName="Parametros" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="b06b022e-e7f7-4448-bf88-ebb7cef874ee" Description="Description for IPS.UMLSPF.Parametros.Tipo Dato" Name="TipoDato" DisplayName="Tipo Dato">
+          <Type>
+            <DomainEnumerationMoniker Name="tipodato" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5cd18c66-6e1c-40f0-9031-3db5f1f03763" Description="Description for IPS.UMLSPF.Parametros.Nombre Parametro" Name="NombreParametro" DisplayName="Nombre Parametro">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ec9f2951-dfa3-4fcd-a0ad-fe60abbf0255" Description="Description for IPS.UMLSPF.Parametros.Mostrar Parametro" Name="MostrarParametro" DisplayName="Mostrar Parametro">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d924d344-7352-47e4-9ba1-65f91c8e24af" Description="Description for IPS.UMLSPF.Parametros.Modificador Parametro" Name="ModificadorParametro" DisplayName="Modificador Parametro">
           <Type>
             <DomainEnumerationMoniker Name="Modificadores" />
           </Type>
@@ -457,6 +491,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="dc02bbdf-6769-40c6-9386-8c9f2d611302" Description="Description for IPS.UMLSPF.OperacionesHasParametros" Name="OperacionesHasParametros" DisplayName="Operaciones Has Parametros" Namespace="IPS.UMLSPF" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="489bf74b-caaf-404e-87b6-95a100c32508" Description="Description for IPS.UMLSPF.OperacionesHasParametros.Operaciones" Name="Operaciones" DisplayName="Operaciones" PropertyName="Parametros" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Parametros">
+          <RolePlayer>
+            <DomainClassMoniker Name="Operaciones" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="93d5218d-0ea0-4607-8977-06a6d2844e0c" Description="Description for IPS.UMLSPF.OperacionesHasParametros.Parametros" Name="Parametros" DisplayName="Parametros" PropertyName="Operaciones" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Operaciones">
+          <RolePlayer>
+            <DomainClassMoniker Name="Parametros" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -638,6 +688,9 @@
           <XmlPropertyData XmlName="modificador">
             <DomainPropertyMoniker Name="Operaciones/Modificador" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="parametros">
+            <DomainRelationshipMoniker Name="OperacionesHasParametros" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseHasOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasOperacionesMoniker" ElementName="claseHasOperaciones" MonikerTypeName="ClaseHasOperacionesMoniker">
@@ -797,6 +850,26 @@
       </XmlClassData>
       <XmlClassData TypeName="ClaseHasAtributoIdentificador" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoIdentificadorMoniker" ElementName="claseHasAtributoIdentificador" MonikerTypeName="ClaseHasAtributoIdentificadorMoniker">
         <DomainRelationshipMoniker Name="ClaseHasAtributoIdentificador" />
+      </XmlClassData>
+      <XmlClassData TypeName="Parametros" MonikerAttributeName="" SerializeId="true" MonikerElementName="parametrosMoniker" ElementName="parametros" MonikerTypeName="ParametrosMoniker">
+        <DomainClassMoniker Name="Parametros" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoDato">
+            <DomainPropertyMoniker Name="Parametros/TipoDato" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreParametro">
+            <DomainPropertyMoniker Name="Parametros/NombreParametro" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="mostrarParametro">
+            <DomainPropertyMoniker Name="Parametros/MostrarParametro" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="modificadorParametro">
+            <DomainPropertyMoniker Name="Parametros/ModificadorParametro" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="OperacionesHasParametros" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionesHasParametrosMoniker" ElementName="operacionesHasParametros" MonikerTypeName="OperacionesHasParametrosMoniker">
+        <DomainRelationshipMoniker Name="OperacionesHasParametros" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>

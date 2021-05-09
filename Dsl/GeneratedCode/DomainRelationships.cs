@@ -3016,3 +3016,242 @@ namespace IPS.UMLSPF
 		#endregion
 	}
 }
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainRelationship OperacionesHasParametros
+	/// Description for IPS.UMLSPF.OperacionesHasParametros
+	/// </summary>
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParametros.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParametros.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("dc02bbdf-6769-40c6-9386-8c9f2d611302")]
+	public partial class OperacionesHasParametros : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// OperacionesHasParametros domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xdc02bbdf, 0x6769, 0x40c6, 0x93, 0x86, 0x8c, 0x9f, 0x2d, 0x61, 0x13, 0x02);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a OperacionesHasParametros link in the same Partition as the given Operaciones
+		/// </summary>
+		/// <param name="source">Operaciones to use as the source of the relationship.</param>
+		/// <param name="target">Parametros to use as the target of the relationship.</param>
+		public OperacionesHasParametros(Operaciones source, Parametros target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(OperacionesHasParametros.OperacionesDomainRoleId, source), new DslModeling::RoleAssignment(OperacionesHasParametros.ParametrosDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public OperacionesHasParametros(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public OperacionesHasParametros(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public OperacionesHasParametros(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public OperacionesHasParametros(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Operaciones domain role code
+		
+		/// <summary>
+		/// Operaciones domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid OperacionesDomainRoleId = new global::System.Guid(0x489bf74b, 0xcaaf, 0x404e, 0x87, 0xb6, 0x95, 0xa1, 0x00, 0xc3, 0x25, 0x08);
+		
+		/// <summary>
+		/// DomainRole Operaciones
+		/// Description for IPS.UMLSPF.OperacionesHasParametros.Operaciones
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParametros/Operaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParametros/Operaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Parametros", PropertyDisplayNameKey="IPS.UMLSPF.OperacionesHasParametros/Operaciones.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("489bf74b-caaf-404e-87b6-95a100c32508")]
+		public virtual Operaciones Operaciones
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Operaciones)DslModeling::DomainRoleInfo.GetRolePlayer(this, OperacionesDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, OperacionesDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Operaciones of a Parametros
+		/// <summary>
+		/// Gets Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Operaciones GetOperaciones(Parametros element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ParametrosDomainRoleId) as Operaciones;
+		}
+		
+		/// <summary>
+		/// Sets Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetOperaciones(Parametros element, Operaciones newOperaciones)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ParametrosDomainRoleId, newOperaciones);
+		}
+		#endregion
+		#region Parametros domain role code
+		
+		/// <summary>
+		/// Parametros domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ParametrosDomainRoleId = new global::System.Guid(0x93d5218d, 0x0ea0, 0x4607, 0x89, 0x77, 0x06, 0xa6, 0xd2, 0x84, 0x4e, 0x0c);
+		
+		/// <summary>
+		/// DomainRole Parametros
+		/// Description for IPS.UMLSPF.OperacionesHasParametros.Parametros
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParametros/Parametros.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParametros/Parametros.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Operaciones", PropertyDisplayNameKey="IPS.UMLSPF.OperacionesHasParametros/Parametros.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("93d5218d-0ea0-4607-8977-06a6d2844e0c")]
+		public virtual Parametros Parametros
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Parametros)DslModeling::DomainRoleInfo.GetRolePlayer(this, ParametrosDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ParametrosDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Parametros of a Operaciones
+		/// <summary>
+		/// Gets a list of Parametros.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Parametros> GetParametros(Operaciones element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Parametros>, Parametros>(element, OperacionesDomainRoleId);
+		}
+		#endregion
+		#region Operaciones link accessor
+		/// <summary>
+		/// Get the list of OperacionesHasParametros links to a Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.OperacionesHasParametros> GetLinksToParametros ( global::IPS.UMLSPF.Operaciones operacionesInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(operacionesInstance, global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId);
+		}
+		#endregion
+		#region Parametros link accessor
+		/// <summary>
+		/// Get the OperacionesHasParametros link to a Parametros.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.OperacionesHasParametros GetLinkToOperaciones (global::IPS.UMLSPF.Parametros parametrosInstance)
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParametros> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(parametrosInstance, global::IPS.UMLSPF.OperacionesHasParametros.ParametrosDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Parametros not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region OperacionesHasParametros instance accessors
+		
+		/// <summary>
+		/// Get any OperacionesHasParametros links between a given Operaciones and a Parametros.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.OperacionesHasParametros> GetLinks( global::IPS.UMLSPF.Operaciones source, global::IPS.UMLSPF.Parametros target )
+		{
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.OperacionesHasParametros> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.OperacionesHasParametros>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParametros> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(source, global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId);
+			foreach ( global::IPS.UMLSPF.OperacionesHasParametros link in links )
+			{
+				if ( target.Equals(link.Parametros) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one OperacionesHasParametros link between a given Operacionesand a Parametros.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::IPS.UMLSPF.OperacionesHasParametros GetLink( global::IPS.UMLSPF.Operaciones source, global::IPS.UMLSPF.Parametros target )
+		{
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParametros> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(source, global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId);
+			foreach ( global::IPS.UMLSPF.OperacionesHasParametros link in links )
+			{
+				if ( target.Equals(link.Parametros) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
