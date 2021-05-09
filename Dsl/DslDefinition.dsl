@@ -80,12 +80,17 @@
         </DomainProperty>
         <DomainProperty Id="ff823fe5-1d5e-43e5-9cef-c1b8535d4ad9" Description="Description for IPS.UMLSPF.Atributo.Tipo Atributo" Name="TipoAtributo" DisplayName="Tipo Atributo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="tipodato" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="8e6df31c-3122-47d6-84f6-80e860984576" Description="Description for IPS.UMLSPF.Atributo.Mostrar Atributo" Name="MostrarAtributo" DisplayName="Mostrar Atributo" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="18bcd027-4d9e-49ca-aef1-891172051881" Description="Description for IPS.UMLSPF.Atributo.Modificador" Name="Modificador" DisplayName="Modificador">
+          <Type>
+            <DomainEnumerationMoniker Name="Modificadores" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -99,12 +104,17 @@
         </DomainProperty>
         <DomainProperty Id="fc97e0b4-f8b7-4ff6-a2d9-46ceb9095f20" Description="Description for IPS.UMLSPF.Operaciones.Tipo Operacion" Name="TipoOperacion" DisplayName="Tipo Operacion">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="tipodato" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="52dc144c-75fe-4f98-ab87-5a2c3e2bcdd9" Description="Description for IPS.UMLSPF.Operaciones.Mostrar Operacion" Name="MostrarOperacion" DisplayName="Mostrar Operacion" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="25e09def-510c-4d1d-918f-094e7307ec64" Description="Description for IPS.UMLSPF.Operaciones.Modificador" Name="Modificador" DisplayName="Modificador">
+          <Type>
+            <DomainEnumerationMoniker Name="Modificadores" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -235,12 +245,17 @@
         </DomainProperty>
         <DomainProperty Id="f8db26c1-ce0e-4193-93db-6454d7b7fcbe" Description="Description for IPS.UMLSPF.AtributoIdentificador.Tipo Atributo" Name="TipoAtributo" DisplayName="Tipo Atributo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="tipodato" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="b17a373b-a4a0-4987-a415-f85672e817b9" Description="Description for IPS.UMLSPF.AtributoIdentificador.Mostrar Atributo ID" Name="MostrarAtributoID" DisplayName="Mostrar Atributo ID" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="8058cdfb-decc-40b6-9828-9181ecdd5514" Description="Description for IPS.UMLSPF.AtributoIdentificador.Modificador" Name="Modificador" DisplayName="Modificador">
+          <Type>
+            <DomainEnumerationMoniker Name="Modificadores" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -299,12 +314,12 @@
       <Properties>
         <DomainProperty Id="7de83d71-ad8f-4919-868f-d0e68cafa96c" Description="Description for IPS.UMLSPF.conAsociacion.Ref D" Name="refD" DisplayName="Ref D">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="979cb249-5e5a-4ad9-a7f4-db1dddacce9d" Description="Description for IPS.UMLSPF.conAsociacion.Ref I" Name="refI" DisplayName="Ref I">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="ffff40d9-a340-4e2a-a366-94a74eeb2486" Description="Description for IPS.UMLSPF.conAsociacion.Nombre Relacion" Name="NombreRelacion" DisplayName="Nombre Relacion">
@@ -332,12 +347,12 @@
       <Properties>
         <DomainProperty Id="9039dabe-0f78-4246-bac7-eb56f7d6235c" Description="Description for IPS.UMLSPF.conComposicion.Ref D" Name="refD" DisplayName="Ref D">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="06d54d4e-fe3b-499c-8df1-c2ad02fa3563" Description="Description for IPS.UMLSPF.conComposicion.Ref I" Name="refI" DisplayName="Ref I">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="7a612a76-013c-43b9-a7d1-efff38b1b115" Description="Description for IPS.UMLSPF.conComposicion.Nombre Relacion" Name="NombreRelacion" DisplayName="Nombre Relacion">
@@ -365,12 +380,12 @@
       <Properties>
         <DomainProperty Id="834c8a5f-3b35-4cc2-afc5-32fa1cf60417" Description="Description for IPS.UMLSPF.conAgregacion.Ref D" Name="refD" DisplayName="Ref D">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="53aaf2a8-97d0-4d25-855a-5c0ee73344a8" Description="Description for IPS.UMLSPF.conAgregacion.Ref I" Name="refI" DisplayName="Ref I">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Cardinalidades" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="7ae22ee7-47b6-4b93-8b76-05ae1c01fff3" Description="Description for IPS.UMLSPF.conAgregacion.Nombre Relacion" Name="NombreRelacion" DisplayName="Nombre Relacion">
@@ -523,6 +538,29 @@
     <ExternalType Name="Guid" Namespace="System" />
     <ExternalType Name="Boolean" Namespace="System" />
     <ExternalType Name="Char" Namespace="System" />
+    <DomainEnumeration Name="tipodato" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.tipodato">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.tipodato.Int" Name="Int" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.tipodato.String" Name="String" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.tipodato.Char" Name="Char" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.tipodato.Boolean" Name="Boolean" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Modificadores" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.Modificadores">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Modificadores.Public" Name="Public" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Modificadores.Private" Name="Private" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Modificadores.Protected" Name="Protected" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Cardinalidades" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.Cardinalidades">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Cardinalidades.c1N" Name="c1N" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Cardinalidades.c0N" Name="c0N" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Cardinalidades.c11" Name="c11" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Cardinalidades.c10" Name="c10" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <CompartmentShape Id="86de9b4d-d826-45c7-be05-d815713d3985" Description="Description for IPS.UMLSPF.CMPClase" Name="CMPClase" DisplayName="CMPClase" Namespace="IPS.UMLSPF" FixedTooltipText="CMPClase" FillColor="PaleGoldenrod" OutlineColor="OrangeRed" InitialWidth="2" InitialHeight="1.5" FillGradientMode="None" Geometry="Rectangle">
@@ -561,7 +599,7 @@
       <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="refICL" DisplayName="Ref ICL" DefaultText="refICL" />
       </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="NombreRelacion" DisplayName="Nombre Relacion" DefaultText="NombreRelacion" />
       </ConnectorHasDecorators>
     </Connector>
@@ -650,6 +688,9 @@
           <XmlPropertyData XmlName="mostrarAtributo" Representation="Ignore">
             <DomainPropertyMoniker Name="Atributo/MostrarAtributo" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="modificador">
+            <DomainPropertyMoniker Name="Atributo/Modificador" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
@@ -669,6 +710,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="mostrarOperacion" Representation="Ignore">
             <DomainPropertyMoniker Name="Operaciones/MostrarOperacion" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="modificador">
+            <DomainPropertyMoniker Name="Operaciones/Modificador" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -849,6 +893,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="mostrarAtributoID" Representation="Ignore">
             <DomainPropertyMoniker Name="AtributoIdentificador/MostrarAtributoID" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="modificador">
+            <DomainPropertyMoniker Name="AtributoIdentificador/Modificador" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

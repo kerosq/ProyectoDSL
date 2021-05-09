@@ -10,8 +10,8 @@ namespace IPS.UMLSPF
     {
         public string GetMostrarOperacionValue()
         {
-            //return string.Format("{0} : {1}",this.NombreAtributo,this.TipoAtributo);
-            return this.NombreOperacion.Trim() + " : " + this.TipoOperacion.Trim();
+            return string.Format("{0} : {1} : {2}", this.Modificador, this.TipoOperacion, this.NombreOperacion);
+            //return this.NombreOperacion.Trim() + " : " + this.TipoOperacion.Trim();
         }
     }
 }

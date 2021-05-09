@@ -2209,14 +2209,31 @@ namespace IPS.UMLSPF
 				string attribTipoAtributo = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoAtributo");
 				if (attribTipoAtributo != null)
 				{
-					global::System.String valueOfTipoAtributo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoAtributo, out valueOfTipoAtributo))
+					tipodato valueOfTipoAtributo;
+					if (DslModeling::SerializationUtilities.TryGetValue<tipodato>(serializationContext, attribTipoAtributo, out valueOfTipoAtributo))
 					{
 						instanceOfAtributo.TipoAtributo = valueOfTipoAtributo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoAtributo", typeof(global::System.String), attribTipoAtributo);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoAtributo", typeof(tipodato), attribTipoAtributo);
+					}
+				}
+			}
+			// Modificador
+			if (!serializationContext.Result.Failed)
+			{
+				string attribModificador = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "modificador");
+				if (attribModificador != null)
+				{
+					Modificadores valueOfModificador;
+					if (DslModeling::SerializationUtilities.TryGetValue<Modificadores>(serializationContext, attribModificador, out valueOfModificador))
+					{
+						instanceOfAtributo.Modificador = valueOfModificador;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "modificador", typeof(Modificadores), attribModificador);
 					}
 				}
 			}
@@ -2659,12 +2676,21 @@ namespace IPS.UMLSPF
 			// TipoAtributo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAtributo.TipoAtributo;
+				tipodato propValue = instanceOfAtributo.TipoAtributo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<tipodato>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoAtributo", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoAtributo", serializedPropValue);
+				}
+			}
+			// Modificador
+			if (!serializationContext.Result.Failed)
+			{
+				Modificadores propValue = instanceOfAtributo.Modificador;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Modificadores>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "modificador", serializedPropValue);
 				}
 			}
 		}
@@ -2903,14 +2929,31 @@ namespace IPS.UMLSPF
 				string attribTipoOperacion = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoOperacion");
 				if (attribTipoOperacion != null)
 				{
-					global::System.String valueOfTipoOperacion;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoOperacion, out valueOfTipoOperacion))
+					tipodato valueOfTipoOperacion;
+					if (DslModeling::SerializationUtilities.TryGetValue<tipodato>(serializationContext, attribTipoOperacion, out valueOfTipoOperacion))
 					{
 						instanceOfOperaciones.TipoOperacion = valueOfTipoOperacion;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoOperacion", typeof(global::System.String), attribTipoOperacion);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoOperacion", typeof(tipodato), attribTipoOperacion);
+					}
+				}
+			}
+			// Modificador
+			if (!serializationContext.Result.Failed)
+			{
+				string attribModificador = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "modificador");
+				if (attribModificador != null)
+				{
+					Modificadores valueOfModificador;
+					if (DslModeling::SerializationUtilities.TryGetValue<Modificadores>(serializationContext, attribModificador, out valueOfModificador))
+					{
+						instanceOfOperaciones.Modificador = valueOfModificador;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "modificador", typeof(Modificadores), attribModificador);
 					}
 				}
 			}
@@ -3353,12 +3396,21 @@ namespace IPS.UMLSPF
 			// TipoOperacion
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfOperaciones.TipoOperacion;
+				tipodato propValue = instanceOfOperaciones.TipoOperacion;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<tipodato>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoOperacion", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoOperacion", serializedPropValue);
+				}
+			}
+			// Modificador
+			if (!serializationContext.Result.Failed)
+			{
+				Modificadores propValue = instanceOfOperaciones.Modificador;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Modificadores>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "modificador", serializedPropValue);
 				}
 			}
 		}
@@ -7532,14 +7584,31 @@ namespace IPS.UMLSPF
 				string attribTipoAtributo = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoAtributo");
 				if (attribTipoAtributo != null)
 				{
-					global::System.String valueOfTipoAtributo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoAtributo, out valueOfTipoAtributo))
+					tipodato valueOfTipoAtributo;
+					if (DslModeling::SerializationUtilities.TryGetValue<tipodato>(serializationContext, attribTipoAtributo, out valueOfTipoAtributo))
 					{
 						instanceOfAtributoIdentificador.TipoAtributo = valueOfTipoAtributo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoAtributo", typeof(global::System.String), attribTipoAtributo);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoAtributo", typeof(tipodato), attribTipoAtributo);
+					}
+				}
+			}
+			// Modificador
+			if (!serializationContext.Result.Failed)
+			{
+				string attribModificador = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "modificador");
+				if (attribModificador != null)
+				{
+					Modificadores valueOfModificador;
+					if (DslModeling::SerializationUtilities.TryGetValue<Modificadores>(serializationContext, attribModificador, out valueOfModificador))
+					{
+						instanceOfAtributoIdentificador.Modificador = valueOfModificador;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "modificador", typeof(Modificadores), attribModificador);
 					}
 				}
 			}
@@ -7982,12 +8051,21 @@ namespace IPS.UMLSPF
 			// TipoAtributo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAtributoIdentificador.TipoAtributo;
+				tipodato propValue = instanceOfAtributoIdentificador.TipoAtributo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<tipodato>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoAtributo", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoAtributo", serializedPropValue);
+				}
+			}
+			// Modificador
+			if (!serializationContext.Result.Failed)
+			{
+				Modificadores propValue = instanceOfAtributoIdentificador.Modificador;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Modificadores>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "modificador", serializedPropValue);
 				}
 			}
 		}
@@ -10628,14 +10706,14 @@ namespace IPS.UMLSPF
 				string attribrefD = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refD");
 				if (attribrefD != null)
 				{
-					global::System.String valueOfrefD;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefD, out valueOfrefD))
+					Cardinalidades valueOfrefD;
+					if (DslModeling::SerializationUtilities.TryGetValue<Cardinalidades>(serializationContext, attribrefD, out valueOfrefD))
 					{
 						instanceOfconAsociacion.refD = valueOfrefD;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(global::System.String), attribrefD);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(Cardinalidades), attribrefD);
 					}
 				}
 			}
@@ -10645,14 +10723,14 @@ namespace IPS.UMLSPF
 				string attribrefI = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refI");
 				if (attribrefI != null)
 				{
-					global::System.String valueOfrefI;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefI, out valueOfrefI))
+					Cardinalidades valueOfrefI;
+					if (DslModeling::SerializationUtilities.TryGetValue<Cardinalidades>(serializationContext, attribrefI, out valueOfrefI))
 					{
 						instanceOfconAsociacion.refI = valueOfrefI;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(global::System.String), attribrefI);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(Cardinalidades), attribrefI);
 					}
 				}
 			}
@@ -11162,23 +11240,21 @@ namespace IPS.UMLSPF
 			// refD
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfconAsociacion.refD;
+				Cardinalidades propValue = instanceOfconAsociacion.refD;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", serializedPropValue);
 				}
 			}
 			// refI
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfconAsociacion.refI;
+				Cardinalidades propValue = instanceOfconAsociacion.refI;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", serializedPropValue);
 				}
 			}
 			// NombreRelacion
@@ -11592,14 +11668,14 @@ namespace IPS.UMLSPF
 				string attribrefD = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refD");
 				if (attribrefD != null)
 				{
-					global::System.String valueOfrefD;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefD, out valueOfrefD))
+					Cardinalidades valueOfrefD;
+					if (DslModeling::SerializationUtilities.TryGetValue<Cardinalidades>(serializationContext, attribrefD, out valueOfrefD))
 					{
 						instanceOfconComposicion.refD = valueOfrefD;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(global::System.String), attribrefD);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(Cardinalidades), attribrefD);
 					}
 				}
 			}
@@ -11609,14 +11685,14 @@ namespace IPS.UMLSPF
 				string attribrefI = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refI");
 				if (attribrefI != null)
 				{
-					global::System.String valueOfrefI;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefI, out valueOfrefI))
+					Cardinalidades valueOfrefI;
+					if (DslModeling::SerializationUtilities.TryGetValue<Cardinalidades>(serializationContext, attribrefI, out valueOfrefI))
 					{
 						instanceOfconComposicion.refI = valueOfrefI;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(global::System.String), attribrefI);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(Cardinalidades), attribrefI);
 					}
 				}
 			}
@@ -12126,23 +12202,21 @@ namespace IPS.UMLSPF
 			// refD
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfconComposicion.refD;
+				Cardinalidades propValue = instanceOfconComposicion.refD;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", serializedPropValue);
 				}
 			}
 			// refI
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfconComposicion.refI;
+				Cardinalidades propValue = instanceOfconComposicion.refI;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", serializedPropValue);
 				}
 			}
 			// NombreRelacion
@@ -12463,14 +12537,14 @@ namespace IPS.UMLSPF
 				string attribrefD = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refD");
 				if (attribrefD != null)
 				{
-					global::System.String valueOfrefD;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefD, out valueOfrefD))
+					Cardinalidades valueOfrefD;
+					if (DslModeling::SerializationUtilities.TryGetValue<Cardinalidades>(serializationContext, attribrefD, out valueOfrefD))
 					{
 						instanceOfconAgregacion.refD = valueOfrefD;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(global::System.String), attribrefD);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refD", typeof(Cardinalidades), attribrefD);
 					}
 				}
 			}
@@ -12480,14 +12554,14 @@ namespace IPS.UMLSPF
 				string attribrefI = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "refI");
 				if (attribrefI != null)
 				{
-					global::System.String valueOfrefI;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrefI, out valueOfrefI))
+					Cardinalidades valueOfrefI;
+					if (DslModeling::SerializationUtilities.TryGetValue<Cardinalidades>(serializationContext, attribrefI, out valueOfrefI))
 					{
 						instanceOfconAgregacion.refI = valueOfrefI;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(global::System.String), attribrefI);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "refI", typeof(Cardinalidades), attribrefI);
 					}
 				}
 			}
@@ -12997,23 +13071,21 @@ namespace IPS.UMLSPF
 			// refD
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfconAgregacion.refD;
+				Cardinalidades propValue = instanceOfconAgregacion.refD;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refD", serializedPropValue);
 				}
 			}
 			// refI
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfconAgregacion.refI;
+				Cardinalidades propValue = instanceOfconAgregacion.refI;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "refI", serializedPropValue);
 				}
 			}
 			// NombreRelacion

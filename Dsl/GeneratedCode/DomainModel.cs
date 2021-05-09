@@ -123,9 +123,11 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(Atributo), "NombreAtributo", Atributo.NombreAtributoDomainPropertyId, typeof(Atributo.NombreAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "TipoAtributo", Atributo.TipoAtributoDomainPropertyId, typeof(Atributo.TipoAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "MostrarAtributo", Atributo.MostrarAtributoDomainPropertyId, typeof(Atributo.MostrarAtributoPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "Modificador", Atributo.ModificadorDomainPropertyId, typeof(Atributo.ModificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(Operaciones), "NombreOperacion", Operaciones.NombreOperacionDomainPropertyId, typeof(Operaciones.NombreOperacionPropertyHandler)),
 				new DomainMemberInfo(typeof(Operaciones), "TipoOperacion", Operaciones.TipoOperacionDomainPropertyId, typeof(Operaciones.TipoOperacionPropertyHandler)),
 				new DomainMemberInfo(typeof(Operaciones), "MostrarOperacion", Operaciones.MostrarOperacionDomainPropertyId, typeof(Operaciones.MostrarOperacionPropertyHandler)),
+				new DomainMemberInfo(typeof(Operaciones), "Modificador", Operaciones.ModificadorDomainPropertyId, typeof(Operaciones.ModificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(EstilosClase), "ColorFondo", EstilosClase.ColorFondoDomainPropertyId, typeof(EstilosClase.ColorFondoPropertyHandler)),
 				new DomainMemberInfo(typeof(EstilosClase), "ColorLetra", EstilosClase.ColorLetraDomainPropertyId, typeof(EstilosClase.ColorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstilosClase), "TipoLetra", EstilosClase.TipoLetraDomainPropertyId, typeof(EstilosClase.TipoLetraPropertyHandler)),
@@ -143,6 +145,7 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(AtributoIdentificador), "NombreAtributo", AtributoIdentificador.NombreAtributoDomainPropertyId, typeof(AtributoIdentificador.NombreAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "TipoAtributo", AtributoIdentificador.TipoAtributoDomainPropertyId, typeof(AtributoIdentificador.TipoAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "MostrarAtributoID", AtributoIdentificador.MostrarAtributoIDDomainPropertyId, typeof(AtributoIdentificador.MostrarAtributoIDPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoIdentificador), "Modificador", AtributoIdentificador.ModificadorDomainPropertyId, typeof(AtributoIdentificador.ModificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "refD", conAsociacion.refDDomainPropertyId, typeof(conAsociacion.refDPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "refI", conAsociacion.refIDomainPropertyId, typeof(conAsociacion.refIPropertyHandler)),
 				new DomainMemberInfo(typeof(conAsociacion), "NombreRelacion", conAsociacion.NombreRelacionDomainPropertyId, typeof(conAsociacion.NombreRelacionPropertyHandler)),
@@ -586,5 +589,104 @@ namespace IPS.UMLSPF
 	}
 	#endregion
 		
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: tipodato
+	/// Description for IPS.UMLSPF.tipodato
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum tipodato
+	{
+		/// <summary>
+		/// Int
+		/// Description for IPS.UMLSPF.tipodato.Int
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.tipodato/Int.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Int,
+		/// <summary>
+		/// String
+		/// Description for IPS.UMLSPF.tipodato.String
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.tipodato/String.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		String,
+		/// <summary>
+		/// Char
+		/// Description for IPS.UMLSPF.tipodato.Char
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.tipodato/Char.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Char,
+		/// <summary>
+		/// Boolean
+		/// Description for IPS.UMLSPF.tipodato.Boolean
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.tipodato/Boolean.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Boolean,
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: Modificadores
+	/// Description for IPS.UMLSPF.Modificadores
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Modificadores
+	{
+		/// <summary>
+		/// Public
+		/// Description for IPS.UMLSPF.Modificadores.Public
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Modificadores/Public.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Public,
+		/// <summary>
+		/// Private
+		/// Description for IPS.UMLSPF.Modificadores.Private
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Modificadores/Private.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Private,
+		/// <summary>
+		/// Protected
+		/// Description for IPS.UMLSPF.Modificadores.Protected
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Modificadores/Protected.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Protected,
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: Cardinalidades
+	/// Description for IPS.UMLSPF.Cardinalidades
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Cardinalidades
+	{
+		/// <summary>
+		/// c1N
+		/// Description for IPS.UMLSPF.Cardinalidades.c1N
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Cardinalidades/c1N.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		c1N,
+		/// <summary>
+		/// c0N
+		/// Description for IPS.UMLSPF.Cardinalidades.c0N
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Cardinalidades/c0N.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		c0N,
+		/// <summary>
+		/// c11
+		/// Description for IPS.UMLSPF.Cardinalidades.c11
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Cardinalidades/c11.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		c11,
+		/// <summary>
+		/// c10
+		/// Description for IPS.UMLSPF.Cardinalidades.c10
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Cardinalidades/c10.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		c10,
+	}
 }
 

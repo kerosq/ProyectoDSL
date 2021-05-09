@@ -216,7 +216,9 @@
         <!-- Property: NombreAtributo -->
         <xsd:attribute name="nombreAtributo" type="xsd:string" />
         <!-- Property: TipoAtributo -->
-        <xsd:attribute name="tipoAtributo" type="xsd:string" />
+        <xsd:attribute name="tipoAtributo" type="tipodato" />
+        <!-- Property: Modificador -->
+        <xsd:attribute name="modificador" type="Modificadores" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -252,7 +254,9 @@
         <!-- Property: NombreOperacion -->
         <xsd:attribute name="nombreOperacion" type="xsd:string" />
         <!-- Property: TipoOperacion -->
-        <xsd:attribute name="tipoOperacion" type="xsd:string" />
+        <xsd:attribute name="tipoOperacion" type="tipodato" />
+        <!-- Property: Modificador -->
+        <xsd:attribute name="modificador" type="Modificadores" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -544,7 +548,9 @@
         <!-- Property: NombreAtributo -->
         <xsd:attribute name="nombreAtributo" type="xsd:string" />
         <!-- Property: TipoAtributo -->
-        <xsd:attribute name="tipoAtributo" type="xsd:string" />
+        <xsd:attribute name="tipoAtributo" type="tipodato" />
+        <!-- Property: Modificador -->
+        <xsd:attribute name="modificador" type="Modificadores" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -706,9 +712,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: refD -->
-        <xsd:attribute name="refD" type="xsd:string" />
+        <xsd:attribute name="refD" type="Cardinalidades" />
         <!-- Property: refI -->
-        <xsd:attribute name="refI" type="xsd:string" />
+        <xsd:attribute name="refI" type="Cardinalidades" />
         <!-- Property: NombreRelacion -->
         <xsd:attribute name="nombreRelacion" type="xsd:string" />
       </xsd:extension>
@@ -752,9 +758,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: refD -->
-        <xsd:attribute name="refD" type="xsd:string" />
+        <xsd:attribute name="refD" type="Cardinalidades" />
         <!-- Property: refI -->
-        <xsd:attribute name="refI" type="xsd:string" />
+        <xsd:attribute name="refI" type="Cardinalidades" />
         <!-- Property: NombreRelacion -->
         <xsd:attribute name="nombreRelacion" type="xsd:string" />
       </xsd:extension>
@@ -798,9 +804,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: refD -->
-        <xsd:attribute name="refD" type="xsd:string" />
+        <xsd:attribute name="refD" type="Cardinalidades" />
         <!-- Property: refI -->
-        <xsd:attribute name="refI" type="xsd:string" />
+        <xsd:attribute name="refI" type="Cardinalidades" />
         <!-- Property: NombreRelacion -->
         <xsd:attribute name="nombreRelacion" type="xsd:string" />
       </xsd:extension>
@@ -1103,6 +1109,35 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  
+  <!-- Enum tipodato -->
+  <xsd:simpleType name="tipodato">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Int"/>
+      <xsd:enumeration value="String"/>
+      <xsd:enumeration value="Char"/>
+      <xsd:enumeration value="Boolean"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum Modificadores -->
+  <xsd:simpleType name="Modificadores">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Public"/>
+      <xsd:enumeration value="Private"/>
+      <xsd:enumeration value="Protected"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum Cardinalidades -->
+  <xsd:simpleType name="Cardinalidades">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="c1N"/>
+      <xsd:enumeration value="c0N"/>
+      <xsd:enumeration value="c11"/>
+      <xsd:enumeration value="c10"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   
 </xsd:schema>
 

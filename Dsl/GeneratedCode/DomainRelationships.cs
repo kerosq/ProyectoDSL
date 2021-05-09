@@ -893,7 +893,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for refD
 		/// </summary>
-		private global::System.String refDPropertyStorage = string.Empty;
+		private Cardinalidades refDPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of refD domain property.
@@ -902,7 +902,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("7de83d71-ad8f-4919-868f-d0e68cafa96c")]
-		public global::System.String refD
+		public Cardinalidades refD
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -918,7 +918,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the conAsociacion.refD domain property.
 		/// </summary>
-		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, global::System.String>
+		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, Cardinalidades>
 		{
 			private refDPropertyHandler() { }
 		
@@ -944,7 +944,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(conAsociacion element)
+			public override sealed Cardinalidades GetValue(conAsociacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.refDPropertyStorage;
@@ -955,11 +955,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(conAsociacion element, global::System.String newValue)
+			public override sealed void SetValue(conAsociacion element, Cardinalidades newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Cardinalidades oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -980,7 +980,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for refI
 		/// </summary>
-		private global::System.String refIPropertyStorage = string.Empty;
+		private Cardinalidades refIPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of refI domain property.
@@ -989,7 +989,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAsociacion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAsociacion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("979cb249-5e5a-4ad9-a7f4-db1dddacce9d")]
-		public global::System.String refI
+		public Cardinalidades refI
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1005,7 +1005,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the conAsociacion.refI domain property.
 		/// </summary>
-		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, global::System.String>
+		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conAsociacion, Cardinalidades>
 		{
 			private refIPropertyHandler() { }
 		
@@ -1031,7 +1031,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(conAsociacion element)
+			public override sealed Cardinalidades GetValue(conAsociacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.refIPropertyStorage;
@@ -1042,11 +1042,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(conAsociacion element, global::System.String newValue)
+			public override sealed void SetValue(conAsociacion element, Cardinalidades newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Cardinalidades oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1384,7 +1384,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for refD
 		/// </summary>
-		private global::System.String refDPropertyStorage = string.Empty;
+		private Cardinalidades refDPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of refD domain property.
@@ -1393,7 +1393,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("9039dabe-0f78-4246-bac7-eb56f7d6235c")]
-		public global::System.String refD
+		public Cardinalidades refD
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1409,7 +1409,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the conComposicion.refD domain property.
 		/// </summary>
-		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, global::System.String>
+		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, Cardinalidades>
 		{
 			private refDPropertyHandler() { }
 		
@@ -1435,7 +1435,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(conComposicion element)
+			public override sealed Cardinalidades GetValue(conComposicion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.refDPropertyStorage;
@@ -1446,11 +1446,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(conComposicion element, global::System.String newValue)
+			public override sealed void SetValue(conComposicion element, Cardinalidades newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Cardinalidades oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1471,7 +1471,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for refI
 		/// </summary>
-		private global::System.String refIPropertyStorage = string.Empty;
+		private Cardinalidades refIPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of refI domain property.
@@ -1480,7 +1480,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conComposicion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conComposicion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("06d54d4e-fe3b-499c-8df1-c2ad02fa3563")]
-		public global::System.String refI
+		public Cardinalidades refI
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1496,7 +1496,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the conComposicion.refI domain property.
 		/// </summary>
-		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, global::System.String>
+		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conComposicion, Cardinalidades>
 		{
 			private refIPropertyHandler() { }
 		
@@ -1522,7 +1522,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(conComposicion element)
+			public override sealed Cardinalidades GetValue(conComposicion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.refIPropertyStorage;
@@ -1533,11 +1533,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(conComposicion element, global::System.String newValue)
+			public override sealed void SetValue(conComposicion element, Cardinalidades newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Cardinalidades oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1874,7 +1874,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for refD
 		/// </summary>
-		private global::System.String refDPropertyStorage = string.Empty;
+		private Cardinalidades refDPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of refD domain property.
@@ -1883,7 +1883,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/refD.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/refD.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("834c8a5f-3b35-4cc2-afc5-32fa1cf60417")]
-		public global::System.String refD
+		public Cardinalidades refD
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1899,7 +1899,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the conAgregacion.refD domain property.
 		/// </summary>
-		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, global::System.String>
+		internal sealed partial class refDPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, Cardinalidades>
 		{
 			private refDPropertyHandler() { }
 		
@@ -1925,7 +1925,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(conAgregacion element)
+			public override sealed Cardinalidades GetValue(conAgregacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.refDPropertyStorage;
@@ -1936,11 +1936,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(conAgregacion element, global::System.String newValue)
+			public override sealed void SetValue(conAgregacion element, Cardinalidades newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Cardinalidades oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1961,7 +1961,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for refI
 		/// </summary>
-		private global::System.String refIPropertyStorage = string.Empty;
+		private Cardinalidades refIPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of refI domain property.
@@ -1970,7 +1970,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.conAgregacion/refI.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.conAgregacion/refI.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("53aaf2a8-97d0-4d25-855a-5c0ee73344a8")]
-		public global::System.String refI
+		public Cardinalidades refI
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1986,7 +1986,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the conAgregacion.refI domain property.
 		/// </summary>
-		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, global::System.String>
+		internal sealed partial class refIPropertyHandler : DslModeling::DomainPropertyValueHandler<conAgregacion, Cardinalidades>
 		{
 			private refIPropertyHandler() { }
 		
@@ -2012,7 +2012,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(conAgregacion element)
+			public override sealed Cardinalidades GetValue(conAgregacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.refIPropertyStorage;
@@ -2023,11 +2023,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(conAgregacion element, global::System.String newValue)
+			public override sealed void SetValue(conAgregacion element, Cardinalidades newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Cardinalidades oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

@@ -189,6 +189,14 @@
     <value>Mostrar Atributo</value>
     <comment>DisplayName for DomainProperty &apos;MostrarAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Atributo/Modificador.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Atributo.Modificador</value>
+    <comment>Description for DomainProperty &apos;Modificador&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Atributo/Modificador.DisplayName" xml:space="preserve">
+    <value>Modificador</value>
+    <comment>DisplayName for DomainProperty &apos;Modificador&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.Operaciones.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.Operaciones</value>
     <comment>Description for DomainClass &apos;Operaciones&apos;</comment>
@@ -220,6 +228,14 @@
   <data name="IPS.UMLSPF.Operaciones/MostrarOperacion.DisplayName" xml:space="preserve">
     <value>Mostrar Operacion</value>
     <comment>DisplayName for DomainProperty &apos;MostrarOperacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones/Modificador.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Operaciones.Modificador</value>
+    <comment>Description for DomainProperty &apos;Modificador&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Operaciones/Modificador.DisplayName" xml:space="preserve">
+    <value>Modificador</value>
+    <comment>DisplayName for DomainProperty &apos;Modificador&apos; on DomainClass &apos;Operaciones&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.ClaseEnriquecida.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ClaseEnriquecida</value>
@@ -404,6 +420,14 @@
   <data name="IPS.UMLSPF.AtributoIdentificador/MostrarAtributoID.DisplayName" xml:space="preserve">
     <value>Mostrar Atributo ID</value>
     <comment>DisplayName for DomainProperty &apos;MostrarAtributoID&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/Modificador.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.AtributoIdentificador.Modificador</value>
+    <comment>Description for DomainProperty &apos;Modificador&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.AtributoIdentificador/Modificador.DisplayName" xml:space="preserve">
+    <value>Modificador</value>
+    <comment>DisplayName for DomainProperty &apos;Modificador&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.ModeloClassWEBHasClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase</value>
@@ -892,6 +916,94 @@
   <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.PropertyDisplayName" xml:space="preserve">
     <value>Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/Int.DisplayName" xml:space="preserve">
+    <value>Int</value>
+    <comment>Display name for EnumerationLiteral &apos;Int&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/Int.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.tipodato.Int</value>
+    <comment>Description for EnumerationLiteral &apos;Int&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/String.DisplayName" xml:space="preserve">
+    <value>String</value>
+    <comment>Display name for EnumerationLiteral &apos;String&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/String.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.tipodato.String</value>
+    <comment>Description for EnumerationLiteral &apos;String&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/Char.DisplayName" xml:space="preserve">
+    <value>Char</value>
+    <comment>Display name for EnumerationLiteral &apos;Char&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/Char.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.tipodato.Char</value>
+    <comment>Description for EnumerationLiteral &apos;Char&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/Boolean.DisplayName" xml:space="preserve">
+    <value>Boolean</value>
+    <comment>Display name for EnumerationLiteral &apos;Boolean&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodato/Boolean.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.tipodato.Boolean</value>
+    <comment>Description for EnumerationLiteral &apos;Boolean&apos; on DomainEnumeration &apos;tipodato&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Modificadores/Public.DisplayName" xml:space="preserve">
+    <value>Public</value>
+    <comment>Display name for EnumerationLiteral &apos;Public&apos; on DomainEnumeration &apos;Modificadores&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Modificadores/Public.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Modificadores.Public</value>
+    <comment>Description for EnumerationLiteral &apos;Public&apos; on DomainEnumeration &apos;Modificadores&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Modificadores/Private.DisplayName" xml:space="preserve">
+    <value>Private</value>
+    <comment>Display name for EnumerationLiteral &apos;Private&apos; on DomainEnumeration &apos;Modificadores&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Modificadores/Private.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Modificadores.Private</value>
+    <comment>Description for EnumerationLiteral &apos;Private&apos; on DomainEnumeration &apos;Modificadores&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Modificadores/Protected.DisplayName" xml:space="preserve">
+    <value>Protected</value>
+    <comment>Display name for EnumerationLiteral &apos;Protected&apos; on DomainEnumeration &apos;Modificadores&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Modificadores/Protected.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Modificadores.Protected</value>
+    <comment>Description for EnumerationLiteral &apos;Protected&apos; on DomainEnumeration &apos;Modificadores&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c1N.DisplayName" xml:space="preserve">
+    <value>c1N</value>
+    <comment>Display name for EnumerationLiteral &apos;c1N&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c1N.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Cardinalidades.c1N</value>
+    <comment>Description for EnumerationLiteral &apos;c1N&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c0N.DisplayName" xml:space="preserve">
+    <value>c0N</value>
+    <comment>Display name for EnumerationLiteral &apos;c0N&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c0N.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Cardinalidades.c0N</value>
+    <comment>Description for EnumerationLiteral &apos;c0N&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c11.DisplayName" xml:space="preserve">
+    <value>c11</value>
+    <comment>Display name for EnumerationLiteral &apos;c11&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c11.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Cardinalidades.c11</value>
+    <comment>Description for EnumerationLiteral &apos;c11&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c10.DisplayName" xml:space="preserve">
+    <value>c10</value>
+    <comment>Display name for EnumerationLiteral &apos;c10&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Cardinalidades/c10.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Cardinalidades.c10</value>
+    <comment>Description for EnumerationLiteral &apos;c10&apos; on DomainEnumeration &apos;Cardinalidades&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.CMPClase.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.CMPClase</value>

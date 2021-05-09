@@ -925,7 +925,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for TipoAtributo
 		/// </summary>
-		private global::System.String tipoAtributoPropertyStorage = string.Empty;
+		private tipodato tipoAtributoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of TipoAtributo domain property.
@@ -934,7 +934,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Atributo/TipoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Atributo/TipoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("ff823fe5-1d5e-43e5-9cef-c1b8535d4ad9")]
-		public global::System.String TipoAtributo
+		public tipodato TipoAtributo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -950,7 +950,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the Atributo.TipoAtributo domain property.
 		/// </summary>
-		internal sealed partial class TipoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
+		internal sealed partial class TipoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, tipodato>
 		{
 			private TipoAtributoPropertyHandler() { }
 		
@@ -976,7 +976,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Atributo element)
+			public override sealed tipodato GetValue(Atributo element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoAtributoPropertyStorage;
@@ -987,11 +987,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, global::System.String newValue)
+			public override sealed void SetValue(Atributo element, tipodato newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				tipodato oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1065,6 +1065,93 @@ namespace IPS.UMLSPF
 				return element.GetMostrarAtributoValue();
 			}
 		
+		}
+		
+		#endregion
+		#region Modificador domain property code
+		
+		/// <summary>
+		/// Modificador domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ModificadorDomainPropertyId = new global::System.Guid(0x18bcd027, 0x4d9e, 0x49ca, 0xae, 0xf1, 0x89, 0x11, 0x72, 0x05, 0x18, 0x81);
+		
+		/// <summary>
+		/// Storage for Modificador
+		/// </summary>
+		private Modificadores modificadorPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Modificador domain property.
+		/// Description for IPS.UMLSPF.Atributo.Modificador
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Atributo/Modificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Atributo/Modificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("18bcd027-4d9e-49ca-aef1-891172051881")]
+		public Modificadores Modificador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return modificadorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ModificadorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.Modificador domain property.
+		/// </summary>
+		internal sealed partial class ModificadorPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, Modificadores>
+		{
+			private ModificadorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.Modificador domain property value handler.
+			/// </summary>
+			public static readonly ModificadorPropertyHandler Instance = new ModificadorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.Modificador domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ModificadorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed Modificadores GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.modificadorPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Atributo element, Modificadores newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				Modificadores oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.modificadorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
 		}
 		
 		#endregion
@@ -1225,7 +1312,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for TipoOperacion
 		/// </summary>
-		private global::System.String tipoOperacionPropertyStorage = string.Empty;
+		private tipodato tipoOperacionPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of TipoOperacion domain property.
@@ -1234,7 +1321,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/TipoOperacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/TipoOperacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("fc97e0b4-f8b7-4ff6-a2d9-46ceb9095f20")]
-		public global::System.String TipoOperacion
+		public tipodato TipoOperacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1250,7 +1337,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the Operaciones.TipoOperacion domain property.
 		/// </summary>
-		internal sealed partial class TipoOperacionPropertyHandler : DslModeling::DomainPropertyValueHandler<Operaciones, global::System.String>
+		internal sealed partial class TipoOperacionPropertyHandler : DslModeling::DomainPropertyValueHandler<Operaciones, tipodato>
 		{
 			private TipoOperacionPropertyHandler() { }
 		
@@ -1276,7 +1363,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Operaciones element)
+			public override sealed tipodato GetValue(Operaciones element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoOperacionPropertyStorage;
@@ -1287,11 +1374,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Operaciones element, global::System.String newValue)
+			public override sealed void SetValue(Operaciones element, tipodato newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				tipodato oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1365,6 +1452,93 @@ namespace IPS.UMLSPF
 				return element.GetMostrarOperacionValue();
 			}
 		
+		}
+		
+		#endregion
+		#region Modificador domain property code
+		
+		/// <summary>
+		/// Modificador domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ModificadorDomainPropertyId = new global::System.Guid(0x25e09def, 0x510c, 0x4d1d, 0x91, 0x8f, 0x09, 0x4e, 0x73, 0x07, 0xec, 0x64);
+		
+		/// <summary>
+		/// Storage for Modificador
+		/// </summary>
+		private Modificadores modificadorPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Modificador domain property.
+		/// Description for IPS.UMLSPF.Operaciones.Modificador
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Operaciones/Modificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Operaciones/Modificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("25e09def-510c-4d1d-918f-094e7307ec64")]
+		public Modificadores Modificador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return modificadorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ModificadorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Operaciones.Modificador domain property.
+		/// </summary>
+		internal sealed partial class ModificadorPropertyHandler : DslModeling::DomainPropertyValueHandler<Operaciones, Modificadores>
+		{
+			private ModificadorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Operaciones.Modificador domain property value handler.
+			/// </summary>
+			public static readonly ModificadorPropertyHandler Instance = new ModificadorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Operaciones.Modificador domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ModificadorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed Modificadores GetValue(Operaciones element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.modificadorPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Operaciones element, Modificadores newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				Modificadores oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.modificadorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
 		}
 		
 		#endregion
@@ -3189,7 +3363,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for TipoAtributo
 		/// </summary>
-		private global::System.String tipoAtributoPropertyStorage = string.Empty;
+		private tipodato tipoAtributoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of TipoAtributo domain property.
@@ -3198,7 +3372,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/TipoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/TipoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("f8db26c1-ce0e-4193-93db-6454d7b7fcbe")]
-		public global::System.String TipoAtributo
+		public tipodato TipoAtributo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3214,7 +3388,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the AtributoIdentificador.TipoAtributo domain property.
 		/// </summary>
-		internal sealed partial class TipoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, global::System.String>
+		internal sealed partial class TipoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, tipodato>
 		{
 			private TipoAtributoPropertyHandler() { }
 		
@@ -3240,7 +3414,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(AtributoIdentificador element)
+			public override sealed tipodato GetValue(AtributoIdentificador element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoAtributoPropertyStorage;
@@ -3251,11 +3425,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(AtributoIdentificador element, global::System.String newValue)
+			public override sealed void SetValue(AtributoIdentificador element, tipodato newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				tipodato oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -3329,6 +3503,93 @@ namespace IPS.UMLSPF
 				return element.GetMostrarAtributoIDValue();
 			}
 		
+		}
+		
+		#endregion
+		#region Modificador domain property code
+		
+		/// <summary>
+		/// Modificador domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ModificadorDomainPropertyId = new global::System.Guid(0x8058cdfb, 0xdecc, 0x40b6, 0x98, 0x28, 0x91, 0x81, 0xec, 0xdd, 0x55, 0x14);
+		
+		/// <summary>
+		/// Storage for Modificador
+		/// </summary>
+		private Modificadores modificadorPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Modificador domain property.
+		/// Description for IPS.UMLSPF.AtributoIdentificador.Modificador
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.AtributoIdentificador/Modificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.AtributoIdentificador/Modificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("8058cdfb-decc-40b6-9828-9181ecdd5514")]
+		public Modificadores Modificador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return modificadorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ModificadorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoIdentificador.Modificador domain property.
+		/// </summary>
+		internal sealed partial class ModificadorPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, Modificadores>
+		{
+			private ModificadorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoIdentificador.Modificador domain property value handler.
+			/// </summary>
+			public static readonly ModificadorPropertyHandler Instance = new ModificadorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoIdentificador.Modificador domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ModificadorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed Modificadores GetValue(AtributoIdentificador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.modificadorPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoIdentificador element, Modificadores newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				Modificadores oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.modificadorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
 		}
 		
 		#endregion
