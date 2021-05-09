@@ -317,16 +317,6 @@ namespace IPS.UMLSPF
 				global::IPS.UMLSPF.ConecClase newShape = new global::IPS.UMLSPF.ConecClase(this.Partition);
 				return newShape;
 			}
-			if(element is global::IPS.UMLSPF.conComposicion)
-			{
-				global::IPS.UMLSPF.ConecComposicion newShape = new global::IPS.UMLSPF.ConecComposicion(this.Partition);
-				return newShape;
-			}
-			if(element is global::IPS.UMLSPF.conAgregacion)
-			{
-				global::IPS.UMLSPF.ConecAgregacion newShape = new global::IPS.UMLSPF.ConecAgregacion(this.Partition);
-				return newShape;
-			}
 			if(element is global::IPS.UMLSPF.EsPadre)
 			{
 				global::IPS.UMLSPF.ConEsPadre newShape = new global::IPS.UMLSPF.ConEsPadre(this.Partition);
@@ -352,8 +342,6 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.CMPClaseEnriquecida.DecoratorsInitialized += CMPClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.IMGHerencia.DecoratorsInitialized += IMGHerenciaDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ConecClase.DecoratorsInitialized += ConecClaseDecoratorMap.OnDecoratorsInitialized;
-			global::IPS.UMLSPF.ConecComposicion.DecoratorsInitialized += ConecComposicionDecoratorMap.OnDecoratorsInitialized;
-			global::IPS.UMLSPF.ConecAgregacion.DecoratorsInitialized += ConecAgregacionDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -434,57 +422,9 @@ namespace IPS.UMLSPF
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAsociacion.NameRelationDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreRelacionIZ").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for ConecComposicion.
-		/// </summary>
-		internal static partial class ConecComposicionDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for ConecComposicion.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conComposicion.refDDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refDCO").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conComposicion.refIDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refICO").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conComposicion.NombreRelacionDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CANombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for ConecAgregacion.
-		/// </summary>
-		internal static partial class ConecAgregacionDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for ConecAgregacion.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.NombreRelacionDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CANombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.refDDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refDCA").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.refIDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "refICA").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAgregacion.NombreRelacionDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CANombreRelacion").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.conAsociacion.ConexionTipoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "RelacionTipo").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -493,8 +433,6 @@ namespace IPS.UMLSPF
 		#region Connect actions
 		private bool changingMouseAction;
 		private global::IPS.UMLSPF.ConectarClasesConnectAction conectarClasesConnectAction;
-		private global::IPS.UMLSPF.ConectarComposicionConnectAction conectarComposicionConnectAction;
-		private global::IPS.UMLSPF.ConectarAgregacionConnectAction conectarAgregacionConnectAction;
 		private global::IPS.UMLSPF.ConectarPadreConnectAction conectarPadreConnectAction;
 		private global::IPS.UMLSPF.ConectarHijoConnectAction conectarHijoConnectAction;
 		/// <summary>
@@ -527,24 +465,6 @@ namespace IPS.UMLSPF
 						this.conectarClasesConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
 					action = this.conectarClasesConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::IPS.UMLSPF.UMLSPFToolboxHelper.ConectarComposicionFilterString))
-				{
-					if (this.conectarComposicionConnectAction == null)
-					{
-						this.conectarComposicionConnectAction = new global::IPS.UMLSPF.ConectarComposicionConnectAction(this);
-						this.conectarComposicionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.conectarComposicionConnectAction;
-				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::IPS.UMLSPF.UMLSPFToolboxHelper.ConectarAgregacionFilterString))
-				{
-					if (this.conectarAgregacionConnectAction == null)
-					{
-						this.conectarAgregacionConnectAction = new global::IPS.UMLSPF.ConectarAgregacionConnectAction(this);
-						this.conectarAgregacionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
-					}
-					action = this.conectarAgregacionConnectAction;
 				} 
 				else if (SelectedToolboxItemSupportsFilterString(activeView, global::IPS.UMLSPF.UMLSPFToolboxHelper.ConectarPadreFilterString))
 				{
@@ -626,16 +546,6 @@ namespace IPS.UMLSPF
 						this.conectarClasesConnectAction.Dispose();
 						this.conectarClasesConnectAction = null;
 					}
-					if(this.conectarComposicionConnectAction != null)
-					{
-						this.conectarComposicionConnectAction.Dispose();
-						this.conectarComposicionConnectAction = null;
-					}
-					if(this.conectarAgregacionConnectAction != null)
-					{
-						this.conectarAgregacionConnectAction.Dispose();
-						this.conectarAgregacionConnectAction = null;
-					}
 					if(this.conectarPadreConnectAction != null)
 					{
 						this.conectarPadreConnectAction.Dispose();
@@ -704,8 +614,6 @@ namespace IPS.UMLSPF
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Herencia), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conComposicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAgregacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsPadre), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
@@ -1413,8 +1321,6 @@ namespace IPS.UMLSPF
 		/// so we can update the decorator host's bounds.
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conComposicion), InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAgregacion), InitiallyDisabled=true)]
 		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
@@ -1454,57 +1360,12 @@ namespace IPS.UMLSPF
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAsociacion.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conComposicion.refDDomainPropertyId)
+				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAsociacion.ConexionTipoDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecComposicion.FindConecComposicionDecorator("refDCO");
+					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecClase.FindConecClaseDecorator("RelacionTipo");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conComposicion.DomainClassId);
-					}
-				}
-				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conComposicion.refIDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecComposicion.FindConecComposicionDecorator("refICO");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conComposicion.DomainClassId);
-					}
-				}
-				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conComposicion.NombreRelacionDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecComposicion.FindConecComposicionDecorator("CANombreRelacion");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conComposicion.DomainClassId);
-					}
-				}
-				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAgregacion.NombreRelacionDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecAgregacion.FindConecAgregacionDecorator("CANombreRelacion");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAgregacion.DomainClassId);
-					}
-					decorator = global::IPS.UMLSPF.ConecAgregacion.FindConecAgregacionDecorator("CANombreRelacion");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAgregacion.DomainClassId);
-					}
-				}
-				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAgregacion.refDDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecAgregacion.FindConecAgregacionDecorator("refDCA");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAgregacion.DomainClassId);
-					}
-				}
-				else if (e.DomainProperty.Id == global::IPS.UMLSPF.conAgregacion.refIDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::IPS.UMLSPF.ConecAgregacion.FindConecAgregacionDecorator("refICA");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAgregacion.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::IPS.UMLSPF.conAsociacion.DomainClassId);
 					}
 				}
 			}
@@ -1514,8 +1375,6 @@ namespace IPS.UMLSPF
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conComposicion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAgregacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsPadre), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule

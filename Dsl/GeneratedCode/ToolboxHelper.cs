@@ -52,14 +52,6 @@ namespace IPS.UMLSPF
 		/// </summary>
 		public const string ConectarClasesFilterString = "ConectarClases.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify ConectarComposicion connector tool.
-		/// </summary>
-		public const string ConectarComposicionFilterString = "ConectarComposicion.1.0";
-		/// <summary>
-		/// Toolbox item filter string used to identify ConectarAgregacion connector tool.
-		/// </summary>
-		public const string ConectarAgregacionFilterString = "ConectarAgregacion.1.0";
-		/// <summary>
 		/// Toolbox item filter string used to identify ConectarPadre connector tool.
 		/// </summary>
 		public const string ConectarPadreFilterString = "ConectarPadre.1.0";
@@ -114,7 +106,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return 8;
+				return 6;
 			}
 		}
 		
@@ -213,47 +205,11 @@ namespace IPS.UMLSPF
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "IPS.UMLSPF.ConectarComposicionToolboxItem":
-
-					// Add ConectarComposicion connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"IPS.UMLSPF.ConectarComposicionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						4, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ConectarComposicionToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ConectarComposicionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"ConectarComposicion", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ConectarComposicionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ConectarComposicionFilterString)
-						});
-					break;
-				case "IPS.UMLSPF.ConectarAgregacionToolboxItem":
-
-					// Add ConectarAgregacion connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"IPS.UMLSPF.ConectarAgregacionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						5, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ConectarAgregacionToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ConectarAgregacionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"ConectarAgregacion", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ConectarAgregacionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ConectarAgregacionFilterString)
-						});
-					break;
 				case "IPS.UMLSPF.IconHerenciaToolboxItem":
 					// Add IconHerencia shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"IPS.UMLSPF.IconHerenciaToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						6, // Position relative to other items in the same toolbox tab.
+						4, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("IconHerenciaToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("IconHerenciaToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -270,7 +226,7 @@ namespace IPS.UMLSPF
 					// Add ConectarPadre connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"IPS.UMLSPF.ConectarPadreToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						7, // Position relative to other items in the same toolbox tab.
+						5, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ConectarPadreToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ConectarPadreToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -288,7 +244,7 @@ namespace IPS.UMLSPF
 					// Add ConectarHijo connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"IPS.UMLSPF.ConectarHijoToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						8, // Position relative to other items in the same toolbox tab.
+						6, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ConectarHijoToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ConectarHijoToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.

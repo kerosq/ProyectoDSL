@@ -497,70 +497,6 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region CompTargetClase opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of CompTargetClase.
-		/// Description for IPS.UMLSPF.conComposicion.CompSourceClase
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> CompTargetClase
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId);
-			}
-		}
-		#endregion
-		#region CompSourceClase opposite domain role accessor
-		/// <summary>
-		/// Gets or sets CompSourceClase.
-		/// Description for IPS.UMLSPF.conComposicion.CompTargetClase
-		/// </summary>
-		public virtual Clase CompSourceClase
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId) as Clase;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region AgreTargetClase opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of AgreTargetClase.
-		/// Description for IPS.UMLSPF.conAgregacion.SourceClase
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> AgreTargetClase
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.conAgregacion.SourceClaseDomainRoleId);
-			}
-		}
-		#endregion
-		#region AgreSourceClase opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of AgreSourceClase.
-		/// Description for IPS.UMLSPF.conAgregacion.TargetClase
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> AgreSourceClase
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.conAgregacion.TargetClaseDomainRoleId);
-			}
-		}
-		#endregion
 		#region HerenciaPadre opposite domain role accessor
 		
 		/// <summary>
@@ -636,11 +572,6 @@ namespace IPS.UMLSPF
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.Clase.DomainClassId)) 
-				{
-					return true;
-				}
-				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.AtributoIdentificador.DomainClassId)) 
 				{
 					return true;
@@ -688,20 +619,11 @@ namespace IPS.UMLSPF
 				return;
 			}
 				
-			global::IPS.UMLSPF.Clase sourceClase3 = sourceElement as global::IPS.UMLSPF.Clase;
-			if (sourceClase3 != null)
-			{
-				// Create link for path conComposicion.CompTargetClase
-				this.CompTargetClase.Add(sourceClase3);
-
-				return;
-			}
-				
-			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador4 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
-			if (sourceAtributoIdentificador4 != null)
+			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador3 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
+			if (sourceAtributoIdentificador3 != null)
 			{
 				// Create link for path ClaseHasAtributoIdentificador.AtributoIdentificador
-				this.AtributoIdentificador.Add(sourceAtributoIdentificador4);
+				this.AtributoIdentificador.Add(sourceAtributoIdentificador3);
 
 				return;
 			}
@@ -756,26 +678,12 @@ namespace IPS.UMLSPF
 				return;
 			}
 				
-			global::IPS.UMLSPF.Clase sourceClase3 = sourceElement as global::IPS.UMLSPF.Clase;
-			if (sourceClase3 != null)
-			{
-				// Delete link for path conComposicion.CompTargetClase
-				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.conComposicion.GetLinks((global::IPS.UMLSPF.Clase)this, sourceClase3))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.conComposicion.CompSourceClaseDomainRoleId, global::IPS.UMLSPF.conComposicion.CompTargetClaseDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador4 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
-			if (sourceAtributoIdentificador4 != null)
+			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador3 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
+			if (sourceAtributoIdentificador3 != null)
 			{
 				// Delete link for path ClaseHasAtributoIdentificador.AtributoIdentificador
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasAtributoIdentificador.GetLinks((global::IPS.UMLSPF.Clase)this, sourceAtributoIdentificador4))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasAtributoIdentificador.GetLinks((global::IPS.UMLSPF.Clase)this, sourceAtributoIdentificador3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId);

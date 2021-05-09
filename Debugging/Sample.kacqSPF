@@ -14,21 +14,25 @@
       <claseEnriquecida Id="095df3e6-2f24-4fe7-b27f-388f1cf7605c" />
     </modeloClassWEBHasClase>
     <modeloClassWEBHasClase Id="8c9c6aaf-3f05-4258-b0d1-6118f4019c29">
-      <clase Id="c88b7916-013e-426d-aaab-710a60a3c16a">
-        <targetClase>
-          <conAsociacion Id="9d38e232-c2ab-45c2-b751-0f26790459d0" refD="c1N" refI="c1N">
-            <claseMoniker Id="259bfd3c-01ec-4309-9963-cad229fa9e5f" />
-          </conAsociacion>
-        </targetClase>
-        <agreTargetClase>
-          <conAgregacion Id="630ca27d-4a96-4a36-bf3d-1215385f7ca7" refD="c1N" refI="c1N">
-            <claseMoniker Id="607039ed-3126-47ba-8b6a-293608699b31" />
-          </conAgregacion>
-        </agreTargetClase>
-      </clase>
+      <clase Id="c88b7916-013e-426d-aaab-710a60a3c16a" />
     </modeloClassWEBHasClase>
     <modeloClassWEBHasClase Id="aba88d52-a63c-47e1-9f15-a481fce2473d">
-      <clase Id="607039ed-3126-47ba-8b6a-293608699b31" />
+      <clase Id="607039ed-3126-47ba-8b6a-293608699b31">
+        <targetClase>
+          <conAsociacion Id="f86a4b02-8031-45b1-be05-a4da696f19ba" refD="c1N" refI="c1N">
+            <claseMoniker Id="259bfd3c-01ec-4309-9963-cad229fa9e5f" />
+          </conAsociacion>
+          <conAsociacion Id="42d3d407-dd2c-4676-b14e-ef7ba77148cb" refD="c1N" refI="c1N">
+            <claseMoniker Id="c88b7916-013e-426d-aaab-710a60a3c16a" />
+          </conAsociacion>
+          <conAsociacion Id="dde0c8a4-7b47-49ef-83a4-78232ad8867f" refD="c1N" refI="c1N">
+            <claseEnriquecidaMoniker Id="095df3e6-2f24-4fe7-b27f-388f1cf7605c" />
+          </conAsociacion>
+          <conAsociacion Id="6083fe20-c7a9-4c93-9493-a535773a6a87" refD="c1N" refI="c1N">
+            <claseMoniker Id="3e14d53b-a8b4-443e-ba51-5e080a64bbf0" />
+          </conAsociacion>
+        </targetClase>
+      </clase>
     </modeloClassWEBHasClase>
     <modeloClassWEBHasClase Id="73404eaa-d452-41da-88e6-488dba27fa1d">
       <clase Id="3e14d53b-a8b4-443e-ba51-5e080a64bbf0" />
@@ -43,9 +47,6 @@
           </esPadre>
         </clasePadre>
         <claseHija>
-          <esHija Id="7c009544-b8e6-419d-977b-3144d5dd5d82">
-            <claseEnriquecidaMoniker Id="095df3e6-2f24-4fe7-b27f-388f1cf7605c" />
-          </esHija>
           <esHija Id="90236cb1-b395-4e3f-97d6-db6fb83b5349">
             <claseMoniker Id="3e14d53b-a8b4-443e-ba51-5e080a64bbf0" />
           </esHija>

@@ -127,36 +127,6 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: conComposicion -->
-          <xsd:element name="compTargetClase" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of conComposicion</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="conComposicion" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of conComposicion needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: conAgregacion -->
-          <xsd:element name="agreTargetClase" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of conAgregacion</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="conAgregacion" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of conAgregacion needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
           <!-- Relationship: ClaseHasAtributoIdentificador -->
           <xsd:element name="atributoIdentificador" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
@@ -775,6 +745,12 @@
             <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: ConexionTipo -->
+        <xsd:attribute name="conexionTipo" type="ConexionTipos" >
+          <xsd:annotation>
+            <xsd:documentation>Establecer tipo de conexion</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -784,134 +760,6 @@
   <xsd:complexType name="ConAsociacionMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for conAsociacion instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- conComposicion -->
-  <xsd:element name="conComposicion" type="ConComposicion" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ConComposicion">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Clase -->
-          <xsd:element ref="clase" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: refD -->
-        <xsd:attribute name="refD" type="Cardinalidades" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: refI -->
-        <xsd:attribute name="refI" type="Cardinalidades" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: NombreRelacion -->
-        <xsd:attribute name="nombreRelacion" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: NameRelation -->
-        <xsd:attribute name="nameRelation" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- conComposicion Moniker -->
-  <xsd:element name="conComposicionMoniker" type="ConComposicionMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ConComposicionMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for conComposicion instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- conAgregacion -->
-  <xsd:element name="conAgregacion" type="ConAgregacion" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ConAgregacion">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Clase -->
-          <xsd:element ref="claseMoniker" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: refD -->
-        <xsd:attribute name="refD" type="Cardinalidades" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: refI -->
-        <xsd:attribute name="refI" type="Cardinalidades" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer cardinalidad entre clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: NombreRelacion -->
-        <xsd:attribute name="nombreRelacion" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: NameRelation -->
-        <xsd:attribute name="nameRelation" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Establecer nonbre relacion entre las clases</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- conAgregacion Moniker -->
-  <xsd:element name="conAgregacionMoniker" type="ConAgregacionMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ConAgregacionMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for conAgregacion instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -1230,6 +1078,15 @@
       <xsd:enumeration value="c0N"/>
       <xsd:enumeration value="c11"/>
       <xsd:enumeration value="c10"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum ConexionTipos -->
+  <xsd:simpleType name="ConexionTipos">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Asociacion"/>
+      <xsd:enumeration value="Agregacion"/>
+      <xsd:enumeration value="Composicion"/>
     </xsd:restriction>
   </xsd:simpleType>
   
