@@ -263,7 +263,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="7b20d996-b631-4d0a-bdc4-bfcf98092bc5" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="ModeloClassWEB" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Modelo Class WEB">
+        <DomainRole Id="7b20d996-b631-4d0a-bdc4-bfcf98092bc5" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="ModeloClassWEB" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Modelo Class WEB">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>

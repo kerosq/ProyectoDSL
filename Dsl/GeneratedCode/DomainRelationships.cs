@@ -148,7 +148,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClase/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClase/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModeloClassWEB", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModeloClassWEB", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("7b20d996-b631-4d0a-bdc4-bfcf98092bc5")]
 		public virtual Clase Clase
 		{
