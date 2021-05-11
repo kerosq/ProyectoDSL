@@ -1018,7 +1018,7 @@
     <comment>Description for DomainClass &apos;ShapeOperaciones&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.ShapeOperaciones.DisplayName" xml:space="preserve">
-    <value>Shape Operaciones</value>
+    <value>Shade de Operaciones</value>
     <comment>DisplayName for DomainClass &apos;ShapeOperaciones&apos;</comment>
   </data>
   <data name="ShapeOperacionesNombreOperacionDefaultText" xml:space="preserve">
@@ -1030,7 +1030,7 @@
     <comment>Description for DomainClass &apos;ShapeClase&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.ShapeClase.DisplayName" xml:space="preserve">
-    <value>Shape Clase</value>
+    <value>Agregar Clase</value>
     <comment>DisplayName for DomainClass &apos;ShapeClase&apos;</comment>
   </data>
   <data name="ShapeClaseNombreClaseDefaultText" xml:space="preserve">
@@ -1234,67 +1234,67 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeClaseToolboxItem" xml:space="preserve">
-    <value>ShapeClase</value>
+    <value>AgregarClase</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeClaseToolboxTooltip" xml:space="preserve">
-    <value>Shape Clase</value>
+    <value>AgregarClase</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeParametroToolboxItem" xml:space="preserve">
-    <value>ShapeParametro</value>
+    <value>AgregarParametro</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeParametroToolboxTooltip" xml:space="preserve">
-    <value>Shape Parametro</value>
+    <value>AgregarParametro</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeAtributoIDToolboxItem" xml:space="preserve">
-    <value>ShapeAtributoID</value>
+    <value>AgregarAtributoID</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeAtributoIDToolboxTooltip" xml:space="preserve">
-    <value>Shape Atributo ID</value>
+    <value>AgregarAtributoID</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeAtributoToolboxItem" xml:space="preserve">
-    <value>ShapeAtributo</value>
+    <value>AgregarAtributo</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeAtributoToolboxTooltip" xml:space="preserve">
-    <value>Shape Atributo</value>
+    <value>AgregarAtributo</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeClaseEToolboxItem" xml:space="preserve">
-    <value>ShapeClaseE</value>
+    <value>AgregarClaseEnriquecida</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeClaseEToolboxTooltip" xml:space="preserve">
-    <value>Shape Clase E</value>
+    <value>AgregarClaseEnriquecida</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeEstiloClasesToolboxItem" xml:space="preserve">
-    <value>ShapeEstiloClases</value>
+    <value>AgregarEstiloClases</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeEstiloClasesToolboxTooltip" xml:space="preserve">
-    <value>Shape Estilo Clases</value>
+    <value>AgregarEstiloClases</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeEstilosAtributosToolboxItem" xml:space="preserve">
-    <value>ShapeEstilosAtributos</value>
+    <value>AgregarEstilosAtributos</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeEstilosAtributosToolboxTooltip" xml:space="preserve">
-    <value>Shape Estilos Atributos</value>
+    <value>AgregarEstilosAtributos</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeEstilosMetodosToolboxItem" xml:space="preserve">
-    <value>ShapeEstilosMetodos</value>
+    <value>AgregarEstilosMetodos</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeEstilosMetodosToolboxTooltip" xml:space="preserve">
-    <value>Shape Estilos Metodos</value>
+    <value>AgregarEstilosMetodos</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">

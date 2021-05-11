@@ -81,7 +81,7 @@ namespace IPS.UMLSPF
 					"@ShapeClaseToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeClaseToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeClase", 
+					"AgregarClase", 
 					"@ShapeClaseToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 6)]
@@ -89,7 +89,7 @@ namespace IPS.UMLSPF
 					"@ShapeParametroToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeParametroToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeParametro", 
+					"AgregarParametro", 
 					"@ShapeParametroToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 7)]
@@ -97,7 +97,7 @@ namespace IPS.UMLSPF
 					"@ShapeAtributoIDToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeAtributoIDToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeAtributoID", 
+					"AgregarAtributoID", 
 					"@ShapeAtributoIDToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 8)]
@@ -105,7 +105,7 @@ namespace IPS.UMLSPF
 					"@ShapeAtributoToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeAtributoToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeAtributo", 
+					"AgregarAtributo", 
 					"@ShapeAtributoToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 9)]
@@ -113,7 +113,7 @@ namespace IPS.UMLSPF
 					"@ShapeClaseEToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeClaseEToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeClaseE", 
+					"AgregarClaseEnriquecida", 
 					"@ShapeClaseEToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 10)]
@@ -121,7 +121,7 @@ namespace IPS.UMLSPF
 					"@ShapeEstiloClasesToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeEstiloClasesToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeEstiloClases", 
+					"AgregarEstiloClases", 
 					"@ShapeEstiloClasesToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 11)]
@@ -129,7 +129,7 @@ namespace IPS.UMLSPF
 					"@ShapeEstilosAtributosToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeEstilosAtributosToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeEstilosAtributos", 
+					"AgregarEstilosAtributos", 
 					"@ShapeEstilosAtributosToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 12)]
@@ -137,7 +137,7 @@ namespace IPS.UMLSPF
 					"@ShapeEstilosMetodosToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeEstilosMetodosToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ShapeEstilosMetodos", 
+					"AgregarEstilosMetodos", 
 					"@ShapeEstilosMetodosToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 13)]

@@ -335,11 +335,30 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(2.5, 0.5);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 250, 240, 202);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 250, 240, 202);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -347,18 +366,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -390,7 +398,7 @@ namespace IPS.UMLSPF
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreOperacion");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -555,11 +563,30 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(5, 3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 253, 197, 0);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 255, 202, 58);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -567,18 +594,17 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -775,11 +801,25 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(1.5, 0.3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 125, 133, 151);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -787,18 +827,17 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -995,11 +1034,35 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(3, 0.3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromArgb(255, 125, 133, 151);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 125, 133, 151);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+			// Text brush settings for this shape.
+			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
+			textBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
+		
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1007,18 +1070,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -1215,11 +1267,25 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(3, 0.3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1227,18 +1293,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -1435,11 +1490,26 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(5, 3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.AntiqueWhite);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1447,18 +1517,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -1655,11 +1714,26 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(2, 0.3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 241, 250, 238);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1667,18 +1741,17 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -1875,11 +1948,26 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(2, 0.3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 241, 250, 238);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1887,18 +1975,17 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -2095,11 +2182,26 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(2, 0.3);
 			}
 		}
 		#endregion
 		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 241, 250, 238);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
+		}
+		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -2107,18 +2209,17 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return true;
+				return false;
 			}
 		}
-		
 		/// <summary>
-		/// Indicates the direction of the gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion

@@ -559,47 +559,47 @@
         <TextDecorator Name="MGeneralizacion2" DisplayName="MGeneralizacion2" DefaultText="MGeneralizacion2" />
       </ShapeHasDecorators>
     </ImageShape>
-    <GeometryShape Id="80f16035-0f4d-433e-97b2-8d9dd064235d" Description="Description for IPS.UMLSPF.ShapeOperaciones" Name="ShapeOperaciones" DisplayName="Shape Operaciones" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Operaciones" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+    <GeometryShape Id="80f16035-0f4d-433e-97b2-8d9dd064235d" Description="Description for IPS.UMLSPF.ShapeOperaciones" Name="ShapeOperaciones" DisplayName="Shade de Operaciones" Namespace="IPS.UMLSPF" FixedTooltipText="Shape de Operaciones" FillColor="250, 240, 202" OutlineColor="250, 240, 202" InitialWidth="2.5" InitialHeight="0.5" FillGradientMode="None" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreOperacion" DisplayName="Nombre Operacion" DefaultText="NombreOperacion" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Shape Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Agregar Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Agregar Clase" FillColor="255, 202, 58" OutlineColor="253, 197, 0" InitialWidth="4" InitialHeight="3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="aa852645-0b9c-4538-ae24-5d9dead62e9c" Description="Description for IPS.UMLSPF.ShapeParametro" Name="ShapeParametro" DisplayName="Shape Parametro" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Parametro" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="aa852645-0b9c-4538-ae24-5d9dead62e9c" Description="Description for IPS.UMLSPF.ShapeParametro" Name="ShapeParametro" DisplayName="Shape Parametro" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Parametro" OutlineColor="125, 133, 151" InitialHeight="0.3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarParametros" DisplayName="Mostrar Parametros" DefaultText="MostrarParametros" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="63e7553f-3a36-4fc3-88fa-8a28ef62a3d3" Description="Description for IPS.UMLSPF.ShapeAtributoID" Name="ShapeAtributoID" DisplayName="Shape Atributo ID" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo ID" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="63e7553f-3a36-4fc3-88fa-8a28ef62a3d3" Description="Description for IPS.UMLSPF.ShapeAtributoID" Name="ShapeAtributoID" DisplayName="Shape Atributo ID" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo ID" TextColor="White" FillColor="125, 133, 151" OutlineColor="125, 133, 151" InitialWidth="3" InitialHeight="0.3" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarAtributoID" DisplayName="Mostrar Atributo ID" DefaultText="MostrarAtributoID" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="7788902f-f865-4d4f-bebe-efaeaa1ba962" Description="Description for IPS.UMLSPF.ShapeAtributo" Name="ShapeAtributo" DisplayName="Shape Atributo" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="7788902f-f865-4d4f-bebe-efaeaa1ba962" Description="Description for IPS.UMLSPF.ShapeAtributo" Name="ShapeAtributo" DisplayName="Shape Atributo" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo" OutlineColor="White" InitialWidth="3" InitialHeight="0.3" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarAtributo" DisplayName="Mostrar Atributo" DefaultText="MostrarAtributo" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="AntiqueWhite" OutlineColor="AntiqueWhite" InitialWidth="4" InitialHeight="3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="32d01433-f674-42b6-91af-5b299bbcc107" Description="Description for IPS.UMLSPF.ShapeEstiloClase" Name="ShapeEstiloClase" DisplayName="Shape Estilo Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Clase" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="32d01433-f674-42b6-91af-5b299bbcc107" Description="Description for IPS.UMLSPF.ShapeEstiloClase" Name="ShapeEstiloClase" DisplayName="Shape Estilo Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Clase" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarEstilosClase" DisplayName="Mostrar Estilos Clase" DefaultText="MostrarEstilosClase" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="2067591f-7a46-43db-99b5-3b60d0bd7c46" Description="Description for IPS.UMLSPF.ShapeEstiloAtributos" Name="ShapeEstiloAtributos" DisplayName="Shape Estilo Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Atributos" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="2067591f-7a46-43db-99b5-3b60d0bd7c46" Description="Description for IPS.UMLSPF.ShapeEstiloAtributos" Name="ShapeEstiloAtributos" DisplayName="Shape Estilo Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Atributos" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarEAs" DisplayName="Mostrar EAs" DefaultText="MostrarEAs" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="b565caa0-ebad-4595-9d9e-c396935627d6" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="b565caa0-ebad-4595-9d9e-c396935627d6" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarEMs" DisplayName="Mostrar EMs" DefaultText="MostrarEMs" />
       </ShapeHasDecorators>
@@ -1216,28 +1216,28 @@
       <ElementTool Name="AgregarMetodo" ToolboxIcon="Resources\template.bmp" Caption="AgregarMetodo" Tooltip="Agregar Metodo" HelpKeyword="AgregarMetodo">
         <DomainClassMoniker Name="Operaciones" />
       </ElementTool>
-      <ElementTool Name="ShapeClase" ToolboxIcon="Resources\IconoClase.bmp" Caption="ShapeClase" Tooltip="Shape Clase" HelpKeyword="ShapeClase">
+      <ElementTool Name="ShapeClase" ToolboxIcon="Resources\IconoClase.bmp" Caption="AgregarClase" Tooltip="AgregarClase" HelpKeyword="AgregarClase">
         <DomainClassMoniker Name="Clase" />
       </ElementTool>
-      <ElementTool Name="ShapeParametro" ToolboxIcon="Resources\Atributo.bmp" Caption="ShapeParametro" Tooltip="Shape Parametro" HelpKeyword="ShapeParametro">
+      <ElementTool Name="ShapeParametro" ToolboxIcon="Resources\Atributo.bmp" Caption="AgregarParametro" Tooltip="AgregarParametro" HelpKeyword="AgregarParametro">
         <DomainClassMoniker Name="Parametros" />
       </ElementTool>
-      <ElementTool Name="ShapeAtributoID" ToolboxIcon="Resources\AtributoIDicon.bmp" Caption="ShapeAtributoID" Tooltip="Shape Atributo ID" HelpKeyword="ShapeAtributoID">
+      <ElementTool Name="ShapeAtributoID" ToolboxIcon="Resources\AtributoIDicon.bmp" Caption="AgregarAtributoID" Tooltip="AgregarAtributoID" HelpKeyword="AgregarAtributoID">
         <DomainClassMoniker Name="AtributoIdentificador" />
       </ElementTool>
-      <ElementTool Name="ShapeAtributo" ToolboxIcon="Resources\Atributos.bmp" Caption="ShapeAtributo" Tooltip="Shape Atributo" HelpKeyword="ShapeAtributo">
+      <ElementTool Name="ShapeAtributo" ToolboxIcon="Resources\Atributos.bmp" Caption="AgregarAtributo" Tooltip="AgregarAtributo" HelpKeyword="AgregarAtributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
-      <ElementTool Name="ShapeClaseE" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="ShapeClaseE" Tooltip="Shape Clase E" HelpKeyword="ShapeClaseE">
+      <ElementTool Name="ShapeClaseE" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarClaseEnriquecida" Tooltip="AgregarClaseEnriquecida" HelpKeyword="AgregarClaseEnriquecida">
         <DomainClassMoniker Name="ClaseEnriquecida" />
       </ElementTool>
-      <ElementTool Name="ShapeEstiloClases" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="ShapeEstiloClases" Tooltip="Shape Estilo Clases" HelpKeyword="ShapeEstiloClases">
+      <ElementTool Name="ShapeEstiloClases" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloClases" Tooltip="AgregarEstiloClases" HelpKeyword="AgregarEstiloClases">
         <DomainClassMoniker Name="EstilosClase" />
       </ElementTool>
-      <ElementTool Name="ShapeEstilosAtributos" ToolboxIcon="Resources\IconoEstiloClase.bmp" Caption="ShapeEstilosAtributos" Tooltip="Shape Estilos Atributos" HelpKeyword="ShapeEstilosAtributos">
+      <ElementTool Name="ShapeEstilosAtributos" ToolboxIcon="Resources\IconoEstiloClase.bmp" Caption="AgregarEstilosAtributos" Tooltip="AgregarEstilosAtributos" HelpKeyword="AgregarEstilosAtributos">
         <DomainClassMoniker Name="EstiloAtributos" />
       </ElementTool>
-      <ElementTool Name="ShapeEstilosMetodos" ToolboxIcon="Resources\IconoEstiloMetodos.bmp" Caption="ShapeEstilosMetodos" Tooltip="Shape Estilos Metodos" HelpKeyword="ShapeEstilosMetodos">
+      <ElementTool Name="ShapeEstilosMetodos" ToolboxIcon="Resources\IconoEstiloMetodos.bmp" Caption="AgregarEstilosMetodos" Tooltip="AgregarEstilosMetodos" HelpKeyword="AgregarEstilosMetodos">
         <DomainClassMoniker Name="EstiloMetodos" />
       </ElementTool>
     </ToolboxTab>
