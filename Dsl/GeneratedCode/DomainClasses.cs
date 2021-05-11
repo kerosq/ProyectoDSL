@@ -528,17 +528,21 @@ namespace IPS.UMLSPF
 		}
 		#endregion
 		#region AtributoIdentificador opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of AtributoIdentificador.
+		/// Gets or sets AtributoIdentificador.
 		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<AtributoIdentificador> AtributoIdentificador
+		public virtual AtributoIdentificador AtributoIdentificador
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoIdentificador>, AtributoIdentificador>(global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId) as AtributoIdentificador;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -574,6 +578,11 @@ namespace IPS.UMLSPF
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.AtributoIdentificador.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseHasAtributoIdentificador.AtributoIdentificador
+					if (this.AtributoIdentificador != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -623,7 +632,7 @@ namespace IPS.UMLSPF
 			if (sourceAtributoIdentificador3 != null)
 			{
 				// Create link for path ClaseHasAtributoIdentificador.AtributoIdentificador
-				this.AtributoIdentificador.Add(sourceAtributoIdentificador3);
+				this.AtributoIdentificador = sourceAtributoIdentificador3;
 
 				return;
 			}

@@ -22,7 +22,7 @@ namespace IPS.UMLSPF
 		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
 		private void ValidateClaseMultiplicity (DslValidation::ValidationContext context)
 		{
-			if (this.AtributoIdentificador.Count == 0)
+			if (this.AtributoIdentificador == null)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 

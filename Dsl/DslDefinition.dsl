@@ -472,7 +472,7 @@
     </DomainRelationship>
     <DomainRelationship Id="c01259a4-025d-4d30-a785-216b7d4b748d" Description="Description for IPS.UMLSPF.ClaseHasAtributoIdentificador" Name="ClaseHasAtributoIdentificador" DisplayName="Clase Has Atributo Identificador" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="53d76716-d806-403a-91f5-91074717158d" Description="Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase" Name="Clase" DisplayName="Clase" PropertyName="AtributoIdentificador" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Identificador">
+        <DomainRole Id="53d76716-d806-403a-91f5-91074717158d" Description="Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase" Name="Clase" DisplayName="Clase" PropertyName="AtributoIdentificador" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Identificador">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>

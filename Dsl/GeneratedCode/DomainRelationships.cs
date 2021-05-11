@@ -2922,7 +2922,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoIdentificador", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoIdentificador", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("53d76716-d806-403a-91f5-91074717158d")]
 		public virtual Clase Clase
 		{
@@ -2992,24 +2992,43 @@ namespace IPS.UMLSPF
 		#endregion
 		#region Static methods to access AtributoIdentificador of a Clase
 		/// <summary>
-		/// Gets a list of AtributoIdentificador.
+		/// Gets AtributoIdentificador.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<AtributoIdentificador> GetAtributoIdentificador(Clase element)
+		public static AtributoIdentificador GetAtributoIdentificador(Clase element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoIdentificador>, AtributoIdentificador>(element, ClaseDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseDomainRoleId) as AtributoIdentificador;
+		}
+		
+		/// <summary>
+		/// Sets AtributoIdentificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetAtributoIdentificador(Clase element, AtributoIdentificador newAtributoIdentificador)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseDomainRoleId, newAtributoIdentificador);
 		}
 		#endregion
 		#region Clase link accessor
 		/// <summary>
-		/// Get the list of ClaseHasAtributoIdentificador links to a Clase.
+		/// Get the ClaseHasAtributoIdentificador link to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> GetLinksToAtributoIdentificador ( global::IPS.UMLSPF.Clase claseInstance )
+		public static global::IPS.UMLSPF.ClaseHasAtributoIdentificador GetLinkToAtributoIdentificador (global::IPS.UMLSPF.Clase claseInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(claseInstance, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(claseInstance, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Clase not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region AtributoIdentificador link accessor
