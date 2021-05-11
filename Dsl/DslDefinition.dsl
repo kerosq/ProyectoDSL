@@ -564,7 +564,7 @@
         <TextDecorator Name="NombreOperacion" DisplayName="Nombre Operacion" DefaultText="NombreOperacion" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Agregar Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Agregar Clase" FillColor="255, 202, 58" OutlineColor="253, 197, 0" InitialWidth="4" InitialHeight="2" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Agregar Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Agregar Clase" FillColor="255, 202, 58" OutlineColor="253, 197, 0" InitialWidth="3.9" InitialHeight="2.3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
@@ -584,7 +584,7 @@
         <TextDecorator Name="MostrarAtributo" DisplayName="Mostrar Atributo" DefaultText="MostrarAtributo" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="AntiqueWhite" OutlineColor="AntiqueWhite" InitialWidth="4" InitialHeight="2" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="AntiqueWhite" OutlineColor="AntiqueWhite" InitialWidth="3.9" InitialHeight="2.3" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
