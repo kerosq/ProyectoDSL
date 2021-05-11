@@ -20,5 +20,24 @@
         </atributoIdentificador>
       </clase>
     </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="122657c7-9764-482d-830b-2178a86e7678">
+      <claseEnriquecida Id="50c5d76b-af38-414f-8afd-b12aaf4eca98">
+        <estilosClase>
+          <claseEnriquecidaHasEstilosClase Id="10d74dcc-a6fe-4f0d-b55d-63c272472bc8">
+            <estilosClase Id="15f25617-8177-4865-93c3-63c59e977dcd" />
+          </claseEnriquecidaHasEstilosClase>
+        </estilosClase>
+        <estiloAtributos>
+          <claseEnriquecidaHasEstiloAtributos Id="ab782b61-9ee2-4e2e-9d6b-5cf1544dab3d">
+            <estiloAtributos Id="e9df2c0d-9be3-492c-b4e6-7b8c233b36e4" />
+          </claseEnriquecidaHasEstiloAtributos>
+        </estiloAtributos>
+        <estiloMetodos>
+          <claseEnriquecidaHasEstiloMetodos Id="86f3e127-a4a2-43a3-8962-c9f4c7ad7b57">
+            <estiloMetodos Id="143893a1-7697-460c-b7f1-b4af48a48bc9" />
+          </claseEnriquecidaHasEstiloMetodos>
+        </estiloMetodos>
+      </claseEnriquecida>
+    </modeloClassWEBHasClase>
   </clase>
 </modeloClassWEB>

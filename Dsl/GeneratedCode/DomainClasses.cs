@@ -1623,47 +1623,59 @@ namespace IPS.UMLSPF
 		}
 		#endregion
 		#region EstilosClase opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of EstilosClase.
+		/// Gets or sets EstilosClase.
 		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstilosClase> EstilosClase
+		public virtual EstilosClase EstilosClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstilosClase>, EstilosClase>(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId) as EstilosClase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
 		#region EstiloAtributos opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of EstiloAtributos.
+		/// Gets or sets EstiloAtributos.
 		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstiloAtributos> EstiloAtributos
+		public virtual EstiloAtributos EstiloAtributos
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloAtributos>, EstiloAtributos>(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId) as EstiloAtributos;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
 		#region EstiloMetodos opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of EstiloMetodos.
+		/// Gets or sets EstiloMetodos.
 		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstiloMetodos> EstiloMetodos
+		public virtual EstiloMetodos EstiloMetodos
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloMetodos>, EstiloMetodos>(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId) as EstiloMetodos;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1689,16 +1701,31 @@ namespace IPS.UMLSPF
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstilosClase.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstilosClase.EstilosClase
+					if (this.EstilosClase != null)
+					{
+						return false;
+					}
 					return true;
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstiloAtributos.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+					if (this.EstiloAtributos != null)
+					{
+						return false;
+					}
 					return true;
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstiloMetodos.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+					if (this.EstiloMetodos != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -1730,7 +1757,7 @@ namespace IPS.UMLSPF
 			if (sourceEstilosClase1 != null)
 			{
 				// Create link for path ClaseEnriquecidaHasEstilosClase.EstilosClase
-				this.EstilosClase.Add(sourceEstilosClase1);
+				this.EstilosClase = sourceEstilosClase1;
 
 				return;
 			}
@@ -1739,7 +1766,7 @@ namespace IPS.UMLSPF
 			if (sourceEstiloAtributos2 != null)
 			{
 				// Create link for path ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
-				this.EstiloAtributos.Add(sourceEstiloAtributos2);
+				this.EstiloAtributos = sourceEstiloAtributos2;
 
 				return;
 			}
@@ -1748,7 +1775,7 @@ namespace IPS.UMLSPF
 			if (sourceEstiloMetodos3 != null)
 			{
 				// Create link for path ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
-				this.EstiloMetodos.Add(sourceEstiloMetodos3);
+				this.EstiloMetodos = sourceEstiloMetodos3;
 
 				return;
 			}

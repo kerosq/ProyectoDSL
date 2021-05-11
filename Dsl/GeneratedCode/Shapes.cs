@@ -563,7 +563,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(5, 3);
+				return new DslDiagrams::SizeD(3, 2.7);
 			}
 		}
 		#endregion
@@ -1490,7 +1490,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(5, 3);
+				return new DslDiagrams::SizeD(3, 2.7);
 			}
 		}
 		#endregion
@@ -1503,6 +1503,10 @@ namespace IPS.UMLSPF
 		{
 			base.InitializeResources(classStyleSet);
 			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.AntiqueWhite);
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
 			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.AntiqueWhite);
@@ -1518,6 +1522,16 @@ namespace IPS.UMLSPF
 			get
 			{
 				return false;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion

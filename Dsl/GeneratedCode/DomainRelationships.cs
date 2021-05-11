@@ -1469,7 +1469,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstilosClase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstilosClase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("58dd85a2-24a3-4e37-956a-3b7062f9e72c")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -1539,24 +1539,43 @@ namespace IPS.UMLSPF
 		#endregion
 		#region Static methods to access EstilosClase of a ClaseEnriquecida
 		/// <summary>
-		/// Gets a list of EstilosClase.
+		/// Gets EstilosClase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<EstilosClase> GetEstilosClase(ClaseEnriquecida element)
+		public static EstilosClase GetEstilosClase(ClaseEnriquecida element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<EstilosClase>, EstilosClase>(element, ClaseEnriquecidaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstilosClase;
+		}
+		
+		/// <summary>
+		/// Sets EstilosClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstilosClase(ClaseEnriquecida element, EstilosClase newEstilosClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstilosClase);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the list of ClaseEnriquecidaHasEstilosClase links to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasEstilosClase link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> GetLinksToEstilosClase ( global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance )
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase GetLinkToEstilosClase (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region EstilosClase link accessor
@@ -1708,7 +1727,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloAtributos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloAtributos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("6d6592a5-cdcd-4603-a535-e243aa27bbf1")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -1778,24 +1797,43 @@ namespace IPS.UMLSPF
 		#endregion
 		#region Static methods to access EstiloAtributos of a ClaseEnriquecida
 		/// <summary>
-		/// Gets a list of EstiloAtributos.
+		/// Gets EstiloAtributos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<EstiloAtributos> GetEstiloAtributos(ClaseEnriquecida element)
+		public static EstiloAtributos GetEstiloAtributos(ClaseEnriquecida element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloAtributos>, EstiloAtributos>(element, ClaseEnriquecidaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstiloAtributos;
+		}
+		
+		/// <summary>
+		/// Sets EstiloAtributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstiloAtributos(ClaseEnriquecida element, EstiloAtributos newEstiloAtributos)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstiloAtributos);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the list of ClaseEnriquecidaHasEstiloAtributos links to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasEstiloAtributos link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> GetLinksToEstiloAtributos ( global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance )
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos GetLinkToEstiloAtributos (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region EstiloAtributos link accessor
@@ -1947,7 +1985,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloMetodos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloMetodos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("6cc245b0-5f75-4340-8014-6f24deca6ca2")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -2017,24 +2055,43 @@ namespace IPS.UMLSPF
 		#endregion
 		#region Static methods to access EstiloMetodos of a ClaseEnriquecida
 		/// <summary>
-		/// Gets a list of EstiloMetodos.
+		/// Gets EstiloMetodos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<EstiloMetodos> GetEstiloMetodos(ClaseEnriquecida element)
+		public static EstiloMetodos GetEstiloMetodos(ClaseEnriquecida element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloMetodos>, EstiloMetodos>(element, ClaseEnriquecidaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstiloMetodos;
+		}
+		
+		/// <summary>
+		/// Sets EstiloMetodos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstiloMetodos(ClaseEnriquecida element, EstiloMetodos newEstiloMetodos)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstiloMetodos);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the list of ClaseEnriquecidaHasEstiloMetodos links to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasEstiloMetodos link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> GetLinksToEstiloMetodos ( global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance )
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos GetLinkToEstiloMetodos (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region EstiloMetodos link accessor

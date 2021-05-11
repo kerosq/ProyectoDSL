@@ -376,7 +376,7 @@
     </DomainRelationship>
     <DomainRelationship Id="262c7f2b-659c-4761-bf32-55514e4a6aee" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase" Name="ClaseEnriquecidaHasEstilosClase" DisplayName="Clase Enriquecida Has Estilos Clase" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="58dd85a2-24a3-4e37-956a-3b7062f9e72c" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstilosClase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilos Clase">
+        <DomainRole Id="58dd85a2-24a3-4e37-956a-3b7062f9e72c" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstilosClase" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilos Clase">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>
@@ -392,7 +392,7 @@
     </DomainRelationship>
     <DomainRelationship Id="152ed9dc-919b-4fdc-b705-6edaee7103e1" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos" Name="ClaseEnriquecidaHasEstiloAtributos" DisplayName="Clase Enriquecida Has Estilo Atributos" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="6d6592a5-cdcd-4603-a535-e243aa27bbf1" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloAtributos" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Atributos">
+        <DomainRole Id="6d6592a5-cdcd-4603-a535-e243aa27bbf1" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloAtributos" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Atributos">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>
@@ -408,7 +408,7 @@
     </DomainRelationship>
     <DomainRelationship Id="252fa143-b76c-42ec-817f-02aec7ac9bca" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos" Name="ClaseEnriquecidaHasEstiloMetodos" DisplayName="Clase Enriquecida Has Estilo Metodos" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="6cc245b0-5f75-4340-8014-6f24deca6ca2" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloMetodos" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Metodos">
+        <DomainRole Id="6cc245b0-5f75-4340-8014-6f24deca6ca2" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloMetodos" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Metodos">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>
@@ -564,7 +564,7 @@
         <TextDecorator Name="NombreOperacion" DisplayName="Nombre Operacion" DefaultText="NombreOperacion" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Agregar Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Agregar Clase" FillColor="255, 202, 58" OutlineColor="253, 197, 0" InitialWidth="4" InitialHeight="3" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Agregar Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Agregar Clase" FillColor="255, 202, 58" OutlineColor="253, 197, 0" InitialWidth="4" InitialHeight="2" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
@@ -584,7 +584,7 @@
         <TextDecorator Name="MostrarAtributo" DisplayName="Mostrar Atributo" DefaultText="MostrarAtributo" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="AntiqueWhite" OutlineColor="AntiqueWhite" InitialWidth="4" InitialHeight="3" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="AntiqueWhite" OutlineColor="AntiqueWhite" InitialWidth="4" InitialHeight="2" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
