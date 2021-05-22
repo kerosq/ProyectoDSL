@@ -1907,7 +1907,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for ColorFondo
 		/// </summary>
-		private global::System.String colorFondoPropertyStorage = string.Empty;
+		private Colorz colorFondoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of ColorFondo domain property.
@@ -1916,7 +1916,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/ColorFondo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/ColorFondo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("dbcbd7a7-8e8f-4fcb-9e14-1746d1112633")]
-		public global::System.String ColorFondo
+		public Colorz ColorFondo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1932,7 +1932,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstilosClase.ColorFondo domain property.
 		/// </summary>
-		internal sealed partial class ColorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		internal sealed partial class ColorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, Colorz>
 		{
 			private ColorFondoPropertyHandler() { }
 		
@@ -1958,7 +1958,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstilosClase element)
+			public override sealed Colorz GetValue(EstilosClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorFondoPropertyStorage;
@@ -1969,11 +1969,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			public override sealed void SetValue(EstilosClase element, Colorz newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Colorz oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

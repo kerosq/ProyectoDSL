@@ -4493,14 +4493,14 @@ namespace IPS.UMLSPF
 				string attribColorFondo = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorFondo");
 				if (attribColorFondo != null)
 				{
-					global::System.String valueOfColorFondo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribColorFondo, out valueOfColorFondo))
+					Colorz valueOfColorFondo;
+					if (DslModeling::SerializationUtilities.TryGetValue<Colorz>(serializationContext, attribColorFondo, out valueOfColorFondo))
 					{
 						instanceOfEstilosClase.ColorFondo = valueOfColorFondo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorFondo", typeof(global::System.String), attribColorFondo);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorFondo", typeof(Colorz), attribColorFondo);
 					}
 				}
 			}
@@ -4983,12 +4983,11 @@ namespace IPS.UMLSPF
 			// ColorFondo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstilosClase.ColorFondo;
+				Colorz propValue = instanceOfEstilosClase.ColorFondo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Colorz>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorFondo", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorFondo", serializedPropValue);
 				}
 			}
 			// ColorLetra

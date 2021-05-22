@@ -1282,7 +1282,7 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeClaseEToolboxItem" xml:space="preserve">
-    <value>Agregar Clase Enriquecida</value>
+    <value>AgregarClaseEnriquecida</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeClaseEToolboxTooltip" xml:space="preserve">

@@ -379,7 +379,7 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: ColorFondo -->
-        <xsd:attribute name="colorFondo" type="xsd:string" />
+        <xsd:attribute name="colorFondo" type="Colorz" />
         <!-- Property: ColorLetra -->
         <xsd:attribute name="colorLetra" type="xsd:string" />
         <!-- Property: TipoLetra -->
