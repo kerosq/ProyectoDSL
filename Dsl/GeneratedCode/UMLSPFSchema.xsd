@@ -381,7 +381,7 @@
         <!-- Property: ColorFondo -->
         <xsd:attribute name="colorFondo" type="Colorz" />
         <!-- Property: ColorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="Colorz" />
         <!-- Property: TipoLetra -->
         <xsd:attribute name="tipoLetra" type="xsd:string" />
         <!-- Property: Alineacion -->
@@ -524,10 +524,6 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: Generalizacion1 -->
-        <xsd:attribute name="generalizacion1" type="xsd:string" />
-        <!-- Property: Generalizacion2 -->
-        <xsd:attribute name="generalizacion2" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1189,6 +1185,23 @@
       <xsd:enumeration value="Rojo"/>
       <xsd:enumeration value="Azul"/>
       <xsd:enumeration value="Negro"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum posicion -->
+  <xsd:simpleType name="posicion">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="left"/>
+      <xsd:enumeration value="right"/>
+      <xsd:enumeration value="center"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum tipodeletra -->
+  <xsd:simpleType name="tipodeletra">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Arial"/>
+      <xsd:enumeration value="Tahoma"/>
     </xsd:restriction>
   </xsd:simpleType>
   

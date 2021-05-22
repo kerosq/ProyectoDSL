@@ -140,8 +140,6 @@ namespace IPS.UMLSPF
 				new DomainMemberInfo(typeof(EstiloMetodos), "TipoLetra", EstiloMetodos.TipoLetraDomainPropertyId, typeof(EstiloMetodos.TipoLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloMetodos), "ColorLetra", EstiloMetodos.ColorLetraDomainPropertyId, typeof(EstiloMetodos.ColorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloMetodos), "MostrarEM", EstiloMetodos.MostrarEMDomainPropertyId, typeof(EstiloMetodos.MostrarEMPropertyHandler)),
-				new DomainMemberInfo(typeof(Herencia), "Generalizacion1", Herencia.Generalizacion1DomainPropertyId, typeof(Herencia.Generalizacion1PropertyHandler)),
-				new DomainMemberInfo(typeof(Herencia), "Generalizacion2", Herencia.Generalizacion2DomainPropertyId, typeof(Herencia.Generalizacion2PropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "NombreAtributo", AtributoIdentificador.NombreAtributoDomainPropertyId, typeof(AtributoIdentificador.NombreAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "TipoAtributo", AtributoIdentificador.TipoAtributoDomainPropertyId, typeof(AtributoIdentificador.TipoAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "MostrarAtributoID", AtributoIdentificador.MostrarAtributoIDDomainPropertyId, typeof(AtributoIdentificador.MostrarAtributoIDPropertyHandler)),
@@ -742,6 +740,58 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DescriptionResource("IPS.UMLSPF.Colorz/Negro.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		Negro,
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: posicion
+	/// Description for IPS.UMLSPF.posicion
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum posicion
+	{
+		/// <summary>
+		/// left
+		/// Description for IPS.UMLSPF.posicion.left
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.posicion/left.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		left,
+		/// <summary>
+		/// right
+		/// Description for IPS.UMLSPF.posicion.right
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.posicion/right.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		right,
+		/// <summary>
+		/// center
+		/// Description for IPS.UMLSPF.posicion.center
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.posicion/center.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		center,
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: tipodeletra
+	/// Description for IPS.UMLSPF.tipodeletra
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum tipodeletra
+	{
+		/// <summary>
+		/// Arial
+		/// Description for IPS.UMLSPF.tipodeletra.Arial
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.tipodeletra/Arial.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Arial,
+		/// <summary>
+		/// Tahoma
+		/// Description for IPS.UMLSPF.tipodeletra.Tahoma
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.tipodeletra/Tahoma.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Tahoma,
 	}
 }
 

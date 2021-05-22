@@ -161,7 +161,7 @@
         </DomainProperty>
         <DomainProperty Id="3a12762b-1c2a-4db1-880f-ca36395f5f48" Description="Description for IPS.UMLSPF.EstilosClase.Color Letra" Name="ColorLetra" DisplayName="Color Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Colorz" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="c24892e3-d2c0-48eb-bed1-fd4f9f6ded6c" Description="Description for IPS.UMLSPF.EstilosClase.Tipo Letra" Name="TipoLetra" DisplayName="Tipo Letra">
@@ -224,20 +224,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="f953e01b-ccf2-470d-9867-9e0f1a8f2025" Description="Description for IPS.UMLSPF.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="IPS.UMLSPF">
-      <Properties>
-        <DomainProperty Id="4264dfc4-08d1-479f-9ced-e57a9bf26674" Description="Description for IPS.UMLSPF.Herencia.Generalizacion1" Name="Generalizacion1" DisplayName="Generalizacion1">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="f20bdf78-9a0c-4d0f-97dd-5171e312c164" Description="Description for IPS.UMLSPF.Herencia.Generalizacion2" Name="Generalizacion2" DisplayName="Generalizacion2">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
+    <DomainClass Id="f953e01b-ccf2-470d-9867-9e0f1a8f2025" Description="Description for IPS.UMLSPF.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="IPS.UMLSPF" />
     <DomainClass Id="8e986070-39d3-4084-9b30-cd3e53097af3" Description="Description for IPS.UMLSPF.AtributoIdentificador" Name="AtributoIdentificador" DisplayName="Atributo Identificador" Namespace="IPS.UMLSPF">
       <Properties>
         <DomainProperty Id="a5025d40-3f8f-41dd-a098-7aa515c29cee" Description="Nombre del Atributo" Name="NombreAtributo" DisplayName="Nombre Atributo">
@@ -556,16 +543,22 @@
         <EnumerationLiteral Description="Description for IPS.UMLSPF.Colorz.Negro" Name="Negro" Value="" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="posicion" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.posicion">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.posicion.left" Name="left" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.posicion.right" Name="right" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.posicion.center" Name="center" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="tipodeletra" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.tipodeletra">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.tipodeletra.Arial" Name="Arial" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.tipodeletra.Tahoma" Name="Tahoma" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
-    <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png">
-      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="MGeneralizacion1" DisplayName="MGeneralizacion1" DefaultText="MGeneralizacion1" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerBottomCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="MGeneralizacion2" DisplayName="MGeneralizacion2" DefaultText="MGeneralizacion2" />
-      </ShapeHasDecorators>
-    </ImageShape>
+    <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png" />
     <GeometryShape Id="80f16035-0f4d-433e-97b2-8d9dd064235d" Description="Description for IPS.UMLSPF.ShapeOperaciones" Name="ShapeOperaciones" DisplayName="Shade de Operaciones" Namespace="IPS.UMLSPF" FixedTooltipText="Shape de Operaciones" FillColor="250, 240, 202" OutlineColor="250, 240, 202" InitialWidth="2.5" InitialHeight="0.5" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreOperacion" DisplayName="Nombre Operacion" DefaultText="NombreOperacion" />
@@ -824,12 +817,6 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="claseHija">
             <DomainRelationshipMoniker Name="EsHija" />
           </XmlRelationshipData>
-          <XmlPropertyData XmlName="generalizacion1">
-            <DomainPropertyMoniker Name="Herencia/Generalizacion1" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="generalizacion2">
-            <DomainPropertyMoniker Name="Herencia/Generalizacion2" />
-          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ModeloClassWEBHasHerencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBHasHerenciaMoniker" ElementName="modeloClassWEBHasHerencia" MonikerTypeName="ModeloClassWEBHasHerenciaMoniker">
@@ -986,24 +973,6 @@
         <ParentElementPath>
           <DomainPath>ModeloClassWEBHasHerencia.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="IMGHerencia/MGeneralizacion1" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Herencia/Generalizacion1" />
-              <DomainPath />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="IMGHerencia/MGeneralizacion2" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Herencia/Generalizacion2" />
-              <DomainPath />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
         <ImageShapeMoniker Name="IMGHerencia" />
       </ShapeMap>
       <ShapeMap>

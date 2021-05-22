@@ -4510,14 +4510,14 @@ namespace IPS.UMLSPF
 				string attribColorLetra = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetra");
 				if (attribColorLetra != null)
 				{
-					global::System.String valueOfColorLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribColorLetra, out valueOfColorLetra))
+					Colorz valueOfColorLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<Colorz>(serializationContext, attribColorLetra, out valueOfColorLetra))
 					{
 						instanceOfEstilosClase.ColorLetra = valueOfColorLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(global::System.String), attribColorLetra);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(Colorz), attribColorLetra);
 					}
 				}
 			}
@@ -4993,12 +4993,11 @@ namespace IPS.UMLSPF
 			// ColorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstilosClase.ColorLetra;
+				Colorz propValue = instanceOfEstilosClase.ColorLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Colorz>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", serializedPropValue);
 				}
 			}
 			// TipoLetra
@@ -6601,7 +6600,7 @@ namespace IPS.UMLSPF
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-	
+				
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
 			{
@@ -6649,43 +6648,7 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			Herencia instanceOfHerencia = element as Herencia;
-			global::System.Diagnostics.Debug.Assert(instanceOfHerencia != null, "Expecting an instance of Herencia");
-	
-			// Generalizacion1
-			if (!serializationContext.Result.Failed)
-			{
-				string attribGeneralizacion1 = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "generalizacion1");
-				if (attribGeneralizacion1 != null)
-				{
-					global::System.String valueOfGeneralizacion1;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribGeneralizacion1, out valueOfGeneralizacion1))
-					{
-						instanceOfHerencia.Generalizacion1 = valueOfGeneralizacion1;
-					}
-					else
-					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "generalizacion1", typeof(global::System.String), attribGeneralizacion1);
-					}
-				}
-			}
-			// Generalizacion2
-			if (!serializationContext.Result.Failed)
-			{
-				string attribGeneralizacion2 = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "generalizacion2");
-				if (attribGeneralizacion2 != null)
-				{
-					global::System.String valueOfGeneralizacion2;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribGeneralizacion2, out valueOfGeneralizacion2))
-					{
-						instanceOfHerencia.Generalizacion2 = valueOfGeneralizacion2;
-					}
-					else
-					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "generalizacion2", typeof(global::System.String), attribGeneralizacion2);
-					}
-				}
-			}
+			// There is no property to read; do nothing
 		}
 	
 		/// <summary>
@@ -7255,31 +7218,7 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			Herencia instanceOfHerencia = element as Herencia;
-			global::System.Diagnostics.Debug.Assert(instanceOfHerencia != null, "Expecting an instance of Herencia");
-	
-			// Generalizacion1
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfHerencia.Generalizacion1;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "generalizacion1", propValue);
-	
-				}
-			}
-			// Generalizacion2
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfHerencia.Generalizacion2;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "generalizacion2", propValue);
-	
-				}
-			}
+			// There are no properties; do nothing
 		}
 	
 		/// <summary>

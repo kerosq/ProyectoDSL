@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<uMLSPFDiagram dslVersion="1.0.0.0" Id="e8f2062a-c99f-47dd-b100-1f5c7654708f" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+<uMLSPFDiagram dslVersion="1.0.0.0" Id="e8f2062a-c99f-47dd-b100-1f5c7654708f" absoluteBounds="0, 0, 11, 9.875" name="Sample">
   <modeloClassWEBMoniker Id="8a5b10dc-80fe-4d1a-91c3-27db53f92ee6" />
   <nestedChildShapes>
     <shapeClase Id="90fb574b-4644-4bb3-9103-6ed8e6211e9f" absoluteBounds="0.625, 0.625, 5.25, 2.875">
@@ -32,5 +32,32 @@
     <shapeParametro Id="0646c2bc-96e1-4377-952b-6b1823544065" absoluteBounds="0.875, 3, 1.5, 0.25">
       <parametrosMoniker Id="454dd6dd-8518-4839-aa88-ae43827e0dab" />
     </shapeParametro>
+    <shapeEstiloMetodos Id="42d5efb0-88c9-40cf-9014-b755c33984d4" absoluteBounds="1.375, 4.375, 2, 0.375">
+      <estiloMetodosMoniker Id="f422101f-5664-4c61-807d-e836d21f8249" />
+    </shapeEstiloMetodos>
+    <shapeEstiloAtributos Id="2b265667-61c4-4948-a99f-4bfaf695f7e7" absoluteBounds="1.25, 5.125, 2, 0.375">
+      <estiloAtributosMoniker Id="6cb12c73-61af-4460-8d02-da738c57f143" />
+    </shapeEstiloAtributos>
+    <shapeOperaciones Id="c36edbe9-bea2-46db-bca3-0af64511386c" absoluteBounds="1, 4, 2.5, 0.5">
+      <operacionesMoniker Id="a233dd6e-3452-496a-a99a-65b73e89d286" />
+    </shapeOperaciones>
+    <shapeAtributoID Id="58fc0629-2eb0-46f5-a086-1d25f604a647" absoluteBounds="1.875, 3.875, 3, 0.375">
+      <atributoIdentificadorMoniker Id="3c02537e-fb0e-44c9-9dd8-ef2104addd19" />
+    </shapeAtributoID>
+    <shapeAtributo Id="6045c864-7736-4197-984a-7219849dbcf4" absoluteBounds="3.75, 4.625, 3, 0.375">
+      <atributoMoniker Id="d16f4055-caf6-44b8-9f4a-bd0cddff87e7" />
+    </shapeAtributo>
+    <shapeEstiloClase Id="e6c53292-6de9-4edb-b0e9-62f889b40136" absoluteBounds="0.875, 5.625, 2, 0.375">
+      <estilosClaseMoniker Id="4f6df1a4-d27d-48cf-a668-c1af6d21d256" />
+    </shapeEstiloClase>
+    <shapeEstiloClase Id="f9816b7e-8ca2-4ea2-bc00-9d6a7220e8aa" absoluteBounds="5.875, 4.125, 2, 0.375">
+      <estilosClaseMoniker Id="92ca3c54-4074-4167-8bd9-28323243f82b" />
+    </shapeEstiloClase>
+    <shapeClaseEnriquecida Id="3d459b42-6971-4c19-b410-65fbc96e43eb" absoluteBounds="5.75, 6.875, 4.875, 2.75">
+      <claseEnriquecidaMoniker Id="27f42573-1c8b-4b47-9afc-98d838482094" />
+    </shapeClaseEnriquecida>
+    <shapeAtributo Id="84fc78ef-5211-4745-ae9f-8c72bdae0368" absoluteBounds="5.875, 7.125, 3, 0.375">
+      <atributoMoniker Id="5a4c167c-d47b-497f-8487-c8bf008bc9be" />
+    </shapeAtributo>
   </nestedChildShapes>
 </uMLSPFDiagram>

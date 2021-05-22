@@ -373,22 +373,6 @@
     <value>Herencia</value>
     <comment>DisplayName for DomainClass &apos;Herencia&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.Herencia/Generalizacion1.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.Herencia.Generalizacion1</value>
-    <comment>Description for DomainProperty &apos;Generalizacion1&apos; on DomainClass &apos;Herencia&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.Herencia/Generalizacion1.DisplayName" xml:space="preserve">
-    <value>Generalizacion1</value>
-    <comment>DisplayName for DomainProperty &apos;Generalizacion1&apos; on DomainClass &apos;Herencia&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.Herencia/Generalizacion2.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.Herencia.Generalizacion2</value>
-    <comment>Description for DomainProperty &apos;Generalizacion2&apos; on DomainClass &apos;Herencia&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.Herencia/Generalizacion2.DisplayName" xml:space="preserve">
-    <value>Generalizacion2</value>
-    <comment>DisplayName for DomainProperty &apos;Generalizacion2&apos; on DomainClass &apos;Herencia&apos;</comment>
-  </data>
   <data name="IPS.UMLSPF.AtributoIdentificador.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.AtributoIdentificador</value>
     <comment>Description for DomainClass &apos;AtributoIdentificador&apos;</comment>
@@ -1021,6 +1005,46 @@
     <value>Description for IPS.UMLSPF.Colorz.Negro</value>
     <comment>Description for EnumerationLiteral &apos;Negro&apos; on DomainEnumeration &apos;Colorz&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.posicion/left.DisplayName" xml:space="preserve">
+    <value>left</value>
+    <comment>Display name for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;posicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.posicion/left.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.posicion.left</value>
+    <comment>Description for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;posicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.posicion/right.DisplayName" xml:space="preserve">
+    <value>right</value>
+    <comment>Display name for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;posicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.posicion/right.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.posicion.right</value>
+    <comment>Description for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;posicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.posicion/center.DisplayName" xml:space="preserve">
+    <value>center</value>
+    <comment>Display name for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;posicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.posicion/center.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.posicion.center</value>
+    <comment>Description for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;posicion&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodeletra/Arial.DisplayName" xml:space="preserve">
+    <value>Arial</value>
+    <comment>Display name for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;tipodeletra&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodeletra/Arial.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.tipodeletra.Arial</value>
+    <comment>Description for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;tipodeletra&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodeletra/Tahoma.DisplayName" xml:space="preserve">
+    <value>Tahoma</value>
+    <comment>Display name for EnumerationLiteral &apos;Tahoma&apos; on DomainEnumeration &apos;tipodeletra&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.tipodeletra/Tahoma.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.tipodeletra.Tahoma</value>
+    <comment>Description for EnumerationLiteral &apos;Tahoma&apos; on DomainEnumeration &apos;tipodeletra&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.IMGHerencia.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.IMGHerencia</value>
     <comment>Description for DomainClass &apos;IMGHerencia&apos;</comment>
@@ -1028,14 +1052,6 @@
   <data name="IPS.UMLSPF.IMGHerencia.DisplayName" xml:space="preserve">
     <value>IMGHerencia</value>
     <comment>DisplayName for DomainClass &apos;IMGHerencia&apos;</comment>
-  </data>
-  <data name="IMGHerenciaMGeneralizacion1DefaultText" xml:space="preserve">
-    <value>MGeneralizacion1</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="IMGHerenciaMGeneralizacion2DefaultText" xml:space="preserve">
-    <value>MGeneralizacion2</value>
-    <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ShapeOperaciones.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ShapeOperaciones</value>
