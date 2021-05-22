@@ -549,6 +549,13 @@
         <EnumerationLiteral Description="Description for IPS.UMLSPF.ConexionTipos.Composicion" Name="Composicion" Value="" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="Colorz" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.Colorz">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Colorz.Rojo" Name="Rojo" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Colorz.Azul" Name="Azul" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.Colorz.Negro" Name="Negro" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png">
@@ -564,7 +571,7 @@
         <TextDecorator Name="NombreOperacion" DisplayName="Nombre Operacion" DefaultText="NombreOperacion" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Agregar Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Agregar Clase" FillColor="255, 202, 58" OutlineColor="253, 197, 0" InitialWidth="3.9" InitialHeight="2.3" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="4867f102-9df8-4465-968a-6e1146e1c988" Description="Description for IPS.UMLSPF.ShapeClase" Name="ShapeClase" DisplayName="Agregar Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Agregar Clase" FillColor="255, 202, 58" OutlineColor="253, 197, 0" InitialWidth="4.9" InitialHeight="2.8" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
@@ -574,32 +581,32 @@
         <TextDecorator Name="MostrarParametros" DisplayName="Mostrar Parametros" DefaultText="MostrarParametros" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="63e7553f-3a36-4fc3-88fa-8a28ef62a3d3" Description="Description for IPS.UMLSPF.ShapeAtributoID" Name="ShapeAtributoID" DisplayName="Shape Atributo ID" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo ID" TextColor="White" FillColor="125, 133, 151" OutlineColor="125, 133, 151" InitialWidth="3" InitialHeight="0.3" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="63e7553f-3a36-4fc3-88fa-8a28ef62a3d3" Description="Description for IPS.UMLSPF.ShapeAtributoID" Name="ShapeAtributoID" DisplayName="Shape Atributo ID" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo ID" TextColor="White" FillColor="125, 133, 151" OutlineColor="125, 133, 151" InitialWidth="3" InitialHeight="0.4" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarAtributoID" DisplayName="Mostrar Atributo ID" DefaultText="MostrarAtributoID" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="7788902f-f865-4d4f-bebe-efaeaa1ba962" Description="Description for IPS.UMLSPF.ShapeAtributo" Name="ShapeAtributo" DisplayName="Shape Atributo" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo" OutlineColor="White" InitialWidth="3" InitialHeight="0.3" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="7788902f-f865-4d4f-bebe-efaeaa1ba962" Description="Description for IPS.UMLSPF.ShapeAtributo" Name="ShapeAtributo" DisplayName="Shape Atributo" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributo" OutlineColor="White" InitialWidth="3" InitialHeight="0.4" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarAtributo" DisplayName="Mostrar Atributo" DefaultText="MostrarAtributo" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="AntiqueWhite" OutlineColor="AntiqueWhite" InitialWidth="3.9" InitialHeight="2.3" FillGradientMode="None" Geometry="RoundedRectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+    <GeometryShape Id="c93ab4ef-0ec2-47bd-aa2c-d1668208f971" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="AntiqueWhite" OutlineColor="AntiqueWhite" InitialWidth="4.9" InitialHeight="2.8" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreClase" DisplayName="Nombre Clase" DefaultText="NombreClase" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="32d01433-f674-42b6-91af-5b299bbcc107" Description="Description for IPS.UMLSPF.ShapeEstiloClase" Name="ShapeEstiloClase" DisplayName="Shape Estilo Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Clase" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.3" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="32d01433-f674-42b6-91af-5b299bbcc107" Description="Description for IPS.UMLSPF.ShapeEstiloClase" Name="ShapeEstiloClase" DisplayName="Shape Estilo Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Clase" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.4" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarEstilosClase" DisplayName="Mostrar Estilos Clase" DefaultText="MostrarEstilosClase" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="2067591f-7a46-43db-99b5-3b60d0bd7c46" Description="Description for IPS.UMLSPF.ShapeEstiloAtributos" Name="ShapeEstiloAtributos" DisplayName="Shape Estilo Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Atributos" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.3" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="2067591f-7a46-43db-99b5-3b60d0bd7c46" Description="Description for IPS.UMLSPF.ShapeEstiloAtributos" Name="ShapeEstiloAtributos" DisplayName="Shape Estilo Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Atributos" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.4" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarEAs" DisplayName="Mostrar EAs" DefaultText="MostrarEAs" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="b565caa0-ebad-4595-9d9e-c396935627d6" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.3" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="b565caa0-ebad-4595-9d9e-c396935627d6" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" FillColor="241, 250, 238" InitialWidth="2" InitialHeight="0.4" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="MostrarEMs" DisplayName="Mostrar EMs" DefaultText="MostrarEMs" />
       </ShapeHasDecorators>

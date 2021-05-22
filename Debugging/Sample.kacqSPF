@@ -4,40 +4,42 @@
     <modeloClassWEBHasClase Id="fe8b6d39-4029-408a-9be3-fa935ba46db3">
       <clase Id="4157a4a0-cbca-4862-91c5-7162354bfd5f" nombreClase="Estudiante">
         <atributo>
-          <claseHasAtributo Id="59aa0e6e-2bf2-4bf7-a88e-66e71e16612e">
-            <atributo Id="4282636a-5ffd-4605-b781-142a785f6b62" tipoAtributo="Int" modificador="Public" />
+          <claseHasAtributo Id="e6eb4a48-913c-4be2-abf3-b6cc6fd3f0b5">
+            <atributo Id="90121dba-0f91-4cb3-a607-c3aed965990d" tipoAtributo="Int" modificador="Public" />
           </claseHasAtributo>
         </atributo>
         <operaciones>
-          <claseHasOperaciones Id="ecff83ea-fcb7-4b06-8776-7d07e4befa9c">
-            <operaciones Id="c44f45fb-3b25-4cff-849c-f7e0611e3233" nombreOperacion="aaa" tipoOperacion="Int" modificador="Public" />
+          <claseHasOperaciones Id="cd4699f5-a0fa-452a-a2ea-b4e9094d3df4">
+            <operaciones Id="f9e3e247-33d2-432d-aa11-ef7fcee604a3" tipoOperacion="Int" modificador="Public">
+              <parametros>
+                <operacionesHasParametros Id="3e54e7f0-94ac-4257-8c6c-1d6e88c5e0bc">
+                  <parametros Id="dabc26f7-3df6-4d8f-910f-bb6848f007f6" tipoDato="Int" />
+                </operacionesHasParametros>
+                <operacionesHasParametros Id="ee7cbfaf-03e6-41de-8974-8e3a5eb0a69e">
+                  <parametros Id="c3992bb2-fa49-476f-9683-436eb59f83f4" tipoDato="Int" />
+                </operacionesHasParametros>
+                <operacionesHasParametros Id="a552fa38-1fc8-4204-b498-41af4b8262ca">
+                  <parametros Id="b1212539-3105-4ce3-ae21-53f689f6136d" tipoDato="Int" />
+                </operacionesHasParametros>
+                <operacionesHasParametros Id="9b16c7d3-554d-432f-b223-bd200f34fe51">
+                  <parametros Id="454dd6dd-8518-4839-aa88-ae43827e0dab" tipoDato="Int" />
+                </operacionesHasParametros>
+              </parametros>
+            </operaciones>
           </claseHasOperaciones>
         </operaciones>
         <atributoIdentificador>
-          <claseHasAtributoIdentificador Id="164a03d4-cbf4-4b91-8abc-feb1d2f15c6a">
-            <atributoIdentificador Id="679dc8d0-ec74-499c-b2c5-b29b900d7d51" nombreAtributo="Nombre" tipoAtributo="String" modificador="Public" />
+          <claseHasAtributoIdentificador Id="6facd227-908e-481c-b650-ba270aed325a">
+            <atributoIdentificador Id="68b993aa-9d88-4a2e-b615-98bf7787761e" tipoAtributo="Int" modificador="Public" />
           </claseHasAtributoIdentificador>
         </atributoIdentificador>
       </clase>
     </modeloClassWEBHasClase>
-    <modeloClassWEBHasClase Id="122657c7-9764-482d-830b-2178a86e7678">
-      <claseEnriquecida Id="50c5d76b-af38-414f-8afd-b12aaf4eca98">
-        <estilosClase>
-          <claseEnriquecidaHasEstilosClase Id="10d74dcc-a6fe-4f0d-b55d-63c272472bc8">
-            <estilosClase Id="15f25617-8177-4865-93c3-63c59e977dcd" />
-          </claseEnriquecidaHasEstilosClase>
-        </estilosClase>
-        <estiloAtributos>
-          <claseEnriquecidaHasEstiloAtributos Id="ab782b61-9ee2-4e2e-9d6b-5cf1544dab3d">
-            <estiloAtributos Id="e9df2c0d-9be3-492c-b4e6-7b8c233b36e4" />
-          </claseEnriquecidaHasEstiloAtributos>
-        </estiloAtributos>
-        <estiloMetodos>
-          <claseEnriquecidaHasEstiloMetodos Id="86f3e127-a4a2-43a3-8962-c9f4c7ad7b57">
-            <estiloMetodos Id="143893a1-7697-460c-b7f1-b4af48a48bc9" />
-          </claseEnriquecidaHasEstiloMetodos>
-        </estiloMetodos>
-      </claseEnriquecida>
+    <modeloClassWEBHasClase Id="9a364aec-1bb7-4363-9cb8-475a01a9f77a">
+      <claseEnriquecida Id="899d0260-cbd3-4890-ba5c-0ec60c41faa1" />
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="a79cf77a-04a5-4517-ba37-97b9b3b6ad69">
+      <claseEnriquecida Id="5d0c1e06-a682-455a-9fef-26e70197c1ae" />
     </modeloClassWEBHasClase>
   </clase>
 </modeloClassWEB>

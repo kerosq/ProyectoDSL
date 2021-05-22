@@ -1183,5 +1183,14 @@
     </xsd:restriction>
   </xsd:simpleType>
   
+  <!-- Enum Colorz -->
+  <xsd:simpleType name="Colorz">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Rojo"/>
+      <xsd:enumeration value="Azul"/>
+      <xsd:enumeration value="Negro"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
 </xsd:schema>
 

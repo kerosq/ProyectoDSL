@@ -563,7 +563,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(3.9, 2.3);
+				return new DslDiagrams::SizeD(4.9, 2.8);
 			}
 		}
 		#endregion
@@ -1034,7 +1034,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(3, 0.3);
+				return new DslDiagrams::SizeD(3, 0.4);
 			}
 		}
 		#endregion
@@ -1267,7 +1267,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(3, 0.3);
+				return new DslDiagrams::SizeD(3, 0.4);
 			}
 		}
 		#endregion
@@ -1563,7 +1563,7 @@ namespace IPS.UMLSPF
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreClase");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -1728,7 +1728,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(2, 0.3);
+				return new DslDiagrams::SizeD(2, 0.4);
 			}
 		}
 		#endregion
@@ -1962,7 +1962,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(2, 0.3);
+				return new DslDiagrams::SizeD(2, 0.4);
 			}
 		}
 		#endregion
@@ -2196,7 +2196,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(2, 0.3);
+				return new DslDiagrams::SizeD(2, 0.4);
 			}
 		}
 		#endregion

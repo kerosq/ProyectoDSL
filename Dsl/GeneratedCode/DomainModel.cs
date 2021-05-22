@@ -715,4 +715,33 @@ namespace IPS.UMLSPF
 		Composicion,
 	}
 }
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: Colorz
+	/// Description for IPS.UMLSPF.Colorz
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Colorz
+	{
+		/// <summary>
+		/// Rojo
+		/// Description for IPS.UMLSPF.Colorz.Rojo
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Colorz/Rojo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Rojo,
+		/// <summary>
+		/// Azul
+		/// Description for IPS.UMLSPF.Colorz.Azul
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Colorz/Azul.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Azul,
+		/// <summary>
+		/// Negro
+		/// Description for IPS.UMLSPF.Colorz.Negro
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Colorz/Negro.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Negro,
+	}
+}
 

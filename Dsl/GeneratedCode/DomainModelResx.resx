@@ -997,6 +997,30 @@
     <value>Description for IPS.UMLSPF.ConexionTipos.Composicion</value>
     <comment>Description for EnumerationLiteral &apos;Composicion&apos; on DomainEnumeration &apos;ConexionTipos&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Colorz/Rojo.DisplayName" xml:space="preserve">
+    <value>Rojo</value>
+    <comment>Display name for EnumerationLiteral &apos;Rojo&apos; on DomainEnumeration &apos;Colorz&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Colorz/Rojo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Colorz.Rojo</value>
+    <comment>Description for EnumerationLiteral &apos;Rojo&apos; on DomainEnumeration &apos;Colorz&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Colorz/Azul.DisplayName" xml:space="preserve">
+    <value>Azul</value>
+    <comment>Display name for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;Colorz&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Colorz/Azul.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Colorz.Azul</value>
+    <comment>Description for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;Colorz&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Colorz/Negro.DisplayName" xml:space="preserve">
+    <value>Negro</value>
+    <comment>Display name for EnumerationLiteral &apos;Negro&apos; on DomainEnumeration &apos;Colorz&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Colorz/Negro.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Colorz.Negro</value>
+    <comment>Description for EnumerationLiteral &apos;Negro&apos; on DomainEnumeration &apos;Colorz&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.IMGHerencia.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.IMGHerencia</value>
     <comment>Description for DomainClass &apos;IMGHerencia&apos;</comment>

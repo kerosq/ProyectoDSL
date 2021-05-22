@@ -10,7 +10,7 @@ namespace IPS.UMLSPF
     {
         public string GetMostrarEMValue()
         {
-            return string.Format("{0} : {1}", this.TipoLetra.Trim() , this.ColorLetra.Trim());
+            return string.Format("Estilos de la Metodos \n {0} : {1}", this.TipoLetra , this.ColorLetra);
             //return this.TipoLetra.Trim() + " : " + this.ColorLetra.Trim();
         }
     }

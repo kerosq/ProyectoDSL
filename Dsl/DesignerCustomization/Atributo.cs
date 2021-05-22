@@ -10,7 +10,7 @@ namespace IPS.UMLSPF
     {
         public string GetMostrarAtributoValue() 
         {
-            return string.Format("{0} : {1} : {2}", this.Modificador, this.TipoAtributo, this.NombreAtributo);
+            return string.Format("Atributo \n {0} : {1} : {2}", this.Modificador, this.TipoAtributo, this.NombreAtributo);
             //return this.NombreAtributo.Trim() + " : " + this.TipoAtributo.Trim();
         }
     }

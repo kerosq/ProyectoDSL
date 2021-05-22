@@ -10,7 +10,7 @@ namespace IPS.UMLSPF
     {
         public string GetMostrarEstilosClaseValue()
         {
-            return string.Format("{0} : {1} : {2} : {3}", this.ColorFondo.Trim(), this.ColorLetra.Trim(), this.TipoLetra.Trim(), this.Alineacion.Trim());
+            return string.Format("Estilos de la Clase \n {0} : {1} : {2} : {3}", this.ColorFondo, this.ColorLetra, this.TipoLetra, this.Alineacion);
             //return this.ColorFondo.Trim() + " : " + this.ColorLetra.Trim() + " : " + this.TipoLetra.Trim() + " : " + this.Alineacion.Trim();
         }
     }

@@ -10,7 +10,7 @@ namespace IPS.UMLSPF
     {
         public string GetMostrarEAValue()
         {
-            return string.Format("{0} : {1} : {2}", this.Tipoletra.Trim() , this.ColorLetra.Trim(), this.FormatoAtributo.Trim());
+            return string.Format("Estilos de la Atributos \n {0} : {1} : {2}", this.Tipoletra , this.ColorLetra, this.FormatoAtributo);
             //return this.Tipoletra.Trim() + " : " +  this.ColorLetra.Trim() + " : " +  this.FormatoAtributo.Trim();
         }
     }
