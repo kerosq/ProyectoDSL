@@ -1208,9 +1208,6 @@
       <ConnectionTool Name="ConectarClases" ToolboxIcon="Resources\conectorArrow.bmp" Caption="ConectarClases" Tooltip="Conectar Clases" HelpKeyword="ConectarClases">
         <ConnectionBuilderMoniker Name="UMLSPF/conAsociacionBuilder" />
       </ConnectionTool>
-      <ElementTool Name="IconClassEnr" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="ClaseEnriquecida" Tooltip="Agregar ClaseEnriquecida" HelpKeyword="ClaseEnriquecida">
-        <DomainClassMoniker Name="ClaseEnriquecida" />
-      </ElementTool>
       <ElementTool Name="IconHerencia" ToolboxIcon="Resources\herenciaICON.bmp" Caption="Herencia" Tooltip="Agregar Herencia" HelpKeyword="Herencia">
         <DomainClassMoniker Name="Herencia" />
       </ElementTool>

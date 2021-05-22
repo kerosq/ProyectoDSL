@@ -1490,7 +1490,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(3.9, 2.3);
+				return new DslDiagrams::SizeD(4.9, 2.8);
 			}
 		}
 		#endregion
