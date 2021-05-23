@@ -106,7 +106,7 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return 13;
+				return 14;
 			}
 		}
 		
@@ -365,6 +365,22 @@ namespace IPS.UMLSPF
 						"AgregarEstiloAtributos", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("AgregarEstiloAtributosToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::IPS.UMLSPF.EstiloAtributos.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "IPS.UMLSPF.AgregarEstiloMeetodosToolboxItem":
+					// Add AgregarEstiloMeetodos shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"IPS.UMLSPF.AgregarEstiloMeetodosToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						14, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AgregarEstiloMeetodosToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AgregarEstiloMeetodosToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"AgregarEstiloMeetodos", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AgregarEstiloMeetodosToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::IPS.UMLSPF.EstiloMetodos.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

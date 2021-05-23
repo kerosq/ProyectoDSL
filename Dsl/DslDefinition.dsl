@@ -1236,6 +1236,9 @@
       <ElementTool Name="AgregarEstiloAtributos" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloAtributos" Tooltip="Agregar Estilo Atributos" HelpKeyword="AgregarEstiloAtributos">
         <DomainClassMoniker Name="EstiloAtributos" />
       </ElementTool>
+      <ElementTool Name="AgregarEstiloMeetodos" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloMeetodos" Tooltip="Agregar Estilo Meetodos" HelpKeyword="AgregarEstiloMeetodos">
+        <DomainClassMoniker Name="EstiloMetodos" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="UMLSPFDiagram" />
