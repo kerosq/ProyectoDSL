@@ -4527,14 +4527,14 @@ namespace IPS.UMLSPF
 				string attribTipoLetra = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
 				if (attribTipoLetra != null)
 				{
-					global::System.String valueOfTipoLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoLetra, out valueOfTipoLetra))
+					tipodeletra valueOfTipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<tipodeletra>(serializationContext, attribTipoLetra, out valueOfTipoLetra))
 					{
 						instanceOfEstilosClase.TipoLetra = valueOfTipoLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(global::System.String), attribTipoLetra);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(tipodeletra), attribTipoLetra);
 					}
 				}
 			}
@@ -4544,14 +4544,14 @@ namespace IPS.UMLSPF
 				string attribAlineacion = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "alineacion");
 				if (attribAlineacion != null)
 				{
-					global::System.String valueOfAlineacion;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribAlineacion, out valueOfAlineacion))
+					posicion valueOfAlineacion;
+					if (DslModeling::SerializationUtilities.TryGetValue<posicion>(serializationContext, attribAlineacion, out valueOfAlineacion))
 					{
 						instanceOfEstilosClase.Alineacion = valueOfAlineacion;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacion", typeof(global::System.String), attribAlineacion);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "alineacion", typeof(posicion), attribAlineacion);
 					}
 				}
 			}
@@ -5003,23 +5003,21 @@ namespace IPS.UMLSPF
 			// TipoLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstilosClase.TipoLetra;
+				tipodeletra propValue = instanceOfEstilosClase.TipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<tipodeletra>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
 				}
 			}
 			// Alineacion
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstilosClase.Alineacion;
+				posicion propValue = instanceOfEstilosClase.Alineacion;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<posicion>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacion", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "alineacion", serializedPropValue);
 				}
 			}
 		}
@@ -5241,14 +5239,14 @@ namespace IPS.UMLSPF
 				string attribTipoletra = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoletra");
 				if (attribTipoletra != null)
 				{
-					global::System.String valueOfTipoletra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoletra, out valueOfTipoletra))
+					tipodeletra valueOfTipoletra;
+					if (DslModeling::SerializationUtilities.TryGetValue<tipodeletra>(serializationContext, attribTipoletra, out valueOfTipoletra))
 					{
 						instanceOfEstiloAtributos.Tipoletra = valueOfTipoletra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoletra", typeof(global::System.String), attribTipoletra);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoletra", typeof(tipodeletra), attribTipoletra);
 					}
 				}
 			}
@@ -5258,14 +5256,14 @@ namespace IPS.UMLSPF
 				string attribColorLetra = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetra");
 				if (attribColorLetra != null)
 				{
-					global::System.String valueOfColorLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribColorLetra, out valueOfColorLetra))
+					Colorz valueOfColorLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<Colorz>(serializationContext, attribColorLetra, out valueOfColorLetra))
 					{
 						instanceOfEstiloAtributos.ColorLetra = valueOfColorLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(global::System.String), attribColorLetra);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(Colorz), attribColorLetra);
 					}
 				}
 			}
@@ -5714,23 +5712,21 @@ namespace IPS.UMLSPF
 			// Tipoletra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloAtributos.Tipoletra;
+				tipodeletra propValue = instanceOfEstiloAtributos.Tipoletra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<tipodeletra>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoletra", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoletra", serializedPropValue);
 				}
 			}
 			// ColorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloAtributos.ColorLetra;
+				Colorz propValue = instanceOfEstiloAtributos.ColorLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Colorz>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", serializedPropValue);
 				}
 			}
 			// FormatoAtributo
@@ -5963,14 +5959,14 @@ namespace IPS.UMLSPF
 				string attribTipoLetra = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
 				if (attribTipoLetra != null)
 				{
-					global::System.String valueOfTipoLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribTipoLetra, out valueOfTipoLetra))
+					tipodeletra valueOfTipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<tipodeletra>(serializationContext, attribTipoLetra, out valueOfTipoLetra))
 					{
 						instanceOfEstiloMetodos.TipoLetra = valueOfTipoLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(global::System.String), attribTipoLetra);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(tipodeletra), attribTipoLetra);
 					}
 				}
 			}
@@ -5980,14 +5976,14 @@ namespace IPS.UMLSPF
 				string attribColorLetra = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetra");
 				if (attribColorLetra != null)
 				{
-					global::System.String valueOfColorLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribColorLetra, out valueOfColorLetra))
+					Colorz valueOfColorLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<Colorz>(serializationContext, attribColorLetra, out valueOfColorLetra))
 					{
 						instanceOfEstiloMetodos.ColorLetra = valueOfColorLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(global::System.String), attribColorLetra);
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(Colorz), attribColorLetra);
 					}
 				}
 			}
@@ -6419,23 +6415,21 @@ namespace IPS.UMLSPF
 			// TipoLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloMetodos.TipoLetra;
+				tipodeletra propValue = instanceOfEstiloMetodos.TipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<tipodeletra>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
 				}
 			}
 			// ColorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloMetodos.ColorLetra;
+				Colorz propValue = instanceOfEstiloMetodos.ColorLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<Colorz>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", propValue);
-	
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", serializedPropValue);
 				}
 			}
 		}

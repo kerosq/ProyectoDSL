@@ -1304,7 +1304,7 @@ namespace IPS.UMLSPF
 	[DslDesign::DescriptionResource("IPS.UMLSPF.ShapeClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("c93ab4ef-0ec2-47bd-aa2c-d1668208f971")]
+	[DslModeling::DomainObjectId("5c82e096-aca6-4a33-92bf-7292d18be43f")]
 	public partial class ShapeClaseEnriquecida : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
@@ -1406,30 +1406,11 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(4.9, 2.8);
+				return new DslDiagrams::SizeD(1.5, 1);
 			}
 		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Outline pen settings for this shape.
-			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
-			outlinePen.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.AntiqueWhite);
-			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
-			// Fill brush settings for this shape.
-			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.AntiqueWhite);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
-		
-		}
-		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1437,17 +1418,18 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return false;
+				return true;
 			}
 		}
+		
 		/// <summary>
-		/// Specifies the geometry used by this shape
+		/// Indicates the direction of the gradient.
 		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
 		{
 			get
 			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
 			}
 		}
 		#endregion
@@ -1458,8 +1440,8 @@ namespace IPS.UMLSPF
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NombreClase");
-			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeClaseEnriquecidaNombreClaseDefaultText");
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("Nombre");
+			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeClaseEnriquecidaNombreDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1478,8 +1460,8 @@ namespace IPS.UMLSPF
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NombreClase");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Nombre");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -1509,7 +1491,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// ShapeClaseEnriquecida domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc93ab4ef, 0x0ec2, 0x47bd, 0xaa, 0x2c, 0xd1, 0x66, 0x82, 0x08, 0xf9, 0x71);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5c82e096, 0xaca6, 0x4a33, 0x92, 0xbf, 0x72, 0x92, 0xd1, 0x8b, 0xe4, 0x3f);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -1542,7 +1524,7 @@ namespace IPS.UMLSPF
 	[DslDesign::DescriptionResource("IPS.UMLSPF.ShapeEstiloClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("32d01433-f674-42b6-91af-5b299bbcc107")]
+	[DslModeling::DomainObjectId("b856f9fe-d0b0-4719-b36c-fdba586ac784")]
 	public partial class ShapeEstiloClase : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
@@ -1644,26 +1626,11 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(2, 0.4);
+				return new DslDiagrams::SizeD(1.5, 1);
 			}
 		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Fill brush settings for this shape.
-			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 241, 250, 238);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
-		
-		}
-		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1671,17 +1638,18 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return false;
+				return true;
 			}
 		}
+		
 		/// <summary>
-		/// Specifies the geometry used by this shape
+		/// Indicates the direction of the gradient.
 		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
 		{
 			get
 			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
 			}
 		}
 		#endregion
@@ -1692,8 +1660,8 @@ namespace IPS.UMLSPF
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("MostrarEstilosClase");
-			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeEstiloClaseMostrarEstilosClaseDefaultText");
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("Mostrar");
+			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeEstiloClaseMostrarDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1712,7 +1680,7 @@ namespace IPS.UMLSPF
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "MostrarEstilosClase");
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Mostrar");
 			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
@@ -1743,7 +1711,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// ShapeEstiloClase domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x32d01433, 0xf674, 0x42b6, 0x91, 0xaf, 0x5b, 0x29, 0x9b, 0xbc, 0xc1, 0x07);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb856f9fe, 0xd0b0, 0x4719, 0xb3, 0x6c, 0xfd, 0xba, 0x58, 0x6a, 0xc7, 0x84);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -1776,7 +1744,7 @@ namespace IPS.UMLSPF
 	[DslDesign::DescriptionResource("IPS.UMLSPF.ShapeEstiloAtributos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("2067591f-7a46-43db-99b5-3b60d0bd7c46")]
+	[DslModeling::DomainObjectId("98213957-5fe2-41cd-ba93-815603bf7a4b")]
 	public partial class ShapeEstiloAtributos : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
@@ -1878,26 +1846,11 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(2, 0.4);
+				return new DslDiagrams::SizeD(1.5, 1);
 			}
 		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Fill brush settings for this shape.
-			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 241, 250, 238);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
-		
-		}
-		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -1905,17 +1858,18 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return false;
+				return true;
 			}
 		}
+		
 		/// <summary>
-		/// Specifies the geometry used by this shape
+		/// Indicates the direction of the gradient.
 		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
 		{
 			get
 			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
 			}
 		}
 		#endregion
@@ -1926,8 +1880,8 @@ namespace IPS.UMLSPF
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("MostrarEAs");
-			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeEstiloAtributosMostrarEAsDefaultText");
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("Mostrar");
+			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeEstiloAtributosMostrarDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1946,7 +1900,7 @@ namespace IPS.UMLSPF
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "MostrarEAs");
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Mostrar");
 			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
@@ -1977,7 +1931,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// ShapeEstiloAtributos domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2067591f, 0x7a46, 0x43db, 0x99, 0xb5, 0x3b, 0x60, 0xd0, 0xbd, 0x7c, 0x46);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x98213957, 0x5fe2, 0x41cd, 0xba, 0x93, 0x81, 0x56, 0x03, 0xbf, 0x7a, 0x4b);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -2010,7 +1964,7 @@ namespace IPS.UMLSPF
 	[DslDesign::DescriptionResource("IPS.UMLSPF.ShapeEstiloMetodos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("b565caa0-ebad-4595-9d9e-c396935627d6")]
+	[DslModeling::DomainObjectId("9c8cfca0-1dfe-4f81-a190-a4473798b10b")]
 	public partial class ShapeEstiloMetodos : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
@@ -2112,26 +2066,11 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(2, 0.4);
+				return new DslDiagrams::SizeD(1.5, 1);
 			}
 		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Fill brush settings for this shape.
-			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromArgb(255, 241, 250, 238);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
-		
-		}
-		
 		/// <summary>
 		/// Indicates whether this shape displays a background gradient.
 		/// </summary>
@@ -2139,17 +2078,18 @@ namespace IPS.UMLSPF
 		{
 			get
 			{
-				return false;
+				return true;
 			}
 		}
+		
 		/// <summary>
-		/// Specifies the geometry used by this shape
+		/// Indicates the direction of the gradient.
 		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
 		{
 			get
 			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
 			}
 		}
 		#endregion
@@ -2160,8 +2100,8 @@ namespace IPS.UMLSPF
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("MostrarEMs");
-			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeEstiloMetodosMostrarEMsDefaultText");
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("Mostrar");
+			field1.DefaultText = global::IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("ShapeEstiloMetodosMostrarDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -2180,7 +2120,7 @@ namespace IPS.UMLSPF
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "MostrarEMs");
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Mostrar");
 			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
@@ -2211,7 +2151,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// ShapeEstiloMetodos domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb565caa0, 0xebad, 0x4595, 0x9d, 0x9e, 0xc3, 0x96, 0x93, 0x56, 0x27, 0xd6);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9c8cfca0, 0x1dfe, 0x4f81, 0xa1, 0x90, 0xa4, 0x47, 0x37, 0x98, 0xb1, 0x0b);
 		/// <summary>
 		/// Constructor
 		/// </summary>

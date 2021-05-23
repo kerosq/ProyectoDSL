@@ -383,9 +383,9 @@
         <!-- Property: ColorLetra -->
         <xsd:attribute name="colorLetra" type="Colorz" />
         <!-- Property: TipoLetra -->
-        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <xsd:attribute name="tipoLetra" type="tipodeletra" />
         <!-- Property: Alineacion -->
-        <xsd:attribute name="alineacion" type="xsd:string" />
+        <xsd:attribute name="alineacion" type="posicion" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -419,9 +419,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: Tipoletra -->
-        <xsd:attribute name="tipoletra" type="xsd:string" />
+        <xsd:attribute name="tipoletra" type="tipodeletra" />
         <!-- Property: ColorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="Colorz" />
         <!-- Property: FormatoAtributo -->
         <xsd:attribute name="formatoAtributo" type="xsd:string" />
       </xsd:extension>
@@ -457,9 +457,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: TipoLetra -->
-        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <xsd:attribute name="tipoLetra" type="tipodeletra" />
         <!-- Property: ColorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="Colorz" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1202,6 +1202,15 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="Arial"/>
       <xsd:enumeration value="Tahoma"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum formatoclase -->
+  <xsd:simpleType name="formatoclase">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Radio"/>
+      <xsd:enumeration value="Normal"/>
+      <xsd:enumeration value="Check"/>
     </xsd:restriction>
   </xsd:simpleType>
   

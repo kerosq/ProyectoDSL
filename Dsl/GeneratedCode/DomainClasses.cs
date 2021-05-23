@@ -2081,7 +2081,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for TipoLetra
 		/// </summary>
-		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		private tipodeletra tipoLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of TipoLetra domain property.
@@ -2090,7 +2090,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/TipoLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/TipoLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("c24892e3-d2c0-48eb-bed1-fd4f9f6ded6c")]
-		public global::System.String TipoLetra
+		public tipodeletra TipoLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2106,7 +2106,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstilosClase.TipoLetra domain property.
 		/// </summary>
-		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, tipodeletra>
 		{
 			private TipoLetraPropertyHandler() { }
 		
@@ -2132,7 +2132,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstilosClase element)
+			public override sealed tipodeletra GetValue(EstilosClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraPropertyStorage;
@@ -2143,11 +2143,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			public override sealed void SetValue(EstilosClase element, tipodeletra newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				tipodeletra oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2168,7 +2168,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for Alineacion
 		/// </summary>
-		private global::System.String alineacionPropertyStorage = string.Empty;
+		private posicion alineacionPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of Alineacion domain property.
@@ -2177,7 +2177,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstilosClase/Alineacion.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstilosClase/Alineacion.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("a57287a4-d92e-484e-ab26-d28a924eb0eb")]
-		public global::System.String Alineacion
+		public posicion Alineacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2193,7 +2193,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstilosClase.Alineacion domain property.
 		/// </summary>
-		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, global::System.String>
+		internal sealed partial class AlineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<EstilosClase, posicion>
 		{
 			private AlineacionPropertyHandler() { }
 		
@@ -2219,7 +2219,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstilosClase element)
+			public override sealed posicion GetValue(EstilosClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.alineacionPropertyStorage;
@@ -2230,11 +2230,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstilosClase element, global::System.String newValue)
+			public override sealed void SetValue(EstilosClase element, posicion newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				posicion oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2381,7 +2381,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for Tipoletra
 		/// </summary>
-		private global::System.String tipoletraPropertyStorage = string.Empty;
+		private tipodeletra tipoletraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of Tipoletra domain property.
@@ -2390,7 +2390,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/Tipoletra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/Tipoletra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("e1409060-7733-4f43-a66e-312b3afd24a9")]
-		public global::System.String Tipoletra
+		public tipodeletra Tipoletra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2406,7 +2406,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstiloAtributos.Tipoletra domain property.
 		/// </summary>
-		internal sealed partial class TipoletraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		internal sealed partial class TipoletraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, tipodeletra>
 		{
 			private TipoletraPropertyHandler() { }
 		
@@ -2432,7 +2432,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloAtributos element)
+			public override sealed tipodeletra GetValue(EstiloAtributos element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoletraPropertyStorage;
@@ -2443,11 +2443,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
+			public override sealed void SetValue(EstiloAtributos element, tipodeletra newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				tipodeletra oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2468,7 +2468,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for ColorLetra
 		/// </summary>
-		private global::System.String colorLetraPropertyStorage = string.Empty;
+		private Colorz colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of ColorLetra domain property.
@@ -2477,7 +2477,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/ColorLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/ColorLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("1d39572d-7564-4f66-af0e-11c0b6940049")]
-		public global::System.String ColorLetra
+		public Colorz ColorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2493,7 +2493,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstiloAtributos.ColorLetra domain property.
 		/// </summary>
-		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, Colorz>
 		{
 			private ColorLetraPropertyHandler() { }
 		
@@ -2519,7 +2519,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloAtributos element)
+			public override sealed Colorz GetValue(EstiloAtributos element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -2530,11 +2530,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
+			public override sealed void SetValue(EstiloAtributos element, Colorz newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Colorz oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2768,7 +2768,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for TipoLetra
 		/// </summary>
-		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		private tipodeletra tipoLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of TipoLetra domain property.
@@ -2777,7 +2777,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloMetodos/TipoLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloMetodos/TipoLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("24b9417c-4ef1-4274-9056-afdc70f8dfd1")]
-		public global::System.String TipoLetra
+		public tipodeletra TipoLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2793,7 +2793,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstiloMetodos.TipoLetra domain property.
 		/// </summary>
-		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, global::System.String>
+		internal sealed partial class TipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, tipodeletra>
 		{
 			private TipoLetraPropertyHandler() { }
 		
@@ -2819,7 +2819,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloMetodos element)
+			public override sealed tipodeletra GetValue(EstiloMetodos element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraPropertyStorage;
@@ -2830,11 +2830,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloMetodos element, global::System.String newValue)
+			public override sealed void SetValue(EstiloMetodos element, tipodeletra newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				tipodeletra oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2855,7 +2855,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for ColorLetra
 		/// </summary>
-		private global::System.String colorLetraPropertyStorage = string.Empty;
+		private Colorz colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of ColorLetra domain property.
@@ -2864,7 +2864,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloMetodos/ColorLetra.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloMetodos/ColorLetra.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("38f8ed5d-9974-483e-b21d-f4ed13455bac")]
-		public global::System.String ColorLetra
+		public Colorz ColorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2880,7 +2880,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstiloMetodos.ColorLetra domain property.
 		/// </summary>
-		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, global::System.String>
+		internal sealed partial class ColorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloMetodos, Colorz>
 		{
 			private ColorLetraPropertyHandler() { }
 		
@@ -2906,7 +2906,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloMetodos element)
+			public override sealed Colorz GetValue(EstiloMetodos element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -2917,11 +2917,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloMetodos element, global::System.String newValue)
+			public override sealed void SetValue(EstiloMetodos element, Colorz newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Colorz oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

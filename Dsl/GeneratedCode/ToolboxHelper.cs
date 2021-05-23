@@ -321,50 +321,50 @@ namespace IPS.UMLSPF
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "IPS.UMLSPF.ShapeEstiloClasesToolboxItem":
-					// Add ShapeEstiloClases shape tool.
+				case "IPS.UMLSPF.AgregarClaseEnriquecidaToolboxItem":
+					// Add AgregarClaseEnriquecida shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"IPS.UMLSPF.ShapeEstiloClasesToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"IPS.UMLSPF.AgregarClaseEnriquecidaToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						11, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ShapeEstiloClasesToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ShapeEstiloClasesToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						resourceManager.GetString("AgregarClaseEnriquecidaToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AgregarClaseEnriquecidaToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AgregarEstiloClases", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ShapeEstiloClasesToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						"AgregarClaseEnriquecida", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AgregarClaseEnriquecidaToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::IPS.UMLSPF.ClaseEnriquecida.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "IPS.UMLSPF.AgregarEstiloClaseToolboxItem":
+					// Add AgregarEstiloClase shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"IPS.UMLSPF.AgregarEstiloClaseToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						12, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AgregarEstiloClaseToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AgregarEstiloClaseToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"AgregarEstiloClase", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AgregarEstiloClaseToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::IPS.UMLSPF.EstilosClase.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "IPS.UMLSPF.ShapeEstilosAtributosToolboxItem":
-					// Add ShapeEstilosAtributos shape tool.
+				case "IPS.UMLSPF.AgregarEstiloAtributosToolboxItem":
+					// Add AgregarEstiloAtributos shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"IPS.UMLSPF.ShapeEstilosAtributosToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						12, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ShapeEstilosAtributosToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ShapeEstilosAtributosToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AgregarEstilosAtributos", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ShapeEstilosAtributosToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::IPS.UMLSPF.EstiloAtributos.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
-				case "IPS.UMLSPF.ShapeEstilosMetodosToolboxItem":
-					// Add ShapeEstilosMetodos shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"IPS.UMLSPF.ShapeEstilosMetodosToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"IPS.UMLSPF.AgregarEstiloAtributosToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						13, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ShapeEstilosMetodosToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ShapeEstilosMetodosToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						resourceManager.GetString("AgregarEstiloAtributosToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AgregarEstiloAtributosToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"IPS.UMLSPF.UMLSPFToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("UMLSPFToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AgregarEstilosMetodos", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ShapeEstilosMetodosToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::IPS.UMLSPF.EstiloMetodos.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						"AgregarEstiloAtributos", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AgregarEstiloAtributosToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::IPS.UMLSPF.EstiloAtributos.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

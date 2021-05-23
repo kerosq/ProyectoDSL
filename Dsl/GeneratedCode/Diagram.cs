@@ -414,7 +414,7 @@ namespace IPS.UMLSPF
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Clase.NombreClaseDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreClase").AssociateValueWith(shape.Store, propertyInfo);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Nombre").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -432,7 +432,7 @@ namespace IPS.UMLSPF
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstilosClase.MostrarEstilosClaseDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarEstilosClase").AssociateValueWith(shape.Store, propertyInfo);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -450,7 +450,10 @@ namespace IPS.UMLSPF
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarEAs").AssociateValueWith(shape.Store, propertyInfo);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -468,7 +471,10 @@ namespace IPS.UMLSPF
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloMetodos.MostrarEMDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MostrarEMs").AssociateValueWith(shape.Store, propertyInfo);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloMetodos.MostrarEMDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

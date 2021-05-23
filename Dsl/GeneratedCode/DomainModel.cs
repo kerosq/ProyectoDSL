@@ -794,4 +794,33 @@ namespace IPS.UMLSPF
 		Tahoma,
 	}
 }
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: formatoclase
+	/// Description for IPS.UMLSPF.formatoclase
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum formatoclase
+	{
+		/// <summary>
+		/// Radio
+		/// Description for IPS.UMLSPF.formatoclase.Radio
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.formatoclase/Radio.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Radio,
+		/// <summary>
+		/// Normal
+		/// Description for IPS.UMLSPF.formatoclase.Normal
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.formatoclase/Normal.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Normal,
+		/// <summary>
+		/// Check
+		/// Description for IPS.UMLSPF.formatoclase.Check
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.formatoclase/Check.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Check,
+	}
+}
 

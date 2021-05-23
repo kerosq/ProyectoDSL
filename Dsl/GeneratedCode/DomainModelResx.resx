@@ -1045,6 +1045,30 @@
     <value>Description for IPS.UMLSPF.tipodeletra.Tahoma</value>
     <comment>Description for EnumerationLiteral &apos;Tahoma&apos; on DomainEnumeration &apos;tipodeletra&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.formatoclase/Radio.DisplayName" xml:space="preserve">
+    <value>Radio</value>
+    <comment>Display name for EnumerationLiteral &apos;Radio&apos; on DomainEnumeration &apos;formatoclase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatoclase/Radio.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.formatoclase.Radio</value>
+    <comment>Description for EnumerationLiteral &apos;Radio&apos; on DomainEnumeration &apos;formatoclase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatoclase/Normal.DisplayName" xml:space="preserve">
+    <value>Normal</value>
+    <comment>Display name for EnumerationLiteral &apos;Normal&apos; on DomainEnumeration &apos;formatoclase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatoclase/Normal.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.formatoclase.Normal</value>
+    <comment>Description for EnumerationLiteral &apos;Normal&apos; on DomainEnumeration &apos;formatoclase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatoclase/Check.DisplayName" xml:space="preserve">
+    <value>Check</value>
+    <comment>Display name for EnumerationLiteral &apos;Check&apos; on DomainEnumeration &apos;formatoclase&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatoclase/Check.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.formatoclase.Check</value>
+    <comment>Description for EnumerationLiteral &apos;Check&apos; on DomainEnumeration &apos;formatoclase&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.IMGHerencia.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.IMGHerencia</value>
     <comment>Description for DomainClass &apos;IMGHerencia&apos;</comment>
@@ -1121,8 +1145,8 @@
     <value>Shape Clase Enriquecida</value>
     <comment>DisplayName for DomainClass &apos;ShapeClaseEnriquecida&apos;</comment>
   </data>
-  <data name="ShapeClaseEnriquecidaNombreClaseDefaultText" xml:space="preserve">
-    <value>NombreClase</value>
+  <data name="ShapeClaseEnriquecidaNombreDefaultText" xml:space="preserve">
+    <value>Nombre</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ShapeEstiloClase.Description" xml:space="preserve">
@@ -1133,8 +1157,8 @@
     <value>Shape Estilo Clase</value>
     <comment>DisplayName for DomainClass &apos;ShapeEstiloClase&apos;</comment>
   </data>
-  <data name="ShapeEstiloClaseMostrarEstilosClaseDefaultText" xml:space="preserve">
-    <value>MostrarEstilosClase</value>
+  <data name="ShapeEstiloClaseMostrarDefaultText" xml:space="preserve">
+    <value>Mostrar</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ShapeEstiloAtributos.Description" xml:space="preserve">
@@ -1145,8 +1169,8 @@
     <value>Shape Estilo Atributos</value>
     <comment>DisplayName for DomainClass &apos;ShapeEstiloAtributos&apos;</comment>
   </data>
-  <data name="ShapeEstiloAtributosMostrarEAsDefaultText" xml:space="preserve">
-    <value>MostrarEAs</value>
+  <data name="ShapeEstiloAtributosMostrarDefaultText" xml:space="preserve">
+    <value>Mostrar</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ShapeEstiloMetodos.Description" xml:space="preserve">
@@ -1157,8 +1181,8 @@
     <value>Shape Estilo Metodos</value>
     <comment>DisplayName for DomainClass &apos;ShapeEstiloMetodos&apos;</comment>
   </data>
-  <data name="ShapeEstiloMetodosMostrarEMsDefaultText" xml:space="preserve">
-    <value>MostrarEMs</value>
+  <data name="ShapeEstiloMetodosMostrarDefaultText" xml:space="preserve">
+    <value>Mostrar</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ConecClase.Description" xml:space="preserve">
@@ -1305,28 +1329,28 @@
     <value>AgregarClaseEnriquecida</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ShapeEstiloClasesToolboxItem" xml:space="preserve">
-    <value>AgregarEstiloClases</value>
+  <data name="AgregarClaseEnriquecidaToolboxItem" xml:space="preserve">
+    <value>AgregarClaseEnriquecida</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ShapeEstiloClasesToolboxTooltip" xml:space="preserve">
-    <value>AgregarEstiloClases</value>
+  <data name="AgregarClaseEnriquecidaToolboxTooltip" xml:space="preserve">
+    <value>Agregar Clase Enriquecida</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ShapeEstilosAtributosToolboxItem" xml:space="preserve">
-    <value>AgregarEstilosAtributos</value>
+  <data name="AgregarEstiloClaseToolboxItem" xml:space="preserve">
+    <value>AgregarEstiloClase</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ShapeEstilosAtributosToolboxTooltip" xml:space="preserve">
-    <value>AgregarEstilosAtributos</value>
+  <data name="AgregarEstiloClaseToolboxTooltip" xml:space="preserve">
+    <value>Agregar Estilo Clase</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ShapeEstilosMetodosToolboxItem" xml:space="preserve">
-    <value>AgregarEstilosMetodos</value>
+  <data name="AgregarEstiloAtributosToolboxItem" xml:space="preserve">
+    <value>AgregarEstiloAtributos</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ShapeEstilosMetodosToolboxTooltip" xml:space="preserve">
-    <value>AgregarEstilosMetodos</value>
+  <data name="AgregarEstiloAtributosToolboxTooltip" xml:space="preserve">
+    <value>Agregar Estilo Atributos</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1498,16 +1522,16 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ShapeEstiloClasesToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="AgregarClaseEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ShapeEstilosAtributosToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\IconoEstiloClase.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AgregarEstiloClaseToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ShapeEstilosMetodosToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\IconoEstiloMetodos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AgregarEstiloAtributosToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>
