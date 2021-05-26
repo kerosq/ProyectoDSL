@@ -1,0 +1,58 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ UMLSPF processor="UMLSPFDirectiveProcessor" requires="fileName='Sample.kacqSPF'" #> 
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#@ output extension=".java" #>
+
+
+
+<#
+
+	String extension = ".java";
+	
+	var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
+		
+	WriteLine("------------------------------------------------ ");
+	WriteLine("");
+	if (this.ModeloClassWEB.Clase.Count ==0)
+		WriteLine("  solucion vacía. No se ha configurado ningún nodo");
+	else{ 
+		
+		Clase modelClass;
+						
+		foreach(Clase nodo in this.ModeloClassWEB.Clase){
+			if (nodo is Clase) {	
+				modelClass = ((Clase)nodo);		
+				fileManager.StartNewFile(modelClass.NombreClase+extension);	
+
+
+
+
+
+			}
+		}
+
+		foreach(Herencia herencia in this.ModeloClassWEB.Herencia){
+			foreach(Clase Hija in herencia.ClaseHija){
+
+			}
+		}
+
+	}
+
+	// cierra el proceso de creación de ficheros del documento.
+	fileManager.Process();
+
+#>
+
+<#+
+	private String getComunidad(tipodato dato ){
+		String c = dato.ToString();
+		if ((c.CompareTo("Madrid")==0))
+			return c;
+		else if (c.CompareTo("CastillaLaMancha")==0)
+			return "Castilla la Mancha";
+		else if (c.CompareTo("PaisVasco")==0)
+			return "Pais Vasco";
+		else return "";
+	}
+#>

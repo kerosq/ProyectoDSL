@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2fa49bf6-8e71-4cbc-9b3a-56be0e3c476a}</ProjectGuid>
+    <ProjectGuid>{2FA49BF6-8E71-4CBC-9B3A-56BE0E3C476A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -65,6 +65,33 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cliente.java">
+      <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Coorporativo.java">
+      <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Java.java">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Java.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Java.java</LastGenOutput>
+    </Content>
+    <Content Include="LineaPedido.java">
+      <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Pedido.java">
+      <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Personal.java">
+      <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Producto.java">
+      <DependentUpon>Java.tt</DependentUpon>
+    </Content>
     <Content Include="UMLSPFReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

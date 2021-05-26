@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<uMLSPFDiagram dslVersion="1.0.0.0" Id="e8f2062a-c99f-47dd-b100-1f5c7654708f" absoluteBounds="0, 0, 14.875, 8.5" name="Sample">
+<uMLSPFDiagram dslVersion="1.0.0.0" Id="e8f2062a-c99f-47dd-b100-1f5c7654708f" absoluteBounds="0, 0, 11.875, 8.5" name="Sample">
   <modeloClassWEBMoniker Id="8a5b10dc-80fe-4d1a-91c3-27db53f92ee6" />
   <nestedChildShapes>
     <shapeClaseEnriquecida Id="aafe02a7-83ef-4b67-a3b5-01052e0fff33" absoluteBounds="0.5, 0.75, 5, 3">
@@ -11,22 +11,22 @@
     <shapeClase Id="c7635fca-3705-41e6-8a62-8857fa3bd3f3" absoluteBounds="3.375, 6.125, 2.375, 0.875">
       <claseMoniker Id="858ec77c-a869-4d59-ae52-d49665c26775" />
     </shapeClase>
-    <shapeClase Id="71d7c399-030d-4d17-bf43-d287039d2f71" absoluteBounds="11, 0.625, 3.5, 1">
+    <shapeClase Id="71d7c399-030d-4d17-bf43-d287039d2f71" absoluteBounds="8, 1.25, 3.5, 1">
       <claseMoniker Id="00da68f5-b53e-4bb9-bcc5-c73464cf8f93" />
     </shapeClase>
-    <shapeClase Id="1a94c308-9e84-4fc5-b529-1e8e4eded099" absoluteBounds="11, 2.625, 3.625, 0.875">
+    <shapeClase Id="1a94c308-9e84-4fc5-b529-1e8e4eded099" absoluteBounds="8, 3.25, 3.625, 0.875">
       <claseMoniker Id="06c76675-b749-439c-b667-78f06eec2ab1" />
     </shapeClase>
-    <shapeClase Id="974eeeb3-1339-4a6b-90a1-f27f46861aef" absoluteBounds="11, 4.625, 3.625, 0.875">
+    <shapeClase Id="974eeeb3-1339-4a6b-90a1-f27f46861aef" absoluteBounds="8, 5.25, 3.625, 0.875">
       <claseMoniker Id="e66d9eda-40f8-4b93-882c-6f36351653ea" />
     </shapeClase>
-    <shapeAtributoID Id="001c6282-6cbf-45f9-8a77-7ac9d16dc0d3" absoluteBounds="11.375, 1.125, 3, 0.375">
+    <shapeAtributoID Id="001c6282-6cbf-45f9-8a77-7ac9d16dc0d3" absoluteBounds="8.375, 1.75, 3, 0.375">
       <atributoIdentificadorMoniker Id="fca1ba4e-4095-4f48-96c3-49419898218f" />
     </shapeAtributoID>
-    <shapeAtributoID Id="1da041ca-05b9-4f56-b8bb-c04253d161f1" absoluteBounds="11.5, 3, 3, 0.375">
+    <shapeAtributoID Id="1da041ca-05b9-4f56-b8bb-c04253d161f1" absoluteBounds="8.5, 3.625, 3, 0.375">
       <atributoIdentificadorMoniker Id="6cf46ad4-389d-4671-9170-d3c954da04f2" />
     </shapeAtributoID>
-    <shapeAtributoID Id="287f2f64-2c2d-4e0a-b93b-267177706a15" absoluteBounds="11.5, 5, 3, 0.375">
+    <shapeAtributoID Id="287f2f64-2c2d-4e0a-b93b-267177706a15" absoluteBounds="8.5, 5.625, 3, 0.375">
       <atributoIdentificadorMoniker Id="68254e9f-5e54-4fb3-aa32-2c9ca29b0f33" />
     </shapeAtributoID>
     <shapeAtributoID Id="18062be1-dbba-4dae-9bf9-c83b96e282d3" absoluteBounds="0.75, 6.5, 1.875, 0.375">
@@ -62,28 +62,28 @@
     <iMGHerencia Id="56e2c3cd-4fcf-4752-b8c2-2ba7755178ce" absoluteBounds="2.875, 4.375, 0.55548608303070068, 0.54159897565841675">
       <herenciaMoniker Id="55efe291-c4c0-4d22-8804-58cdd9d64317" />
     </iMGHerencia>
-    <conEsPadre Id="cbdd9d00-c982-425a-af42-124957458f8f" edgePoints="[(3.15274304151535 : 4.375); (3.15274304151535 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conEsPadre Id="cbdd9d00-c982-425a-af42-124957458f8f" edgePoints="[(3.15274304151535 : 4.375); (3.15274304151535 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <esPadreMoniker Id="0a67378d-ffd4-4355-9770-2bcda6bce9cc" />
       <nodes>
         <iMGHerenciaMoniker Id="56e2c3cd-4fcf-4752-b8c2-2ba7755178ce" />
         <shapeClaseEnriquecidaMoniker Id="aafe02a7-83ef-4b67-a3b5-01052e0fff33" />
       </nodes>
     </conEsPadre>
-    <conEsPadre Id="b73f3423-4461-4659-bac3-0ac030e3d3b4" edgePoints="[(2.875 : 4.64579948782921); (1.7499995 : 4.64579948782921); (1.7499995 : 6.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conEsPadre Id="b73f3423-4461-4659-bac3-0ac030e3d3b4" edgePoints="[(2.875 : 4.64579948782921); (1.7499995 : 4.64579948782921); (1.7499995 : 6.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <esPadreMoniker Id="79cce46c-4c9e-402f-a702-ae458ad54e2d" />
       <nodes>
         <iMGHerenciaMoniker Id="56e2c3cd-4fcf-4752-b8c2-2ba7755178ce" />
         <shapeClaseMoniker Id="1e1277c0-0291-4e37-bff1-6dc424c58101" />
       </nodes>
     </conEsPadre>
-    <conEsPadre Id="c874cb41-9e7d-4b49-b03a-a766e49ca8d4" edgePoints="[(3.4304860830307 : 4.64579948782921); (4.59024354151535 : 4.64579948782921); (4.59024354151535 : 6.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conEsPadre Id="c874cb41-9e7d-4b49-b03a-a766e49ca8d4" edgePoints="[(3.4304860830307 : 4.64579948782921); (4.59024354151535 : 4.64579948782921); (4.59024354151535 : 6.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <esPadreMoniker Id="c12b1645-06c8-4ce9-9082-919fb0662fdb" />
       <nodes>
         <iMGHerenciaMoniker Id="56e2c3cd-4fcf-4752-b8c2-2ba7755178ce" />
         <shapeClaseMoniker Id="c7635fca-3705-41e6-8a62-8857fa3bd3f3" />
       </nodes>
     </conEsPadre>
-    <conecClase Id="04364a72-ef5f-4b9e-8900-6fe80bf38ff5" edgePoints="[(11 : 1.1875); (5.5 : 1.1875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="04364a72-ef5f-4b9e-8900-6fe80bf38ff5" edgePoints="[(8 : 1.75); (5.5 : 1.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <conAsociacionMoniker Id="ca767df6-7006-4442-8e84-2dbeb12631c8" />
       <relativeChildShapes />
       <nodes>
@@ -91,7 +91,7 @@
         <shapeClaseEnriquecidaMoniker Id="aafe02a7-83ef-4b67-a3b5-01052e0fff33" />
       </nodes>
     </conecClase>
-    <conecClase Id="5c1846f8-faa0-4a86-bbbc-ee7829641e7a" edgePoints="[(12.75 : 1.625); (12.75 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="5c1846f8-faa0-4a86-bbbc-ee7829641e7a" edgePoints="[(9.75 : 2.25); (9.75 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <conAsociacionMoniker Id="3f497288-853e-47a2-8cbf-3d6bfa5b87b6" />
       <relativeChildShapes />
       <nodes>
@@ -99,7 +99,7 @@
         <shapeClaseMoniker Id="1a94c308-9e84-4fc5-b529-1e8e4eded099" />
       </nodes>
     </conecClase>
-    <conecClase Id="2f8fec11-7f78-47cf-92e9-33e81cd44024" edgePoints="[(12.8125 : 3.5); (12.8125 : 4.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="2f8fec11-7f78-47cf-92e9-33e81cd44024" edgePoints="[(9.8125 : 4.125); (9.8125 : 5.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <conAsociacionMoniker Id="61731cf4-bd17-4832-8eeb-0b346130d462" />
       <relativeChildShapes />
       <nodes>
