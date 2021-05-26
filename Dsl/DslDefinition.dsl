@@ -591,22 +591,22 @@
         <TextDecorator Name="MostrarAtributo" DisplayName="Mostrar Atributo" DefaultText="MostrarAtributo" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="5c82e096-aca6-4a33-92bf-7292d18be43f" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+    <GeometryShape Id="5c82e096-aca6-4a33-92bf-7292d18be43f" Description="Description for IPS.UMLSPF.ShapeClaseEnriquecida" Name="ShapeClaseEnriquecida" DisplayName="Shape Clase Enriquecida" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Clase Enriquecida" FillColor="LemonChiffon" InitialWidth="4.9" InitialHeight="2.8" FillGradientMode="None" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Nombre" DisplayName="Nombre" DefaultText="Nombre" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="b856f9fe-d0b0-4719-b36c-fdba586ac784" Description="Description for IPS.UMLSPF.ShapeEstiloClase" Name="ShapeEstiloClase" DisplayName="Shape Estilo Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Clase" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="b856f9fe-d0b0-4719-b36c-fdba586ac784" Description="Description for IPS.UMLSPF.ShapeEstiloClase" Name="ShapeEstiloClase" DisplayName="Shape Estilo Clase" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Clase" FillColor="Chartreuse" InitialWidth="3" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Mostrar" DisplayName="Mostrar" DefaultText="Mostrar" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="98213957-5fe2-41cd-ba93-815603bf7a4b" Description="Description for IPS.UMLSPF.ShapeEstiloAtributos" Name="ShapeEstiloAtributos" DisplayName="Shape Estilo Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Atributos" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="98213957-5fe2-41cd-ba93-815603bf7a4b" Description="Description for IPS.UMLSPF.ShapeEstiloAtributos" Name="ShapeEstiloAtributos" DisplayName="Shape Estilo Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Atributos" FillColor="Chartreuse" InitialWidth="3" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Mostrar" DisplayName="Mostrar" DefaultText="Mostrar" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="9c8cfca0-1dfe-4f81-a190-a4473798b10b" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="9c8cfca0-1dfe-4f81-a190-a4473798b10b" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" FillColor="Chartreuse" InitialWidth="4" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Mostrar" DisplayName="Mostrar" DefaultText="Mostrar" />
       </ShapeHasDecorators>
@@ -1224,8 +1224,8 @@
       <ElementTool Name="ShapeAtributo" ToolboxIcon="Resources\Atributos.bmp" Caption="AgregarAtributo" Tooltip="AgregarAtributo" HelpKeyword="AgregarAtributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
-      <ElementTool Name="ShapeClaseE" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarClaseEnriquecida" Tooltip="AgregarClaseEnriquecida" HelpKeyword="AgregarClaseEnriquecida">
-        <DomainClassMoniker Name="ClaseEnriquecida" />
+      <ElementTool Name="ShapeClaseE" ToolboxIcon="Resources\IconoClase.bmp" Caption="AgregarClase" Tooltip="AgregarClase" HelpKeyword="AgregarClase">
+        <DomainClassMoniker Name="Clase" />
       </ElementTool>
       <ElementTool Name="AgregarClaseEnriquecida" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarClaseEnriquecida" Tooltip="Agregar Clase Enriquecida" HelpKeyword="AgregarClaseEnriquecida">
         <DomainClassMoniker Name="ClaseEnriquecida" />
@@ -1238,6 +1238,9 @@
       </ElementTool>
       <ElementTool Name="AgregarEstiloMeetodos" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloMeetodos" Tooltip="Agregar Estilo Meetodos" HelpKeyword="AgregarEstiloMeetodos">
         <DomainClassMoniker Name="EstiloMetodos" />
+      </ElementTool>
+      <ElementTool Name="ShapeParametroz" ToolboxIcon="Resources\Parametro.bmp" Caption="ShapeParametroz" Tooltip="Shape Parametroz" HelpKeyword="ShapeParametroz">
+        <DomainClassMoniker Name="Parametros" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

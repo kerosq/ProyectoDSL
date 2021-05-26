@@ -1322,11 +1322,11 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ShapeClaseEToolboxItem" xml:space="preserve">
-    <value>AgregarClaseEnriquecida</value>
+    <value>AgregarClase</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ShapeClaseEToolboxTooltip" xml:space="preserve">
-    <value>AgregarClaseEnriquecida</value>
+    <value>AgregarClase</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="AgregarClaseEnriquecidaToolboxItem" xml:space="preserve">
@@ -1359,6 +1359,14 @@
   </data>
   <data name="AgregarEstiloMeetodosToolboxTooltip" xml:space="preserve">
     <value>Agregar Estilo Meetodos</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ShapeParametrozToolboxItem" xml:space="preserve">
+    <value>ShapeParametroz</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ShapeParametrozToolboxTooltip" xml:space="preserve">
+    <value>Shape Parametroz</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1527,7 +1535,7 @@ A DomainClass can be serialized as a moniker only if
     <comment>Toolbox item image</comment>
   </data>
   <data name="ShapeClaseEToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\IconoClase.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="AgregarClaseEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -1544,6 +1552,10 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="AgregarEstiloMeetodosToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ShapeParametrozToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Parametro.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

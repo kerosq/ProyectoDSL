@@ -1,91 +1,123 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <modeloClassWEB xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8a5b10dc-80fe-4d1a-91c3-27db53f92ee6" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF">
   <clase>
-    <modeloClassWEBHasClase Id="fe8b6d39-4029-408a-9be3-fa935ba46db3">
-      <clase Id="4157a4a0-cbca-4862-91c5-7162354bfd5f" nombreClase="Estudiante">
+    <modeloClassWEBHasClase Id="39f812e1-7740-4bf1-b8ed-e19bb98ae02b">
+      <claseEnriquecida Id="419b5613-0718-416e-8cb9-0d3a2078a800" nombreClase="Cliente">
         <atributo>
-          <claseHasAtributo Id="e6eb4a48-913c-4be2-abf3-b6cc6fd3f0b5">
-            <atributo Id="90121dba-0f91-4cb3-a607-c3aed965990d" tipoAtributo="Int" modificador="Public" />
+          <claseHasAtributo Id="386b4195-b48a-402e-a23f-c1de6abf963a">
+            <atributo Id="8bdeba94-3965-47e5-b87e-101c39cc50ea" nombreAtributo="Nombre" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="7d1d723f-706d-473d-94ee-9cef770a485d">
+            <atributo Id="63646d17-2dda-4c1b-80a8-7e5fc382ddfd" nombreAtributo="Pedidos" tipoAtributo="Int" modificador="Public" />
           </claseHasAtributo>
         </atributo>
         <operaciones>
-          <claseHasOperaciones Id="cd4699f5-a0fa-452a-a2ea-b4e9094d3df4">
-            <operaciones Id="f9e3e247-33d2-432d-aa11-ef7fcee604a3" tipoOperacion="Int" modificador="Public">
+          <claseHasOperaciones Id="98b017b1-724f-4752-8a70-a802b66c1111">
+            <operaciones Id="31648db4-7d80-41a4-b999-c5c4e8c9effb" nombreOperacion="ObtenerPedidos" tipoOperacion="Int" modificador="Public">
               <parametros>
-                <operacionesHasParametros Id="3e54e7f0-94ac-4257-8c6c-1d6e88c5e0bc">
-                  <parametros Id="dabc26f7-3df6-4d8f-910f-bb6848f007f6" tipoDato="Int" />
-                </operacionesHasParametros>
-                <operacionesHasParametros Id="ee7cbfaf-03e6-41de-8974-8e3a5eb0a69e">
-                  <parametros Id="c3992bb2-fa49-476f-9683-436eb59f83f4" tipoDato="Int" />
-                </operacionesHasParametros>
-                <operacionesHasParametros Id="a552fa38-1fc8-4204-b498-41af4b8262ca">
-                  <parametros Id="b1212539-3105-4ce3-ae21-53f689f6136d" tipoDato="Int" />
-                </operacionesHasParametros>
-                <operacionesHasParametros Id="9b16c7d3-554d-432f-b223-bd200f34fe51">
-                  <parametros Id="454dd6dd-8518-4839-aa88-ae43827e0dab" tipoDato="Int" />
+                <operacionesHasParametros Id="1584242d-c756-434f-8133-c94f5dbcead4">
+                  <parametros Id="32551dbd-df77-47c9-9359-20e9081a4b7e" tipoDato="String" nombreParametro="IDCliente" />
                 </operacionesHasParametros>
               </parametros>
             </operaciones>
           </claseHasOperaciones>
         </operaciones>
         <atributoIdentificador>
-          <claseHasAtributoIdentificador Id="6facd227-908e-481c-b650-ba270aed325a">
-            <atributoIdentificador Id="68b993aa-9d88-4a2e-b615-98bf7787761e" tipoAtributo="Int" modificador="Public" />
-          </claseHasAtributoIdentificador>
-        </atributoIdentificador>
-      </clase>
-    </modeloClassWEBHasClase>
-    <modeloClassWEBHasClase Id="9a364aec-1bb7-4363-9cb8-475a01a9f77a">
-      <claseEnriquecida Id="899d0260-cbd3-4890-ba5c-0ec60c41faa1">
-        <estilosClase>
-          <claseEnriquecidaHasEstilosClase Id="1da43615-514b-469f-b995-f02b4c16aed2">
-            <estilosClase Id="92ca3c54-4074-4167-8bd9-28323243f82b" colorFondo="Rojo" colorLetra="Rojo" />
-          </claseEnriquecidaHasEstilosClase>
-        </estilosClase>
-      </claseEnriquecida>
-    </modeloClassWEBHasClase>
-    <modeloClassWEBHasClase Id="a79cf77a-04a5-4517-ba37-97b9b3b6ad69">
-      <claseEnriquecida Id="5d0c1e06-a682-455a-9fef-26e70197c1ae">
-        <atributo>
-          <claseHasAtributo Id="e276c355-1dcf-4daa-9a97-99280d6dceba">
-            <atributo Id="d16f4055-caf6-44b8-9f4a-bd0cddff87e7" tipoAtributo="Int" modificador="Public" />
-          </claseHasAtributo>
-        </atributo>
-        <operaciones>
-          <claseHasOperaciones Id="d2a3cdde-6250-47ad-a1ad-096165634b1a">
-            <operaciones Id="a233dd6e-3452-496a-a99a-65b73e89d286" tipoOperacion="Int" modificador="Public" />
-          </claseHasOperaciones>
-        </operaciones>
-        <atributoIdentificador>
-          <claseHasAtributoIdentificador Id="88e6f4c3-7dc9-4d79-8441-b7b418a50978">
-            <atributoIdentificador Id="3c02537e-fb0e-44c9-9dd8-ef2104addd19" tipoAtributo="Int" modificador="Public" />
+          <claseHasAtributoIdentificador Id="bfb7512f-27c8-4a3d-8038-0552d5ce2e85">
+            <atributoIdentificador Id="cb769196-539c-476a-94e9-f8b0a3799859" nombreAtributo="ClienteID" tipoAtributo="Int" modificador="Public" />
           </claseHasAtributoIdentificador>
         </atributoIdentificador>
         <estilosClase>
-          <claseEnriquecidaHasEstilosClase Id="c4c2c219-7b09-48a9-8331-54bf83643ccc">
-            <estilosClase Id="4f6df1a4-d27d-48cf-a668-c1af6d21d256" colorFondo="Rojo" colorLetra="Rojo" />
+          <claseEnriquecidaHasEstilosClase Id="cde0ade8-81f7-43ab-acb2-742e5ceced46">
+            <estilosClase Id="ee2b1df3-7356-4ccc-9008-ac17b033f012" colorFondo="Rojo" colorLetra="Rojo" tipoLetra="Arial" alineacion="left" />
           </claseEnriquecidaHasEstilosClase>
         </estilosClase>
         <estiloAtributos>
-          <claseEnriquecidaHasEstiloAtributos Id="dcf385fd-86d1-4a21-ab5c-e95b483c09f2">
-            <estiloAtributos Id="6cb12c73-61af-4460-8d02-da738c57f143" />
+          <claseEnriquecidaHasEstiloAtributos Id="01164de9-002d-42fc-ae99-8cea1d8d97ed">
+            <estiloAtributos Id="7e4c20e1-d94a-4db8-95aa-b3266ca40cfb" tipoletra="Arial" colorLetra="Rojo" />
           </claseEnriquecidaHasEstiloAtributos>
         </estiloAtributos>
         <estiloMetodos>
-          <claseEnriquecidaHasEstiloMetodos Id="141045b2-3479-4489-b0e1-1dbf4d69c3dd">
-            <estiloMetodos Id="f422101f-5664-4c61-807d-e836d21f8249" />
+          <claseEnriquecidaHasEstiloMetodos Id="a0d8df0b-f7d4-4d51-a1b6-464a200eb337">
+            <estiloMetodos Id="e1992f8d-7ede-453a-a037-532d06c057f5" tipoLetra="Arial" colorLetra="Rojo" />
           </claseEnriquecidaHasEstiloMetodos>
         </estiloMetodos>
       </claseEnriquecida>
     </modeloClassWEBHasClase>
-    <modeloClassWEBHasClase Id="fcc70d04-e35d-4b37-8773-9901c9882972">
-      <claseEnriquecida Id="27f42573-1c8b-4b47-9afc-98d838482094">
-        <atributo>
-          <claseHasAtributo Id="d7d8aa88-9b8f-4147-bdbf-81c04efbd3cd">
-            <atributo Id="5a4c167c-d47b-497f-8487-c8bf008bc9be" tipoAtributo="Int" modificador="Public" />
-          </claseHasAtributo>
-        </atributo>
-      </claseEnriquecida>
+    <modeloClassWEBHasClase Id="6cd87617-c66a-4cd2-823e-dd6f0dc6fceb">
+      <clase Id="b0d028d6-471b-467e-8f40-7442557d4693" nombreClase="Coorporativo">
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="0e8035c2-15f3-42ab-be0d-1f4d20810008">
+            <atributoIdentificador Id="dc810389-0d0b-4fff-8c19-68f7132babb2" nombreAtributo="Estrategia" tipoAtributo="String" modificador="Public" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
+      </clase>
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="c3d74148-e911-415b-8b9e-eba77a8bbdde">
+      <clase Id="858ec77c-a869-4d59-ae52-d49665c26775" nombreClase="Personal">
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="c68b45e2-f095-4c43-bf6e-f8e3855d2e18">
+            <atributoIdentificador Id="2ecdc814-4eb8-462e-83ff-c61557d6ebb3" nombreAtributo="Estrategia" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
+      </clase>
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="1c329a18-8b98-4bca-ae3a-97cfa00e5051">
+      <clase Id="00da68f5-b53e-4bb9-bcc5-c73464cf8f93" nombreClase="Pedido">
+        <targetClase>
+          <conAsociacion Id="ca767df6-7006-4442-8e84-2dbeb12631c8" refD="c1N" refI="c1N" nombreRelacion="Pertenece" nameRelation="Realiza" conexionTipo="Asociacion">
+            <claseEnriquecidaMoniker Id="419b5613-0718-416e-8cb9-0d3a2078a800" />
+          </conAsociacion>
+          <conAsociacion Id="3f497288-853e-47a2-8cbf-3d6bfa5b87b6" refD="c1N" refI="c1N" nombreRelacion="tiene" nameRelation="pertenece" conexionTipo="Agregacion">
+            <claseMoniker Id="06c76675-b749-439c-b667-78f06eec2ab1" />
+          </conAsociacion>
+        </targetClase>
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="393f8f2d-0fb2-4fab-9626-743d871929b1">
+            <atributoIdentificador Id="fca1ba4e-4095-4f48-96c3-49419898218f" nombreAtributo="PedidoID" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
+      </clase>
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="7332226e-70c6-47d0-b93b-175cc5443e8f">
+      <clase Id="06c76675-b749-439c-b667-78f06eec2ab1" nombreClase="LineaPedido">
+        <targetClase>
+          <conAsociacion Id="61731cf4-bd17-4832-8eeb-0b346130d462" refD="c1N" refI="c1N" nombreRelacion="pertenece" nameRelation="tiene" conexionTipo="Composicion">
+            <claseMoniker Id="e66d9eda-40f8-4b93-882c-6f36351653ea" />
+          </conAsociacion>
+        </targetClase>
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="62aea444-d8e1-40ac-b154-442eccd7e2e3">
+            <atributoIdentificador Id="6cf46ad4-389d-4671-9170-d3c954da04f2" nombreAtributo="LineaPedidoID" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
+      </clase>
+    </modeloClassWEBHasClase>
+    <modeloClassWEBHasClase Id="b780e579-e8d2-4b4e-94da-3a042827f1fc">
+      <clase Id="e66d9eda-40f8-4b93-882c-6f36351653ea" nombreClase="Producto">
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="0767a9d4-828e-4929-8942-408bf6bdce93">
+            <atributoIdentificador Id="68254e9f-5e54-4fb3-aa32-2c9ca29b0f33" nombreAtributo="ProductoID" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
+      </clase>
     </modeloClassWEBHasClase>
   </clase>
+  <herencia>
+    <modeloClassWEBHasHerencia Id="c456a1b0-ace8-4f41-a1de-15c6a2e213c3">
+      <herencia Id="55efe291-c4c0-4d22-8804-58cdd9d64317">
+        <clasePadre>
+          <esPadre Id="0a67378d-ffd4-4355-9770-2bcda6bce9cc">
+            <claseEnriquecidaMoniker Id="419b5613-0718-416e-8cb9-0d3a2078a800" />
+          </esPadre>
+          <esPadre Id="79cce46c-4c9e-402f-a702-ae458ad54e2d">
+            <claseMoniker Id="b0d028d6-471b-467e-8f40-7442557d4693" />
+          </esPadre>
+          <esPadre Id="c12b1645-06c8-4ce9-9082-919fb0662fdb">
+            <claseMoniker Id="858ec77c-a869-4d59-ae52-d49665c26775" />
+          </esPadre>
+        </clasePadre>
+      </herencia>
+    </modeloClassWEBHasHerencia>
+  </herencia>
 </modeloClassWEB>

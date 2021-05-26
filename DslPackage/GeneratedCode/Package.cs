@@ -105,7 +105,7 @@ namespace IPS.UMLSPF
 					"@ShapeClaseEToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeClaseEToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"AgregarClaseEnriquecida", 
+					"AgregarClase", 
 					"@ShapeClaseEToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 9)]
@@ -141,6 +141,14 @@ namespace IPS.UMLSPF
 					"@AgregarEstiloMeetodosToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 13)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@ShapeParametrozToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.ShapeParametrozToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ShapeParametroz", 
+					"@ShapeParametrozToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 14)]
 	[VSShell::ProvideEditorFactory(typeof(UMLSPFEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(UMLSPFEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(UMLSPFEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
