@@ -224,7 +224,20 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="f953e01b-ccf2-470d-9867-9e0f1a8f2025" Description="Description for IPS.UMLSPF.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="IPS.UMLSPF" />
+    <DomainClass Id="f953e01b-ccf2-470d-9867-9e0f1a8f2025" Description="Description for IPS.UMLSPF.Herencia" Name="Herencia" DisplayName="Herencia" Namespace="IPS.UMLSPF">
+      <Properties>
+        <DomainProperty Id="e55af7ac-27b6-48e5-8aaf-9ce6ff4efb48" Description="Description for IPS.UMLSPF.Herencia.Generalizacion1" Name="Generalizacion1" DisplayName="Generalizacion1">
+          <Type>
+            <DomainEnumerationMoniker Name="genera1" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="dc619d6b-9837-4693-8b5a-7e28aae2f914" Description="Description for IPS.UMLSPF.Herencia.Generalizacion2" Name="Generalizacion2" DisplayName="Generalizacion2">
+          <Type>
+            <DomainEnumerationMoniker Name="genera2" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
     <DomainClass Id="8e986070-39d3-4084-9b30-cd3e53097af3" Description="Description for IPS.UMLSPF.AtributoIdentificador" Name="AtributoIdentificador" DisplayName="Atributo Identificador" Namespace="IPS.UMLSPF">
       <Properties>
         <DomainProperty Id="a5025d40-3f8f-41dd-a098-7aa515c29cee" Description="Nombre del Atributo" Name="NombreAtributo" DisplayName="Nombre Atributo">
@@ -563,9 +576,28 @@
         <EnumerationLiteral Description="Description for IPS.UMLSPF.formatoclase.Check" Name="Check" Value="" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="genera1" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.genera1">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.genera1.Total" Name="Total" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.genera1.Parcial" Name="Parcial" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="genera2" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.genera2">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.genera2.Disjunta" Name="Disjunta" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.genera2.Solapada" Name="Solapada" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
-    <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png" />
+    <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Genera1" DisplayName="Genera1" DefaultText="Genera1" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerBottomCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Genera2" DisplayName="Genera2" DefaultText="Genera2" />
+      </ShapeHasDecorators>
+    </ImageShape>
     <GeometryShape Id="80f16035-0f4d-433e-97b2-8d9dd064235d" Description="Description for IPS.UMLSPF.ShapeOperaciones" Name="ShapeOperaciones" DisplayName="Shade de Operaciones" Namespace="IPS.UMLSPF" FixedTooltipText="Shape de Operaciones" FillColor="250, 240, 202" OutlineColor="250, 240, 202" InitialWidth="2.5" InitialHeight="0.5" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreOperacion" DisplayName="Nombre Operacion" DefaultText="NombreOperacion" />
@@ -824,6 +856,12 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="claseHija">
             <DomainRelationshipMoniker Name="EsHija" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="generalizacion1">
+            <DomainPropertyMoniker Name="Herencia/Generalizacion1" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="generalizacion2">
+            <DomainPropertyMoniker Name="Herencia/Generalizacion2" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ModeloClassWEBHasHerencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBHasHerenciaMoniker" ElementName="modeloClassWEBHasHerencia" MonikerTypeName="ModeloClassWEBHasHerenciaMoniker">
@@ -980,6 +1018,22 @@
         <ParentElementPath>
           <DomainPath>ModeloClassWEBHasHerencia.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="IMGHerencia/Genera1" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Herencia/Generalizacion1" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="IMGHerencia/Genera2" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Herencia/Generalizacion2" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <ImageShapeMoniker Name="IMGHerencia" />
       </ShapeMap>
       <ShapeMap>

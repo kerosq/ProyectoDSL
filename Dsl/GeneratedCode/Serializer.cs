@@ -6594,7 +6594,7 @@ namespace IPS.UMLSPF
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-				
+	
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
 			{
@@ -6642,7 +6642,43 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			// There is no property to read; do nothing
+			Herencia instanceOfHerencia = element as Herencia;
+			global::System.Diagnostics.Debug.Assert(instanceOfHerencia != null, "Expecting an instance of Herencia");
+	
+			// Generalizacion1
+			if (!serializationContext.Result.Failed)
+			{
+				string attribGeneralizacion1 = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "generalizacion1");
+				if (attribGeneralizacion1 != null)
+				{
+					genera1 valueOfGeneralizacion1;
+					if (DslModeling::SerializationUtilities.TryGetValue<genera1>(serializationContext, attribGeneralizacion1, out valueOfGeneralizacion1))
+					{
+						instanceOfHerencia.Generalizacion1 = valueOfGeneralizacion1;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "generalizacion1", typeof(genera1), attribGeneralizacion1);
+					}
+				}
+			}
+			// Generalizacion2
+			if (!serializationContext.Result.Failed)
+			{
+				string attribGeneralizacion2 = UMLSPFSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "generalizacion2");
+				if (attribGeneralizacion2 != null)
+				{
+					genera2 valueOfGeneralizacion2;
+					if (DslModeling::SerializationUtilities.TryGetValue<genera2>(serializationContext, attribGeneralizacion2, out valueOfGeneralizacion2))
+					{
+						instanceOfHerencia.Generalizacion2 = valueOfGeneralizacion2;
+					}
+					else
+					{	// Invalid property value, ignored.
+						UMLSPFSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "generalizacion2", typeof(genera2), attribGeneralizacion2);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -7212,7 +7248,29 @@ namespace IPS.UMLSPF
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			// There are no properties; do nothing
+			Herencia instanceOfHerencia = element as Herencia;
+			global::System.Diagnostics.Debug.Assert(instanceOfHerencia != null, "Expecting an instance of Herencia");
+	
+			// Generalizacion1
+			if (!serializationContext.Result.Failed)
+			{
+				genera1 propValue = instanceOfHerencia.Generalizacion1;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<genera1>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "generalizacion1", serializedPropValue);
+				}
+			}
+			// Generalizacion2
+			if (!serializationContext.Result.Failed)
+			{
+				genera2 propValue = instanceOfHerencia.Generalizacion2;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<genera2>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					UMLSPFSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "generalizacion2", serializedPropValue);
+				}
+			}
 		}
 	
 		/// <summary>

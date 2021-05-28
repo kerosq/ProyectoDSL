@@ -3058,6 +3058,180 @@ namespace IPS.UMLSPF
 		{
 		}
 		#endregion
+		#region Generalizacion1 domain property code
+		
+		/// <summary>
+		/// Generalizacion1 domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid Generalizacion1DomainPropertyId = new global::System.Guid(0xe55af7ac, 0x27b6, 0x48e5, 0x8a, 0xaf, 0x9c, 0xe6, 0xff, 0x4e, 0xfb, 0x48);
+		
+		/// <summary>
+		/// Storage for Generalizacion1
+		/// </summary>
+		private genera1 generalizacion1PropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Generalizacion1 domain property.
+		/// Description for IPS.UMLSPF.Herencia.Generalizacion1
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Herencia/Generalizacion1.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Herencia/Generalizacion1.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e55af7ac-27b6-48e5-8aaf-9ce6ff4efb48")]
+		public genera1 Generalizacion1
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return generalizacion1PropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				Generalizacion1PropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Herencia.Generalizacion1 domain property.
+		/// </summary>
+		internal sealed partial class Generalizacion1PropertyHandler : DslModeling::DomainPropertyValueHandler<Herencia, genera1>
+		{
+			private Generalizacion1PropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Herencia.Generalizacion1 domain property value handler.
+			/// </summary>
+			public static readonly Generalizacion1PropertyHandler Instance = new Generalizacion1PropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Herencia.Generalizacion1 domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return Generalizacion1DomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed genera1 GetValue(Herencia element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.generalizacion1PropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Herencia element, genera1 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				genera1 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.generalizacion1PropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Generalizacion2 domain property code
+		
+		/// <summary>
+		/// Generalizacion2 domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid Generalizacion2DomainPropertyId = new global::System.Guid(0xdc619d6b, 0x9837, 0x4693, 0x8b, 0x5a, 0x7e, 0x28, 0xaa, 0xe2, 0xf9, 0x14);
+		
+		/// <summary>
+		/// Storage for Generalizacion2
+		/// </summary>
+		private genera2 generalizacion2PropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Generalizacion2 domain property.
+		/// Description for IPS.UMLSPF.Herencia.Generalizacion2
+		/// </summary>
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.Herencia/Generalizacion2.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.Herencia/Generalizacion2.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("dc619d6b-9837-4693-8b5a-7e28aae2f914")]
+		public genera2 Generalizacion2
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return generalizacion2PropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				Generalizacion2PropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Herencia.Generalizacion2 domain property.
+		/// </summary>
+		internal sealed partial class Generalizacion2PropertyHandler : DslModeling::DomainPropertyValueHandler<Herencia, genera2>
+		{
+			private Generalizacion2PropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Herencia.Generalizacion2 domain property value handler.
+			/// </summary>
+			public static readonly Generalizacion2PropertyHandler Instance = new Generalizacion2PropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Herencia.Generalizacion2 domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return Generalizacion2DomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed genera2 GetValue(Herencia element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.generalizacion2PropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Herencia element, genera2 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				genera2 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.generalizacion2PropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region ModeloClassWEB opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ModeloClassWEB.

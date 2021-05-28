@@ -373,6 +373,22 @@
     <value>Herencia</value>
     <comment>DisplayName for DomainClass &apos;Herencia&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion1.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Herencia.Generalizacion1</value>
+    <comment>Description for DomainProperty &apos;Generalizacion1&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion1.DisplayName" xml:space="preserve">
+    <value>Generalizacion1</value>
+    <comment>DisplayName for DomainProperty &apos;Generalizacion1&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion2.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.Herencia.Generalizacion2</value>
+    <comment>Description for DomainProperty &apos;Generalizacion2&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.Herencia/Generalizacion2.DisplayName" xml:space="preserve">
+    <value>Generalizacion2</value>
+    <comment>DisplayName for DomainProperty &apos;Generalizacion2&apos; on DomainClass &apos;Herencia&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.AtributoIdentificador.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.AtributoIdentificador</value>
     <comment>Description for DomainClass &apos;AtributoIdentificador&apos;</comment>
@@ -1069,6 +1085,38 @@
     <value>Description for IPS.UMLSPF.formatoclase.Check</value>
     <comment>Description for EnumerationLiteral &apos;Check&apos; on DomainEnumeration &apos;formatoclase&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.genera1/Total.DisplayName" xml:space="preserve">
+    <value>Total</value>
+    <comment>Display name for EnumerationLiteral &apos;Total&apos; on DomainEnumeration &apos;genera1&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.genera1/Total.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.genera1.Total</value>
+    <comment>Description for EnumerationLiteral &apos;Total&apos; on DomainEnumeration &apos;genera1&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.genera1/Parcial.DisplayName" xml:space="preserve">
+    <value>Parcial</value>
+    <comment>Display name for EnumerationLiteral &apos;Parcial&apos; on DomainEnumeration &apos;genera1&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.genera1/Parcial.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.genera1.Parcial</value>
+    <comment>Description for EnumerationLiteral &apos;Parcial&apos; on DomainEnumeration &apos;genera1&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.genera2/Disjunta.DisplayName" xml:space="preserve">
+    <value>Disjunta</value>
+    <comment>Display name for EnumerationLiteral &apos;Disjunta&apos; on DomainEnumeration &apos;genera2&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.genera2/Disjunta.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.genera2.Disjunta</value>
+    <comment>Description for EnumerationLiteral &apos;Disjunta&apos; on DomainEnumeration &apos;genera2&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.genera2/Solapada.DisplayName" xml:space="preserve">
+    <value>Solapada</value>
+    <comment>Display name for EnumerationLiteral &apos;Solapada&apos; on DomainEnumeration &apos;genera2&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.genera2/Solapada.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.genera2.Solapada</value>
+    <comment>Description for EnumerationLiteral &apos;Solapada&apos; on DomainEnumeration &apos;genera2&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.IMGHerencia.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.IMGHerencia</value>
     <comment>Description for DomainClass &apos;IMGHerencia&apos;</comment>
@@ -1076,6 +1124,14 @@
   <data name="IPS.UMLSPF.IMGHerencia.DisplayName" xml:space="preserve">
     <value>IMGHerencia</value>
     <comment>DisplayName for DomainClass &apos;IMGHerencia&apos;</comment>
+  </data>
+  <data name="IMGHerenciaGenera1DefaultText" xml:space="preserve">
+    <value>Genera1</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IMGHerenciaGenera2DefaultText" xml:space="preserve">
+    <value>Genera2</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="IPS.UMLSPF.ShapeOperaciones.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ShapeOperaciones</value>

@@ -83,7 +83,7 @@
         <shapeClaseMoniker Id="c7635fca-3705-41e6-8a62-8857fa3bd3f3" />
       </nodes>
     </conEsPadre>
-    <conecClase Id="04364a72-ef5f-4b9e-8900-6fe80bf38ff5" edgePoints="[(8 : 1.75); (5.5 : 1.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="04364a72-ef5f-4b9e-8900-6fe80bf38ff5" edgePoints="[(8 : 1.75); (5.5 : 1.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <conAsociacionMoniker Id="ca767df6-7006-4442-8e84-2dbeb12631c8" />
       <relativeChildShapes />
       <nodes>
@@ -91,7 +91,7 @@
         <shapeClaseEnriquecidaMoniker Id="aafe02a7-83ef-4b67-a3b5-01052e0fff33" />
       </nodes>
     </conecClase>
-    <conecClase Id="5c1846f8-faa0-4a86-bbbc-ee7829641e7a" edgePoints="[(9.75 : 2.25); (9.75 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="5c1846f8-faa0-4a86-bbbc-ee7829641e7a" edgePoints="[(9.75 : 2.25); (9.75 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <conAsociacionMoniker Id="3f497288-853e-47a2-8cbf-3d6bfa5b87b6" />
       <relativeChildShapes />
       <nodes>
@@ -99,7 +99,7 @@
         <shapeClaseMoniker Id="1a94c308-9e84-4fc5-b529-1e8e4eded099" />
       </nodes>
     </conecClase>
-    <conecClase Id="2f8fec11-7f78-47cf-92e9-33e81cd44024" edgePoints="[(9.8125 : 4.125); (9.8125 : 5.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="2f8fec11-7f78-47cf-92e9-33e81cd44024" edgePoints="[(9.8125 : 4.125); (9.8125 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <conAsociacionMoniker Id="61731cf4-bd17-4832-8eeb-0b346130d462" />
       <relativeChildShapes />
       <nodes>

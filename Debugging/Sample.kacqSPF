@@ -105,7 +105,7 @@
   </clase>
   <herencia>
     <modeloClassWEBHasHerencia Id="c456a1b0-ace8-4f41-a1de-15c6a2e213c3">
-      <herencia Id="55efe291-c4c0-4d22-8804-58cdd9d64317">
+      <herencia Id="55efe291-c4c0-4d22-8804-58cdd9d64317" generalizacion1="Total" generalizacion2="Disjunta">
         <clasePadre>
           <esPadre Id="0a67378d-ffd4-4355-9770-2bcda6bce9cc">
             <claseEnriquecidaMoniker Id="419b5613-0718-416e-8cb9-0d3a2078a800" />

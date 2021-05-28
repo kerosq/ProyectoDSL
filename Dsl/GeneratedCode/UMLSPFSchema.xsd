@@ -524,6 +524,10 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: Generalizacion1 -->
+        <xsd:attribute name="generalizacion1" type="genera1" />
+        <!-- Property: Generalizacion2 -->
+        <xsd:attribute name="generalizacion2" type="genera2" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1211,6 +1215,22 @@
       <xsd:enumeration value="Radio"/>
       <xsd:enumeration value="Normal"/>
       <xsd:enumeration value="Check"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum genera1 -->
+  <xsd:simpleType name="genera1">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Total"/>
+      <xsd:enumeration value="Parcial"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum genera2 -->
+  <xsd:simpleType name="genera2">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Disjunta"/>
+      <xsd:enumeration value="Solapada"/>
     </xsd:restriction>
   </xsd:simpleType>
   

@@ -298,6 +298,7 @@ namespace IPS.UMLSPF
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
+			global::IPS.UMLSPF.IMGHerencia.DecoratorsInitialized += IMGHerenciaDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeOperaciones.DecoratorsInitialized += ShapeOperacionesDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeClase.DecoratorsInitialized += ShapeClaseDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeParametro.DecoratorsInitialized += ShapeParametroDecoratorMap.OnDecoratorsInitialized;
@@ -308,6 +309,27 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.ShapeEstiloAtributos.DecoratorsInitialized += ShapeEstiloAtributosDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeEstiloMetodos.DecoratorsInitialized += ShapeEstiloMetodosDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ConecClase.DecoratorsInitialized += ConecClaseDecoratorMap.OnDecoratorsInitialized;
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for IMGHerencia.
+		/// </summary>
+		internal static partial class IMGHerenciaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for IMGHerencia.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Herencia.Generalizacion1DomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Genera1").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.Herencia.Generalizacion2DomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Genera2").AssociateValueWith(shape.Store, propertyInfo);
+			}
 		}
 		
 		/// <summary>
