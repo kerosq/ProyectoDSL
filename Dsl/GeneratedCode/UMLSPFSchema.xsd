@@ -10,16 +10,16 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: ModeloClassWEBHasClase -->
-          <xsd:element name="clase" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ModeloClassWEBHasClass -->
+          <xsd:element name="class" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ModeloClassWEBHasClase</xsd:documentation>
+              <xsd:documentation>Instances of ModeloClassWEBHasClass</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="modeloClassWEBHasClase" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="modeloClassWEBHasClass" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ModeloClassWEBHasClase needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ModeloClassWEBHasClass needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -82,31 +82,31 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: ClaseHasAtributo -->
-          <xsd:element name="atributo" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ClaseHasAtrib -->
+          <xsd:element name="atrib" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClaseHasAtributo</xsd:documentation>
+              <xsd:documentation>Instances of ClaseHasAtrib</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseHasAtributo" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="claseHasAtrib" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClaseHasAtributo needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClaseHasAtrib needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: ClaseHasOperaciones -->
-          <xsd:element name="operaciones" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ClaseHasMethods -->
+          <xsd:element name="methods" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClaseHasOperaciones</xsd:documentation>
+              <xsd:documentation>Instances of ClaseHasMethods</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseHasOperaciones" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="claseHasMethods" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClaseHasOperaciones needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClaseHasMethods needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -127,16 +127,16 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: ClaseHasAtributoIdentificador -->
-          <xsd:element name="atributoIdentificador" minOccurs="1" maxOccurs="1">
+          <!-- Relationship: ClaseHasAtribID -->
+          <xsd:element name="atribID" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instance of ClaseHasAtributoIdentificador</xsd:documentation>
+              <xsd:documentation>Instance of ClaseHasAtribID</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseHasAtributoIdentificador" minOccurs="1" maxOccurs="1">
+                <xsd:element ref="claseHasAtribID" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClaseHasAtributoIdentificador needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClaseHasAtribID needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -232,16 +232,16 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: OperacionesHasParametros -->
-          <xsd:element name="parametros" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: OperacionesHasParams -->
+          <xsd:element name="params" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of OperacionesHasParametros</xsd:documentation>
+              <xsd:documentation>Instances of OperacionesHasParams</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="operacionesHasParametros" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="operacionesHasParams" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of OperacionesHasParametros needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of OperacionesHasParams needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -299,46 +299,46 @@
     <xsd:complexContent>
       <xsd:extension base="Clase">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: ClaseEnriquecidaHasEstilosClase -->
-          <xsd:element name="estilosClase" minOccurs="1" maxOccurs="1">
+          <!-- Relationship: ClaseEnriquecidaHasClassStyle -->
+          <xsd:element name="classStyle" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instance of ClaseEnriquecidaHasEstilosClase</xsd:documentation>
+              <xsd:documentation>Instance of ClaseEnriquecidaHasClassStyle</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseEnriquecidaHasEstilosClase" minOccurs="1" maxOccurs="1">
+                <xsd:element ref="claseEnriquecidaHasClassStyle" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClaseEnriquecidaHasEstilosClase needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClaseEnriquecidaHasClassStyle needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: ClaseEnriquecidaHasEstiloAtributos -->
-          <xsd:element name="estiloAtributos" minOccurs="1" maxOccurs="1">
+          <!-- Relationship: ClaseEnriquecidaHasAtribStyle -->
+          <xsd:element name="atribStyle" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instance of ClaseEnriquecidaHasEstiloAtributos</xsd:documentation>
+              <xsd:documentation>Instance of ClaseEnriquecidaHasAtribStyle</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseEnriquecidaHasEstiloAtributos" minOccurs="1" maxOccurs="1">
+                <xsd:element ref="claseEnriquecidaHasAtribStyle" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClaseEnriquecidaHasEstiloAtributos needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClaseEnriquecidaHasAtribStyle needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: ClaseEnriquecidaHasEstiloMetodos -->
-          <xsd:element name="estiloMetodos" minOccurs="1" maxOccurs="1">
+          <!-- Relationship: ClaseEnriquecidaHasMethodsStyle -->
+          <xsd:element name="methodsStyle" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instance of ClaseEnriquecidaHasEstiloMetodos</xsd:documentation>
+              <xsd:documentation>Instance of ClaseEnriquecidaHasMethodsStyle</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseEnriquecidaHasEstiloMetodos" minOccurs="1" maxOccurs="1">
+                <xsd:element ref="claseEnriquecidaHasMethodsStyle" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClaseEnriquecidaHasEstiloMetodos needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClaseEnriquecidaHasMethodsStyle needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -635,9 +635,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ModeloClassWEBHasClase -->
-  <xsd:element name="modeloClassWEBHasClase" type="ModeloClassWEBHasClase" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ModeloClassWEBHasClase">
+  <!-- ModeloClassWEBHasClass -->
+  <xsd:element name="modeloClassWEBHasClass" type="ModeloClassWEBHasClass" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ModeloClassWEBHasClass">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -658,11 +658,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ModeloClassWEBHasClase Moniker -->
-  <xsd:element name="modeloClassWEBHasClaseMoniker" type="ModeloClassWEBHasClaseMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ModeloClassWEBHasClaseMoniker">
+  <!-- ModeloClassWEBHasClass Moniker -->
+  <xsd:element name="modeloClassWEBHasClassMoniker" type="ModeloClassWEBHasClassMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ModeloClassWEBHasClassMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ModeloClassWEBHasClase instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ModeloClassWEBHasClass instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -675,9 +675,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseHasAtributo -->
-  <xsd:element name="claseHasAtributo" type="ClaseHasAtributo" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClaseHasAtributo">
+  <!-- ClaseHasAtrib -->
+  <xsd:element name="claseHasAtrib" type="ClaseHasAtrib" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseHasAtrib">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -698,11 +698,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseHasAtributo Moniker -->
-  <xsd:element name="claseHasAtributoMoniker" type="ClaseHasAtributoMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ClaseHasAtributoMoniker">
+  <!-- ClaseHasAtrib Moniker -->
+  <xsd:element name="claseHasAtribMoniker" type="ClaseHasAtribMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseHasAtribMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseHasAtributo instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClaseHasAtrib instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -715,9 +715,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseHasOperaciones -->
-  <xsd:element name="claseHasOperaciones" type="ClaseHasOperaciones" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClaseHasOperaciones">
+  <!-- ClaseHasMethods -->
+  <xsd:element name="claseHasMethods" type="ClaseHasMethods" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseHasMethods">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -738,11 +738,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseHasOperaciones Moniker -->
-  <xsd:element name="claseHasOperacionesMoniker" type="ClaseHasOperacionesMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ClaseHasOperacionesMoniker">
+  <!-- ClaseHasMethods Moniker -->
+  <xsd:element name="claseHasMethodsMoniker" type="ClaseHasMethodsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseHasMethodsMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseHasOperaciones instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClaseHasMethods instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -825,9 +825,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseEnriquecidaHasEstilosClase -->
-  <xsd:element name="claseEnriquecidaHasEstilosClase" type="ClaseEnriquecidaHasEstilosClase" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClaseEnriquecidaHasEstilosClase">
+  <!-- ClaseEnriquecidaHasClassStyle -->
+  <xsd:element name="claseEnriquecidaHasClassStyle" type="ClaseEnriquecidaHasClassStyle" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnriquecidaHasClassStyle">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -848,11 +848,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseEnriquecidaHasEstilosClase Moniker -->
-  <xsd:element name="claseEnriquecidaHasEstilosClaseMoniker" type="ClaseEnriquecidaHasEstilosClaseMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ClaseEnriquecidaHasEstilosClaseMoniker">
+  <!-- ClaseEnriquecidaHasClassStyle Moniker -->
+  <xsd:element name="claseEnriquecidaHasClassStyleMoniker" type="ClaseEnriquecidaHasClassStyleMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnriquecidaHasClassStyleMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseEnriquecidaHasEstilosClase instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClaseEnriquecidaHasClassStyle instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -865,9 +865,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseEnriquecidaHasEstiloAtributos -->
-  <xsd:element name="claseEnriquecidaHasEstiloAtributos" type="ClaseEnriquecidaHasEstiloAtributos" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClaseEnriquecidaHasEstiloAtributos">
+  <!-- ClaseEnriquecidaHasAtribStyle -->
+  <xsd:element name="claseEnriquecidaHasAtribStyle" type="ClaseEnriquecidaHasAtribStyle" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnriquecidaHasAtribStyle">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -888,11 +888,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseEnriquecidaHasEstiloAtributos Moniker -->
-  <xsd:element name="claseEnriquecidaHasEstiloAtributosMoniker" type="ClaseEnriquecidaHasEstiloAtributosMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ClaseEnriquecidaHasEstiloAtributosMoniker">
+  <!-- ClaseEnriquecidaHasAtribStyle Moniker -->
+  <xsd:element name="claseEnriquecidaHasAtribStyleMoniker" type="ClaseEnriquecidaHasAtribStyleMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnriquecidaHasAtribStyleMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseEnriquecidaHasEstiloAtributos instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClaseEnriquecidaHasAtribStyle instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -905,9 +905,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseEnriquecidaHasEstiloMetodos -->
-  <xsd:element name="claseEnriquecidaHasEstiloMetodos" type="ClaseEnriquecidaHasEstiloMetodos" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClaseEnriquecidaHasEstiloMetodos">
+  <!-- ClaseEnriquecidaHasMethodsStyle -->
+  <xsd:element name="claseEnriquecidaHasMethodsStyle" type="ClaseEnriquecidaHasMethodsStyle" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnriquecidaHasMethodsStyle">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -928,11 +928,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseEnriquecidaHasEstiloMetodos Moniker -->
-  <xsd:element name="claseEnriquecidaHasEstiloMetodosMoniker" type="ClaseEnriquecidaHasEstiloMetodosMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ClaseEnriquecidaHasEstiloMetodosMoniker">
+  <!-- ClaseEnriquecidaHasMethodsStyle Moniker -->
+  <xsd:element name="claseEnriquecidaHasMethodsStyleMoniker" type="ClaseEnriquecidaHasMethodsStyleMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnriquecidaHasMethodsStyleMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseEnriquecidaHasEstiloMetodos instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClaseEnriquecidaHasMethodsStyle instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -1065,9 +1065,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseHasAtributoIdentificador -->
-  <xsd:element name="claseHasAtributoIdentificador" type="ClaseHasAtributoIdentificador" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClaseHasAtributoIdentificador">
+  <!-- ClaseHasAtribID -->
+  <xsd:element name="claseHasAtribID" type="ClaseHasAtribID" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseHasAtribID">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1088,11 +1088,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseHasAtributoIdentificador Moniker -->
-  <xsd:element name="claseHasAtributoIdentificadorMoniker" type="ClaseHasAtributoIdentificadorMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ClaseHasAtributoIdentificadorMoniker">
+  <!-- ClaseHasAtribID Moniker -->
+  <xsd:element name="claseHasAtribIDMoniker" type="ClaseHasAtribIDMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseHasAtribIDMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseHasAtributoIdentificador instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClaseHasAtribID instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -1105,9 +1105,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- OperacionesHasParametros -->
-  <xsd:element name="operacionesHasParametros" type="OperacionesHasParametros" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="OperacionesHasParametros">
+  <!-- OperacionesHasParams -->
+  <xsd:element name="operacionesHasParams" type="OperacionesHasParams" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="OperacionesHasParams">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1128,11 +1128,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- OperacionesHasParametros Moniker -->
-  <xsd:element name="operacionesHasParametrosMoniker" type="OperacionesHasParametrosMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="OperacionesHasParametrosMoniker">
+  <!-- OperacionesHasParams Moniker -->
+  <xsd:element name="operacionesHasParamsMoniker" type="OperacionesHasParamsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="OperacionesHasParamsMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for OperacionesHasParametros instance.</xsd:documentation>
+      <xsd:documentation>Moniker for OperacionesHasParams instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

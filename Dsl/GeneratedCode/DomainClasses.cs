@@ -135,18 +135,18 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
-		#region Clase opposite domain role accessor
+		#region Class opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Clase.
-		/// Description for IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEB
+		/// Gets a list of Class.
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEB
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> Clase
+		public virtual DslModeling::LinkedElementCollection<Clase> Class
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEBDomainRoleId);
 			}
 		}
 		#endregion
@@ -222,8 +222,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Clase sourceClase1 = sourceElement as global::IPS.UMLSPF.Clase;
 			if (sourceClase1 != null)
 			{
-				// Create link for path ModeloClassWEBHasClase.Clase
-				this.Clase.Add(sourceClase1);
+				// Create link for path ModeloClassWEBHasClass.Class
+				this.Class.Add(sourceClase1);
 
 				return;
 			}
@@ -262,12 +262,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Clase sourceClase1 = sourceElement as global::IPS.UMLSPF.Clase;
 			if (sourceClase1 != null)
 			{
-				// Delete link for path ModeloClassWEBHasClase.Clase
+				// Delete link for path ModeloClassWEBHasClass.Class
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ModeloClassWEBHasClase.GetLinks((global::IPS.UMLSPF.ModeloClassWEB)this, sourceClase1))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ModeloClassWEBHasClass.GetLinks((global::IPS.UMLSPF.ModeloClassWEB)this, sourceClase1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEBDomainRoleId, global::IPS.UMLSPF.ModeloClassWEBHasClass.ClaseDomainRoleId);
 				}
 
 				return;
@@ -421,49 +421,49 @@ namespace IPS.UMLSPF
 		#region ModeloClassWEB opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ModeloClassWEB.
-		/// Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasClass.Clase
 		/// </summary>
 		public virtual ModeloClassWEB ModeloClassWEB
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId) as ModeloClassWEB;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasClass.ClaseDomainRoleId) as ModeloClassWEB;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ModeloClassWEBHasClass.ClaseDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region Atributo opposite domain role accessor
+		#region Atrib opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Atributo.
-		/// Description for IPS.UMLSPF.ClaseHasAtributo.Clase
+		/// Gets a list of Atrib.
+		/// Description for IPS.UMLSPF.ClaseHasAtrib.Clase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Atributo> Atributo
+		public virtual DslModeling::LinkedElementCollection<Atributo> Atrib
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(global::IPS.UMLSPF.ClaseHasAtrib.ClaseDomainRoleId);
 			}
 		}
 		#endregion
-		#region Operaciones opposite domain role accessor
+		#region Methods opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Operaciones.
-		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Clase
+		/// Gets a list of Methods.
+		/// Description for IPS.UMLSPF.ClaseHasMethods.Clase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Operaciones> Operaciones
+		public virtual DslModeling::LinkedElementCollection<Operaciones> Methods
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Operaciones>, Operaciones>(global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Operaciones>, Operaciones>(global::IPS.UMLSPF.ClaseHasMethods.ClaseDomainRoleId);
 			}
 		}
 		#endregion
@@ -527,22 +527,22 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region AtributoIdentificador opposite domain role accessor
+		#region AtribID opposite domain role accessor
 		/// <summary>
-		/// Gets or sets AtributoIdentificador.
-		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase
+		/// Gets or sets AtribID.
+		/// Description for IPS.UMLSPF.ClaseHasAtribID.Clase
 		/// </summary>
-		public virtual AtributoIdentificador AtributoIdentificador
+		public virtual AtributoIdentificador AtribID
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId) as AtributoIdentificador;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtribID.ClaseDomainRoleId) as AtributoIdentificador;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtribID.ClaseDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -578,8 +578,8 @@ namespace IPS.UMLSPF
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.AtributoIdentificador.DomainClassId)) 
 				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseHasAtributoIdentificador.AtributoIdentificador
-					if (this.AtributoIdentificador != null)
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseHasAtribID.AtribID
+					if (this.AtribID != null)
 					{
 						return false;
 					}
@@ -613,8 +613,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Atributo sourceAtributo1 = sourceElement as global::IPS.UMLSPF.Atributo;
 			if (sourceAtributo1 != null)
 			{
-				// Create link for path ClaseHasAtributo.Atributo
-				this.Atributo.Add(sourceAtributo1);
+				// Create link for path ClaseHasAtrib.Atrib
+				this.Atrib.Add(sourceAtributo1);
 
 				return;
 			}
@@ -622,8 +622,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Operaciones sourceOperaciones2 = sourceElement as global::IPS.UMLSPF.Operaciones;
 			if (sourceOperaciones2 != null)
 			{
-				// Create link for path ClaseHasOperaciones.Operaciones
-				this.Operaciones.Add(sourceOperaciones2);
+				// Create link for path ClaseHasMethods.Methods
+				this.Methods.Add(sourceOperaciones2);
 
 				return;
 			}
@@ -631,8 +631,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador3 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
 			if (sourceAtributoIdentificador3 != null)
 			{
-				// Create link for path ClaseHasAtributoIdentificador.AtributoIdentificador
-				this.AtributoIdentificador = sourceAtributoIdentificador3;
+				// Create link for path ClaseHasAtribID.AtribID
+				this.AtribID = sourceAtributoIdentificador3;
 
 				return;
 			}
@@ -662,12 +662,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Atributo sourceAtributo1 = sourceElement as global::IPS.UMLSPF.Atributo;
 			if (sourceAtributo1 != null)
 			{
-				// Delete link for path ClaseHasAtributo.Atributo
+				// Delete link for path ClaseHasAtrib.Atrib
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasAtributo.GetLinks((global::IPS.UMLSPF.Clase)this, sourceAtributo1))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasAtrib.GetLinks((global::IPS.UMLSPF.Clase)this, sourceAtributo1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ClaseHasAtrib.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasAtrib.AtributoDomainRoleId);
 				}
 
 				return;
@@ -676,12 +676,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Operaciones sourceOperaciones2 = sourceElement as global::IPS.UMLSPF.Operaciones;
 			if (sourceOperaciones2 != null)
 			{
-				// Delete link for path ClaseHasOperaciones.Operaciones
+				// Delete link for path ClaseHasMethods.Methods
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasOperaciones.GetLinks((global::IPS.UMLSPF.Clase)this, sourceOperaciones2))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasMethods.GetLinks((global::IPS.UMLSPF.Clase)this, sourceOperaciones2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ClaseHasMethods.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasMethods.OperacionesDomainRoleId);
 				}
 
 				return;
@@ -690,12 +690,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.AtributoIdentificador sourceAtributoIdentificador3 = sourceElement as global::IPS.UMLSPF.AtributoIdentificador;
 			if (sourceAtributoIdentificador3 != null)
 			{
-				// Delete link for path ClaseHasAtributoIdentificador.AtributoIdentificador
+				// Delete link for path ClaseHasAtribID.AtribID
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasAtributoIdentificador.GetLinks((global::IPS.UMLSPF.Clase)this, sourceAtributoIdentificador3))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseHasAtribID.GetLinks((global::IPS.UMLSPF.Clase)this, sourceAtributoIdentificador3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ClaseHasAtribID.ClaseDomainRoleId, global::IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificadorDomainRoleId);
 				}
 
 				return;
@@ -1072,22 +1072,22 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
-		#region Clase opposite domain role accessor
+		#region Class opposite domain role accessor
 		/// <summary>
-		/// Gets or sets Clase.
-		/// Description for IPS.UMLSPF.ClaseHasAtributo.Atributo
+		/// Gets or sets Class.
+		/// Description for IPS.UMLSPF.ClaseHasAtrib.Atributo
 		/// </summary>
-		public virtual Clase Clase
+		public virtual Clase Class
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId) as Clase;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtrib.AtributoDomainRoleId) as Clase;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtrib.AtributoDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1459,37 +1459,37 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
-		#region Clase opposite domain role accessor
+		#region Class opposite domain role accessor
 		/// <summary>
-		/// Gets or sets Clase.
-		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones
+		/// Gets or sets Class.
+		/// Description for IPS.UMLSPF.ClaseHasMethods.Operaciones
 		/// </summary>
-		public virtual Clase Clase
+		public virtual Clase Class
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId) as Clase;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasMethods.OperacionesDomainRoleId) as Clase;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasMethods.OperacionesDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region Parametros opposite domain role accessor
+		#region Params opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Parametros.
-		/// Description for IPS.UMLSPF.OperacionesHasParametros.Operaciones
+		/// Gets a list of Params.
+		/// Description for IPS.UMLSPF.OperacionesHasParams.Operaciones
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Parametros> Parametros
+		public virtual DslModeling::LinkedElementCollection<Parametros> Params
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Parametros>, Parametros>(global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Parametros>, Parametros>(global::IPS.UMLSPF.OperacionesHasParams.OperacionesDomainRoleId);
 			}
 		}
 		#endregion
@@ -1545,8 +1545,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Parametros sourceParametros1 = sourceElement as global::IPS.UMLSPF.Parametros;
 			if (sourceParametros1 != null)
 			{
-				// Create link for path OperacionesHasParametros.Parametros
-				this.Parametros.Add(sourceParametros1);
+				// Create link for path OperacionesHasParams.Params
+				this.Params.Add(sourceParametros1);
 
 				return;
 			}
@@ -1576,12 +1576,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.Parametros sourceParametros1 = sourceElement as global::IPS.UMLSPF.Parametros;
 			if (sourceParametros1 != null)
 			{
-				// Delete link for path OperacionesHasParametros.Parametros
+				// Delete link for path OperacionesHasParams.Params
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.OperacionesHasParametros.GetLinks((global::IPS.UMLSPF.Operaciones)this, sourceParametros1))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.OperacionesHasParams.GetLinks((global::IPS.UMLSPF.Operaciones)this, sourceParametros1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId, global::IPS.UMLSPF.OperacionesHasParametros.ParametrosDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.OperacionesHasParams.OperacionesDomainRoleId, global::IPS.UMLSPF.OperacionesHasParams.ParametrosDomainRoleId);
 				}
 
 				return;
@@ -1631,60 +1631,60 @@ namespace IPS.UMLSPF
 		{
 		}
 		#endregion
-		#region EstilosClase opposite domain role accessor
+		#region ClassStyle opposite domain role accessor
 		/// <summary>
-		/// Gets or sets EstilosClase.
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida
+		/// Gets or sets ClassStyle.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecida
 		/// </summary>
-		public virtual EstilosClase EstilosClase
+		public virtual EstilosClase ClassStyle
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId) as EstilosClase;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecidaDomainRoleId) as EstilosClase;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region EstiloAtributos opposite domain role accessor
+		#region AtribStyle opposite domain role accessor
 		/// <summary>
-		/// Gets or sets EstiloAtributos.
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida
+		/// Gets or sets AtribStyle.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecida
 		/// </summary>
-		public virtual EstiloAtributos EstiloAtributos
+		public virtual EstiloAtributos AtribStyle
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId) as EstiloAtributos;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecidaDomainRoleId) as EstiloAtributos;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region EstiloMetodos opposite domain role accessor
+		#region MethodsStyle opposite domain role accessor
 		/// <summary>
-		/// Gets or sets EstiloMetodos.
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida
+		/// Gets or sets MethodsStyle.
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecida
 		/// </summary>
-		public virtual EstiloMetodos EstiloMetodos
+		public virtual EstiloMetodos MethodsStyle
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId) as EstiloMetodos;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecidaDomainRoleId) as EstiloMetodos;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1710,8 +1710,8 @@ namespace IPS.UMLSPF
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstilosClase.DomainClassId)) 
 				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstilosClase.EstilosClase
-					if (this.EstilosClase != null)
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasClassStyle.ClassStyle
+					if (this.ClassStyle != null)
 					{
 						return false;
 					}
@@ -1720,8 +1720,8 @@ namespace IPS.UMLSPF
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstiloAtributos.DomainClassId)) 
 				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
-					if (this.EstiloAtributos != null)
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasAtribStyle.AtribStyle
+					if (this.AtribStyle != null)
 					{
 						return false;
 					}
@@ -1730,8 +1730,8 @@ namespace IPS.UMLSPF
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::IPS.UMLSPF.EstiloMetodos.DomainClassId)) 
 				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
-					if (this.EstiloMetodos != null)
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasMethodsStyle.MethodsStyle
+					if (this.MethodsStyle != null)
 					{
 						return false;
 					}
@@ -1765,8 +1765,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.EstilosClase sourceEstilosClase1 = sourceElement as global::IPS.UMLSPF.EstilosClase;
 			if (sourceEstilosClase1 != null)
 			{
-				// Create link for path ClaseEnriquecidaHasEstilosClase.EstilosClase
-				this.EstilosClase = sourceEstilosClase1;
+				// Create link for path ClaseEnriquecidaHasClassStyle.ClassStyle
+				this.ClassStyle = sourceEstilosClase1;
 
 				return;
 			}
@@ -1774,8 +1774,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.EstiloAtributos sourceEstiloAtributos2 = sourceElement as global::IPS.UMLSPF.EstiloAtributos;
 			if (sourceEstiloAtributos2 != null)
 			{
-				// Create link for path ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
-				this.EstiloAtributos = sourceEstiloAtributos2;
+				// Create link for path ClaseEnriquecidaHasAtribStyle.AtribStyle
+				this.AtribStyle = sourceEstiloAtributos2;
 
 				return;
 			}
@@ -1783,8 +1783,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.EstiloMetodos sourceEstiloMetodos3 = sourceElement as global::IPS.UMLSPF.EstiloMetodos;
 			if (sourceEstiloMetodos3 != null)
 			{
-				// Create link for path ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
-				this.EstiloMetodos = sourceEstiloMetodos3;
+				// Create link for path ClaseEnriquecidaHasMethodsStyle.MethodsStyle
+				this.MethodsStyle = sourceEstiloMetodos3;
 
 				return;
 			}
@@ -1814,12 +1814,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.EstilosClase sourceEstilosClase1 = sourceElement as global::IPS.UMLSPF.EstilosClase;
 			if (sourceEstilosClase1 != null)
 			{
-				// Delete link for path ClaseEnriquecidaHasEstilosClase.EstilosClase
+				// Delete link for path ClaseEnriquecidaHasClassStyle.ClassStyle
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstilosClase1))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstilosClase1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClaseDomainRoleId);
 				}
 
 				return;
@@ -1828,12 +1828,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.EstiloAtributos sourceEstiloAtributos2 = sourceElement as global::IPS.UMLSPF.EstiloAtributos;
 			if (sourceEstiloAtributos2 != null)
 			{
-				// Delete link for path ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+				// Delete link for path ClaseEnriquecidaHasAtribStyle.AtribStyle
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstiloAtributos2))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstiloAtributos2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributosDomainRoleId);
 				}
 
 				return;
@@ -1842,12 +1842,12 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.EstiloMetodos sourceEstiloMetodos3 = sourceElement as global::IPS.UMLSPF.EstiloMetodos;
 			if (sourceEstiloMetodos3 != null)
 			{
-				// Delete link for path ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+				// Delete link for path ClaseEnriquecidaHasMethodsStyle.MethodsStyle
 				
-				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstiloMetodos3))
+				foreach (DslModeling::ElementLink link in global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.GetLinks((global::IPS.UMLSPF.ClaseEnriquecida)this, sourceEstiloMetodos3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId);
+					link.Delete(global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecidaDomainRoleId, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodosDomainRoleId);
 				}
 
 				return;
@@ -2314,19 +2314,19 @@ namespace IPS.UMLSPF
 		#region ClaseEnriquecida opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClaseEnriquecida.
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClase
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClase
 		/// </summary>
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId) as ClaseEnriquecida;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClaseDomainRoleId) as ClaseEnriquecida;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClaseDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -2701,19 +2701,19 @@ namespace IPS.UMLSPF
 		#region ClaseEnriquecida opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClaseEnriquecida.
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributos
 		/// </summary>
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId) as ClaseEnriquecida;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributosDomainRoleId) as ClaseEnriquecida;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributosDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -3001,19 +3001,19 @@ namespace IPS.UMLSPF
 		#region ClaseEnriquecida opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClaseEnriquecida.
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodos
 		/// </summary>
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId) as ClaseEnriquecida;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodosDomainRoleId) as ClaseEnriquecida;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodosDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -3649,22 +3649,22 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
-		#region Clase opposite domain role accessor
+		#region Class opposite domain role accessor
 		/// <summary>
-		/// Gets or sets Clase.
-		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificador
+		/// Gets or sets Class.
+		/// Description for IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificador
 		/// </summary>
-		public virtual Clase Clase
+		public virtual Clase Class
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId) as Clase;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificadorDomainRoleId) as Clase;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificadorDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -3949,22 +3949,22 @@ namespace IPS.UMLSPF
 		}
 		
 		#endregion
-		#region Operaciones opposite domain role accessor
+		#region Methodz opposite domain role accessor
 		/// <summary>
-		/// Gets or sets Operaciones.
-		/// Description for IPS.UMLSPF.OperacionesHasParametros.Parametros
+		/// Gets or sets Methodz.
+		/// Description for IPS.UMLSPF.OperacionesHasParams.Parametros
 		/// </summary>
-		public virtual Operaciones Operaciones
+		public virtual Operaciones Methodz
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.OperacionesHasParametros.ParametrosDomainRoleId) as Operaciones;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.OperacionesHasParams.ParametrosDomainRoleId) as Operaciones;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.OperacionesHasParametros.ParametrosDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.OperacionesHasParams.ParametrosDomainRoleId, value);
 			}
 		}
 		#endregion

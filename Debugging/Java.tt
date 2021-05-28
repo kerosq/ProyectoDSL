@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
-<#@ UMLSPF processor="UMLSPFDirectiveProcessor" requires="fileName='Sample.kacqSPF'" #> 
+<#@ UMLSPF processor="UMLSPFDirectiveProcessor" requires="fileName='IPS_PT2.kacqSPF'" #> 
 <#@ include file="EF.utility.CS.ttinclude" #>
 <#@ output extension=".java" #>
 
@@ -12,15 +12,15 @@
 	var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
 		
 
-	if ( this.ModeloClassWEB.Clase.Count == 0 ) {
+	if ( this.ModeloClassWEB.Class.Count == 0 ) {
 		WriteLine("Solucion vacía. No se ha configurado ningún nodo");
 	}
 	else{ 
 		
 		Clase modelClass;
-		AtributoIdentificador Atrib_ID;
+		
 						
-		foreach(Clase nodo in this.ModeloClassWEB.Clase) {
+		foreach(Clase nodo in this.ModeloClassWEB.Class) {
 		
 			if (nodo is Clase) {
 				modelClass = ((Clase)nodo);		
@@ -28,10 +28,11 @@
 
 				WriteLine("public class "+ modelClass.NombreClase+ " {");
 				
-					foreach (AtributoIdentificador AtribID in modelClass.AtributoIdentificador){	
-					WriteLine(AtribID.NombreAtributo);
+					foreach (Atributo atrib in modelClass.Atrib){	
+						
 
 					}
+				
 			
 				WriteLine("}");
 			}

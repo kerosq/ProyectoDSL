@@ -798,7 +798,7 @@ namespace IPS.UMLSPF
 			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForOperaciones( global::IPS.UMLSPF.Operaciones root )
 			{
 				// Segments 0 and 1
-				global::IPS.UMLSPF.Clase root2 = root.Clase;
+				global::IPS.UMLSPF.Clase root2 = root.Class;
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
@@ -815,10 +815,10 @@ namespace IPS.UMLSPF
 			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForParametros( global::IPS.UMLSPF.Parametros root )
 			{
 				// Segments 0 and 1
-				global::IPS.UMLSPF.Operaciones root2 = root.Operaciones;
+				global::IPS.UMLSPF.Operaciones root2 = root.Methodz;
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
-				global::IPS.UMLSPF.Clase root4 = root2.Clase;
+				global::IPS.UMLSPF.Clase root4 = root2.Class;
 				if ( root4 == null ) return null;
 				// Segments 4 and 5
 				global::IPS.UMLSPF.ModeloClassWEB result = root4.ModeloClassWEB;
@@ -828,7 +828,7 @@ namespace IPS.UMLSPF
 			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForAtributoIdentificador( global::IPS.UMLSPF.AtributoIdentificador root )
 			{
 				// Segments 0 and 1
-				global::IPS.UMLSPF.Clase root2 = root.Clase;
+				global::IPS.UMLSPF.Clase root2 = root.Class;
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;
@@ -838,7 +838,7 @@ namespace IPS.UMLSPF
 			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForAtributo( global::IPS.UMLSPF.Atributo root )
 			{
 				// Segments 0 and 1
-				global::IPS.UMLSPF.Clase root2 = root.Clase;
+				global::IPS.UMLSPF.Clase root2 = root.Class;
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::IPS.UMLSPF.ModeloClassWEB result = root2.ModeloClassWEB;

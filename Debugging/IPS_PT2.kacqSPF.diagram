@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uMLSPFDiagram dslVersion="1.0.0.0" Id="6d317040-b718-4d9e-8961-9d7a5325f75b" absoluteBounds="0, 0, 11, 8.5" name="IPS_PT2">
+  <modeloClassWEBMoniker Id="d74831a6-2494-45b4-8c8d-03679a08c109" />
+  <nestedChildShapes>
+    <shapeClaseEnriquecida Id="87c9822b-6dfb-42ba-88d9-fc89b4f5e622" absoluteBounds="0.5, 1, 4.875, 2.75">
+      <claseEnriquecidaMoniker Id="8e7457ea-fd29-485a-b942-c23fce294c53" />
+    </shapeClaseEnriquecida>
+  </nestedChildShapes>
+</uMLSPFDiagram>

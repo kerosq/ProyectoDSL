@@ -22,12 +22,12 @@ namespace IPS.UMLSPF
 		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
 		private void ValidateClaseMultiplicity (DslValidation::ValidationContext context)
 		{
-			if (this.AtributoIdentificador == null)
+			if (this.AtribID == null)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
 						IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"Clase", "", "AtributoIdentificador"),
+						"Clase", "", "AtribID"),
 						"DSL0001", this);
 			}
 		} // ValidateClaseMultiplicity
@@ -46,28 +46,28 @@ namespace IPS.UMLSPF
 		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
 		private void ValidateClaseEnriquecidaMultiplicity (DslValidation::ValidationContext context)
 		{
-			if (this.EstilosClase == null)
+			if (this.ClassStyle == null)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
 						IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"ClaseEnriquecida", "", "EstilosClase"),
+						"ClaseEnriquecida", "", "ClassStyle"),
 						"DSL0001", this);
 			}
-			if (this.EstiloAtributos == null)
+			if (this.AtribStyle == null)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
 						IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"ClaseEnriquecida", "", "EstiloAtributos"),
+						"ClaseEnriquecida", "", "AtribStyle"),
 						"DSL0001", this);
 			}
-			if (this.EstiloMetodos == null)
+			if (this.MethodsStyle == null)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
 						IPS.UMLSPF.UMLSPFDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"ClaseEnriquecida", "", "EstiloMetodos"),
+						"ClaseEnriquecida", "", "MethodsStyle"),
 						"DSL0001", this);
 			}
 		} // ValidateClaseEnriquecidaMultiplicity

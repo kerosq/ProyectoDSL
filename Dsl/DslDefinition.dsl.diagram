@@ -5,21 +5,21 @@
     <microsoft.VisualStudio.Modeling.DslDesigner.DomainModelElements Id="b3b856dd-9b75-43e1-af81-da7a15ab5818" absoluteBounds="0, 0, 12.466666671633721, 22.963409830729177">
       <nestedChildShapes>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="33b19f62-7ebc-49ee-bf9d-7aad120b1831" isExpanded="false" absoluteBounds="1.6, 1.7416910807291668, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ModeloClassWEBHasClase" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ModeloClassWEBHasClass" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="547eaa06-649c-44ba-b3c6-ab9898d98be3" absoluteBounds="1.6, 1.7416910807291668, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="d25d1afd-67b4-40bb-8a8c-8bb58fb71f66" isExpanded="false" absoluteBounds="4.95, 4.8019775390624995, 1.3500000000000005, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseHasAtributo" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseHasAtrib" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="9363d09a-e03a-41cd-8310-3800f3bc55f0" absoluteBounds="4.965, 5.0619775390624993, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="f805ed19-8038-490d-b7d5-940de6d6c14d" isExpanded="false" absoluteBounds="4.95, 6.6205729166666663, 1.3500000000000005, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseHasOperaciones" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseHasMethods" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="124edf4e-63a6-450b-9029-ff7c66f3ef3f" absoluteBounds="4.965, 6.880572916666666, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
@@ -33,21 +33,21 @@
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="3b9ab085-4ec4-449f-83cd-fe6b41f5255d" isExpanded="false" absoluteBounds="5.5500000000000007, 12.985748697916669, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasEstilosClase" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasClassStyle" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="9177aff3-952a-4f72-a3d7-6df4fb4e04e8" absoluteBounds="5.5500000000000007, 12.985748697916669, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="a283552e-2204-4e1c-952b-03cff038d716" isExpanded="false" absoluteBounds="5.5500000000000007, 14.996645507812504, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasEstiloAtributos" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasAtribStyle" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="6ffbd523-9ee7-4974-865e-25528ce49b92" absoluteBounds="5.5500000000000007, 14.996645507812504, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="3c93921b-1a5c-431e-ae78-0617c9df69dd" isExpanded="false" absoluteBounds="5.5500000000000007, 16.815240885416671, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasEstiloMetodos" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasMethodsStyle" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="67e86763-97a6-43bb-9d32-07c88f78a475" absoluteBounds="5.5500000000000007, 16.815240885416671, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
@@ -75,14 +75,14 @@
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="79dd2e1e-eaa1-4aee-b17c-48329319b59d" isExpanded="false" absoluteBounds="4.95, 2.9833821614583331, 1.3500000000000005, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseHasAtributoIdentificador" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/ClaseHasAtribID" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="d2c47344-4821-4276-91da-090063e1cee8" absoluteBounds="4.965, 3.2433821614583334, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="42baae49-553f-4014-ba28-4969be7eec8b" isExpanded="false" absoluteBounds="8.3, 8.4391682942708339, 1.3499999999999996, 0.25">
-          <DomainRelationshipMoniker Name="/IPS.UMLSPF/OperacionesHasParametros" />
+          <DomainRelationshipMoniker Name="/IPS.UMLSPF/OperacionesHasParams" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="b928d5d9-64bd-43a8-9823-3ec06b026288" absoluteBounds="8.3150000000000013, 8.6991682942708337, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
@@ -558,17 +558,17 @@
           <Arcs>
             <SourceRoleNode Id="525d84ba-9dae-4be1-bd81-e37eb4ce13cb">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/ModeloClassWEBHasClase/ModeloClassWEB" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/ModeloClassWEBHasClass/ModeloClassWEB" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="8d418136-964a-4748-9b66-6b9dce6421db">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseHasAtributo/Clase" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseHasAtrib/Clase" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="126ea573-a783-42e9-9f14-042b599f0e0c">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseHasOperaciones/Clase" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseHasMethods/Clase" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="a91cd98e-dd61-4946-a5d7-373514c7c4c9" IsLeaf="true">
@@ -583,17 +583,17 @@
             </InheritanceNode>
             <SourceRoleNode Id="8ed0fc8f-19c4-4409-b915-487f8963dbe1">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasClassStyle/ClaseEnriquecida" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="75abdd3b-488c-46be-b33d-7e7273a747cd">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasAtribStyle/ClaseEnriquecida" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="1195c52c-f64b-4a88-9033-8bd906c00f1e">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseEnriquecidaHasMethodsStyle/ClaseEnriquecida" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="3a5d4ad5-602b-4857-ba5d-7735335fcf61">
@@ -613,12 +613,12 @@
             </SourceRoleNode>
             <SourceRoleNode Id="807c4037-e0b1-4eaf-a173-a2a095d0f39a">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseHasAtributoIdentificador/Clase" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/ClaseHasAtribID/Clase" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="f5da101a-f745-4c38-9f42-4a0bd7c9ff21">
               <Role>
-                <DomainRoleMoniker Name="/IPS.UMLSPF/OperacionesHasParametros/Operaciones" />
+                <DomainRoleMoniker Name="/IPS.UMLSPF/OperacionesHasParams/Operaciones" />
               </Role>
             </SourceRoleNode>
           </Arcs>

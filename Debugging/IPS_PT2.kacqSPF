@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modeloClassWEB xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d74831a6-2494-45b4-8c8d-03679a08c109" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF">
+  <class>
+    <modeloClassWEBHasClass Id="649a05ae-d4f2-4e46-a24c-054b3092d066">
+      <claseEnriquecida Id="8e7457ea-fd29-485a-b942-c23fce294c53" nombreClase="Cliente" />
+    </modeloClassWEBHasClass>
+  </class>
+</modeloClassWEB>

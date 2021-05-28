@@ -15,7 +15,7 @@
             <DomainClassMoniker Name="Clase" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ModeloClassWEBHasClase.Clase</DomainPath>
+            <DomainPath>ModeloClassWEBHasClass.Class</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -42,7 +42,7 @@
             <DomainClassMoniker Name="Atributo" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ClaseHasAtributo.Atributo</DomainPath>
+            <DomainPath>ClaseHasAtrib.Atrib</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -50,7 +50,7 @@
             <DomainClassMoniker Name="Operaciones" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ClaseHasOperaciones.Operaciones</DomainPath>
+            <DomainPath>ClaseHasMethods.Methods</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -58,7 +58,7 @@
             <DomainClassMoniker Name="AtributoIdentificador" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ClaseHasAtributoIdentificador.AtributoIdentificador</DomainPath>
+            <DomainPath>ClaseHasAtribID.AtribID</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -116,7 +116,7 @@
             <DomainClassMoniker Name="Parametros" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>OperacionesHasParametros.Parametros</DomainPath>
+            <DomainPath>OperacionesHasParams.Params</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -131,7 +131,7 @@
             <DomainClassMoniker Name="EstilosClase" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ClaseEnriquecidaHasEstilosClase.EstilosClase</DomainPath>
+            <DomainPath>ClaseEnriquecidaHasClassStyle.ClassStyle</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -139,7 +139,7 @@
             <DomainClassMoniker Name="EstiloAtributos" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos</DomainPath>
+            <DomainPath>ClaseEnriquecidaHasAtribStyle.AtribStyle</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -147,7 +147,7 @@
             <DomainClassMoniker Name="EstiloMetodos" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos</DomainPath>
+            <DomainPath>ClaseEnriquecidaHasMethodsStyle.MethodsStyle</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -283,48 +283,48 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="a9b6e343-13d8-40ae-994b-012eafb94bff" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase" Name="ModeloClassWEBHasClase" DisplayName="Modelo Class WEBHas Clase" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="a9b6e343-13d8-40ae-994b-012eafb94bff" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClass" Name="ModeloClassWEBHasClass" DisplayName="Modelo Class WEBHas Class" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="cd62c36a-4feb-4c05-8a87-e735abd28795" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEB" Name="ModeloClassWEB" DisplayName="Modelo Class WEB" PropertyName="Clase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase">
+        <DomainRole Id="cd62c36a-4feb-4c05-8a87-e735abd28795" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEB" Name="ModeloClassWEB" DisplayName="Modelo Class WEB" PropertyName="Class" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Class">
           <RolePlayer>
             <DomainClassMoniker Name="ModeloClassWEB" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="7b20d996-b631-4d0a-bdc4-bfcf98092bc5" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="ModeloClassWEB" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Modelo Class WEB">
+        <DomainRole Id="7b20d996-b631-4d0a-bdc4-bfcf98092bc5" Description="Description for IPS.UMLSPF.ModeloClassWEBHasClass.Clase" Name="Clase" DisplayName="Clase" PropertyName="ModeloClassWEB" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Modelo Class WEB">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="8536dcfa-cd47-42ad-bec5-6b313e3f4900" Description="Description for IPS.UMLSPF.ClaseHasAtributo" Name="ClaseHasAtributo" DisplayName="Clase Has Atributo" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="8536dcfa-cd47-42ad-bec5-6b313e3f4900" Description="Description for IPS.UMLSPF.ClaseHasAtrib" Name="ClaseHasAtrib" DisplayName="Clase Has Atrib" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="db2f3002-204b-4e00-9b5a-f780c5c3eeba" Description="Description for IPS.UMLSPF.ClaseHasAtributo.Clase" Name="Clase" DisplayName="Clase" PropertyName="Atributo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo">
+        <DomainRole Id="db2f3002-204b-4e00-9b5a-f780c5c3eeba" Description="Description for IPS.UMLSPF.ClaseHasAtrib.Clase" Name="Clase" DisplayName="Clase" PropertyName="Atrib" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atrib">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="63085b37-3fe4-4d9f-b962-f5817593b664" Description="Description for IPS.UMLSPF.ClaseHasAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="63085b37-3fe4-4d9f-b962-f5817593b664" Description="Description for IPS.UMLSPF.ClaseHasAtrib.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Class" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Class">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="555a51fc-f4e2-4122-b27c-bffa5105fa66" Description="Description for IPS.UMLSPF.ClaseHasOperaciones" Name="ClaseHasOperaciones" DisplayName="Clase Has Operaciones" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="555a51fc-f4e2-4122-b27c-bffa5105fa66" Description="Description for IPS.UMLSPF.ClaseHasMethods" Name="ClaseHasMethods" DisplayName="Clase Has Methods" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="dfc13914-090a-41d9-b52b-2c2f3fe755cd" Description="Description for IPS.UMLSPF.ClaseHasOperaciones.Clase" Name="Clase" DisplayName="Clase" PropertyName="Operaciones" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Operaciones">
+        <DomainRole Id="dfc13914-090a-41d9-b52b-2c2f3fe755cd" Description="Description for IPS.UMLSPF.ClaseHasMethods.Clase" Name="Clase" DisplayName="Clase" PropertyName="Methods" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Methods">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="78609571-12e9-4d9a-9070-edf2628d2972" Description="Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones" Name="Operaciones" DisplayName="Operaciones" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="78609571-12e9-4d9a-9070-edf2628d2972" Description="Description for IPS.UMLSPF.ClaseHasMethods.Operaciones" Name="Operaciones" DisplayName="Operaciones" PropertyName="Class" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Class">
           <RolePlayer>
             <DomainClassMoniker Name="Operaciones" />
           </RolePlayer>
@@ -374,48 +374,48 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="262c7f2b-659c-4761-bf32-55514e4a6aee" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase" Name="ClaseEnriquecidaHasEstilosClase" DisplayName="Clase Enriquecida Has Estilos Clase" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="262c7f2b-659c-4761-bf32-55514e4a6aee" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle" Name="ClaseEnriquecidaHasClassStyle" DisplayName="Clase Enriquecida Has Class Style" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="58dd85a2-24a3-4e37-956a-3b7062f9e72c" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstilosClase" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilos Clase">
+        <DomainRole Id="58dd85a2-24a3-4e37-956a-3b7062f9e72c" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="ClassStyle" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Class Style">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="7d7a8e6c-2d8d-4895-a12b-8f41c543bdfb" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClase" Name="EstilosClase" DisplayName="Estilos Clase" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
+        <DomainRole Id="7d7a8e6c-2d8d-4895-a12b-8f41c543bdfb" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClase" Name="EstilosClase" DisplayName="Estilos Clase" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
           <RolePlayer>
             <DomainClassMoniker Name="EstilosClase" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="152ed9dc-919b-4fdc-b705-6edaee7103e1" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos" Name="ClaseEnriquecidaHasEstiloAtributos" DisplayName="Clase Enriquecida Has Estilo Atributos" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="152ed9dc-919b-4fdc-b705-6edaee7103e1" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle" Name="ClaseEnriquecidaHasAtribStyle" DisplayName="Clase Enriquecida Has Atrib Style" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="6d6592a5-cdcd-4603-a535-e243aa27bbf1" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloAtributos" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Atributos">
+        <DomainRole Id="6d6592a5-cdcd-4603-a535-e243aa27bbf1" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="AtribStyle" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atrib Style">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="2c53b122-a1ac-4777-bd05-9a86fa7a40a2" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos" Name="EstiloAtributos" DisplayName="Estilo Atributos" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
+        <DomainRole Id="2c53b122-a1ac-4777-bd05-9a86fa7a40a2" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributos" Name="EstiloAtributos" DisplayName="Estilo Atributos" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
           <RolePlayer>
             <DomainClassMoniker Name="EstiloAtributos" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="252fa143-b76c-42ec-817f-02aec7ac9bca" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos" Name="ClaseEnriquecidaHasEstiloMetodos" DisplayName="Clase Enriquecida Has Estilo Metodos" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="252fa143-b76c-42ec-817f-02aec7ac9bca" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle" Name="ClaseEnriquecidaHasMethodsStyle" DisplayName="Clase Enriquecida Has Methods Style" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="6cc245b0-5f75-4340-8014-6f24deca6ca2" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloMetodos" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Metodos">
+        <DomainRole Id="6cc245b0-5f75-4340-8014-6f24deca6ca2" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="MethodsStyle" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Methods Style">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="303110db-fde9-43fd-819f-57fd2f179da5" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos" Name="EstiloMetodos" DisplayName="Estilo Metodos" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
+        <DomainRole Id="303110db-fde9-43fd-819f-57fd2f179da5" Description="Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodos" Name="EstiloMetodos" DisplayName="Estilo Metodos" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
           <RolePlayer>
             <DomainClassMoniker Name="EstiloMetodos" />
           </RolePlayer>
@@ -470,32 +470,32 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="c01259a4-025d-4d30-a785-216b7d4b748d" Description="Description for IPS.UMLSPF.ClaseHasAtributoIdentificador" Name="ClaseHasAtributoIdentificador" DisplayName="Clase Has Atributo Identificador" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="c01259a4-025d-4d30-a785-216b7d4b748d" Description="Description for IPS.UMLSPF.ClaseHasAtribID" Name="ClaseHasAtribID" DisplayName="Clase Has Atrib ID" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="53d76716-d806-403a-91f5-91074717158d" Description="Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase" Name="Clase" DisplayName="Clase" PropertyName="AtributoIdentificador" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Identificador">
+        <DomainRole Id="53d76716-d806-403a-91f5-91074717158d" Description="Description for IPS.UMLSPF.ClaseHasAtribID.Clase" Name="Clase" DisplayName="Clase" PropertyName="AtribID" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atrib ID">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="b05cceef-ad7d-4400-bded-4e9c15b2b881" Description="Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificador" Name="AtributoIdentificador" DisplayName="Atributo Identificador" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="b05cceef-ad7d-4400-bded-4e9c15b2b881" Description="Description for IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificador" Name="AtributoIdentificador" DisplayName="Atributo Identificador" PropertyName="Class" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Class">
           <RolePlayer>
             <DomainClassMoniker Name="AtributoIdentificador" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="dc02bbdf-6769-40c6-9386-8c9f2d611302" Description="Description for IPS.UMLSPF.OperacionesHasParametros" Name="OperacionesHasParametros" DisplayName="Operaciones Has Parametros" Namespace="IPS.UMLSPF" IsEmbedding="true">
+    <DomainRelationship Id="dc02bbdf-6769-40c6-9386-8c9f2d611302" Description="Description for IPS.UMLSPF.OperacionesHasParams" Name="OperacionesHasParams" DisplayName="Operaciones Has Params" Namespace="IPS.UMLSPF" IsEmbedding="true">
       <Source>
-        <DomainRole Id="489bf74b-caaf-404e-87b6-95a100c32508" Description="Description for IPS.UMLSPF.OperacionesHasParametros.Operaciones" Name="Operaciones" DisplayName="Operaciones" PropertyName="Parametros" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Parametros">
+        <DomainRole Id="489bf74b-caaf-404e-87b6-95a100c32508" Description="Description for IPS.UMLSPF.OperacionesHasParams.Operaciones" Name="Operaciones" DisplayName="Operaciones" PropertyName="Params" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Params">
           <RolePlayer>
             <DomainClassMoniker Name="Operaciones" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="93d5218d-0ea0-4607-8977-06a6d2844e0c" Description="Description for IPS.UMLSPF.OperacionesHasParametros.Parametros" Name="Parametros" DisplayName="Parametros" PropertyName="Operaciones" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Operaciones">
+        <DomainRole Id="93d5218d-0ea0-4607-8977-06a6d2844e0c" Description="Description for IPS.UMLSPF.OperacionesHasParams.Parametros" Name="Parametros" DisplayName="Parametros" PropertyName="Methodz" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Methodz">
           <RolePlayer>
             <DomainClassMoniker Name="Parametros" />
           </RolePlayer>
@@ -670,8 +670,8 @@
       <XmlClassData TypeName="ModeloClassWEB" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBMoniker" ElementName="modeloClassWEB" MonikerTypeName="ModeloClassWEBMoniker">
         <DomainClassMoniker Name="ModeloClassWEB" />
         <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="clase">
-            <DomainRelationshipMoniker Name="ModeloClassWEBHasClase" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="class">
+            <DomainRelationshipMoniker Name="ModeloClassWEBHasClass" />
           </XmlRelationshipData>
           <XmlPropertyData XmlName="nombreUML">
             <DomainPropertyMoniker Name="ModeloClassWEB/NombreUML" />
@@ -690,22 +690,22 @@
           <XmlPropertyData XmlName="nombreClase">
             <DomainPropertyMoniker Name="Clase/NombreClase" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
-            <DomainRelationshipMoniker Name="ClaseHasAtributo" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atrib">
+            <DomainRelationshipMoniker Name="ClaseHasAtrib" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="operaciones">
-            <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="methods">
+            <DomainRelationshipMoniker Name="ClaseHasMethods" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
             <DomainRelationshipMoniker Name="conAsociacion" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoIdentificador">
-            <DomainRelationshipMoniker Name="ClaseHasAtributoIdentificador" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atribID">
+            <DomainRelationshipMoniker Name="ClaseHasAtribID" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ModeloClassWEBHasClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBHasClaseMoniker" ElementName="modeloClassWEBHasClase" MonikerTypeName="ModeloClassWEBHasClaseMoniker">
-        <DomainRelationshipMoniker Name="ModeloClassWEBHasClase" />
+      <XmlClassData TypeName="ModeloClassWEBHasClass" MonikerAttributeName="" SerializeId="true" MonikerElementName="modeloClassWEBHasClassMoniker" ElementName="modeloClassWEBHasClass" MonikerTypeName="ModeloClassWEBHasClassMoniker">
+        <DomainRelationshipMoniker Name="ModeloClassWEBHasClass" />
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
@@ -724,8 +724,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
-        <DomainRelationshipMoniker Name="ClaseHasAtributo" />
+      <XmlClassData TypeName="ClaseHasAtrib" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtribMoniker" ElementName="claseHasAtrib" MonikerTypeName="ClaseHasAtribMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasAtrib" />
       </XmlClassData>
       <XmlClassData TypeName="Operaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionesMoniker" ElementName="operaciones" MonikerTypeName="OperacionesMoniker">
         <DomainClassMoniker Name="Operaciones" />
@@ -742,13 +742,13 @@
           <XmlPropertyData XmlName="modificador">
             <DomainPropertyMoniker Name="Operaciones/Modificador" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="parametros">
-            <DomainRelationshipMoniker Name="OperacionesHasParametros" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="params">
+            <DomainRelationshipMoniker Name="OperacionesHasParams" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseHasOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasOperacionesMoniker" ElementName="claseHasOperaciones" MonikerTypeName="ClaseHasOperacionesMoniker">
-        <DomainRelationshipMoniker Name="ClaseHasOperaciones" />
+      <XmlClassData TypeName="ClaseHasMethods" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasMethodsMoniker" ElementName="claseHasMethods" MonikerTypeName="ClaseHasMethodsMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasMethods" />
       </XmlClassData>
       <XmlClassData TypeName="ConAsociacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conAsociacionMoniker" ElementName="conAsociacion" MonikerTypeName="ConAsociacionMoniker">
         <DomainRelationshipMoniker Name="conAsociacion" />
@@ -776,14 +776,14 @@
       <XmlClassData TypeName="ClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaMoniker" ElementName="claseEnriquecida" MonikerTypeName="ClaseEnriquecidaMoniker">
         <DomainClassMoniker Name="ClaseEnriquecida" />
         <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="estilosClase">
-            <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstilosClase" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="classStyle">
+            <DomainRelationshipMoniker Name="ClaseEnriquecidaHasClassStyle" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="estiloAtributos">
-            <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstiloAtributos" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atribStyle">
+            <DomainRelationshipMoniker Name="ClaseEnriquecidaHasAtribStyle" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="estiloMetodos">
-            <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstiloMetodos" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="methodsStyle">
+            <DomainRelationshipMoniker Name="ClaseEnriquecidaHasMethodsStyle" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -807,8 +807,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseEnriquecidaHasEstilosClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasEstilosClaseMoniker" ElementName="claseEnriquecidaHasEstilosClase" MonikerTypeName="ClaseEnriquecidaHasEstilosClaseMoniker">
-        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstilosClase" />
+      <XmlClassData TypeName="ClaseEnriquecidaHasClassStyle" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasClassStyleMoniker" ElementName="claseEnriquecidaHasClassStyle" MonikerTypeName="ClaseEnriquecidaHasClassStyleMoniker">
+        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasClassStyle" />
       </XmlClassData>
       <XmlClassData TypeName="EstiloAtributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloAtributosMoniker" ElementName="estiloAtributos" MonikerTypeName="EstiloAtributosMoniker">
         <DomainClassMoniker Name="EstiloAtributos" />
@@ -827,8 +827,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseEnriquecidaHasEstiloAtributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasEstiloAtributosMoniker" ElementName="claseEnriquecidaHasEstiloAtributos" MonikerTypeName="ClaseEnriquecidaHasEstiloAtributosMoniker">
-        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstiloAtributos" />
+      <XmlClassData TypeName="ClaseEnriquecidaHasAtribStyle" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasAtribStyleMoniker" ElementName="claseEnriquecidaHasAtribStyle" MonikerTypeName="ClaseEnriquecidaHasAtribStyleMoniker">
+        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasAtribStyle" />
       </XmlClassData>
       <XmlClassData TypeName="EstiloMetodos" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloMetodosMoniker" ElementName="estiloMetodos" MonikerTypeName="EstiloMetodosMoniker">
         <DomainClassMoniker Name="EstiloMetodos" />
@@ -844,8 +844,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseEnriquecidaHasEstiloMetodos" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasEstiloMetodosMoniker" ElementName="claseEnriquecidaHasEstiloMetodos" MonikerTypeName="ClaseEnriquecidaHasEstiloMetodosMoniker">
-        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasEstiloMetodos" />
+      <XmlClassData TypeName="ClaseEnriquecidaHasMethodsStyle" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasMethodsStyleMoniker" ElementName="claseEnriquecidaHasMethodsStyle" MonikerTypeName="ClaseEnriquecidaHasMethodsStyleMoniker">
+        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasMethodsStyle" />
       </XmlClassData>
       <XmlClassData TypeName="Herencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="herenciaMoniker" ElementName="herencia" MonikerTypeName="HerenciaMoniker">
         <DomainClassMoniker Name="Herencia" />
@@ -899,8 +899,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ClaseHasAtributoIdentificador" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoIdentificadorMoniker" ElementName="claseHasAtributoIdentificador" MonikerTypeName="ClaseHasAtributoIdentificadorMoniker">
-        <DomainRelationshipMoniker Name="ClaseHasAtributoIdentificador" />
+      <XmlClassData TypeName="ClaseHasAtribID" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtribIDMoniker" ElementName="claseHasAtribID" MonikerTypeName="ClaseHasAtribIDMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasAtribID" />
       </XmlClassData>
       <XmlClassData TypeName="Parametros" MonikerAttributeName="" SerializeId="true" MonikerElementName="parametrosMoniker" ElementName="parametros" MonikerTypeName="ParametrosMoniker">
         <DomainClassMoniker Name="Parametros" />
@@ -916,8 +916,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="OperacionesHasParametros" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionesHasParametrosMoniker" ElementName="operacionesHasParametros" MonikerTypeName="OperacionesHasParametrosMoniker">
-        <DomainRelationshipMoniker Name="OperacionesHasParametros" />
+      <XmlClassData TypeName="OperacionesHasParams" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionesHasParamsMoniker" ElementName="operacionesHasParams" MonikerTypeName="OperacionesHasParamsMoniker">
+        <DomainRelationshipMoniker Name="OperacionesHasParams" />
       </XmlClassData>
       <XmlClassData TypeName="ShapeOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeOperacionesMoniker" ElementName="shapeOperaciones" MonikerTypeName="ShapeOperacionesMoniker">
         <GeometryShapeMoniker Name="ShapeOperaciones" />
@@ -1039,7 +1039,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="Operaciones" />
         <ParentElementPath>
-          <DomainPath>ClaseHasOperaciones.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ClaseHasMethods.Class/!Clase/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeOperaciones/NombreOperacion" />
@@ -1054,7 +1054,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="Clase" />
         <ParentElementPath>
-          <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeClase/NombreClase" />
@@ -1069,7 +1069,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="Parametros" />
         <ParentElementPath>
-          <DomainPath>OperacionesHasParametros.Operaciones/!Operaciones/ClaseHasOperaciones.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>OperacionesHasParams.Methodz/!Operaciones/ClaseHasMethods.Class/!Clase/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeParametro/MostrarParametros" />
@@ -1084,7 +1084,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="AtributoIdentificador" />
         <ParentElementPath>
-          <DomainPath>ClaseHasAtributoIdentificador.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ClaseHasAtribID.Class/!Clase/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeAtributoID/MostrarAtributoID" />
@@ -1099,7 +1099,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="Atributo" />
         <ParentElementPath>
-          <DomainPath>ClaseHasAtributo.Clase/!Clase/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ClaseHasAtrib.Class/!Clase/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeAtributo/MostrarAtributo" />
@@ -1114,7 +1114,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="ClaseEnriquecida" />
         <ParentElementPath>
-          <DomainPath>ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeClaseEnriquecida/Nombre" />
@@ -1129,7 +1129,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="EstilosClase" />
         <ParentElementPath>
-          <DomainPath>ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ClaseEnriquecidaHasClassStyle.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeEstiloClase/Mostrar" />
@@ -1144,7 +1144,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="EstiloAtributos" />
         <ParentElementPath>
-          <DomainPath>ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ClaseEnriquecidaHasAtribStyle.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeEstiloAtributos/Mostrar" />
@@ -1167,7 +1167,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="EstiloMetodos" />
         <ParentElementPath>
-          <DomainPath>ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClase.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+          <DomainPath>ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="ShapeEstiloMetodos/Mostrar" />

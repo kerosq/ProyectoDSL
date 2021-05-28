@@ -12,33 +12,33 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship ModeloClassWEBHasClase
-	/// Description for IPS.UMLSPF.ModeloClassWEBHasClase
+	/// DomainRelationship ModeloClassWEBHasClass
+	/// Description for IPS.UMLSPF.ModeloClassWEBHasClass
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClass.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClass.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("a9b6e343-13d8-40ae-994b-012eafb94bff")]
-	public partial class ModeloClassWEBHasClase : DslModeling::ElementLink
+	public partial class ModeloClassWEBHasClass : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ModeloClassWEBHasClase domain class Id.
+		/// ModeloClassWEBHasClass domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa9b6e343, 0x13d8, 0x40ae, 0x99, 0x4b, 0x01, 0x2e, 0xaf, 0xb9, 0x4b, 0xff);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ModeloClassWEBHasClase link in the same Partition as the given ModeloClassWEB
+		/// Creates a ModeloClassWEBHasClass link in the same Partition as the given ModeloClassWEB
 		/// </summary>
 		/// <param name="source">ModeloClassWEB to use as the source of the relationship.</param>
 		/// <param name="target">Clase to use as the target of the relationship.</param>
-		public ModeloClassWEBHasClase(ModeloClassWEB source, Clase target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId, source), new DslModeling::RoleAssignment(ModeloClassWEBHasClase.ClaseDomainRoleId, target)}, null)
+		public ModeloClassWEBHasClass(ModeloClassWEB source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ModeloClassWEBHasClass.ModeloClassWEBDomainRoleId, source), new DslModeling::RoleAssignment(ModeloClassWEBHasClass.ClaseDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -47,7 +47,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ModeloClassWEBHasClase(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ModeloClassWEBHasClass(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -58,7 +58,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ModeloClassWEBHasClase(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ModeloClassWEBHasClass(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -68,7 +68,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ModeloClassWEBHasClase(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ModeloClassWEBHasClass(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -79,7 +79,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ModeloClassWEBHasClase(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ModeloClassWEBHasClass(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -93,11 +93,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole ModeloClassWEB
-		/// Description for IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEB
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEB
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClase/ModeloClassWEB.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClase/ModeloClassWEB.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClase/ModeloClassWEB.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClass/ModeloClassWEB.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClass/ModeloClassWEB.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Class", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClass/ModeloClassWEB.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("cd62c36a-4feb-4c05-8a87-e735abd28795")]
 		public virtual ModeloClassWEB ModeloClassWEB
 		{
@@ -144,11 +144,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Clase
-		/// Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase
+		/// Description for IPS.UMLSPF.ModeloClassWEBHasClass.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClase/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClase/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModeloClassWEB", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ModeloClassWEBHasClass/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ModeloClassWEBHasClass/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ModeloClassWEB", PropertyDisplayNameKey="IPS.UMLSPF.ModeloClassWEBHasClass/Clase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("7b20d996-b631-4d0a-bdc4-bfcf98092bc5")]
 		public virtual Clase Clase
 		{
@@ -165,37 +165,37 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Clase of a ModeloClassWEB
+		#region Static methods to access Class of a ModeloClassWEB
 		/// <summary>
-		/// Gets a list of Clase.
+		/// Gets a list of Class.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClase(ModeloClassWEB element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClass(ModeloClassWEB element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, ModeloClassWEBDomainRoleId);
 		}
 		#endregion
 		#region ModeloClassWEB link accessor
 		/// <summary>
-		/// Get the list of ModeloClassWEBHasClase links to a ModeloClassWEB.
+		/// Get the list of ModeloClassWEBHasClass links to a ModeloClassWEB.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ModeloClassWEBHasClase> GetLinksToClase ( global::IPS.UMLSPF.ModeloClassWEB modeloClassWEBInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ModeloClassWEBHasClass> GetLinksToClass ( global::IPS.UMLSPF.ModeloClassWEB modeloClassWEBInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClase>(modeloClassWEBInstance, global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClass>(modeloClassWEBInstance, global::IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEBDomainRoleId);
 		}
 		#endregion
 		#region Clase link accessor
 		/// <summary>
-		/// Get the ModeloClassWEBHasClase link to a Clase.
+		/// Get the ModeloClassWEBHasClass link to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ModeloClassWEBHasClase GetLinkToModeloClassWEB (global::IPS.UMLSPF.Clase claseInstance)
+		public static global::IPS.UMLSPF.ModeloClassWEBHasClass GetLinkToModeloClassWEB (global::IPS.UMLSPF.Clase claseInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClase>(claseInstance, global::IPS.UMLSPF.ModeloClassWEBHasClase.ClaseDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasClass> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClass>(claseInstance, global::IPS.UMLSPF.ModeloClassWEBHasClass.ClaseDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Clase not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -207,18 +207,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region ModeloClassWEBHasClase instance accessors
+		#region ModeloClassWEBHasClass instance accessors
 		
 		/// <summary>
-		/// Get any ModeloClassWEBHasClase links between a given ModeloClassWEB and a Clase.
+		/// Get any ModeloClassWEBHasClass links between a given ModeloClassWEB and a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ModeloClassWEBHasClase> GetLinks( global::IPS.UMLSPF.ModeloClassWEB source, global::IPS.UMLSPF.Clase target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ModeloClassWEBHasClass> GetLinks( global::IPS.UMLSPF.ModeloClassWEB source, global::IPS.UMLSPF.Clase target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.ModeloClassWEBHasClase> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ModeloClassWEBHasClase>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClase>(source, global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ModeloClassWEBHasClase link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ModeloClassWEBHasClass> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ModeloClassWEBHasClass>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasClass> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClass>(source, global::IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEBDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ModeloClassWEBHasClass link in links )
 			{
 				if ( target.Equals(link.Clase) )
 				{
@@ -228,14 +228,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ModeloClassWEBHasClase link between a given ModeloClassWEBand a Clase.
+		/// Get the one ModeloClassWEBHasClass link between a given ModeloClassWEBand a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ModeloClassWEBHasClase GetLink( global::IPS.UMLSPF.ModeloClassWEB source, global::IPS.UMLSPF.Clase target )
+		public static global::IPS.UMLSPF.ModeloClassWEBHasClass GetLink( global::IPS.UMLSPF.ModeloClassWEB source, global::IPS.UMLSPF.Clase target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClase>(source, global::IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEBDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ModeloClassWEBHasClase link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ModeloClassWEBHasClass> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ModeloClassWEBHasClass>(source, global::IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEBDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ModeloClassWEBHasClass link in links )
 			{
 				if ( target.Equals(link.Clase) )
 				{
@@ -251,33 +251,33 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship ClaseHasAtributo
-	/// Description for IPS.UMLSPF.ClaseHasAtributo
+	/// DomainRelationship ClaseHasAtrib
+	/// Description for IPS.UMLSPF.ClaseHasAtrib
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtrib.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtrib.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("8536dcfa-cd47-42ad-bec5-6b313e3f4900")]
-	public partial class ClaseHasAtributo : DslModeling::ElementLink
+	public partial class ClaseHasAtrib : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ClaseHasAtributo domain class Id.
+		/// ClaseHasAtrib domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x8536dcfa, 0xcd47, 0x42ad, 0xbe, 0xc5, 0x6b, 0x31, 0x3e, 0x3f, 0x49, 0x00);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ClaseHasAtributo link in the same Partition as the given Clase
+		/// Creates a ClaseHasAtrib link in the same Partition as the given Clase
 		/// </summary>
 		/// <param name="source">Clase to use as the source of the relationship.</param>
 		/// <param name="target">Atributo to use as the target of the relationship.</param>
-		public ClaseHasAtributo(Clase source, Atributo target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasAtributo.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasAtributo.AtributoDomainRoleId, target)}, null)
+		public ClaseHasAtrib(Clase source, Atributo target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasAtrib.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasAtrib.AtributoDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -286,7 +286,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasAtributo(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseHasAtrib(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -297,7 +297,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasAtributo(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseHasAtrib(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -307,7 +307,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasAtributo(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseHasAtrib(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -318,7 +318,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasAtributo(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseHasAtrib(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -332,11 +332,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Clase
-		/// Description for IPS.UMLSPF.ClaseHasAtributo.Clase
+		/// Description for IPS.UMLSPF.ClaseHasAtrib.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributo/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributo/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atributo", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributo/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtrib/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtrib/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atrib", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtrib/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("db2f3002-204b-4e00-9b5a-f780c5c3eeba")]
 		public virtual Clase Clase
 		{
@@ -353,23 +353,23 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Clase of a Atributo
+		#region Static methods to access Class of a Atributo
 		/// <summary>
-		/// Gets Clase.
+		/// Gets Class.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Clase GetClase(Atributo element)
+		public static Clase GetClass(Atributo element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoDomainRoleId) as Clase;
 		}
 		
 		/// <summary>
-		/// Sets Clase.
+		/// Sets Class.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetClase(Atributo element, Clase newClase)
+		public static void SetClass(Atributo element, Clase newClase)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoDomainRoleId, newClase);
 		}
@@ -383,11 +383,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Atributo
-		/// Description for IPS.UMLSPF.ClaseHasAtributo.Atributo
+		/// Description for IPS.UMLSPF.ClaseHasAtrib.Atributo
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributo/Atributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributo/Atributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributo/Atributo.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtrib/Atributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtrib/Atributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Class", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtrib/Atributo.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("63085b37-3fe4-4d9f-b962-f5817593b664")]
 		public virtual Atributo Atributo
 		{
@@ -404,37 +404,37 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Atributo of a Clase
+		#region Static methods to access Atrib of a Clase
 		/// <summary>
-		/// Gets a list of Atributo.
+		/// Gets a list of Atrib.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Atributo> GetAtributo(Clase element)
+		public static DslModeling::LinkedElementCollection<Atributo> GetAtrib(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(element, ClaseDomainRoleId);
 		}
 		#endregion
 		#region Clase link accessor
 		/// <summary>
-		/// Get the list of ClaseHasAtributo links to a Clase.
+		/// Get the list of ClaseHasAtrib links to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributo> GetLinksToAtributo ( global::IPS.UMLSPF.Clase claseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtrib> GetLinksToAtrib ( global::IPS.UMLSPF.Clase claseInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(claseInstance, global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtrib>(claseInstance, global::IPS.UMLSPF.ClaseHasAtrib.ClaseDomainRoleId);
 		}
 		#endregion
 		#region Atributo link accessor
 		/// <summary>
-		/// Get the ClaseHasAtributo link to a Atributo.
+		/// Get the ClaseHasAtrib link to a Atributo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseHasAtributo GetLinkToClase (global::IPS.UMLSPF.Atributo atributoInstance)
+		public static global::IPS.UMLSPF.ClaseHasAtrib GetLinkToClass (global::IPS.UMLSPF.Atributo atributoInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(atributoInstance, global::IPS.UMLSPF.ClaseHasAtributo.AtributoDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtrib> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtrib>(atributoInstance, global::IPS.UMLSPF.ClaseHasAtrib.AtributoDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Atributo not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -446,18 +446,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region ClaseHasAtributo instance accessors
+		#region ClaseHasAtrib instance accessors
 		
 		/// <summary>
-		/// Get any ClaseHasAtributo links between a given Clase and a Atributo.
+		/// Get any ClaseHasAtrib links between a given Clase and a Atributo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributo> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Atributo target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtrib> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Atributo target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributo> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributo>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(source, global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseHasAtributo link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtrib> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtrib>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtrib> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtrib>(source, global::IPS.UMLSPF.ClaseHasAtrib.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtrib link in links )
 			{
 				if ( target.Equals(link.Atributo) )
 				{
@@ -467,14 +467,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ClaseHasAtributo link between a given Claseand a Atributo.
+		/// Get the one ClaseHasAtrib link between a given Claseand a Atributo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseHasAtributo GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Atributo target )
+		public static global::IPS.UMLSPF.ClaseHasAtrib GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Atributo target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributo>(source, global::IPS.UMLSPF.ClaseHasAtributo.ClaseDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseHasAtributo link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtrib> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtrib>(source, global::IPS.UMLSPF.ClaseHasAtrib.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtrib link in links )
 			{
 				if ( target.Equals(link.Atributo) )
 				{
@@ -490,33 +490,33 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship ClaseHasOperaciones
-	/// Description for IPS.UMLSPF.ClaseHasOperaciones
+	/// DomainRelationship ClaseHasMethods
+	/// Description for IPS.UMLSPF.ClaseHasMethods
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasOperaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasOperaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasMethods.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasMethods.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("555a51fc-f4e2-4122-b27c-bffa5105fa66")]
-	public partial class ClaseHasOperaciones : DslModeling::ElementLink
+	public partial class ClaseHasMethods : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ClaseHasOperaciones domain class Id.
+		/// ClaseHasMethods domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x555a51fc, 0xf4e2, 0x4122, 0xb2, 0x7c, 0xbf, 0xfa, 0x51, 0x05, 0xfa, 0x66);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ClaseHasOperaciones link in the same Partition as the given Clase
+		/// Creates a ClaseHasMethods link in the same Partition as the given Clase
 		/// </summary>
 		/// <param name="source">Clase to use as the source of the relationship.</param>
 		/// <param name="target">Operaciones to use as the target of the relationship.</param>
-		public ClaseHasOperaciones(Clase source, Operaciones target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasOperaciones.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasOperaciones.OperacionesDomainRoleId, target)}, null)
+		public ClaseHasMethods(Clase source, Operaciones target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasMethods.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasMethods.OperacionesDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -525,7 +525,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasOperaciones(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseHasMethods(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -536,7 +536,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasOperaciones(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseHasMethods(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -546,7 +546,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasOperaciones(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseHasMethods(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -557,7 +557,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasOperaciones(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseHasMethods(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -571,11 +571,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Clase
-		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Clase
+		/// Description for IPS.UMLSPF.ClaseHasMethods.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasOperaciones/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasOperaciones/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Operaciones", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasOperaciones/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasMethods/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasMethods/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Methods", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasMethods/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("dfc13914-090a-41d9-b52b-2c2f3fe755cd")]
 		public virtual Clase Clase
 		{
@@ -592,23 +592,23 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Clase of a Operaciones
+		#region Static methods to access Class of a Operaciones
 		/// <summary>
-		/// Gets Clase.
+		/// Gets Class.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Clase GetClase(Operaciones element)
+		public static Clase GetClass(Operaciones element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, OperacionesDomainRoleId) as Clase;
 		}
 		
 		/// <summary>
-		/// Sets Clase.
+		/// Sets Class.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetClase(Operaciones element, Clase newClase)
+		public static void SetClass(Operaciones element, Clase newClase)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, OperacionesDomainRoleId, newClase);
 		}
@@ -622,11 +622,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Operaciones
-		/// Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones
+		/// Description for IPS.UMLSPF.ClaseHasMethods.Operaciones
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasOperaciones/Operaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasOperaciones/Operaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasMethods/Operaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasMethods/Operaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Class", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasMethods/Operaciones.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("78609571-12e9-4d9a-9070-edf2628d2972")]
 		public virtual Operaciones Operaciones
 		{
@@ -643,37 +643,37 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Operaciones of a Clase
+		#region Static methods to access Methods of a Clase
 		/// <summary>
-		/// Gets a list of Operaciones.
+		/// Gets a list of Methods.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Operaciones> GetOperaciones(Clase element)
+		public static DslModeling::LinkedElementCollection<Operaciones> GetMethods(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Operaciones>, Operaciones>(element, ClaseDomainRoleId);
 		}
 		#endregion
 		#region Clase link accessor
 		/// <summary>
-		/// Get the list of ClaseHasOperaciones links to a Clase.
+		/// Get the list of ClaseHasMethods links to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasOperaciones> GetLinksToOperaciones ( global::IPS.UMLSPF.Clase claseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasMethods> GetLinksToMethods ( global::IPS.UMLSPF.Clase claseInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(claseInstance, global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasMethods>(claseInstance, global::IPS.UMLSPF.ClaseHasMethods.ClaseDomainRoleId);
 		}
 		#endregion
 		#region Operaciones link accessor
 		/// <summary>
-		/// Get the ClaseHasOperaciones link to a Operaciones.
+		/// Get the ClaseHasMethods link to a Operaciones.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseHasOperaciones GetLinkToClase (global::IPS.UMLSPF.Operaciones operacionesInstance)
+		public static global::IPS.UMLSPF.ClaseHasMethods GetLinkToClass (global::IPS.UMLSPF.Operaciones operacionesInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(operacionesInstance, global::IPS.UMLSPF.ClaseHasOperaciones.OperacionesDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasMethods> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasMethods>(operacionesInstance, global::IPS.UMLSPF.ClaseHasMethods.OperacionesDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Operaciones not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -685,18 +685,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region ClaseHasOperaciones instance accessors
+		#region ClaseHasMethods instance accessors
 		
 		/// <summary>
-		/// Get any ClaseHasOperaciones links between a given Clase and a Operaciones.
+		/// Get any ClaseHasMethods links between a given Clase and a Operaciones.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasOperaciones> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Operaciones target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasMethods> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Operaciones target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasOperaciones> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasOperaciones>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(source, global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseHasOperaciones link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasMethods> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasMethods>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasMethods> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasMethods>(source, global::IPS.UMLSPF.ClaseHasMethods.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasMethods link in links )
 			{
 				if ( target.Equals(link.Operaciones) )
 				{
@@ -706,14 +706,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ClaseHasOperaciones link between a given Claseand a Operaciones.
+		/// Get the one ClaseHasMethods link between a given Claseand a Operaciones.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseHasOperaciones GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Operaciones target )
+		public static global::IPS.UMLSPF.ClaseHasMethods GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.Operaciones target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasOperaciones>(source, global::IPS.UMLSPF.ClaseHasOperaciones.ClaseDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseHasOperaciones link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasMethods> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasMethods>(source, global::IPS.UMLSPF.ClaseHasMethods.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasMethods link in links )
 			{
 				if ( target.Equals(link.Operaciones) )
 				{
@@ -1384,33 +1384,33 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship ClaseEnriquecidaHasEstilosClase
-	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase
+	/// DomainRelationship ClaseEnriquecidaHasClassStyle
+	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("262c7f2b-659c-4761-bf32-55514e4a6aee")]
-	public partial class ClaseEnriquecidaHasEstilosClase : DslModeling::ElementLink
+	public partial class ClaseEnriquecidaHasClassStyle : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ClaseEnriquecidaHasEstilosClase domain class Id.
+		/// ClaseEnriquecidaHasClassStyle domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x262c7f2b, 0x659c, 0x4761, 0xbf, 0x32, 0x55, 0x51, 0x4e, 0x4a, 0x6a, 0xee);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ClaseEnriquecidaHasEstilosClase link in the same Partition as the given ClaseEnriquecida
+		/// Creates a ClaseEnriquecidaHasClassStyle link in the same Partition as the given ClaseEnriquecida
 		/// </summary>
 		/// <param name="source">ClaseEnriquecida to use as the source of the relationship.</param>
 		/// <param name="target">EstilosClase to use as the target of the relationship.</param>
-		public ClaseEnriquecidaHasEstilosClase(ClaseEnriquecida source, EstilosClase target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId, target)}, null)
+		public ClaseEnriquecidaHasClassStyle(ClaseEnriquecida source, EstilosClase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasClassStyle.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasClassStyle.EstilosClaseDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -1419,7 +1419,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseEnriquecidaHasEstilosClase(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseEnriquecidaHasClassStyle(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -1430,7 +1430,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseEnriquecidaHasEstilosClase(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseEnriquecidaHasClassStyle(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1440,7 +1440,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseEnriquecidaHasEstilosClase(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseEnriquecidaHasClassStyle(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -1451,7 +1451,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseEnriquecidaHasEstilosClase(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseEnriquecidaHasClassStyle(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1465,11 +1465,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole ClaseEnriquecida
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecida
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstilosClase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClassStyle", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("58dd85a2-24a3-4e37-956a-3b7062f9e72c")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -1516,11 +1516,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole EstilosClase
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClase
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClase
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/EstilosClase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/EstilosClase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/EstilosClase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("7d7a8e6c-2d8d-4895-a12b-8f41c543bdfb")]
 		public virtual EstilosClase EstilosClase
 		{
@@ -1537,36 +1537,36 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access EstilosClase of a ClaseEnriquecida
+		#region Static methods to access ClassStyle of a ClaseEnriquecida
 		/// <summary>
-		/// Gets EstilosClase.
+		/// Gets ClassStyle.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static EstilosClase GetEstilosClase(ClaseEnriquecida element)
+		public static EstilosClase GetClassStyle(ClaseEnriquecida element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstilosClase;
 		}
 		
 		/// <summary>
-		/// Sets EstilosClase.
+		/// Sets ClassStyle.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetEstilosClase(ClaseEnriquecida element, EstilosClase newEstilosClase)
+		public static void SetClassStyle(ClaseEnriquecida element, EstilosClase newEstilosClase)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstilosClase);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the ClaseEnriquecidaHasEstilosClase link to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasClassStyle link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase GetLinkToEstilosClase (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle GetLinkToClassStyle (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecidaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1580,13 +1580,13 @@ namespace IPS.UMLSPF
 		#endregion
 		#region EstilosClase link accessor
 		/// <summary>
-		/// Get the ClaseEnriquecidaHasEstilosClase link to a EstilosClase.
+		/// Get the ClaseEnriquecidaHasClassStyle link to a EstilosClase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstilosClase estilosClaseInstance)
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstilosClase estilosClaseInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(estilosClaseInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClaseDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle>(estilosClaseInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClaseDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstilosClase not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1598,18 +1598,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region ClaseEnriquecidaHasEstilosClase instance accessors
+		#region ClaseEnriquecidaHasClassStyle instance accessors
 		
 		/// <summary>
-		/// Get any ClaseEnriquecidaHasEstilosClase links between a given ClaseEnriquecida and a EstilosClase.
+		/// Get any ClaseEnriquecidaHasClassStyle links between a given ClaseEnriquecida and a EstilosClase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstilosClase target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstilosClase target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle link in links )
 			{
 				if ( target.Equals(link.EstilosClase) )
 				{
@@ -1619,14 +1619,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ClaseEnriquecidaHasEstilosClase link between a given ClaseEnriquecidaand a EstilosClase.
+		/// Get the one ClaseEnriquecidaHasClassStyle link between a given ClaseEnriquecidaand a EstilosClase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstilosClase target )
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstilosClase target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecidaDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasClassStyle link in links )
 			{
 				if ( target.Equals(link.EstilosClase) )
 				{
@@ -1642,33 +1642,33 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship ClaseEnriquecidaHasEstiloAtributos
-	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos
+	/// DomainRelationship ClaseEnriquecidaHasAtribStyle
+	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("152ed9dc-919b-4fdc-b705-6edaee7103e1")]
-	public partial class ClaseEnriquecidaHasEstiloAtributos : DslModeling::ElementLink
+	public partial class ClaseEnriquecidaHasAtribStyle : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ClaseEnriquecidaHasEstiloAtributos domain class Id.
+		/// ClaseEnriquecidaHasAtribStyle domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x152ed9dc, 0x919b, 0x4fdc, 0xb7, 0x05, 0x6e, 0xda, 0xee, 0x71, 0x03, 0xe1);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ClaseEnriquecidaHasEstiloAtributos link in the same Partition as the given ClaseEnriquecida
+		/// Creates a ClaseEnriquecidaHasAtribStyle link in the same Partition as the given ClaseEnriquecida
 		/// </summary>
 		/// <param name="source">ClaseEnriquecida to use as the source of the relationship.</param>
 		/// <param name="target">EstiloAtributos to use as the target of the relationship.</param>
-		public ClaseEnriquecidaHasEstiloAtributos(ClaseEnriquecida source, EstiloAtributos target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId, target)}, null)
+		public ClaseEnriquecidaHasAtribStyle(ClaseEnriquecida source, EstiloAtributos target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasAtribStyle.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasAtribStyle.EstiloAtributosDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -1677,7 +1677,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseEnriquecidaHasAtribStyle(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -1688,7 +1688,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseEnriquecidaHasAtribStyle(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1698,7 +1698,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseEnriquecidaHasAtribStyle(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -1709,7 +1709,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseEnriquecidaHasEstiloAtributos(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseEnriquecidaHasAtribStyle(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1723,11 +1723,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole ClaseEnriquecida
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecida
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloAtributos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtribStyle", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("6d6592a5-cdcd-4603-a535-e243aa27bbf1")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -1774,11 +1774,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole EstiloAtributos
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributos
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/EstiloAtributos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/EstiloAtributos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/EstiloAtributos.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("2c53b122-a1ac-4777-bd05-9a86fa7a40a2")]
 		public virtual EstiloAtributos EstiloAtributos
 		{
@@ -1795,36 +1795,36 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access EstiloAtributos of a ClaseEnriquecida
+		#region Static methods to access AtribStyle of a ClaseEnriquecida
 		/// <summary>
-		/// Gets EstiloAtributos.
+		/// Gets AtribStyle.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static EstiloAtributos GetEstiloAtributos(ClaseEnriquecida element)
+		public static EstiloAtributos GetAtribStyle(ClaseEnriquecida element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstiloAtributos;
 		}
 		
 		/// <summary>
-		/// Sets EstiloAtributos.
+		/// Sets AtribStyle.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetEstiloAtributos(ClaseEnriquecida element, EstiloAtributos newEstiloAtributos)
+		public static void SetAtribStyle(ClaseEnriquecida element, EstiloAtributos newEstiloAtributos)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstiloAtributos);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the ClaseEnriquecidaHasEstiloAtributos link to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasAtribStyle link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos GetLinkToEstiloAtributos (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle GetLinkToAtribStyle (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecidaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1838,13 +1838,13 @@ namespace IPS.UMLSPF
 		#endregion
 		#region EstiloAtributos link accessor
 		/// <summary>
-		/// Get the ClaseEnriquecidaHasEstiloAtributos link to a EstiloAtributos.
+		/// Get the ClaseEnriquecidaHasAtribStyle link to a EstiloAtributos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstiloAtributos estiloAtributosInstance)
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstiloAtributos estiloAtributosInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(estiloAtributosInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributosDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle>(estiloAtributosInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributosDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstiloAtributos not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1856,18 +1856,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region ClaseEnriquecidaHasEstiloAtributos instance accessors
+		#region ClaseEnriquecidaHasAtribStyle instance accessors
 		
 		/// <summary>
-		/// Get any ClaseEnriquecidaHasEstiloAtributos links between a given ClaseEnriquecida and a EstiloAtributos.
+		/// Get any ClaseEnriquecidaHasAtribStyle links between a given ClaseEnriquecida and a EstiloAtributos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloAtributos target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloAtributos target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle link in links )
 			{
 				if ( target.Equals(link.EstiloAtributos) )
 				{
@@ -1877,14 +1877,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ClaseEnriquecidaHasEstiloAtributos link between a given ClaseEnriquecidaand a EstiloAtributos.
+		/// Get the one ClaseEnriquecidaHasAtribStyle link between a given ClaseEnriquecidaand a EstiloAtributos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloAtributos target )
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloAtributos target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecidaDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle link in links )
 			{
 				if ( target.Equals(link.EstiloAtributos) )
 				{
@@ -1900,33 +1900,33 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship ClaseEnriquecidaHasEstiloMetodos
-	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos
+	/// DomainRelationship ClaseEnriquecidaHasMethodsStyle
+	/// Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("252fa143-b76c-42ec-817f-02aec7ac9bca")]
-	public partial class ClaseEnriquecidaHasEstiloMetodos : DslModeling::ElementLink
+	public partial class ClaseEnriquecidaHasMethodsStyle : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ClaseEnriquecidaHasEstiloMetodos domain class Id.
+		/// ClaseEnriquecidaHasMethodsStyle domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x252fa143, 0xb76c, 0x42ec, 0x81, 0x7f, 0x02, 0xae, 0xc7, 0xac, 0x9b, 0xca);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ClaseEnriquecidaHasEstiloMetodos link in the same Partition as the given ClaseEnriquecida
+		/// Creates a ClaseEnriquecidaHasMethodsStyle link in the same Partition as the given ClaseEnriquecida
 		/// </summary>
 		/// <param name="source">ClaseEnriquecida to use as the source of the relationship.</param>
 		/// <param name="target">EstiloMetodos to use as the target of the relationship.</param>
-		public ClaseEnriquecidaHasEstiloMetodos(ClaseEnriquecida source, EstiloMetodos target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId, target)}, null)
+		public ClaseEnriquecidaHasMethodsStyle(ClaseEnriquecida source, EstiloMetodos target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasMethodsStyle.EstiloMetodosDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -1935,7 +1935,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseEnriquecidaHasMethodsStyle(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -1946,7 +1946,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseEnriquecidaHasMethodsStyle(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1956,7 +1956,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseEnriquecidaHasMethodsStyle(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -1967,7 +1967,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseEnriquecidaHasEstiloMetodos(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseEnriquecidaHasMethodsStyle(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -1981,11 +1981,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole ClaseEnriquecida
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecida
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloMetodos", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/ClaseEnriquecida.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/ClaseEnriquecida.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "MethodsStyle", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("6cc245b0-5f75-4340-8014-6f24deca6ca2")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -2032,11 +2032,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole EstiloMetodos
-		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos
+		/// Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodos
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/EstiloMetodos.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/EstiloMetodos.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/EstiloMetodos.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("303110db-fde9-43fd-819f-57fd2f179da5")]
 		public virtual EstiloMetodos EstiloMetodos
 		{
@@ -2053,36 +2053,36 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access EstiloMetodos of a ClaseEnriquecida
+		#region Static methods to access MethodsStyle of a ClaseEnriquecida
 		/// <summary>
-		/// Gets EstiloMetodos.
+		/// Gets MethodsStyle.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static EstiloMetodos GetEstiloMetodos(ClaseEnriquecida element)
+		public static EstiloMetodos GetMethodsStyle(ClaseEnriquecida element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstiloMetodos;
 		}
 		
 		/// <summary>
-		/// Sets EstiloMetodos.
+		/// Sets MethodsStyle.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetEstiloMetodos(ClaseEnriquecida element, EstiloMetodos newEstiloMetodos)
+		public static void SetMethodsStyle(ClaseEnriquecida element, EstiloMetodos newEstiloMetodos)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstiloMetodos);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the ClaseEnriquecidaHasEstiloMetodos link to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasMethodsStyle link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos GetLinkToEstiloMetodos (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle GetLinkToMethodsStyle (global::IPS.UMLSPF.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle>(claseEnriquecidaInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecidaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -2096,13 +2096,13 @@ namespace IPS.UMLSPF
 		#endregion
 		#region EstiloMetodos link accessor
 		/// <summary>
-		/// Get the ClaseEnriquecidaHasEstiloMetodos link to a EstiloMetodos.
+		/// Get the ClaseEnriquecidaHasMethodsStyle link to a EstiloMetodos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstiloMetodos estiloMetodosInstance)
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle GetLinkToClaseEnriquecida (global::IPS.UMLSPF.EstiloMetodos estiloMetodosInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(estiloMetodosInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodosDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle>(estiloMetodosInstance, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodosDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstiloMetodos not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -2114,18 +2114,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region ClaseEnriquecidaHasEstiloMetodos instance accessors
+		#region ClaseEnriquecidaHasMethodsStyle instance accessors
 		
 		/// <summary>
-		/// Get any ClaseEnriquecidaHasEstiloMetodos links between a given ClaseEnriquecida and a EstiloMetodos.
+		/// Get any ClaseEnriquecidaHasMethodsStyle links between a given ClaseEnriquecida and a EstiloMetodos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloMetodos target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle> GetLinks( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloMetodos target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle link in links )
 			{
 				if ( target.Equals(link.EstiloMetodos) )
 				{
@@ -2135,14 +2135,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ClaseEnriquecidaHasEstiloMetodos link between a given ClaseEnriquecidaand a EstiloMetodos.
+		/// Get the one ClaseEnriquecidaHasMethodsStyle link between a given ClaseEnriquecidaand a EstiloMetodos.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloMetodos target )
+		public static global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle GetLink( global::IPS.UMLSPF.ClaseEnriquecida source, global::IPS.UMLSPF.EstiloMetodos target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecidaDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle>(source, global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle link in links )
 			{
 				if ( target.Equals(link.EstiloMetodos) )
 				{
@@ -2837,33 +2837,33 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship ClaseHasAtributoIdentificador
-	/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador
+	/// DomainRelationship ClaseHasAtribID
+	/// Description for IPS.UMLSPF.ClaseHasAtribID
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributoIdentificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributoIdentificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtribID.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtribID.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("c01259a4-025d-4d30-a785-216b7d4b748d")]
-	public partial class ClaseHasAtributoIdentificador : DslModeling::ElementLink
+	public partial class ClaseHasAtribID : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ClaseHasAtributoIdentificador domain class Id.
+		/// ClaseHasAtribID domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc01259a4, 0x025d, 0x4d30, 0xa7, 0x85, 0x21, 0x6b, 0x7d, 0x4b, 0x74, 0x8d);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ClaseHasAtributoIdentificador link in the same Partition as the given Clase
+		/// Creates a ClaseHasAtribID link in the same Partition as the given Clase
 		/// </summary>
 		/// <param name="source">Clase to use as the source of the relationship.</param>
 		/// <param name="target">AtributoIdentificador to use as the target of the relationship.</param>
-		public ClaseHasAtributoIdentificador(Clase source, AtributoIdentificador target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasAtributoIdentificador.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId, target)}, null)
+		public ClaseHasAtribID(Clase source, AtributoIdentificador target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasAtribID.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasAtribID.AtributoIdentificadorDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -2872,7 +2872,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasAtributoIdentificador(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseHasAtribID(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -2883,7 +2883,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasAtributoIdentificador(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseHasAtribID(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -2893,7 +2893,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasAtributoIdentificador(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ClaseHasAtribID(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -2904,7 +2904,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasAtributoIdentificador(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ClaseHasAtribID(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -2918,11 +2918,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Clase
-		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase
+		/// Description for IPS.UMLSPF.ClaseHasAtribID.Clase
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoIdentificador", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtribID/Clase.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtribID/Clase.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtribID", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtribID/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("53d76716-d806-403a-91f5-91074717158d")]
 		public virtual Clase Clase
 		{
@@ -2939,23 +2939,23 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Clase of a AtributoIdentificador
+		#region Static methods to access Class of a AtributoIdentificador
 		/// <summary>
-		/// Gets Clase.
+		/// Gets Class.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Clase GetClase(AtributoIdentificador element)
+		public static Clase GetClass(AtributoIdentificador element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoIdentificadorDomainRoleId) as Clase;
 		}
 		
 		/// <summary>
-		/// Sets Clase.
+		/// Sets Class.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetClase(AtributoIdentificador element, Clase newClase)
+		public static void SetClass(AtributoIdentificador element, Clase newClase)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoIdentificadorDomainRoleId, newClase);
 		}
@@ -2969,11 +2969,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole AtributoIdentificador
-		/// Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificador
+		/// Description for IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificador
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.ClaseHasAtribID/AtributoIdentificador.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.ClaseHasAtribID/AtributoIdentificador.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Class", PropertyDisplayNameKey="IPS.UMLSPF.ClaseHasAtribID/AtributoIdentificador.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("b05cceef-ad7d-4400-bded-4e9c15b2b881")]
 		public virtual AtributoIdentificador AtributoIdentificador
 		{
@@ -2990,36 +2990,36 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access AtributoIdentificador of a Clase
+		#region Static methods to access AtribID of a Clase
 		/// <summary>
-		/// Gets AtributoIdentificador.
+		/// Gets AtribID.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static AtributoIdentificador GetAtributoIdentificador(Clase element)
+		public static AtributoIdentificador GetAtribID(Clase element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseDomainRoleId) as AtributoIdentificador;
 		}
 		
 		/// <summary>
-		/// Sets AtributoIdentificador.
+		/// Sets AtribID.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetAtributoIdentificador(Clase element, AtributoIdentificador newAtributoIdentificador)
+		public static void SetAtribID(Clase element, AtributoIdentificador newAtributoIdentificador)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseDomainRoleId, newAtributoIdentificador);
 		}
 		#endregion
 		#region Clase link accessor
 		/// <summary>
-		/// Get the ClaseHasAtributoIdentificador link to a Clase.
+		/// Get the ClaseHasAtribID link to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseHasAtributoIdentificador GetLinkToAtributoIdentificador (global::IPS.UMLSPF.Clase claseInstance)
+		public static global::IPS.UMLSPF.ClaseHasAtribID GetLinkToAtribID (global::IPS.UMLSPF.Clase claseInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(claseInstance, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtribID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtribID>(claseInstance, global::IPS.UMLSPF.ClaseHasAtribID.ClaseDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Clase not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -3033,13 +3033,13 @@ namespace IPS.UMLSPF
 		#endregion
 		#region AtributoIdentificador link accessor
 		/// <summary>
-		/// Get the ClaseHasAtributoIdentificador link to a AtributoIdentificador.
+		/// Get the ClaseHasAtribID link to a AtributoIdentificador.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseHasAtributoIdentificador GetLinkToClase (global::IPS.UMLSPF.AtributoIdentificador atributoIdentificadorInstance)
+		public static global::IPS.UMLSPF.ClaseHasAtribID GetLinkToClass (global::IPS.UMLSPF.AtributoIdentificador atributoIdentificadorInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(atributoIdentificadorInstance, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtribID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtribID>(atributoIdentificadorInstance, global::IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificadorDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AtributoIdentificador not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -3051,18 +3051,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region ClaseHasAtributoIdentificador instance accessors
+		#region ClaseHasAtribID instance accessors
 		
 		/// <summary>
-		/// Get any ClaseHasAtributoIdentificador links between a given Clase and a AtributoIdentificador.
+		/// Get any ClaseHasAtribID links between a given Clase and a AtributoIdentificador.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.AtributoIdentificador target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.ClaseHasAtribID> GetLinks( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.AtributoIdentificador target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(source, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseHasAtributoIdentificador link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtribID> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.ClaseHasAtribID>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtribID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtribID>(source, global::IPS.UMLSPF.ClaseHasAtribID.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtribID link in links )
 			{
 				if ( target.Equals(link.AtributoIdentificador) )
 				{
@@ -3072,14 +3072,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ClaseHasAtributoIdentificador link between a given Claseand a AtributoIdentificador.
+		/// Get the one ClaseHasAtribID link between a given Claseand a AtributoIdentificador.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.ClaseHasAtributoIdentificador GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.AtributoIdentificador target )
+		public static global::IPS.UMLSPF.ClaseHasAtribID GetLink( global::IPS.UMLSPF.Clase source, global::IPS.UMLSPF.AtributoIdentificador target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtributoIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtributoIdentificador>(source, global::IPS.UMLSPF.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
-			foreach ( global::IPS.UMLSPF.ClaseHasAtributoIdentificador link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.ClaseHasAtribID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.ClaseHasAtribID>(source, global::IPS.UMLSPF.ClaseHasAtribID.ClaseDomainRoleId);
+			foreach ( global::IPS.UMLSPF.ClaseHasAtribID link in links )
 			{
 				if ( target.Equals(link.AtributoIdentificador) )
 				{
@@ -3095,33 +3095,33 @@ namespace IPS.UMLSPF
 namespace IPS.UMLSPF
 {
 	/// <summary>
-	/// DomainRelationship OperacionesHasParametros
-	/// Description for IPS.UMLSPF.OperacionesHasParametros
+	/// DomainRelationship OperacionesHasParams
+	/// Description for IPS.UMLSPF.OperacionesHasParams
 	/// </summary>
-	[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParametros.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParametros.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParams.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParams.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::IPS.UMLSPF.UMLSPFDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("dc02bbdf-6769-40c6-9386-8c9f2d611302")]
-	public partial class OperacionesHasParametros : DslModeling::ElementLink
+	public partial class OperacionesHasParams : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// OperacionesHasParametros domain class Id.
+		/// OperacionesHasParams domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xdc02bbdf, 0x6769, 0x40c6, 0x93, 0x86, 0x8c, 0x9f, 0x2d, 0x61, 0x13, 0x02);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a OperacionesHasParametros link in the same Partition as the given Operaciones
+		/// Creates a OperacionesHasParams link in the same Partition as the given Operaciones
 		/// </summary>
 		/// <param name="source">Operaciones to use as the source of the relationship.</param>
 		/// <param name="target">Parametros to use as the target of the relationship.</param>
-		public OperacionesHasParametros(Operaciones source, Parametros target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(OperacionesHasParametros.OperacionesDomainRoleId, source), new DslModeling::RoleAssignment(OperacionesHasParametros.ParametrosDomainRoleId, target)}, null)
+		public OperacionesHasParams(Operaciones source, Parametros target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(OperacionesHasParams.OperacionesDomainRoleId, source), new DslModeling::RoleAssignment(OperacionesHasParams.ParametrosDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -3130,7 +3130,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public OperacionesHasParametros(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public OperacionesHasParams(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -3141,7 +3141,7 @@ namespace IPS.UMLSPF
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public OperacionesHasParametros(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public OperacionesHasParams(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -3151,7 +3151,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public OperacionesHasParametros(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public OperacionesHasParams(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -3162,7 +3162,7 @@ namespace IPS.UMLSPF
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public OperacionesHasParametros(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public OperacionesHasParams(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -3176,11 +3176,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Operaciones
-		/// Description for IPS.UMLSPF.OperacionesHasParametros.Operaciones
+		/// Description for IPS.UMLSPF.OperacionesHasParams.Operaciones
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParametros/Operaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParametros/Operaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Parametros", PropertyDisplayNameKey="IPS.UMLSPF.OperacionesHasParametros/Operaciones.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParams/Operaciones.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParams/Operaciones.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Params", PropertyDisplayNameKey="IPS.UMLSPF.OperacionesHasParams/Operaciones.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("489bf74b-caaf-404e-87b6-95a100c32508")]
 		public virtual Operaciones Operaciones
 		{
@@ -3197,23 +3197,23 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Operaciones of a Parametros
+		#region Static methods to access Methodz of a Parametros
 		/// <summary>
-		/// Gets Operaciones.
+		/// Gets Methodz.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Operaciones GetOperaciones(Parametros element)
+		public static Operaciones GetMethodz(Parametros element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ParametrosDomainRoleId) as Operaciones;
 		}
 		
 		/// <summary>
-		/// Sets Operaciones.
+		/// Sets Methodz.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetOperaciones(Parametros element, Operaciones newOperaciones)
+		public static void SetMethodz(Parametros element, Operaciones newOperaciones)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ParametrosDomainRoleId, newOperaciones);
 		}
@@ -3227,11 +3227,11 @@ namespace IPS.UMLSPF
 		
 		/// <summary>
 		/// DomainRole Parametros
-		/// Description for IPS.UMLSPF.OperacionesHasParametros.Parametros
+		/// Description for IPS.UMLSPF.OperacionesHasParams.Parametros
 		/// </summary>
-		[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParametros/Parametros.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParametros/Parametros.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Operaciones", PropertyDisplayNameKey="IPS.UMLSPF.OperacionesHasParametros/Parametros.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("IPS.UMLSPF.OperacionesHasParams/Parametros.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("IPS.UMLSPF.OperacionesHasParams/Parametros.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Methodz", PropertyDisplayNameKey="IPS.UMLSPF.OperacionesHasParams/Parametros.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("93d5218d-0ea0-4607-8977-06a6d2844e0c")]
 		public virtual Parametros Parametros
 		{
@@ -3248,37 +3248,37 @@ namespace IPS.UMLSPF
 		}
 				
 		#endregion
-		#region Static methods to access Parametros of a Operaciones
+		#region Static methods to access Params of a Operaciones
 		/// <summary>
-		/// Gets a list of Parametros.
+		/// Gets a list of Params.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Parametros> GetParametros(Operaciones element)
+		public static DslModeling::LinkedElementCollection<Parametros> GetParams(Operaciones element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Parametros>, Parametros>(element, OperacionesDomainRoleId);
 		}
 		#endregion
 		#region Operaciones link accessor
 		/// <summary>
-		/// Get the list of OperacionesHasParametros links to a Operaciones.
+		/// Get the list of OperacionesHasParams links to a Operaciones.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.OperacionesHasParametros> GetLinksToParametros ( global::IPS.UMLSPF.Operaciones operacionesInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.OperacionesHasParams> GetLinksToParams ( global::IPS.UMLSPF.Operaciones operacionesInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(operacionesInstance, global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParams>(operacionesInstance, global::IPS.UMLSPF.OperacionesHasParams.OperacionesDomainRoleId);
 		}
 		#endregion
 		#region Parametros link accessor
 		/// <summary>
-		/// Get the OperacionesHasParametros link to a Parametros.
+		/// Get the OperacionesHasParams link to a Parametros.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.OperacionesHasParametros GetLinkToOperaciones (global::IPS.UMLSPF.Parametros parametrosInstance)
+		public static global::IPS.UMLSPF.OperacionesHasParams GetLinkToMethodz (global::IPS.UMLSPF.Parametros parametrosInstance)
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParametros> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(parametrosInstance, global::IPS.UMLSPF.OperacionesHasParametros.ParametrosDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParams> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParams>(parametrosInstance, global::IPS.UMLSPF.OperacionesHasParams.ParametrosDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Parametros not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -3290,18 +3290,18 @@ namespace IPS.UMLSPF
 			}
 		}
 		#endregion
-		#region OperacionesHasParametros instance accessors
+		#region OperacionesHasParams instance accessors
 		
 		/// <summary>
-		/// Get any OperacionesHasParametros links between a given Operaciones and a Parametros.
+		/// Get any OperacionesHasParams links between a given Operaciones and a Parametros.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.OperacionesHasParametros> GetLinks( global::IPS.UMLSPF.Operaciones source, global::IPS.UMLSPF.Parametros target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.OperacionesHasParams> GetLinks( global::IPS.UMLSPF.Operaciones source, global::IPS.UMLSPF.Parametros target )
 		{
-			global::System.Collections.Generic.List<global::IPS.UMLSPF.OperacionesHasParametros> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.OperacionesHasParametros>();
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParametros> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(source, global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId);
-			foreach ( global::IPS.UMLSPF.OperacionesHasParametros link in links )
+			global::System.Collections.Generic.List<global::IPS.UMLSPF.OperacionesHasParams> outLinks = new global::System.Collections.Generic.List<global::IPS.UMLSPF.OperacionesHasParams>();
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParams> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParams>(source, global::IPS.UMLSPF.OperacionesHasParams.OperacionesDomainRoleId);
+			foreach ( global::IPS.UMLSPF.OperacionesHasParams link in links )
 			{
 				if ( target.Equals(link.Parametros) )
 				{
@@ -3311,14 +3311,14 @@ namespace IPS.UMLSPF
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one OperacionesHasParametros link between a given Operacionesand a Parametros.
+		/// Get the one OperacionesHasParams link between a given Operacionesand a Parametros.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::IPS.UMLSPF.OperacionesHasParametros GetLink( global::IPS.UMLSPF.Operaciones source, global::IPS.UMLSPF.Parametros target )
+		public static global::IPS.UMLSPF.OperacionesHasParams GetLink( global::IPS.UMLSPF.Operaciones source, global::IPS.UMLSPF.Parametros target )
 		{
-			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParametros> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParametros>(source, global::IPS.UMLSPF.OperacionesHasParametros.OperacionesDomainRoleId);
-			foreach ( global::IPS.UMLSPF.OperacionesHasParametros link in links )
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.OperacionesHasParams> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.OperacionesHasParams>(source, global::IPS.UMLSPF.OperacionesHasParams.OperacionesDomainRoleId);
+			foreach ( global::IPS.UMLSPF.OperacionesHasParams link in links )
 			{
 				if ( target.Equals(link.Parametros) )
 				{

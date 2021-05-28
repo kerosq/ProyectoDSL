@@ -461,101 +461,101 @@
     <value>Mostrar Parametro</value>
     <comment>DisplayName for DomainProperty &apos;MostrarParametro&apos; on DomainClass &apos;Parametros&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase</value>
-    <comment>Description for DomainClass &apos;ModeloClassWEBHasClase&apos;</comment>
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ModeloClassWEBHasClass</value>
+    <comment>Description for DomainClass &apos;ModeloClassWEBHasClass&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase.DisplayName" xml:space="preserve">
-    <value>Modelo Class WEBHas Clase</value>
-    <comment>DisplayName for DomainClass &apos;ModeloClassWEBHasClase&apos;</comment>
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass.DisplayName" xml:space="preserve">
+    <value>Modelo Class WEBHas Class</value>
+    <comment>DisplayName for DomainClass &apos;ModeloClassWEBHasClass&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase/ModeloClassWEB.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase.ModeloClassWEB</value>
-    <comment>Description for DomainRole &apos;ModeloClassWEB&apos; on DomainRelationship &apos;ModeloClassWEBHasClase&apos;</comment>
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass/ModeloClassWEB.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ModeloClassWEBHasClass.ModeloClassWEB</value>
+    <comment>Description for DomainRole &apos;ModeloClassWEB&apos; on DomainRelationship &apos;ModeloClassWEBHasClass&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase/ModeloClassWEB.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass/ModeloClassWEB.DisplayName" xml:space="preserve">
     <value>Modelo Class WEB</value>
-    <comment>DisplayName for DomainRole &apos;ModeloClassWEB&apos; on DomainRelationship &apos;ModeloClassWEBHasClase&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;ModeloClassWEB&apos; on DomainRelationship &apos;ModeloClassWEBHasClass&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase/ModeloClassWEB.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass/ModeloClassWEB.PropertyDisplayName" xml:space="preserve">
+    <value>Class</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ModeloClassWEB&apos; on DomainRelationship &apos;ModeloClassWEBHasClass&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ModeloClassWEBHasClass.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ModeloClassWEBHasClass&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass/Clase.DisplayName" xml:space="preserve">
     <value>Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ModeloClassWEB&apos; on DomainRelationship &apos;ModeloClassWEBHasClase&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ModeloClassWEBHasClass&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ModeloClassWEBHasClase.Clase</value>
-    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ModeloClassWEBHasClase&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.DisplayName" xml:space="preserve">
-    <value>Clase</value>
-    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ModeloClassWEBHasClase&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ModeloClassWEBHasClase/Clase.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ModeloClassWEBHasClass/Clase.PropertyDisplayName" xml:space="preserve">
     <value>Modelo Class WEB</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ModeloClassWEBHasClase&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ModeloClassWEBHasClass&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasAtributo</value>
-    <comment>Description for DomainClass &apos;ClaseHasAtributo&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtrib.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtrib</value>
+    <comment>Description for DomainClass &apos;ClaseHasAtrib&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo.DisplayName" xml:space="preserve">
-    <value>Clase Has Atributo</value>
-    <comment>DisplayName for DomainClass &apos;ClaseHasAtributo&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtrib.DisplayName" xml:space="preserve">
+    <value>Clase Has Atrib</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasAtrib&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo/Clase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasAtributo.Clase</value>
-    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtrib/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtrib.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtrib&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo/Clase.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseHasAtrib/Clase.DisplayName" xml:space="preserve">
     <value>Clase</value>
-    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtrib&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo/Clase.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseHasAtrib/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Atrib</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtrib&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtrib/Atributo.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtrib.Atributo</value>
+    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtrib&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtrib/Atributo.DisplayName" xml:space="preserve">
     <value>Atributo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtrib&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo/Atributo.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasAtributo.Atributo</value>
-    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtrib/Atributo.PropertyDisplayName" xml:space="preserve">
+    <value>Class</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtrib&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo/Atributo.DisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasMethods.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasMethods</value>
+    <comment>Description for DomainClass &apos;ClaseHasMethods&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseHasMethods.DisplayName" xml:space="preserve">
+    <value>Clase Has Methods</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasMethods&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasMethods/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasMethods.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasMethods&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasMethods/Clase.DisplayName" xml:space="preserve">
     <value>Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClaseHasAtributo&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasMethods&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasOperaciones</value>
-    <comment>Description for DomainClass &apos;ClaseHasOperaciones&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasMethods/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Methods</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasMethods&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones.DisplayName" xml:space="preserve">
-    <value>Clase Has Operaciones</value>
-    <comment>DisplayName for DomainClass &apos;ClaseHasOperaciones&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasMethods/Operaciones.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasMethods.Operaciones</value>
+    <comment>Description for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasMethods&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones/Clase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasOperaciones.Clase</value>
-    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones/Clase.DisplayName" xml:space="preserve">
-    <value>Clase</value>
-    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones/Clase.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseHasMethods/Operaciones.DisplayName" xml:space="preserve">
     <value>Operaciones</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasMethods&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasOperaciones.Operaciones</value>
-    <comment>Description for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.DisplayName" xml:space="preserve">
-    <value>Operaciones</value>
-    <comment>DisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseHasOperaciones/Operaciones.PropertyDisplayName" xml:space="preserve">
-    <value>Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasOperaciones&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasMethods/Operaciones.PropertyDisplayName" xml:space="preserve">
+    <value>Class</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClaseHasMethods&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.conAsociacion.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.conAsociacion</value>
@@ -629,101 +629,101 @@
     <value>Source Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;conAsociacion&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase</value>
-    <comment>Description for DomainClass &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle</value>
+    <comment>Description for DomainClass &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.DisplayName" xml:space="preserve">
-    <value>Clase Enriquecida Has Estilos Clase</value>
-    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.DisplayName" xml:space="preserve">
+    <value>Clase Enriquecida Has Class Style</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.ClaseEnriquecida</value>
-    <comment>Description for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/ClaseEnriquecida.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.ClaseEnriquecida</value>
+    <comment>Description for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/ClaseEnriquecida.DisplayName" xml:space="preserve">
     <value>Clase Enriquecida</value>
-    <comment>DisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/ClaseEnriquecida.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/ClaseEnriquecida.PropertyDisplayName" xml:space="preserve">
+    <value>Class Style</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/EstilosClase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasClassStyle.EstilosClase</value>
+    <comment>Description for DomainRole &apos;EstilosClase&apos; on DomainRelationship &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/EstilosClase.DisplayName" xml:space="preserve">
     <value>Estilos Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;EstilosClase&apos; on DomainRelationship &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase.EstilosClase</value>
-    <comment>Description for DomainRole &apos;EstilosClase&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.DisplayName" xml:space="preserve">
-    <value>Estilos Clase</value>
-    <comment>DisplayName for DomainRole &apos;EstilosClase&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstilosClase/EstilosClase.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasClassStyle/EstilosClase.PropertyDisplayName" xml:space="preserve">
     <value>Clase Enriquecida</value>
-    <comment>PropertyDisplayName for DomainRole &apos;EstilosClase&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstilosClase&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;EstilosClase&apos; on DomainRelationship &apos;ClaseEnriquecidaHasClassStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos</value>
-    <comment>Description for DomainClass &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle</value>
+    <comment>Description for DomainClass &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.DisplayName" xml:space="preserve">
-    <value>Clase Enriquecida Has Estilo Atributos</value>
-    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.DisplayName" xml:space="preserve">
+    <value>Clase Enriquecida Has Atrib Style</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.ClaseEnriquecida</value>
-    <comment>Description for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/ClaseEnriquecida.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.ClaseEnriquecida</value>
+    <comment>Description for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/ClaseEnriquecida.DisplayName" xml:space="preserve">
     <value>Clase Enriquecida</value>
-    <comment>DisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/ClaseEnriquecida.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/ClaseEnriquecida.PropertyDisplayName" xml:space="preserve">
+    <value>Atrib Style</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/EstiloAtributos.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle.EstiloAtributos</value>
+    <comment>Description for DomainRole &apos;EstiloAtributos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/EstiloAtributos.DisplayName" xml:space="preserve">
     <value>Estilo Atributos</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;EstiloAtributos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos.EstiloAtributos</value>
-    <comment>Description for DomainRole &apos;EstiloAtributos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.DisplayName" xml:space="preserve">
-    <value>Estilo Atributos</value>
-    <comment>DisplayName for DomainRole &apos;EstiloAtributos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloAtributos/EstiloAtributos.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasAtribStyle/EstiloAtributos.PropertyDisplayName" xml:space="preserve">
     <value>Clase Enriquecida</value>
-    <comment>PropertyDisplayName for DomainRole &apos;EstiloAtributos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloAtributos&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;EstiloAtributos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtribStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos</value>
-    <comment>Description for DomainClass &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle</value>
+    <comment>Description for DomainClass &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.DisplayName" xml:space="preserve">
-    <value>Clase Enriquecida Has Estilo Metodos</value>
-    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.DisplayName" xml:space="preserve">
+    <value>Clase Enriquecida Has Methods Style</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.ClaseEnriquecida</value>
-    <comment>Description for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/ClaseEnriquecida.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecida</value>
+    <comment>Description for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/ClaseEnriquecida.DisplayName" xml:space="preserve">
     <value>Clase Enriquecida</value>
-    <comment>DisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/ClaseEnriquecida.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/ClaseEnriquecida.PropertyDisplayName" xml:space="preserve">
+    <value>Methods Style</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/EstiloMetodos.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle.EstiloMetodos</value>
+    <comment>Description for DomainRole &apos;EstiloMetodos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/EstiloMetodos.DisplayName" xml:space="preserve">
     <value>Estilo Metodos</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;EstiloMetodos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos.EstiloMetodos</value>
-    <comment>Description for DomainRole &apos;EstiloMetodos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.DisplayName" xml:space="preserve">
-    <value>Estilo Metodos</value>
-    <comment>DisplayName for DomainRole &apos;EstiloMetodos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ClaseEnriquecidaHasEstiloMetodos/EstiloMetodos.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseEnriquecidaHasMethodsStyle/EstiloMetodos.PropertyDisplayName" xml:space="preserve">
     <value>Clase Enriquecida</value>
-    <comment>PropertyDisplayName for DomainRole &apos;EstiloMetodos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloMetodos&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;EstiloMetodos&apos; on DomainRelationship &apos;ClaseEnriquecidaHasMethodsStyle&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.ModeloClassWEBHasHerencia.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ModeloClassWEBHasHerencia</value>
@@ -821,69 +821,69 @@
     <value>Herencia Hija</value>
     <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;EsHija&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasAtributoIdentificador</value>
-    <comment>Description for DomainClass &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtribID.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtribID</value>
+    <comment>Description for DomainClass &apos;ClaseHasAtribID&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador.DisplayName" xml:space="preserve">
-    <value>Clase Has Atributo Identificador</value>
-    <comment>DisplayName for DomainClass &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtribID.DisplayName" xml:space="preserve">
+    <value>Clase Has Atrib ID</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasAtribID&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.Clase</value>
-    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtribID/Clase.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtribID.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtribID&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseHasAtribID/Clase.DisplayName" xml:space="preserve">
     <value>Clase</value>
-    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtribID&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/Clase.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.ClaseHasAtribID/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Atrib ID</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtribID&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtribID/AtributoIdentificador.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ClaseHasAtribID.AtributoIdentificador</value>
+    <comment>Description for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtribID&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ClaseHasAtribID/AtributoIdentificador.DisplayName" xml:space="preserve">
     <value>Atributo Identificador</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtribID&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ClaseHasAtributoIdentificador.AtributoIdentificador</value>
-    <comment>Description for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  <data name="IPS.UMLSPF.ClaseHasAtribID/AtributoIdentificador.PropertyDisplayName" xml:space="preserve">
+    <value>Class</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtribID&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.DisplayName" xml:space="preserve">
-    <value>Atributo Identificador</value>
-    <comment>DisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  <data name="IPS.UMLSPF.OperacionesHasParams.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.OperacionesHasParams</value>
+    <comment>Description for DomainClass &apos;OperacionesHasParams&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.ClaseHasAtributoIdentificador/AtributoIdentificador.PropertyDisplayName" xml:space="preserve">
-    <value>Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoIdentificador&apos; on DomainRelationship &apos;ClaseHasAtributoIdentificador&apos;</comment>
+  <data name="IPS.UMLSPF.OperacionesHasParams.DisplayName" xml:space="preserve">
+    <value>Operaciones Has Params</value>
+    <comment>DisplayName for DomainClass &apos;OperacionesHasParams&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.OperacionesHasParametros</value>
-    <comment>Description for DomainClass &apos;OperacionesHasParametros&apos;</comment>
+  <data name="IPS.UMLSPF.OperacionesHasParams/Operaciones.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.OperacionesHasParams.Operaciones</value>
+    <comment>Description for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParams&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros.DisplayName" xml:space="preserve">
-    <value>Operaciones Has Parametros</value>
-    <comment>DisplayName for DomainClass &apos;OperacionesHasParametros&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros/Operaciones.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.OperacionesHasParametros.Operaciones</value>
-    <comment>Description for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros/Operaciones.DisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.OperacionesHasParams/Operaciones.DisplayName" xml:space="preserve">
     <value>Operaciones</value>
-    <comment>DisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParams&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros/Operaciones.PropertyDisplayName" xml:space="preserve">
+  <data name="IPS.UMLSPF.OperacionesHasParams/Operaciones.PropertyDisplayName" xml:space="preserve">
+    <value>Params</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParams&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParams/Parametros.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.OperacionesHasParams.Parametros</value>
+    <comment>Description for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParams&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.OperacionesHasParams/Parametros.DisplayName" xml:space="preserve">
     <value>Parametros</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParams&apos;</comment>
   </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros/Parametros.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.OperacionesHasParametros.Parametros</value>
-    <comment>Description for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros/Parametros.DisplayName" xml:space="preserve">
-    <value>Parametros</value>
-    <comment>DisplayName for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.OperacionesHasParametros/Parametros.PropertyDisplayName" xml:space="preserve">
-    <value>Operaciones</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParametros&apos;</comment>
+  <data name="IPS.UMLSPF.OperacionesHasParams/Parametros.PropertyDisplayName" xml:space="preserve">
+    <value>Methodz</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Parametros&apos; on DomainRelationship &apos;OperacionesHasParams&apos;</comment>
   </data>
   <data name="IPS.UMLSPF.tipodato/Int.DisplayName" xml:space="preserve">
     <value>Int</value>
