@@ -2,7 +2,114 @@
 <modeloClassWEB xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d74831a6-2494-45b4-8c8d-03679a08c109" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF">
   <class>
     <modeloClassWEBHasClass Id="649a05ae-d4f2-4e46-a24c-054b3092d066">
-      <claseEnriquecida Id="8e7457ea-fd29-485a-b942-c23fce294c53" nombreClase="Cliente" />
+      <claseEnriquecida Id="8e7457ea-fd29-485a-b942-c23fce294c53" nombreClase="Cliente">
+        <atrib>
+          <claseHasAtrib Id="7fe1d4af-13e1-48de-92a0-1b9ef9080b59">
+            <atributo Id="ce607ee0-a16b-4eb1-a3b0-483146ca5947" nombreAtributo="Nombre" tipoAtributo="String" modificador="Public" />
+          </claseHasAtrib>
+          <claseHasAtrib Id="48339c2d-af91-4e4d-9de4-0f6089899c4b">
+            <atributo Id="55516f44-97af-4190-9f85-a475522762b2" nombreAtributo="Pedidos" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtrib>
+        </atrib>
+        <methods>
+          <claseHasMethods Id="bcdf6838-083e-49ff-8613-d83623e2053c">
+            <operaciones Id="d8d3b252-1ae8-4a98-a04d-75721570f5b6" nombreOperacion="ObtenerPedidos" tipoOperacion="Int" modificador="Public">
+              <params>
+                <operacionesHasParams Id="48b6ee89-09de-4e99-8f17-88e6b02bd0a5">
+                  <parametros Id="ceb2816a-3449-49c1-91cc-108a626a198f" tipoDato="Int" nombreParametro="idCliente" />
+                </operacionesHasParams>
+              </params>
+            </operaciones>
+          </claseHasMethods>
+        </methods>
+        <targetClase>
+          <conAsociacion Id="3b38fb0d-1cce-40ac-80ff-f3c7bd9279ff" refD="c1N" refI="c1N" nombreRelacion="Realiza" nameRelation="Pertenece" conexionTipo="Asociacion">
+            <claseMoniker Id="bd09ffca-59ad-4458-94d0-13d11bbd92a6" />
+          </conAsociacion>
+        </targetClase>
+        <atribID>
+          <claseHasAtribID Id="12c7dcbb-3a14-47a9-b36f-bf7bd9eedb22">
+            <atributoIdentificador Id="23d9d889-3e41-4bc7-843e-283f120d8a8c" nombreAtributo="ClienteID" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtribID>
+        </atribID>
+        <classStyle>
+          <claseEnriquecidaHasClassStyle Id="9f08e5c9-ef29-472e-8708-d10ce55cf58e">
+            <estilosClase Id="17fc646a-7b21-441c-966e-79f3b6fa5793" colorFondo="Rojo" colorLetra="Rojo" tipoLetra="Arial" alineacion="left" />
+          </claseEnriquecidaHasClassStyle>
+        </classStyle>
+        <atribStyle>
+          <claseEnriquecidaHasAtribStyle Id="5eb8efc3-6cc3-4fc1-971e-35b955b564cc">
+            <estiloAtributos Id="c72cb29c-4ff3-48d0-9bf6-64977b324885" tipoletra="Arial" colorLetra="Rojo" formatoAtributo="Radio" />
+          </claseEnriquecidaHasAtribStyle>
+        </atribStyle>
+        <methodsStyle>
+          <claseEnriquecidaHasMethodsStyle Id="ed743edb-3f6e-4e8b-a079-2baaf00f1925">
+            <estiloMetodos Id="6e0051bf-019a-435b-8a6f-8c1fd715955f" tipoLetra="Arial" colorLetra="Rojo" />
+          </claseEnriquecidaHasMethodsStyle>
+        </methodsStyle>
+      </claseEnriquecida>
+    </modeloClassWEBHasClass>
+    <modeloClassWEBHasClass Id="c20cc987-922b-47ce-aca0-b1af04dcc53b">
+      <clase Id="bd09ffca-59ad-4458-94d0-13d11bbd92a6" nombreClase="Pedido">
+        <targetClase>
+          <conAsociacion Id="c8205d96-aa2b-45c7-823d-4abdeb43347d" refD="c1N" refI="c1N" nombreRelacion="Tiene" nameRelation="Pertenece" conexionTipo="Composicion">
+            <claseMoniker Id="4705064d-f7d6-4bce-b20d-4407a46493d2" />
+          </conAsociacion>
+        </targetClase>
+        <atribID>
+          <claseHasAtribID Id="1ce06ee3-126d-4282-8069-ceb316d0ed95">
+            <atributoIdentificador Id="413473df-8e86-4538-904b-92c20680e86e" nombreAtributo="IdPedido" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtribID>
+        </atribID>
+      </clase>
+    </modeloClassWEBHasClass>
+    <modeloClassWEBHasClass Id="bbb3b1c4-46d9-4c0f-915f-27f4f5d830ac">
+      <clase Id="4705064d-f7d6-4bce-b20d-4407a46493d2" nombreClase="LineaPedido">
+        <targetClase>
+          <conAsociacion Id="1c7ba561-0284-4ff8-8f97-c69af0a1e8b5" refD="c1N" refI="c1N" nombreRelacion="Tiene" nameRelation="Pertenece" conexionTipo="Agregacion">
+            <claseMoniker Id="794d3cd1-0ecd-4d5c-ba47-54c8367f19d8" />
+          </conAsociacion>
+        </targetClase>
+        <atribID>
+          <claseHasAtribID Id="20f4ee71-c56a-49f2-bc6d-a0905a243609">
+            <atributoIdentificador Id="83efbbf5-e671-4ff0-b25d-e0306dcaee69" nombreAtributo="IdLineaPedido" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtribID>
+        </atribID>
+      </clase>
+    </modeloClassWEBHasClass>
+    <modeloClassWEBHasClass Id="285ec543-e3bb-4d28-b0d4-8f9a33771e27">
+      <clase Id="794d3cd1-0ecd-4d5c-ba47-54c8367f19d8" nombreClase="Producto">
+        <atribID>
+          <claseHasAtribID Id="f2b8f889-c752-47c1-87a9-cb807dd40a6d">
+            <atributoIdentificador Id="007504a8-b44f-4d91-ba41-cccacb9ec666" nombreAtributo="IDProducto" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtribID>
+        </atribID>
+      </clase>
+    </modeloClassWEBHasClass>
+    <modeloClassWEBHasClass Id="0f991593-bcb2-4a0c-af9c-72c94e5f35cd">
+      <clase Id="64f5eea7-d6b1-47ff-b6e6-cdc8dddbc744" nombreClase="Coorporativo" />
+    </modeloClassWEBHasClass>
+    <modeloClassWEBHasClass Id="ad4b5ce0-10be-4f4d-87bd-e81174407844">
+      <clase Id="01364f53-3424-4e02-a710-60fd93bb7e1d" nombreClase="Personal" />
     </modeloClassWEBHasClass>
   </class>
+  <herencia>
+    <modeloClassWEBHasHerencia Id="45671d44-15df-42a7-ac09-d90dfa1c4804">
+      <herencia Id="11edc114-93d8-4e50-aaa1-ddf4b4986842" generalizacion1="Total" generalizacion2="Disjunta">
+        <clasePadre>
+          <esPadre Id="4e6ea073-7123-4cd0-9862-62b395e30e3f">
+            <claseEnriquecidaMoniker Id="8e7457ea-fd29-485a-b942-c23fce294c53" />
+          </esPadre>
+        </clasePadre>
+        <claseHija>
+          <esHija Id="5aad61cb-b089-4c5a-9d93-aeae52976de9">
+            <claseMoniker Id="64f5eea7-d6b1-47ff-b6e6-cdc8dddbc744" />
+          </esHija>
+          <esHija Id="6eeec58e-b538-4ece-8eb1-3326af0253ba">
+            <claseMoniker Id="01364f53-3424-4e02-a710-60fd93bb7e1d" />
+          </esHija>
+        </claseHija>
+      </herencia>
+    </modeloClassWEBHasHerencia>
+  </herencia>
 </modeloClassWEB>

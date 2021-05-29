@@ -2555,7 +2555,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Storage for FormatoAtributo
 		/// </summary>
-		private global::System.String formatoAtributoPropertyStorage = string.Empty;
+		private formatAtrib formatoAtributoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of FormatoAtributo domain property.
@@ -2564,7 +2564,7 @@ namespace IPS.UMLSPF
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EstiloAtributos/FormatoAtributo.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EstiloAtributos/FormatoAtributo.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("4b978335-ac2b-4af7-994e-ee7004ef4abe")]
-		public global::System.String FormatoAtributo
+		public formatAtrib FormatoAtributo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2580,7 +2580,7 @@ namespace IPS.UMLSPF
 		/// <summary>
 		/// Value handler for the EstiloAtributos.FormatoAtributo domain property.
 		/// </summary>
-		internal sealed partial class FormatoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, global::System.String>
+		internal sealed partial class FormatoAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributos, formatAtrib>
 		{
 			private FormatoAtributoPropertyHandler() { }
 		
@@ -2606,7 +2606,7 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloAtributos element)
+			public override sealed formatAtrib GetValue(EstiloAtributos element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.formatoAtributoPropertyStorage;
@@ -2617,11 +2617,11 @@ namespace IPS.UMLSPF
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloAtributos element, global::System.String newValue)
+			public override sealed void SetValue(EstiloAtributos element, formatAtrib newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				formatAtrib oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

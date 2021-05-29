@@ -1117,6 +1117,30 @@
     <value>Description for IPS.UMLSPF.genera2.Solapada</value>
     <comment>Description for EnumerationLiteral &apos;Solapada&apos; on DomainEnumeration &apos;genera2&apos;</comment>
   </data>
+  <data name="IPS.UMLSPF.formatAtrib/Radio.DisplayName" xml:space="preserve">
+    <value>Radio</value>
+    <comment>Display name for EnumerationLiteral &apos;Radio&apos; on DomainEnumeration &apos;formatAtrib&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatAtrib/Radio.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.formatAtrib.Radio</value>
+    <comment>Description for EnumerationLiteral &apos;Radio&apos; on DomainEnumeration &apos;formatAtrib&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatAtrib/Normal.DisplayName" xml:space="preserve">
+    <value>Normal</value>
+    <comment>Display name for EnumerationLiteral &apos;Normal&apos; on DomainEnumeration &apos;formatAtrib&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatAtrib/Normal.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.formatAtrib.Normal</value>
+    <comment>Description for EnumerationLiteral &apos;Normal&apos; on DomainEnumeration &apos;formatAtrib&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatAtrib/CheckBox.DisplayName" xml:space="preserve">
+    <value>CheckBox</value>
+    <comment>Display name for EnumerationLiteral &apos;CheckBox&apos; on DomainEnumeration &apos;formatAtrib&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.formatAtrib/CheckBox.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.formatAtrib.CheckBox</value>
+    <comment>Description for EnumerationLiteral &apos;CheckBox&apos; on DomainEnumeration &apos;formatAtrib&apos;</comment>
+  </data>
   <data name="IPS.UMLSPF.IMGHerencia.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.IMGHerencia</value>
     <comment>Description for DomainClass &apos;IMGHerencia&apos;</comment>
@@ -1217,18 +1241,6 @@
     <value>Mostrar</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="IPS.UMLSPF.ShapeEstiloAtributos.Description" xml:space="preserve">
-    <value>Description for IPS.UMLSPF.ShapeEstiloAtributos</value>
-    <comment>Description for DomainClass &apos;ShapeEstiloAtributos&apos;</comment>
-  </data>
-  <data name="IPS.UMLSPF.ShapeEstiloAtributos.DisplayName" xml:space="preserve">
-    <value>Shape Estilo Atributos</value>
-    <comment>DisplayName for DomainClass &apos;ShapeEstiloAtributos&apos;</comment>
-  </data>
-  <data name="ShapeEstiloAtributosMostrarDefaultText" xml:space="preserve">
-    <value>Mostrar</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="IPS.UMLSPF.ShapeEstiloMetodos.Description" xml:space="preserve">
     <value>Description for IPS.UMLSPF.ShapeEstiloMetodos</value>
     <comment>Description for DomainClass &apos;ShapeEstiloMetodos&apos;</comment>
@@ -1238,6 +1250,18 @@
     <comment>DisplayName for DomainClass &apos;ShapeEstiloMetodos&apos;</comment>
   </data>
   <data name="ShapeEstiloMetodosMostrarDefaultText" xml:space="preserve">
+    <value>Mostrar</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeAtributos.Description" xml:space="preserve">
+    <value>Description for IPS.UMLSPF.ShapeAtributos</value>
+    <comment>Description for DomainClass &apos;ShapeAtributos&apos;</comment>
+  </data>
+  <data name="IPS.UMLSPF.ShapeAtributos.DisplayName" xml:space="preserve">
+    <value>Shape Atributos</value>
+    <comment>DisplayName for DomainClass &apos;ShapeAtributos&apos;</comment>
+  </data>
+  <data name="ShapeAtributosMostrarDefaultText" xml:space="preserve">
     <value>Mostrar</value>
     <comment>Text decorator default text</comment>
   </data>
@@ -1401,14 +1425,6 @@
     <value>Agregar Estilo Clase</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="AgregarEstiloAtributosToolboxItem" xml:space="preserve">
-    <value>AgregarEstiloAtributos</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="AgregarEstiloAtributosToolboxTooltip" xml:space="preserve">
-    <value>Agregar Estilo Atributos</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
   <data name="AgregarEstiloMeetodosToolboxItem" xml:space="preserve">
     <value>AgregarEstiloMeetodos</value>
     <comment>Toolbox item name</comment>
@@ -1423,6 +1439,14 @@
   </data>
   <data name="ShapeParametrozToolboxTooltip" xml:space="preserve">
     <value>Shape Parametroz</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AgregarEstiloAtributoToolboxItem" xml:space="preserve">
+    <value>AgregarEstiloAtributo</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AgregarEstiloAtributoToolboxTooltip" xml:space="preserve">
+    <value>Agregar Estilo Atributo</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1602,16 +1626,16 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="AgregarEstiloAtributosToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
   <data name="AgregarEstiloMeetodosToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ShapeParametrozToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\Parametro.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AgregarEstiloAtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ClaseEnriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

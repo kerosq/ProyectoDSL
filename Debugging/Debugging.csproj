@@ -44,6 +44,7 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="IPS_PT2.kacqSPF" />
     <None Include="UMLSPFReport.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UMLSPFReport.txt</LastGenOutput>

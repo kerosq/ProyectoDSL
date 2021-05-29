@@ -101,8 +101,8 @@ namespace IPS.UMLSPF
 				typeof(ShapeAtributo),
 				typeof(ShapeClaseEnriquecida),
 				typeof(ShapeEstiloClase),
-				typeof(ShapeEstiloAtributos),
 				typeof(ShapeEstiloMetodos),
+				typeof(ShapeAtributos),
 				typeof(IMGHerencia),
 				typeof(global::IPS.UMLSPF.FixUpDiagram),
 				typeof(global::IPS.UMLSPF.DecoratorPropertyChanged),
@@ -232,8 +232,8 @@ namespace IPS.UMLSPF
 				createElementMap.Add(typeof(ShapeAtributo), 19);
 				createElementMap.Add(typeof(ShapeClaseEnriquecida), 20);
 				createElementMap.Add(typeof(ShapeEstiloClase), 21);
-				createElementMap.Add(typeof(ShapeEstiloAtributos), 22);
-				createElementMap.Add(typeof(ShapeEstiloMetodos), 23);
+				createElementMap.Add(typeof(ShapeEstiloMetodos), 22);
+				createElementMap.Add(typeof(ShapeAtributos), 23);
 				createElementMap.Add(typeof(IMGHerencia), 24);
 			}
 			int index;
@@ -270,8 +270,8 @@ namespace IPS.UMLSPF
 				case 19: return new ShapeAtributo(partition, propertyAssignments);
 				case 20: return new ShapeClaseEnriquecida(partition, propertyAssignments);
 				case 21: return new ShapeEstiloClase(partition, propertyAssignments);
-				case 22: return new ShapeEstiloAtributos(partition, propertyAssignments);
-				case 23: return new ShapeEstiloMetodos(partition, propertyAssignments);
+				case 22: return new ShapeEstiloMetodos(partition, propertyAssignments);
+				case 23: return new ShapeAtributos(partition, propertyAssignments);
 				case 24: return new IMGHerencia(partition, propertyAssignments);
 				default: return null;
 			}
@@ -869,6 +869,35 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DescriptionResource("IPS.UMLSPF.genera2/Solapada.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		Solapada,
+	}
+}
+namespace IPS.UMLSPF
+{
+	/// <summary>
+	/// DomainEnumeration: formatAtrib
+	/// Description for IPS.UMLSPF.formatAtrib
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum formatAtrib
+	{
+		/// <summary>
+		/// Radio
+		/// Description for IPS.UMLSPF.formatAtrib.Radio
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.formatAtrib/Radio.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Radio,
+		/// <summary>
+		/// Normal
+		/// Description for IPS.UMLSPF.formatAtrib.Normal
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.formatAtrib/Normal.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		Normal,
+		/// <summary>
+		/// CheckBox
+		/// Description for IPS.UMLSPF.formatAtrib.CheckBox
+		/// </summary>
+		[DslDesign::DescriptionResource("IPS.UMLSPF.formatAtrib/CheckBox.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
+		CheckBox,
 	}
 }
 

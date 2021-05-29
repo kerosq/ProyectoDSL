@@ -126,27 +126,27 @@ namespace IPS.UMLSPF
 					0xff00ff,
 					Index = 11)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
-					"@AgregarEstiloAtributosToolboxItem;IPS.UMLSPF.Dsl.dll", 
-					"IPS.UMLSPF.AgregarEstiloAtributosToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"AgregarEstiloAtributos", 
-					"@AgregarEstiloAtributosToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
-					0xff00ff,
-					Index = 12)]
-	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@AgregarEstiloMeetodosToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.AgregarEstiloMeetodosToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"AgregarEstiloMeetodos", 
 					"@AgregarEstiloMeetodosToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
-					Index = 13)]
+					Index = 12)]
 	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
 					"@ShapeParametrozToolboxItem;IPS.UMLSPF.Dsl.dll", 
 					"IPS.UMLSPF.ShapeParametrozToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ShapeParametroz", 
 					"@ShapeParametrozToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
+					0xff00ff,
+					Index = 13)]
+	[VSShell::ProvideStaticToolboxItem("IPS.UMLSPF.UMLSPFToolboxTab",
+					"@AgregarEstiloAtributoToolboxItem;IPS.UMLSPF.Dsl.dll", 
+					"IPS.UMLSPF.AgregarEstiloAtributoToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AgregarEstiloAtributo", 
+					"@AgregarEstiloAtributoToolboxBitmap;IPS.UMLSPF.Dsl.dll", 
 					0xff00ff,
 					Index = 14)]
 	[VSShell::ProvideEditorFactory(typeof(UMLSPFEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]

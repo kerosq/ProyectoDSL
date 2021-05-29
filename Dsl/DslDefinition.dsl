@@ -195,7 +195,7 @@
         </DomainProperty>
         <DomainProperty Id="4b978335-ac2b-4af7-994e-ee7004ef4abe" Description="Description for IPS.UMLSPF.EstiloAtributos.Formato Atributo" Name="FormatoAtributo" DisplayName="Formato Atributo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="formatAtrib" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="4d655f1e-020a-4e1f-b39a-5bd22133258f" Description="Description for IPS.UMLSPF.EstiloAtributos.Mostrar EA" Name="MostrarEA" DisplayName="Mostrar EA" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
@@ -588,6 +588,13 @@
         <EnumerationLiteral Description="Description for IPS.UMLSPF.genera2.Solapada" Name="Solapada" Value="" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="formatAtrib" Namespace="IPS.UMLSPF" Description="Description for IPS.UMLSPF.formatAtrib">
+      <Literals>
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.formatAtrib.Radio" Name="Radio" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.formatAtrib.Normal" Name="Normal" Value="" />
+        <EnumerationLiteral Description="Description for IPS.UMLSPF.formatAtrib.CheckBox" Name="CheckBox" Value="" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <ImageShape Id="52017427-7d40-4915-8db4-576d30b48e15" Description="Description for IPS.UMLSPF.IMGHerencia" Name="IMGHerencia" DisplayName="IMGHerencia" Namespace="IPS.UMLSPF" FixedTooltipText="IMGHerencia" InitialHeight="1" Image="Resources\HERENCIA.png">
@@ -633,12 +640,12 @@
         <TextDecorator Name="Mostrar" DisplayName="Mostrar" DefaultText="Mostrar" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="98213957-5fe2-41cd-ba93-815603bf7a4b" Description="Description for IPS.UMLSPF.ShapeEstiloAtributos" Name="ShapeEstiloAtributos" DisplayName="Shape Estilo Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Atributos" FillColor="Chartreuse" InitialWidth="3" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="9c8cfca0-1dfe-4f81-a190-a4473798b10b" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" FillColor="Chartreuse" InitialWidth="4" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Mostrar" DisplayName="Mostrar" DefaultText="Mostrar" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="9c8cfca0-1dfe-4f81-a190-a4473798b10b" Description="Description for IPS.UMLSPF.ShapeEstiloMetodos" Name="ShapeEstiloMetodos" DisplayName="Shape Estilo Metodos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Estilo Metodos" FillColor="Chartreuse" InitialWidth="4" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="ba83428d-f7e7-4594-8932-4d3230d7ddb3" Description="Description for IPS.UMLSPF.ShapeAtributos" Name="ShapeAtributos" DisplayName="Shape Atributos" Namespace="IPS.UMLSPF" FixedTooltipText="Shape Atributos" FillColor="Chartreuse" InitialWidth="3" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Mostrar" DisplayName="Mostrar" DefaultText="Mostrar" />
       </ShapeHasDecorators>
@@ -940,11 +947,11 @@
       <XmlClassData TypeName="ShapeEstiloClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeEstiloClaseMoniker" ElementName="shapeEstiloClase" MonikerTypeName="ShapeEstiloClaseMoniker">
         <GeometryShapeMoniker Name="ShapeEstiloClase" />
       </XmlClassData>
-      <XmlClassData TypeName="ShapeEstiloAtributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeEstiloAtributosMoniker" ElementName="shapeEstiloAtributos" MonikerTypeName="ShapeEstiloAtributosMoniker">
-        <GeometryShapeMoniker Name="ShapeEstiloAtributos" />
-      </XmlClassData>
       <XmlClassData TypeName="ShapeEstiloMetodos" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeEstiloMetodosMoniker" ElementName="shapeEstiloMetodos" MonikerTypeName="ShapeEstiloMetodosMoniker">
         <GeometryShapeMoniker Name="ShapeEstiloMetodos" />
+      </XmlClassData>
+      <XmlClassData TypeName="ShapeAtributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="shapeAtributosMoniker" ElementName="shapeAtributos" MonikerTypeName="ShapeAtributosMoniker">
+        <GeometryShapeMoniker Name="ShapeAtributos" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1142,29 +1149,6 @@
         <GeometryShapeMoniker Name="ShapeEstiloClase" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="EstiloAtributos" />
-        <ParentElementPath>
-          <DomainPath>ClaseEnriquecidaHasAtribStyle.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ShapeEstiloAtributos/Mostrar" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EstiloAtributos/MostrarEA" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ShapeEstiloClase/Mostrar" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="EstiloAtributos/MostrarEA" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="ShapeEstiloAtributos" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="EstiloMetodos" />
         <ParentElementPath>
           <DomainPath>ClaseEnriquecidaHasMethodsStyle.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
@@ -1186,6 +1170,21 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="ShapeEstiloMetodos" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="EstiloAtributos" />
+        <ParentElementPath>
+          <DomainPath>ClaseEnriquecidaHasAtribStyle.ClaseEnriquecida/!ClaseEnriquecida/ModeloClassWEBHasClass.ModeloClassWEB/!ModeloClassWEB</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ShapeAtributos/Mostrar" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloAtributos/MostrarEA" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ShapeAtributos" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -1287,14 +1286,14 @@
       <ElementTool Name="AgregarEstiloClase" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloClase" Tooltip="Agregar Estilo Clase" HelpKeyword="AgregarEstiloClase">
         <DomainClassMoniker Name="EstilosClase" />
       </ElementTool>
-      <ElementTool Name="AgregarEstiloAtributos" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloAtributos" Tooltip="Agregar Estilo Atributos" HelpKeyword="AgregarEstiloAtributos">
-        <DomainClassMoniker Name="EstiloAtributos" />
-      </ElementTool>
       <ElementTool Name="AgregarEstiloMeetodos" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloMeetodos" Tooltip="Agregar Estilo Meetodos" HelpKeyword="AgregarEstiloMeetodos">
         <DomainClassMoniker Name="EstiloMetodos" />
       </ElementTool>
       <ElementTool Name="ShapeParametroz" ToolboxIcon="Resources\Parametro.bmp" Caption="ShapeParametroz" Tooltip="Shape Parametroz" HelpKeyword="ShapeParametroz">
         <DomainClassMoniker Name="Parametros" />
+      </ElementTool>
+      <ElementTool Name="AgregarEstiloAtributo" ToolboxIcon="Resources\ClaseEnriquecida.bmp" Caption="AgregarEstiloAtributo" Tooltip="Agregar Estilo Atributo" HelpKeyword="AgregarEstiloAtributo">
+        <DomainClassMoniker Name="EstiloAtributos" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

@@ -423,7 +423,7 @@
         <!-- Property: ColorLetra -->
         <xsd:attribute name="colorLetra" type="Colorz" />
         <!-- Property: FormatoAtributo -->
-        <xsd:attribute name="formatoAtributo" type="xsd:string" />
+        <xsd:attribute name="formatoAtributo" type="formatAtrib" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1231,6 +1231,15 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="Disjunta"/>
       <xsd:enumeration value="Solapada"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum formatAtrib -->
+  <xsd:simpleType name="formatAtrib">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Radio"/>
+      <xsd:enumeration value="Normal"/>
+      <xsd:enumeration value="CheckBox"/>
     </xsd:restriction>
   </xsd:simpleType>
   

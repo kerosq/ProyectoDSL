@@ -260,15 +260,15 @@ namespace IPS.UMLSPF
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::IPS.UMLSPF.EstiloAtributos)
-			{
-				global::IPS.UMLSPF.ShapeEstiloAtributos newShape = new global::IPS.UMLSPF.ShapeEstiloAtributos(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::IPS.UMLSPF.EstiloMetodos)
 			{
 				global::IPS.UMLSPF.ShapeEstiloMetodos newShape = new global::IPS.UMLSPF.ShapeEstiloMetodos(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::IPS.UMLSPF.EstiloAtributos)
+			{
+				global::IPS.UMLSPF.ShapeAtributos newShape = new global::IPS.UMLSPF.ShapeAtributos(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -306,8 +306,8 @@ namespace IPS.UMLSPF
 			global::IPS.UMLSPF.ShapeAtributo.DecoratorsInitialized += ShapeAtributoDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeClaseEnriquecida.DecoratorsInitialized += ShapeClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeEstiloClase.DecoratorsInitialized += ShapeEstiloClaseDecoratorMap.OnDecoratorsInitialized;
-			global::IPS.UMLSPF.ShapeEstiloAtributos.DecoratorsInitialized += ShapeEstiloAtributosDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ShapeEstiloMetodos.DecoratorsInitialized += ShapeEstiloMetodosDecoratorMap.OnDecoratorsInitialized;
+			global::IPS.UMLSPF.ShapeAtributos.DecoratorsInitialized += ShapeAtributosDecoratorMap.OnDecoratorsInitialized;
 			global::IPS.UMLSPF.ConecClase.DecoratorsInitialized += ConecClaseDecoratorMap.OnDecoratorsInitialized;
 		}
 		
@@ -459,27 +459,6 @@ namespace IPS.UMLSPF
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for ShapeEstiloAtributos.
-		/// </summary>
-		internal static partial class ShapeEstiloAtributosDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for ShapeEstiloAtributos.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
 		/// Class containing decorator path traversal methods for ShapeEstiloMetodos.
 		/// </summary>
 		internal static partial class ShapeEstiloMetodosDecoratorMap
@@ -496,6 +475,24 @@ namespace IPS.UMLSPF
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloMetodos.MostrarEMDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ShapeAtributos.
+		/// </summary>
+		internal static partial class ShapeAtributosDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ShapeAtributos.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::IPS.UMLSPF.EstiloAtributos.MostrarEADomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Mostrar").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -719,8 +716,8 @@ namespace IPS.UMLSPF
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.AtributoIdentificador), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstilosClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloAtributos), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloMetodos), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EstiloAtributos), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.conAsociacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsPadre), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::IPS.UMLSPF.EsHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -771,13 +768,13 @@ namespace IPS.UMLSPF
 				{
 					parentElement = GetParentForEstilosClase((global::IPS.UMLSPF.EstilosClase)childElement);
 				} else
-				if(childElement is global::IPS.UMLSPF.EstiloAtributos)
-				{
-					parentElement = GetParentForEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)childElement);
-				} else
 				if(childElement is global::IPS.UMLSPF.EstiloMetodos)
 				{
 					parentElement = GetParentForEstiloMetodos((global::IPS.UMLSPF.EstiloMetodos)childElement);
+				} else
+				if(childElement is global::IPS.UMLSPF.EstiloAtributos)
+				{
+					parentElement = GetParentForEstiloAtributos((global::IPS.UMLSPF.EstiloAtributos)childElement);
 				} else
 				{
 					parentElement = null;
@@ -862,7 +859,7 @@ namespace IPS.UMLSPF
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForEstiloAtributos( global::IPS.UMLSPF.EstiloAtributos root )
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForEstiloMetodos( global::IPS.UMLSPF.EstiloMetodos root )
 			{
 				// Segments 0 and 1
 				global::IPS.UMLSPF.Clase root2 = root.ClaseEnriquecida as global::IPS.UMLSPF.Clase;
@@ -872,7 +869,7 @@ namespace IPS.UMLSPF
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForEstiloMetodos( global::IPS.UMLSPF.EstiloMetodos root )
+			public static global::IPS.UMLSPF.ModeloClassWEB GetParentForEstiloAtributos( global::IPS.UMLSPF.EstiloAtributos root )
 			{
 				// Segments 0 and 1
 				global::IPS.UMLSPF.Clase root2 = root.ClaseEnriquecida as global::IPS.UMLSPF.Clase;
