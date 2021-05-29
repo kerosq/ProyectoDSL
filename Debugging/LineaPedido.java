@@ -1,2 +1,3 @@
 public class LineaPedido {
+LineaPedido(){}
 }

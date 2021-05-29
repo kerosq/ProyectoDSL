@@ -1,2 +1,3 @@
 public class Personal {
+Personal(){}
 }

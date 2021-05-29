@@ -28,13 +28,34 @@
 
 				WriteLine("public class "+ modelClass.NombreClase+ " {");
 				
-					foreach (Atributo atrib in modelClass.Atrib){	
+
+
+					WriteLine( modelClass.NombreClase+"(){}" );
+
+					foreach (Atributo atrib in modelClass.Atrib){
+						WriteLine(getModificador(atrib.Modificador)+" "+getTipoDato(atrib.TipoAtributo) +" "+ atrib.NombreAtributo +";");						
+						WriteLine(getModificador(atrib.Modificador)+" get"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{}");
+						WriteLine(getModificador(atrib.Modificador)+" set"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{return "+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+";}");
+					}
+
+					foreach (Operaciones metho in modelClass.Methods){	
 						
+						if ( metho.Params.Count == 0 ) {
+							WriteLine( getModificador(metho.Modificador)+" "+getTipoDato(metho.TipoOperacion) +" "+ metho.NombreOperacion );
+						}
+						else {
+							string parametros = "";
+							foreach(Parametros paramz in metho.Params ) {
+								parametros += getTipoDato(paramz.TipoDato)+" "+paramz.NombreParametro;							
+							}						
+
+							WriteLine( getModificador(metho.Modificador)+" "+getTipoDato(metho.TipoOperacion) +" "+ metho.NombreOperacion+"("+parametros+")" +"{ return 0;}");
+						}
 
 					}
 				
 			
-				WriteLine("}");
+			WriteLine("}");
 			}
 
 		}
@@ -53,8 +74,16 @@
 #>
 
 <#+
-	private String getComunidad(tipodato dato){
+	private String getTipoDato(tipodato dato){
 		String c = dato.ToString();
-		return c;
+		return c.ToLower();
 	}
 #>
+
+<#+
+	private String getModificador(Modificadores mod){
+		String c = mod.ToString();
+		return c.ToLower();
+	}
+#>
+
