@@ -440,7 +440,7 @@
     </DomainRelationship>
     <DomainRelationship Id="2332c0eb-ffb1-4991-a149-87c7d8fb3f24" Description="Description for IPS.UMLSPF.EsPadre" Name="EsPadre" DisplayName="Es Padre" Namespace="IPS.UMLSPF">
       <Source>
-        <DomainRole Id="bc8350d8-c103-4725-8c38-f2b3a1065d16" Description="Description for IPS.UMLSPF.EsPadre.Herencia" Name="Herencia" DisplayName="Herencia" PropertyName="ClasePadre" PropertyDisplayName="Clase Padre">
+        <DomainRole Id="bc8350d8-c103-4725-8c38-f2b3a1065d16" Description="Description for IPS.UMLSPF.EsPadre.Herencia" Name="Herencia" DisplayName="Herencia" PropertyName="ClasePadre" Multiplicity="One" PropertyDisplayName="Clase Padre">
           <RolePlayer>
             <DomainClassMoniker Name="Herencia" />
           </RolePlayer>

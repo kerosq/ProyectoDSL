@@ -2482,7 +2482,7 @@ namespace IPS.UMLSPF
 		/// </summary>
 		[DslDesign::DisplayNameResource("IPS.UMLSPF.EsPadre/Herencia.DisplayName", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("IPS.UMLSPF.EsPadre/Herencia.Description", typeof(global::IPS.UMLSPF.UMLSPFDomainModel), "IPS.UMLSPF.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClasePadre", PropertyDisplayNameKey="IPS.UMLSPF.EsPadre/Herencia.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClasePadre", PropertyDisplayNameKey="IPS.UMLSPF.EsPadre/Herencia.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("bc8350d8-c103-4725-8c38-f2b3a1065d16")]
 		public virtual Herencia Herencia
 		{
@@ -2542,24 +2542,43 @@ namespace IPS.UMLSPF
 		#endregion
 		#region Static methods to access ClasePadre of a Herencia
 		/// <summary>
-		/// Gets a list of ClasePadre.
+		/// Gets ClasePadre.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClasePadre(Herencia element)
+		public static Clase GetClasePadre(Herencia element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, HerenciaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, HerenciaDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets ClasePadre.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClasePadre(Herencia element, Clase newClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, HerenciaDomainRoleId, newClase);
 		}
 		#endregion
 		#region Herencia link accessor
 		/// <summary>
-		/// Get the list of EsPadre links to a Herencia.
+		/// Get the EsPadre link to a Herencia.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::IPS.UMLSPF.EsPadre> GetLinksToClasePadre ( global::IPS.UMLSPF.Herencia herenciaInstance )
+		public static global::IPS.UMLSPF.EsPadre GetLinkToClasePadre (global::IPS.UMLSPF.Herencia herenciaInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsPadre>(herenciaInstance, global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId);
+			global::System.Collections.Generic.IList<global::IPS.UMLSPF.EsPadre> links = DslModeling::DomainRoleInfo.GetElementLinks<global::IPS.UMLSPF.EsPadre>(herenciaInstance, global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Herencia not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region Clase link accessor

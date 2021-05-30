@@ -3252,17 +3252,21 @@ namespace IPS.UMLSPF
 		}
 		#endregion
 		#region ClasePadre opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of ClasePadre.
+		/// Gets or sets ClasePadre.
 		/// Description for IPS.UMLSPF.EsPadre.Herencia
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClasePadre
+		public virtual Clase ClasePadre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::IPS.UMLSPF.EsPadre.HerenciaDomainRoleId, value);
 			}
 		}
 		#endregion

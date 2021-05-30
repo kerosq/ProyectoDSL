@@ -219,6 +219,7 @@ namespace IPS.UMLSPF
 					{
 						global::IPS.UMLSPF.Herencia sourceHerencia = (global::IPS.UMLSPF.Herencia)candidateSource;
 						global::IPS.UMLSPF.Clase targetClase = (global::IPS.UMLSPF.Clase)candidateTarget;
+						if(sourceHerencia == null || global::IPS.UMLSPF.EsPadre.GetLinkToClasePadre(sourceHerencia) != null) return false;
 						if(targetClase == null || sourceHerencia == null || global::IPS.UMLSPF.EsPadre.GetLinks(sourceHerencia, targetClase).Count > 0) return false;
 						return true;
 					}

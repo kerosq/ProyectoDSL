@@ -21,42 +21,136 @@
 		Herencia modelHerencia;
 		string help;
 
-		List<HerenciaHelper> Herenciahelper = new List<HerenciaHelper>();
+		List<HerenciaHelper> herenciahelper = new List<HerenciaHelper>();
 
 		if ( this.ModeloClassWEB.Herencia.Count > 0){
 			foreach(Herencia nodo in this.ModeloClassWEB.Herencia) { 
 				
 				modelHerencia = nodo;		
+				
+				HerenciaHelper HH = new HerenciaHelper(nodo.ClasePadre.NombreClase);
+
 
 				if ( nodo.ClaseHija.Count > 0){
 					
-					foreach (Clase padre in modelHerencia.ClaseHija){
+					foreach (Clase hija in modelHerencia.ClaseHija){
+
+						HH.AgregarHija(hija.NombreClase);
+
 					}
 				}
 			
-		
+				herenciahelper.Add(HH);
 			}
 		}			
 		
-						
+
+		int indicePadre = 0;
+		bool EncontradoPadre=false;
+
+		int indiceHijo = 0;
+		bool EncontradoHijo=false;
+
 		foreach(Clase nodo in this.ModeloClassWEB.Class) {
 		
 			if (nodo is Clase) {
 				modelClass = nodo;		
 				fileManager.StartNewFile(modelClass.NombreClase+extension);	
 
-				WriteLine("public class "+ modelClass.NombreClase+ " {");
+				
+				
+				for(int i = 0; i < herenciahelper.Count && !EncontradoPadre; i++) {
+					if (herenciahelper[i].getPadre().Equals(modelClass.NombreClase)) {
+					
+						EncontradoPadre = true;
+						indicePadre = i;
+					
+					}
+				}
+
+				for(int i = 0; i < herenciahelper.Count && !EncontradoHijo; i++) {
+						if (herenciahelper[i].BuscarHija(modelClass.NombreClase)) {
+
+							EncontradoHijo = true;
+							indiceHijo = i;
+
+						}
+				}
+
+
+				if (EncontradoPadre) { 
+					WriteLine("public class "+ modelClass.NombreClase+ " {");
+				}
+
+				else if (EncontradoHijo)  {
+					WriteLine("public class "+ modelClass.NombreClase+" extends "+herenciahelper[indiceHijo].getPadre()+"{");
+				}
+
+				else if  (!EncontradoHijo && !EncontradoPadre) {
+					WriteLine("public class "+ modelClass.NombreClase+ " {");
+				}
+
 				
 					WriteLine( modelClass.NombreClase+"(){}" );
 	
-					WriteLine(getModificador(nodo.AtribID.Modificador)+" "+getTipoDato(nodo.AtribID.TipoAtributo) +" "+ nodo.AtribID.NombreAtributo +";");						
-					WriteLine(getModificador(nodo.AtribID.Modificador)+" get"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{}");
-					WriteLine(getModificador(nodo.AtribID.Modificador)+" set"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{return "+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+";}");
 
+					String AtributoID_Nombre = getModificador(nodo.AtribID.Modificador)+" "+getTipoDato(nodo.AtribID.TipoAtributo) +" "+ nodo.AtribID.NombreAtributo +";";
+					String AtributoID_SET = getModificador(nodo.AtribID.Modificador)+" get"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{}";
+					String AtributoID_GET = getModificador(nodo.AtribID.Modificador)+" set"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{return "+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+";}";
+					
+					if (EncontradoPadre) { 
+						herenciahelper[indicePadre].AgregarAtributos(AtributoID_Nombre);
+						herenciahelper[indicePadre].AgregarAtributos(AtributoID_SET);
+						herenciahelper[indicePadre].AgregarAtributos(AtributoID_GET);
+					}
+
+					else if (EncontradoHijo)  {
+
+						int numHijos = herenciahelper[indiceHijo].getAtributos().Count;
+
+						for(int i = 0; i < numHijos; i++) {
+							WriteLine (herenciahelper[indiceHijo].getAtributos()[i]);
+						}
+
+					}
+
+					
+					WriteLine(AtributoID_Nombre);						
+					WriteLine(AtributoID_SET);
+					WriteLine(AtributoID_GET);
+					
 					foreach (Atributo atrib in modelClass.Atrib){
-						WriteLine(getModificador(atrib.Modificador)+" "+getTipoDato(atrib.TipoAtributo) +" "+ atrib.NombreAtributo +";");						
-						WriteLine(getModificador(atrib.Modificador)+" get"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{}");
-						WriteLine(getModificador(atrib.Modificador)+" set"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{return "+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+";}");
+
+						String Atributo_Nombre = getModificador(atrib.Modificador)+" "+getTipoDato(atrib.TipoAtributo) +" "+ atrib.NombreAtributo +";";
+						String Atributo_GET = getModificador(atrib.Modificador)+" get"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{}";
+						String Atributo_SET = getModificador(atrib.Modificador)+" set"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{return "+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+";}";
+
+
+
+
+						if (EncontradoPadre) { 
+							herenciahelper[indicePadre].AgregarAtributos(Atributo_Nombre);
+							herenciahelper[indicePadre].AgregarAtributos(Atributo_GET);
+							herenciahelper[indicePadre].AgregarAtributos(Atributo_SET);
+						}
+
+						else if (EncontradoHijo)  {
+
+							int numHijos = herenciahelper[indiceHijo].getAtributos().Count;
+
+							for(int i = 0; i < numHijos; i++) {
+								WriteLine (herenciahelper[indiceHijo].getAtributos()[i]);
+							}
+
+						}
+
+
+
+
+
+						WriteLine(Atributo_Nombre);						
+						WriteLine(Atributo_GET);
+						WriteLine(Atributo_SET);
 					}
 
 
@@ -87,7 +181,14 @@
 					foreach (Operaciones metho in modelClass.Methods){	
 						
 						if ( metho.Params.Count == 0 ) {
-							WriteLine( getModificador(metho.Modificador)+" "+getTipoDato(metho.TipoOperacion) +" "+ metho.NombreOperacion );
+							
+							String metodoToCode = getModificador(metho.Modificador)+" "+getTipoDato(metho.TipoOperacion) +" "+ metho.NombreOperacion;
+
+							if (EncontradoPadre) { 
+								herenciahelper[indicePadre].AgregarMetodos(metodoToCode);
+							}
+
+							WriteLine(metodoToCode);
 						}
 						else {
 							string parametros = "";
@@ -95,12 +196,33 @@
 								parametros += getTipoDato(paramz.TipoDato)+" "+paramz.NombreParametro;							
 							}						
 
-							WriteLine( getModificador(metho.Modificador)+" "+getTipoDato(metho.TipoOperacion) +" "+ metho.NombreOperacion+"("+parametros+")" +"{ return 0;}");
+							String parametrozToCode = getModificador(metho.Modificador)+" "+getTipoDato(metho.TipoOperacion) +" "+ metho.NombreOperacion+"("+parametros+")" +"{ return 0;}";
+							
+
+							if (EncontradoPadre) { 
+								herenciahelper[indicePadre].AgregarMetodos(parametrozToCode);
+							}
+
+							WriteLine(parametrozToCode);
 						}
 
 					}
+
+					
+					 if (EncontradoHijo)  {
+
+						int numHijos = herenciahelper[indiceHijo].getMetodos().Count;
+							for(int i = 0; i < numHijos; i++) {
+								WriteLine (herenciahelper[indiceHijo].getMetodos()[i]);
+							}
+					}
 				
-			
+
+			indicePadre = 0;		
+			indiceHijo = 0;		
+
+			EncontradoPadre=false;
+			EncontradoHijo=false;
 			WriteLine("}");
 			}
 
@@ -145,8 +267,56 @@
 public class HerenciaHelper {
  
  String Padre;
- List<String> Atributos = new List<String>();
+ List<String> Hijas = new List<String>();
+
+ List<String> Atributos = new List<String>(); // Con getter y setters
  List<String> Metodos = new List<String>();
+
+ public HerenciaHelper (String padre){ 
+	this.Padre = padre;
+ }
+
+ public void AgregarHija(String hija){
+	Hijas.Add(hija);
+ }
+
+ public void AgregarAtributos(String Atrib) {
+ 
+	Atributos.Add(Atrib);
+ }
+
+ public List<string> getAtributos () {
+ 
+	return this.Atributos;
+ 
+ }
+
+  public void AgregarMetodos(String Metho) {
+ 
+	Metodos.Add(Metho);
+ }
+
+ public List<string> getMetodos () {
+ 
+	return this.Metodos;
+ 
+ }
+
+ public bool BuscarHija(String hija){
+	
+	bool EncontradoHija = false;
+	for(int i = 0; i < Hijas.Count && !EncontradoHija; i++) {
+		if (Hijas[i].Equals(hija)) {			
+			EncontradoHija = true;				
+		}
+	}
+
+	return EncontradoHija;
+ }
+
+ public String getPadre () {
+	return this.Padre;
+ }
 
 }
 #>
