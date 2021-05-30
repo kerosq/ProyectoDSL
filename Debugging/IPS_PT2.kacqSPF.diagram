@@ -23,10 +23,10 @@
     <shapeClase Id="45b8b80e-9f15-43a4-84ed-3e9f0a33b434" absoluteBounds="10.75, 7.125, 4.125, 1.5">
       <claseMoniker Id="794d3cd1-0ecd-4d5c-ba47-54c8367f19d8" />
     </shapeClase>
-    <shapeClase Id="b2f0adbc-b5b3-43d5-8025-f511e97c845b" absoluteBounds="0.5, 5, 2, 0.75">
+    <shapeClase Id="b2f0adbc-b5b3-43d5-8025-f511e97c845b" absoluteBounds="0.5, 5, 2, 1.5">
       <claseMoniker Id="64f5eea7-d6b1-47ff-b6e6-cdc8dddbc744" />
     </shapeClase>
-    <shapeClase Id="9e46cd7b-0ff2-48de-8795-6352e9426f0d" absoluteBounds="3.625, 5, 1.875, 0.75">
+    <shapeClase Id="9e46cd7b-0ff2-48de-8795-6352e9426f0d" absoluteBounds="3.375, 6.125, 2.875, 1.25">
       <claseMoniker Id="01364f53-3424-4e02-a710-60fd93bb7e1d" />
     </shapeClase>
     <shapeOperaciones Id="928b2731-166c-44ed-ac0b-dfce357cfbb3" absoluteBounds="0.75, 3.125, 4.25, 0.5">
@@ -47,21 +47,21 @@
     <iMGHerencia Id="5a2736e0-9ae3-4400-8413-fb954d91f85b" absoluteBounds="2.875, 4.25, 0.55548608303070068, 0.54159897565841675">
       <herenciaMoniker Id="11edc114-93d8-4e50-aaa1-ddf4b4986842" />
     </iMGHerencia>
-    <conEsPadre Id="a4825b0a-7976-42c8-9d89-a3000c1f7c30" edgePoints="[(3.15274304151535 : 4.25); (3.15274304151535 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conEsPadre Id="a4825b0a-7976-42c8-9d89-a3000c1f7c30" edgePoints="[(3.15274304151535 : 4.25); (3.15274304151535 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <esPadreMoniker Id="4e6ea073-7123-4cd0-9862-62b395e30e3f" />
       <nodes>
         <iMGHerenciaMoniker Id="5a2736e0-9ae3-4400-8413-fb954d91f85b" />
         <shapeClaseEnriquecidaMoniker Id="87c9822b-6dfb-42ba-88d9-fc89b4f5e622" />
       </nodes>
     </conEsPadre>
-    <conEsHijo Id="f1aa7463-65d2-4f86-9434-a3529c84a532" edgePoints="[(3.15274304151535 : 4.79159897565842); (3.15274304151535 : 5.375); (2.5 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conEsHijo Id="f1aa7463-65d2-4f86-9434-a3529c84a532" edgePoints="[(3.09375 : 4.79159897565842); (3.09375 : 5.53125); (3.03645583333333 : 5.53125 : JumpStart); (2.86978916666667 : 5.53125 : JumpEnd); (2.5 : 5.53125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <esHijaMoniker Id="5aad61cb-b089-4c5a-9d93-aeae52976de9" />
       <nodes>
         <iMGHerenciaMoniker Id="5a2736e0-9ae3-4400-8413-fb954d91f85b" />
         <shapeClaseMoniker Id="b2f0adbc-b5b3-43d5-8025-f511e97c845b" />
       </nodes>
     </conEsHijo>
-    <conEsHijo Id="06634576-2398-4c57-987c-e7c71f9d5e0c" edgePoints="[(3.32286706227303 : 4.79159897565842); (3.32286706227303 : 5.1875); (3.625 : 5.1875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conEsHijo Id="06634576-2398-4c57-987c-e7c71f9d5e0c" edgePoints="[(2.9531225 : 4.79159897565842); (2.9531225 : 6.75); (3.375 : 6.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <esHijaMoniker Id="6eeec58e-b538-4ece-8eb1-3326af0253ba" />
       <nodes>
         <iMGHerenciaMoniker Id="5a2736e0-9ae3-4400-8413-fb954d91f85b" />
@@ -76,7 +76,7 @@
         <shapeClaseMoniker Id="b7d7a806-aeb4-4208-80d8-d3b01b3b57ae" />
       </nodes>
     </conecClase>
-    <conecClase Id="7266045d-1b3b-4fe7-a416-561e4e6a392b" edgePoints="[(12.6875 : 2.375); (12.6875 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="7266045d-1b3b-4fe7-a416-561e4e6a392b" edgePoints="[(13.40625 : 2.375); (13.40625 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <conAsociacionMoniker Id="c8205d96-aa2b-45c7-823d-4abdeb43347d" />
       <relativeChildShapes />
       <nodes>
@@ -84,7 +84,7 @@
         <shapeClaseMoniker Id="17a97a34-abe8-4203-826c-c889bf93b89b" />
       </nodes>
     </conecClase>
-    <conecClase Id="6f2f4d37-087f-4574-a0fe-d464adbfd812" edgePoints="[(12.75 : 5.375); (12.75 : 7.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="6f2f4d37-087f-4574-a0fe-d464adbfd812" edgePoints="[(13.40625 : 5.375); (13.40625 : 7.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <conAsociacionMoniker Id="1c7ba561-0284-4ff8-8f97-c69af0a1e8b5" />
       <relativeChildShapes />
       <nodes>
@@ -100,6 +100,12 @@
     </shapeAtributoID>
     <shapeAtributoID Id="c74b3c12-8469-4549-aaea-940be0039444" absoluteBounds="11, 7.5, 3, 0.375">
       <atributoIdentificadorMoniker Id="007504a8-b44f-4d91-ba41-cccacb9ec666" />
+    </shapeAtributoID>
+    <shapeAtributoID Id="cb514255-5f07-4057-8165-627d08c355d3" absoluteBounds="0.625, 5.75, 1.625, 0.375">
+      <atributoIdentificadorMoniker Id="733d67d4-24c2-4e44-b4dc-20ac2ecfee8d" />
+    </shapeAtributoID>
+    <shapeAtributoID Id="3396daac-2af7-4da8-a209-5c1ac92daf6d" absoluteBounds="3.875, 5.625, 1.75, 0.375">
+      <atributoIdentificadorMoniker Id="a3b8109c-fb3a-4fb0-95ab-8546ccf9b6b0" />
     </shapeAtributoID>
   </nestedChildShapes>
 </uMLSPFDiagram>

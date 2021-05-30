@@ -18,24 +18,70 @@
 	else{ 
 		
 		Clase modelClass;
+		Herencia modelHerencia;
+		string help;
+
+		List<HerenciaHelper> Herenciahelper = new List<HerenciaHelper>();
+
+		if ( this.ModeloClassWEB.Herencia.Count > 0){
+			foreach(Herencia nodo in this.ModeloClassWEB.Herencia) { 
+				
+				modelHerencia = nodo;		
+
+				if ( nodo.ClaseHija.Count > 0){
+					
+					foreach (Clase padre in modelHerencia.ClaseHija){
+					}
+				}
+			
+		
+			}
+		}			
 		
 						
 		foreach(Clase nodo in this.ModeloClassWEB.Class) {
 		
 			if (nodo is Clase) {
-				modelClass = ((Clase)nodo);		
+				modelClass = nodo;		
 				fileManager.StartNewFile(modelClass.NombreClase+extension);	
 
 				WriteLine("public class "+ modelClass.NombreClase+ " {");
 				
-
-
 					WriteLine( modelClass.NombreClase+"(){}" );
+	
+					WriteLine(getModificador(nodo.AtribID.Modificador)+" "+getTipoDato(nodo.AtribID.TipoAtributo) +" "+ nodo.AtribID.NombreAtributo +";");						
+					WriteLine(getModificador(nodo.AtribID.Modificador)+" get"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{}");
+					WriteLine(getModificador(nodo.AtribID.Modificador)+" set"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{return "+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+";}");
 
 					foreach (Atributo atrib in modelClass.Atrib){
 						WriteLine(getModificador(atrib.Modificador)+" "+getTipoDato(atrib.TipoAtributo) +" "+ atrib.NombreAtributo +";");						
 						WriteLine(getModificador(atrib.Modificador)+" get"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{}");
 						WriteLine(getModificador(atrib.Modificador)+" set"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{return "+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+";}");
+					}
+
+
+					if(modelClass.TargetClase.Count >0) {
+
+						foreach (conAsociacion r in conAsociacion.GetLinksToTargetClase(modelClass)) {
+							
+							if (getTipoConexion(r.ConexionTipo).Equals("asociacion")) {
+							
+								WriteLine(r.TargetClase.NombreClase);
+
+							}
+
+							if (getTipoConexion(r.ConexionTipo).Equals("agregacion")) {
+							
+								WriteLine(r.TargetClase.NombreClase);
+							}
+
+							if (getTipoConexion(r.ConexionTipo).Equals("composicion")) {
+							
+								WriteLine(r.TargetClase.NombreClase);
+							}
+
+						}
+
 					}
 
 					foreach (Operaciones metho in modelClass.Methods){	
@@ -87,3 +133,20 @@
 	}
 #>
 
+<#+
+	private String getTipoConexion(ConexionTipos con){
+		String c = con.ToString();
+		return c.ToLower();
+	}
+#>
+
+
+<#+
+public class HerenciaHelper {
+ 
+ String Padre;
+ List<String> Atributos = new List<String>();
+ List<String> Metodos = new List<String>();
+
+}
+#>

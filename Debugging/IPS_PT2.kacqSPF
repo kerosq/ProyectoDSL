@@ -58,7 +58,7 @@
         </targetClase>
         <atribID>
           <claseHasAtribID Id="1ce06ee3-126d-4282-8069-ceb316d0ed95">
-            <atributoIdentificador Id="413473df-8e86-4538-904b-92c20680e86e" nombreAtributo="IdPedido" tipoAtributo="Int" modificador="Public" />
+            <atributoIdentificador Id="413473df-8e86-4538-904b-92c20680e86e" nombreAtributo="PedidoID" tipoAtributo="Int" modificador="Public" />
           </claseHasAtribID>
         </atribID>
       </clase>
@@ -72,7 +72,7 @@
         </targetClase>
         <atribID>
           <claseHasAtribID Id="20f4ee71-c56a-49f2-bc6d-a0905a243609">
-            <atributoIdentificador Id="83efbbf5-e671-4ff0-b25d-e0306dcaee69" nombreAtributo="IdLineaPedido" tipoAtributo="Int" modificador="Public" />
+            <atributoIdentificador Id="83efbbf5-e671-4ff0-b25d-e0306dcaee69" nombreAtributo="LineaPedidoID" tipoAtributo="Int" modificador="Public" />
           </claseHasAtribID>
         </atribID>
       </clase>
@@ -81,16 +81,28 @@
       <clase Id="794d3cd1-0ecd-4d5c-ba47-54c8367f19d8" nombreClase="Producto">
         <atribID>
           <claseHasAtribID Id="f2b8f889-c752-47c1-87a9-cb807dd40a6d">
-            <atributoIdentificador Id="007504a8-b44f-4d91-ba41-cccacb9ec666" nombreAtributo="IDProducto" tipoAtributo="Int" modificador="Public" />
+            <atributoIdentificador Id="007504a8-b44f-4d91-ba41-cccacb9ec666" nombreAtributo="ProductoID" tipoAtributo="Int" modificador="Public" />
           </claseHasAtribID>
         </atribID>
       </clase>
     </modeloClassWEBHasClass>
     <modeloClassWEBHasClass Id="0f991593-bcb2-4a0c-af9c-72c94e5f35cd">
-      <clase Id="64f5eea7-d6b1-47ff-b6e6-cdc8dddbc744" nombreClase="Coorporativo" />
+      <clase Id="64f5eea7-d6b1-47ff-b6e6-cdc8dddbc744" nombreClase="Coorporativo">
+        <atribID>
+          <claseHasAtribID Id="241e6da3-94b5-4521-8954-6c331fd9f29a">
+            <atributoIdentificador Id="733d67d4-24c2-4e44-b4dc-20ac2ecfee8d" nombreAtributo="CoorporativoID" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtribID>
+        </atribID>
+      </clase>
     </modeloClassWEBHasClass>
     <modeloClassWEBHasClass Id="ad4b5ce0-10be-4f4d-87bd-e81174407844">
-      <clase Id="01364f53-3424-4e02-a710-60fd93bb7e1d" nombreClase="Personal" />
+      <clase Id="01364f53-3424-4e02-a710-60fd93bb7e1d" nombreClase="Personal">
+        <atribID>
+          <claseHasAtribID Id="3b6eac6a-c370-477a-9034-5986ccd100b3">
+            <atributoIdentificador Id="a3b8109c-fb3a-4fb0-95ab-8546ccf9b6b0" nombreAtributo="PersonalID" tipoAtributo="Int" modificador="Public" />
+          </claseHasAtribID>
+        </atribID>
+      </clase>
     </modeloClassWEBHasClass>
   </class>
   <herencia>
