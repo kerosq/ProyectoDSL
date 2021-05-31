@@ -1,7 +1,8 @@
+import java.util.List;
 public class Pedido {
 Pedido(){}
 public int PedidoID;
-public getPedidoID(int PedidoID){}
-public setPedidoID(int PedidoID){return int PedidoID;}
-LineaPedido
+public int getPedidoID(int PedidoID){return 0;}
+public void setPedidoID(int PedidoID){ this.PedidoID=PedidoID;}
+public List <LineaPedido> Tiene_LineaPedido;
 }

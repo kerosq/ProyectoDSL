@@ -1,7 +1,9 @@
+import java.util.List;
 public class LineaPedido {
 LineaPedido(){}
 public int LineaPedidoID;
-public getLineaPedidoID(int LineaPedidoID){}
-public setLineaPedidoID(int LineaPedidoID){return int LineaPedidoID;}
-Producto
+public int getLineaPedidoID(int LineaPedidoID){return 0;}
+public void setLineaPedidoID(int LineaPedidoID){ this.LineaPedidoID=LineaPedidoID;}
+public List <Producto> Tiene_Producto;
+public LineaPedido(List <Producto> Tiene_Producto){}
 }

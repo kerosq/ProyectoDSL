@@ -19,7 +19,7 @@
 		
 		Clase modelClass;
 		Herencia modelHerencia;
-		string help;
+		
 
 		List<HerenciaHelper> herenciahelper = new List<HerenciaHelper>();
 
@@ -77,6 +77,7 @@
 						}
 				}
 
+				WriteLine ("import java.util.List;");
 
 				if (EncontradoPadre) { 
 					WriteLine("public class "+ modelClass.NombreClase+ " {");
@@ -95,8 +96,8 @@
 	
 
 					String AtributoID_Nombre = getModificador(nodo.AtribID.Modificador)+" "+getTipoDato(nodo.AtribID.TipoAtributo) +" "+ nodo.AtribID.NombreAtributo +";";
-					String AtributoID_SET = getModificador(nodo.AtribID.Modificador)+" get"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{}";
-					String AtributoID_GET = getModificador(nodo.AtribID.Modificador)+" set"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{return "+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+";}";
+					String AtributoID_SET = getModificador(nodo.AtribID.Modificador)+" "+getTipoDato(nodo.AtribID.TipoAtributo)+" get"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{"+getTipoDatoReturn(nodo.AtribID.TipoAtributo)+"}";
+					String AtributoID_GET = getModificador(nodo.AtribID.Modificador)+" void set"+nodo.AtribID.NombreAtributo+"("+getTipoDato(nodo.AtribID.TipoAtributo)+" "+nodo.AtribID.NombreAtributo+")"+"{ this."+nodo.AtribID.NombreAtributo+"="+nodo.AtribID.NombreAtributo+";}";
 					
 					if (EncontradoPadre) { 
 						herenciahelper[indicePadre].AgregarAtributos(AtributoID_Nombre);
@@ -122,8 +123,8 @@
 					foreach (Atributo atrib in modelClass.Atrib){
 
 						String Atributo_Nombre = getModificador(atrib.Modificador)+" "+getTipoDato(atrib.TipoAtributo) +" "+ atrib.NombreAtributo +";";
-						String Atributo_GET = getModificador(atrib.Modificador)+" get"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{}";
-						String Atributo_SET = getModificador(atrib.Modificador)+" set"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{return "+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+";}";
+						String Atributo_GET = getModificador(atrib.Modificador)+" "+getTipoDato(atrib.TipoAtributo)+" get"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{"+getTipoDatoReturn(atrib.TipoAtributo)+"}";
+						String Atributo_SET = getModificador(atrib.Modificador)+" void set"+atrib.NombreAtributo+"("+getTipoDato(atrib.TipoAtributo)+" "+atrib.NombreAtributo+")"+"{ this."+atrib.NombreAtributo+"="+atrib.NombreAtributo+";}";
 
 
 
@@ -153,25 +154,31 @@
 						WriteLine(Atributo_SET);
 					}
 
-
+					 List<String> ClaseAsiacion = new List<String>();
 					if(modelClass.TargetClase.Count >0) {
 
 						foreach (conAsociacion r in conAsociacion.GetLinksToTargetClase(modelClass)) {
 							
 							if (getTipoConexion(r.ConexionTipo).Equals("asociacion")) {
-							
-								WriteLine(r.TargetClase.NombreClase);
-
+								WriteLine(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));							
 							}
 
 							if (getTipoConexion(r.ConexionTipo).Equals("agregacion")) {
-							
-								WriteLine(r.TargetClase.NombreClase);
+								WriteLine(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
+								ClaseAsiacion.Add(getMAXrelacionASOC(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
+							}
+
+
+							if (ClaseAsiacion.Count>0) {
+								String classesAsoc = "";
+								for (int i = 0; i<ClaseAsiacion.Count; i++){						
+									classesAsoc += ClaseAsiacion[i]+",";
+								}
+								WriteLine ("public "+modelClass.NombreClase+ "(" + classesAsoc.TrimEnd(',')+"){}");
 							}
 
 							if (getTipoConexion(r.ConexionTipo).Equals("composicion")) {
-							
-								WriteLine(r.TargetClase.NombreClase);
+								WriteLine(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
 							}
 
 						}
@@ -242,9 +249,46 @@
 #>
 
 <#+
+
+
+private String getTipoDatoReturn(tipodato dato){
+		String c = dato.ToString().ToLower();
+		
+
+
+			if(c.CompareTo("void")==0) {	
+			return "";
+		}
+
+				if(c.CompareTo("int")==0) {	
+			return "return 0;";
+		}
+
+				if(c.CompareTo("string")==0) {	
+			return "return null;";
+		}
+	return "return null;";
+	}
+
+
 	private String getTipoDato(tipodato dato){
-		String c = dato.ToString();
-		return c.ToLower();
+		String c = dato.ToString().ToLower();
+		
+
+
+			if(c.CompareTo("void")==0) {	
+			return "";
+		}
+
+				if(c.CompareTo("int")==0) {	
+			return "int";
+		}
+
+				if(c.CompareTo("string")==0) {	
+			return "String";
+		}
+	return "return null;";
+
 	}
 #>
 
@@ -255,12 +299,7 @@
 	}
 #>
 
-<#+
-	private String getTipoConexion(ConexionTipos con){
-		String c = con.ToString();
-		return c.ToLower();
-	}
-#>
+
 
 
 <#+
@@ -319,4 +358,53 @@ public class HerenciaHelper {
  }
 
 }
+#>
+
+<#+
+	private String getTipoConexion(ConexionTipos con){
+		String c = con.ToString();
+		return c.ToLower();
+	}
+#>
+
+<#+
+	private String getTipoCardinalidad(Cardinalidades con){
+		String c = con.ToString();
+		return c.ToLower();
+	}
+#>
+
+
+<#+
+	private String getMAXrelacion (String NameRelacion, String  objeto, String Cardinalidad) {
+	
+		if(Cardinalidad.CompareTo("c1n")==0 || Cardinalidad.CompareTo("c0n")==0) {	
+			return "public List <"+objeto+"> "+NameRelacion+"_"+objeto+";";
+		}
+		if(Cardinalidad.CompareTo("c11")==0 || Cardinalidad.CompareTo("c10")==0) {	
+			return "public "+objeto+" " +NameRelacion+"_"+objeto+";";
+		}
+
+	return " ";
+	}
+
+
+#>
+
+
+
+<#+
+	private String getMAXrelacionASOC (String NameRelacion, String  objeto, String Cardinalidad) {
+	
+		if(Cardinalidad.CompareTo("c1n")==0 || Cardinalidad.CompareTo("c0n")==0) {	
+			return "List <"+objeto+"> "+NameRelacion+"_"+objeto;
+		}
+		if(Cardinalidad.CompareTo("c11")==0 || Cardinalidad.CompareTo("c10")==0) {	
+			return ""+objeto+" " +NameRelacion+"_"+objeto;
+		}
+
+	return " ";
+	}
+
+
 #>

@@ -1,16 +1,17 @@
+import java.util.List;
 public class Coorporativo extends Cliente{
 Coorporativo(){}
 public int ClienteID;
-public getClienteID(int ClienteID){}
-public setClienteID(int ClienteID){return int ClienteID;}
-public string Nombre;
-public getNombre(string Nombre){}
-public setNombre(string Nombre){return string Nombre;}
+public int getClienteID(int ClienteID){return 0;}
+public void setClienteID(int ClienteID){ this.ClienteID=ClienteID;}
+public String Nombre;
+public String getNombre(String Nombre){return null;}
+public void setNombre(String Nombre){ this.Nombre=Nombre;}
 public int Pedidos;
-public getPedidos(int Pedidos){}
-public setPedidos(int Pedidos){return int Pedidos;}
+public int getPedidos(int Pedidos){return 0;}
+public void setPedidos(int Pedidos){ this.Pedidos=Pedidos;}
 public int CoorporativoID;
-public getCoorporativoID(int CoorporativoID){}
-public setCoorporativoID(int CoorporativoID){return int CoorporativoID;}
+public int getCoorporativoID(int CoorporativoID){return 0;}
+public void setCoorporativoID(int CoorporativoID){ this.CoorporativoID=CoorporativoID;}
 public int ObtenerPedidos(int idCliente){ return 0;}
 }
