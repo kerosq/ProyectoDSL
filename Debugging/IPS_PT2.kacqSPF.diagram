@@ -54,7 +54,7 @@
         <shapeClaseEnriquecidaMoniker Id="87c9822b-6dfb-42ba-88d9-fc89b4f5e622" />
       </nodes>
     </conEsPadre>
-    <conEsHijo Id="f1aa7463-65d2-4f86-9434-a3529c84a532" edgePoints="[(3.09375 : 4.79159897565842); (3.09375 : 5.53125); (2.5 : 5.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <conEsHijo Id="f1aa7463-65d2-4f86-9434-a3529c84a532" edgePoints="[(3.09375 : 4.79159897565842); (3.09375 : 5.53125); (3.03645583333333 : 5.53125 : JumpStart); (2.86978916666667 : 5.53125 : JumpEnd); (2.5 : 5.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <esHijaMoniker Id="5aad61cb-b089-4c5a-9d93-aeae52976de9" />
       <nodes>
         <iMGHerenciaMoniker Id="5a2736e0-9ae3-4400-8413-fb954d91f85b" />
@@ -68,7 +68,7 @@
         <shapeClaseMoniker Id="9e46cd7b-0ff2-48de-8795-6352e9426f0d" />
       </nodes>
     </conEsHijo>
-    <conecClase Id="4fea8f82-27a2-4614-a3dd-78ecf77567bf" edgePoints="[(5.5 : 1.6875); (10.625 : 1.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conecClase Id="4fea8f82-27a2-4614-a3dd-78ecf77567bf" edgePoints="[(5.5 : 1.6875); (10.625 : 1.6875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <conAsociacionMoniker Id="3b38fb0d-1cce-40ac-80ff-f3c7bd9279ff" />
       <relativeChildShapes />
       <nodes>

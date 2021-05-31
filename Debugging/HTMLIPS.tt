@@ -1,0 +1,344 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ UMLSPF processor="UMLSPFDirectiveProcessor" requires="fileName='IPS_PT2.kacqSPF'" #> 
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#@ output extension=".java" #>
+<#    
+ var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+ String NombreAPP = this.ModeloClassWEB.NombreUML;
+ List <String> NombreComp = new List<String>();
+ 
+ 
+ if(this.ModeloClassWEB.Herencia.Count >0){
+	foreach(Herencia herencia in this.ModeloClassWEB.Herencia){
+		if(herencia.Generalizacion1.ToString()=="Total"&& herencia.ClasePadre is ClaseEnriquecida){
+				ClaseEnriquecida padre=(ClaseEnriquecida)herencia.ClasePadre;
+				NombreComp.Add(padre.NombreClase);
+				fileManager.StartNewFile(padre.NombreClase + ".html");
+				WriteLine("<html> ");
+				WriteLine("<head>");
+				WriteLine("	<title>"+padre.NombreClase+"</title>");
+				WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+				WriteLine("</head>");
+				WriteLine("<body>");
+				WriteLine("<div style='border:1px solid black; margin:20px'>");
+				WriteLine("<p style='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";color:#"+Color(padre.ClassStyle.ColorLetra.ToString())+";font-weight:bold; font-family: "+padre.ClassStyle.TipoLetra.ToString()+"; text-align:"+padre.ClassStyle.Alineacion.ToString()+"'>"+padre.NombreClase+" <br />");
+				WriteLine("<form name='"+padre.NombreClase+"' style='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";font-family:"+padre.ClassStyle.TipoLetra.ToString()+";text-align:center;'>");
+				WriteLine("<table>");
+		
+				foreach(Atributo a in padre.Atrib){
+			
+					WriteLine("<tr><td style='color:#"+Color(padre.AtribStyle.ColorLetra.ToString())+";font-family:"+padre.AtribStyle.Tipoletra.ToString()+";'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#"+Color(padre.AtribStyle.ColorLetra.ToString())+";font-family:"+padre.AtribStyle.Tipoletra.ToString()+";' /></td></tr>");
+				
+				}
+
+						WriteLine("</table>");
+				foreach(Operaciones o in padre.Methods){
+		
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";color:#"+Color(padre.MethodsStyle.ColorLetra.ToString())+";font-family:"+padre.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+		
+				}
+				WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";color:#"+Color(padre.MethodsStyle.ColorLetra.ToString())+";font-family:"+padre.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";color:#"+Color(padre.MethodsStyle.ColorLetra.ToString())+";font-family:"+padre.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+
+				foreach(Atributo a in padre.Atrib){
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";color:#"+Color(padre.MethodsStyle.ColorLetra.ToString())+";font-family:"+padre.MethodsStyle.TipoLetra.ToString()+";\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+";color:#"+Color(padre.MethodsStyle.ColorLetra.ToString())+";font-family:"+padre.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+				}
+
+				WriteLine("</form> ");
+				WriteLine("<a style ='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+"'class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
+				WriteLine("</div>");
+				WriteLine("<html>");
+		}
+		if(herencia.Generalizacion1.ToString()=="Total"&& herencia.ClasePadre is Clase){
+			Clase padre=(Clase) herencia.ClasePadre;
+				NombreComp.Add(padre.NombreClase);
+				fileManager.StartNewFile(padre.NombreClase + ".html");
+				WriteLine("<html> ");
+				WriteLine("<head>");
+				WriteLine("	<title>"+padre.NombreClase+"</title>");
+				WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+				WriteLine("</head>");
+				WriteLine("<body>");
+				WriteLine("<div style='border:1px solid black; margin:20px'>");
+				WriteLine("<p style='background-color:#00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:padrenter'>"+padre.NombreClase+" <br />");
+				WriteLine("<form name='"+padre.NombreClase+"' style='background-color:#00aabb;color:#ffffff;font-family:Arial;text-align:center;''>");
+				WriteLine("<table>");
+		
+				foreach(Atributo a in padre.Atrib){
+			
+					WriteLine("<tr><td style='color:#000000;font-family:Arial;'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#000000;font-family:Arial;' /></td></tr>");
+				
+				}
+						WriteLine("</table>");
+				foreach(Operaciones o in padre.Methods){
+		
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+		
+				}
+				WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+
+				foreach(Atributo a in padre.Atrib){
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				}
+
+				WriteLine("</form> ");
+				WriteLine("<a class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
+				WriteLine("</div>");
+				WriteLine("<html>");
+		
+		}
+		
+		
+		foreach(Clase Hijas in herencia.ClaseHija){
+			if(Hijas is ClaseEnriquecida){
+				ClaseEnriquecida hija = (ClaseEnriquecida) Hijas;
+				fileManager.StartNewFile(hija.NombreClase + ".html");
+				NombreComp.Add(hija.NombreClase);
+				WriteLine("<html> ");
+				WriteLine("<head>");
+				WriteLine("	<title>"+hija.NombreClase+"</title>");
+				WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+				WriteLine("</head>");
+				WriteLine("<body>");
+				WriteLine("<div style='border:1px solid black; margin:20px'>");
+				WriteLine("<p style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.ClassStyle.ColorLetra.ToString())+";font-weight:bold; font-family: "+hija.ClassStyle.TipoLetra.ToString()+"; text-align:"+hija.ClassStyle.Alineacion.ToString()+"'>"+hija.NombreClase+" <br />");
+				WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";font-family:"+hija.ClassStyle.TipoLetra.ToString()+";text-align:hijanter;'>");
+				WriteLine("<table>");
+		
+				foreach(Atributo a in herencia.ClasePadre.Atrib){
+			
+					WriteLine("<tr><td style='color:#"+Color(hija.AtribStyle.ColorLetra.ToString())+";font-family:"+hija.AtribStyle.Tipoletra.ToString()+";'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#"+Color(hija.AtribStyle.ColorLetra.ToString())+";font-family:"+hija.AtribStyle.Tipoletra.ToString()+";' /></td></tr>");
+				
+				}
+
+				foreach(Atributo a in hija.Atrib){
+			
+					WriteLine("<tr><td style='color:#"+Color(hija.AtribStyle.ColorLetra.ToString())+";font-family:"+hija.AtribStyle.Tipoletra.ToString()+";'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#"+Color(hija.AtribStyle.ColorLetra.ToString())+";font-family:"+hija.AtribStyle.Tipoletra.ToString()+";' /></td></tr>");
+				
+				}
+				
+							WriteLine("</table>");
+				foreach(Operaciones o in herencia.ClasePadre.Methods){
+		
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+		
+				}
+				
+				foreach(Operaciones o in hija.Methods){
+		
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+		
+				}
+
+				WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+
+				foreach(Atributo a in herencia.ClasePadre.Atrib){
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				}
+
+				foreach(Atributo a in hija.Atrib){
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+				}
+		
+				WriteLine("</form> ");
+				WriteLine("<a style ='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+"'class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
+				WriteLine("</div>");
+				WriteLine("<html>");
+			}
+			if(Hijas is Clase){
+			
+				Clase hija=(Clase)Hijas;
+				NombreComp.Add(hija.NombreClase);
+				fileManager.StartNewFile(hija.NombreClase + ".html");
+				WriteLine("<html> ");
+				WriteLine("<head>");
+				WriteLine("	<title>"+hija.NombreClase+"</title>");
+				WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+				WriteLine("</head>");
+				WriteLine("<body>");
+				WriteLine("<div style='border:1px solid black; margin:20px'>");
+				WriteLine("<p style='background-color:#00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>"+hija.NombreClase+" <br />");
+				WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#00aabb;color:#ffffff;font-family:Arial;text-align:center;'>");
+				WriteLine("<table>");
+		
+				foreach(Atributo a in herencia.ClasePadre.Atrib){
+					WriteLine("<tr><td style='color:#000000;font-family:Arial;'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#000000;font-family:Arial;' /></td></tr>");
+				}
+				
+				foreach(Atributo a in hija.Atrib){
+			
+					WriteLine("<tr><td style='color:#000000;font-family:Arial;'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#000000;font-family:Arial;' /></td></tr>");
+				
+				}
+						WriteLine("</table>");
+						
+				foreach(Operaciones o in herencia.ClasePadre.Methods){
+				
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				}
+				
+				foreach(Operaciones o in hija.Methods){
+		
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+		
+				}
+				WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				
+				foreach(Atributo a in herencia.ClasePadre.Atrib){
+				
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				}
+				
+				foreach(Atributo a in hija.Atrib){
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				}
+
+				WriteLine("</form> ");
+				WriteLine("<a class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
+				WriteLine("</div>");
+				WriteLine("<html>");
+			}
+		}
+
+
+		
+	}
+
+
+}
+
+if(this.ModeloClassWEB.Class.Count >0){
+	foreach(Clase clase in this.ModeloClassWEB.Class){
+		if(clase is ClaseEnriquecida){
+			ClaseEnriquecida hija = (ClaseEnriquecida) clase;
+				fileManager.StartNewFile(hija.NombreClase + ".html");
+				NombreComp.Add(hija.NombreClase);
+				WriteLine("<html> ");
+				WriteLine("<head>");
+				WriteLine("	<title>"+hija.NombreClase+"</title>");
+				WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+				WriteLine("</head>");
+				WriteLine("<body>");
+				WriteLine("<div style='border:1px solid black; margin:20px'>");
+				WriteLine("<p style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.ClassStyle.ColorLetra.ToString())+";font-weight:bold; font-family: "+hija.ClassStyle.TipoLetra.ToString()+"; text-align:"+hija.ClassStyle.Alineacion.ToString()+"'>"+hija.NombreClase+" <br />");
+				WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";font-family:"+hija.ClassStyle.TipoLetra.ToString()+";text-align:hijanter;'>");
+				WriteLine("<table>");
+
+				foreach(Atributo a in hija.Atrib){
+			
+					WriteLine("<tr><td style='color:#"+Color(hija.AtribStyle.ColorLetra.ToString())+";font-family:"+hija.AtribStyle.Tipoletra.ToString()+";'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#"+Color(hija.AtribStyle.ColorLetra.ToString())+";font-family:"+hija.AtribStyle.Tipoletra.ToString()+";' /></td></tr>");
+				
+				}
+				
+							WriteLine("</table>");
+				
+				foreach(Operaciones o in hija.Methods){
+		
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+		
+				}
+
+				WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+
+				foreach(Atributo a in hija.Atrib){
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
+				}
+		
+				WriteLine("</form> ");
+				WriteLine("<a style ='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+"'class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
+				WriteLine("</div>");
+				WriteLine("<html>");
+		}
+		if(clase is Clase){
+			Clase hija=(Clase)clase;
+				NombreComp.Add(hija.NombreClase);
+				fileManager.StartNewFile(hija.NombreClase + ".html");
+				WriteLine("<html> ");
+				WriteLine("<head>");
+				WriteLine("	<title>"+hija.NombreClase+"</title>");
+				WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+				WriteLine("</head>");
+				WriteLine("<body>");
+				WriteLine("<div style='border:1px solid black; margin:20px'>");
+				WriteLine("<p style='background-color:#00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>"+hija.NombreClase+" <br />");
+				WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#00aabb;color:#ffffff;font-family:Arial;text-align:center;'>");
+				WriteLine("<table>");
+				
+				foreach(Atributo a in hija.Atrib){
+			
+					WriteLine("<tr><td style='color:#000000;font-family:Arial;'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#000000;font-family:Arial;' /></td></tr>");
+				
+				}
+						WriteLine("</table>");
+				
+				foreach(Operaciones o in hija.Methods){
+		
+					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+		
+				}
+				WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				
+				foreach(Atributo a in hija.Atrib){
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+				}
+
+				WriteLine("</form> ");
+				WriteLine("<a class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
+				WriteLine("</div>");
+				WriteLine("<html>");
+		}
+	
+	}
+
+}
+fileManager.Process(); 
+#> 
+
+<#+
+	private String Color(String color){
+		String resu="00aabb";
+
+		if (color.CompareTo("Amarillo")==0)
+				resu="F4D03F";
+		
+		if (color.CompareTo("Azul")==0)
+			resu="2E86C1";
+		
+		if (color.CompareTo("Blanco")==0)
+			resu="DFEFE";
+		
+		if (color.CompareTo("Gris")==0)
+			resu="A6ACAF";
+		
+		if (color.CompareTo("Morado")==0)
+			resu="8E44AD";
+		
+		if (color.CompareTo("Negro")==0)
+			resu="#000000";
+		
+		if (color.CompareTo("Rojo")==0)
+			resu="FF5733";
+		
+		if (color.CompareTo("Rosa")==0)
+			resu="FF00EC";
+		
+		if (color.CompareTo("Verde")==0)
+			resu="58D68D";
+			
+		return resu;
+	}
+
+#>
