@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modeloClassWEB xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d74831a6-2494-45b4-8c8d-03679a08c109" nombreUML="APP" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF">
+<modeloClassWEB xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d74831a6-2494-45b4-8c8d-03679a08c109" nombreUML="ClassWeb" xmlns="http://schemas.microsoft.com/dsltools/UMLSPF">
   <class>
     <modeloClassWEBHasClass Id="649a05ae-d4f2-4e46-a24c-054b3092d066">
       <claseEnriquecida Id="8e7457ea-fd29-485a-b942-c23fce294c53" nombreClase="Cliente">
@@ -34,17 +34,17 @@
         </atribID>
         <classStyle>
           <claseEnriquecidaHasClassStyle Id="9f08e5c9-ef29-472e-8708-d10ce55cf58e">
-            <estilosClase Id="17fc646a-7b21-441c-966e-79f3b6fa5793" colorFondo="Rojo" colorLetra="Rojo" tipoLetra="Arial" alineacion="left" />
+            <estilosClase Id="17fc646a-7b21-441c-966e-79f3b6fa5793" colorFondo="Rojo" colorLetra="Negro" tipoLetra="Arial" alineacion="left" />
           </claseEnriquecidaHasClassStyle>
         </classStyle>
         <atribStyle>
           <claseEnriquecidaHasAtribStyle Id="5eb8efc3-6cc3-4fc1-971e-35b955b564cc">
-            <estiloAtributos Id="c72cb29c-4ff3-48d0-9bf6-64977b324885" tipoletra="Arial" colorLetra="Rojo" formatoAtributo="Radio" />
+            <estiloAtributos Id="c72cb29c-4ff3-48d0-9bf6-64977b324885" tipoletra="Arial" colorLetra="Negro" formatoAtributo="Normal" />
           </claseEnriquecidaHasAtribStyle>
         </atribStyle>
         <methodsStyle>
           <claseEnriquecidaHasMethodsStyle Id="ed743edb-3f6e-4e8b-a079-2baaf00f1925">
-            <estiloMetodos Id="6e0051bf-019a-435b-8a6f-8c1fd715955f" tipoLetra="Arial" colorLetra="Rojo" />
+            <estiloMetodos Id="6e0051bf-019a-435b-8a6f-8c1fd715955f" tipoLetra="Arial" colorLetra="Negro" />
           </claseEnriquecidaHasMethodsStyle>
         </methodsStyle>
       </claseEnriquecida>

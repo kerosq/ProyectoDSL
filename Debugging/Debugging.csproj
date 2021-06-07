@@ -66,11 +66,29 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClassWeb.html">
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
+    </Content>
+    <Content Include="Cliente.html">
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
+    </Content>
     <Content Include="Cliente.java">
       <DependentUpon>Java.tt</DependentUpon>
     </Content>
+    <Content Include="Coorporativo.html">
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
+    </Content>
     <Content Include="Coorporativo.java">
       <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="HTMLIPS.java">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
+    </Content>
+    <Content Include="HTMLIPS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HTMLIPS.java</LastGenOutput>
     </Content>
     <Content Include="Java.java">
       <AutoGen>True</AutoGen>
@@ -81,14 +99,26 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Java.java</LastGenOutput>
     </Content>
+    <Content Include="LineaPedido.html">
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
+    </Content>
     <Content Include="LineaPedido.java">
       <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Pedido.html">
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
     </Content>
     <Content Include="Pedido.java">
       <DependentUpon>Java.tt</DependentUpon>
     </Content>
+    <Content Include="Personal.html">
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
+    </Content>
     <Content Include="Personal.java">
       <DependentUpon>Java.tt</DependentUpon>
+    </Content>
+    <Content Include="Producto.html">
+      <DependentUpon>HTMLIPS.tt</DependentUpon>
     </Content>
     <Content Include="Producto.java">
       <DependentUpon>Java.tt</DependentUpon>

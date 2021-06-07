@@ -2,17 +2,18 @@
 <#@ UMLSPF processor="UMLSPFDirectiveProcessor" requires="fileName='IPS_PT2.kacqSPF'" #> 
 <#@ include file="EF.utility.CS.ttinclude" #>
 <#@ output extension=".java" #>
+
 <#    
  var fileManager=EntityFrameworkTemplateFileManager.Create(this);
  String NombreAPP = this.ModeloClassWEB.NombreUML;
  List <String> NombreComp = new List<String>();
- 
- 
+ List <String> visitados = new List<String>();
  if(this.ModeloClassWEB.Herencia.Count >0){
 	foreach(Herencia herencia in this.ModeloClassWEB.Herencia){
-		if(herencia.Generalizacion1.ToString()=="Total"&& herencia.ClasePadre is ClaseEnriquecida){
+		if((herencia.ClasePadre is ClaseEnriquecida) && (herencia.Generalizacion1.ToString().CompareTo("Total")==0)){
 				ClaseEnriquecida padre=(ClaseEnriquecida)herencia.ClasePadre;
 				NombreComp.Add(padre.NombreClase);
+				visitados.Add(padre.NombreClase);
 				fileManager.StartNewFile(padre.NombreClase + ".html");
 				WriteLine("<html> ");
 				WriteLine("<head>");
@@ -49,9 +50,11 @@
 				WriteLine("<a style ='background-color:#"+Color(padre.ClassStyle.ColorFondo.ToString())+"'class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
 				WriteLine("</div>");
 				WriteLine("<html>");
-		}
-		if(herencia.Generalizacion1.ToString()=="Total"&& herencia.ClasePadre is Clase){
-			Clase padre=(Clase) herencia.ClasePadre;
+		} 
+		else {
+			visitados.Add(herencia.ClasePadre.NombreClase);
+			if((herencia.Generalizacion1.ToString().CompareTo("Total")==0)){
+				Clase padre=(Clase) herencia.ClasePadre;
 				NombreComp.Add(padre.NombreClase);
 				fileManager.StartNewFile(padre.NombreClase + ".html");
 				WriteLine("<html> ");
@@ -61,8 +64,8 @@
 				WriteLine("</head>");
 				WriteLine("<body>");
 				WriteLine("<div style='border:1px solid black; margin:20px'>");
-				WriteLine("<p style='background-color:#00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:padrenter'>"+padre.NombreClase+" <br />");
-				WriteLine("<form name='"+padre.NombreClase+"' style='background-color:#00aabb;color:#ffffff;font-family:Arial;text-align:center;''>");
+				WriteLine("<p style='background-color:#00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>"+padre.NombreClase+" <br />");
+				WriteLine("<form name='"+padre.NombreClase+"' style='background-color:#00aabb;color:#ffffff;font-family:Arial;text-align:center;'>");
 				WriteLine("<table>");
 		
 				foreach(Atributo a in padre.Atrib){
@@ -88,15 +91,19 @@
 				WriteLine("<a class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
 				WriteLine("</div>");
 				WriteLine("<html>");
-		
+			}
 		}
+		
+		
 		
 		
 		foreach(Clase Hijas in herencia.ClaseHija){
 			if(Hijas is ClaseEnriquecida){
 				ClaseEnriquecida hija = (ClaseEnriquecida) Hijas;
 				fileManager.StartNewFile(hija.NombreClase + ".html");
+				visitados.Add(hija.NombreClase);
 				NombreComp.Add(hija.NombreClase);
+				visitados.Add(hija.NombreClase);
 				WriteLine("<html> ");
 				WriteLine("<head>");
 				WriteLine("	<title>"+hija.NombreClase+"</title>");
@@ -105,7 +112,7 @@
 				WriteLine("<body>");
 				WriteLine("<div style='border:1px solid black; margin:20px'>");
 				WriteLine("<p style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.ClassStyle.ColorLetra.ToString())+";font-weight:bold; font-family: "+hija.ClassStyle.TipoLetra.ToString()+"; text-align:"+hija.ClassStyle.Alineacion.ToString()+"'>"+hija.NombreClase+" <br />");
-				WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";font-family:"+hija.ClassStyle.TipoLetra.ToString()+";text-align:hijanter;'>");
+				WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";font-family:"+hija.ClassStyle.TipoLetra.ToString()+";text-align:center;'>");
 				WriteLine("<table>");
 		
 				foreach(Atributo a in herencia.ClasePadre.Atrib){
@@ -137,8 +144,8 @@
 				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
 
 				foreach(Atributo a in herencia.ClasePadre.Atrib){
-					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
-					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";\' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#"+Color(hija.ClassStyle.ColorFondo.ToString())+";color:#"+Color(hija.MethodsStyle.ColorLetra.ToString())+";font-family:"+hija.MethodsStyle.TipoLetra.ToString()+";' />&nbsp;&nbsp;");
 				}
 
 				foreach(Atributo a in hija.Atrib){
@@ -151,10 +158,11 @@
 				WriteLine("</div>");
 				WriteLine("<html>");
 			}
-			if(Hijas is Clase){
+			else{
 			
 				Clase hija=(Clase)Hijas;
 				NombreComp.Add(hija.NombreClase);
+				visitados.Add(hija.NombreClase);
 				fileManager.StartNewFile(hija.NombreClase + ".html");
 				WriteLine("<html> ");
 				WriteLine("<head>");
@@ -208,17 +216,12 @@
 				WriteLine("<html>");
 			}
 		}
-
-
-		
 	}
-
-
 }
 
 if(this.ModeloClassWEB.Class.Count >0){
 	foreach(Clase clase in this.ModeloClassWEB.Class){
-		if(clase is ClaseEnriquecida){
+		if(clase is ClaseEnriquecida && !Visitado(visitados,clase.NombreClase)){
 			ClaseEnriquecida hija = (ClaseEnriquecida) clase;
 				fileManager.StartNewFile(hija.NombreClase + ".html");
 				NombreComp.Add(hija.NombreClase);
@@ -260,47 +263,81 @@ if(this.ModeloClassWEB.Class.Count >0){
 				WriteLine("</div>");
 				WriteLine("<html>");
 		}
-		if(clase is Clase){
-			Clase hija=(Clase)clase;
-				NombreComp.Add(hija.NombreClase);
-				fileManager.StartNewFile(hija.NombreClase + ".html");
-				WriteLine("<html> ");
-				WriteLine("<head>");
-				WriteLine("	<title>"+hija.NombreClase+"</title>");
-				WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
-				WriteLine("</head>");
-				WriteLine("<body>");
-				WriteLine("<div style='border:1px solid black; margin:20px'>");
-				WriteLine("<p style='background-color:#00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>"+hija.NombreClase+" <br />");
-				WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#00aabb;color:#ffffff;font-family:Arial;text-align:center;'>");
-				WriteLine("<table>");
+		else{
+				if(!Visitado(visitados,clase.NombreClase)){
+				Clase hija=(Clase)clase;
+					NombreComp.Add(hija.NombreClase);
+					fileManager.StartNewFile(hija.NombreClase + ".html");
+					WriteLine("<html> ");
+					WriteLine("<head>");
+					WriteLine("	<title>"+hija.NombreClase+"</title>");
+					WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+					WriteLine("</head>");
+					WriteLine("<body>");
+					WriteLine("<div style='border:1px solid black; margin:20px'>");
+					WriteLine("<p style='background-color:#00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>"+hija.NombreClase+" <br />");
+					WriteLine("<form name='"+hija.NombreClase+"' style='background-color:#00aabb;color:#ffffff;font-family:Arial;text-align:center;'>");
+					WriteLine("<table>");
+					
+					foreach(Atributo a in hija.Atrib){
 				
-				foreach(Atributo a in hija.Atrib){
+						WriteLine("<tr><td style='color:#000000;font-family:Arial;'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#000000;font-family:Arial;' /></td></tr>");
+					
+					}
+							WriteLine("</table>");
+					
+					foreach(Operaciones o in hija.Methods){
 			
-					WriteLine("<tr><td style='color:#000000;font-family:Arial;'>"+a.NombreAtributo+":</td><td><input type='text' name='"+a.NombreAtributo+"' style='color:#000000;font-family:Arial;' /></td></tr>");
-				
-				}
-						WriteLine("</table>");
-				
-				foreach(Operaciones o in hija.Methods){
-		
-					WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
-		
-				}
-				WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
-				WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
-				
-				foreach(Atributo a in hija.Atrib){
-					WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
-					WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
-				}
+						WriteLine("<input type='submit' name='"+o.NombreOperacion+"' value='"+o.NombreOperacion+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+			
+					}
+					WriteLine("<input type='submit' name='constructor' value='constructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+					WriteLine("<input type='submit' name='destructor' value='destructor' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+					
+					foreach(Atributo a in hija.Atrib){
+						WriteLine("<input type=\'submit\' name=\'get"+a.NombreAtributo+"\' value=\'get"+a.NombreAtributo+"\' style=\'background-color:#0088ff;color:#ffffff;font-family:Arial;\' />&nbsp;&nbsp;");
+						WriteLine("<input type='submit' name='set"+a.NombreAtributo+"' value='set"+a.NombreAtributo+"' style='background-color:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;");
+					}
 
-				WriteLine("</form> ");
-				WriteLine("<a class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
-				WriteLine("</div>");
-				WriteLine("<html>");
-		}
-	
+					WriteLine("</form> ");
+					WriteLine("<a class='btn btn-primary' href='"+NombreAPP+".html'>inicio</a>");
+					WriteLine("</div>");
+					WriteLine("<html>");
+				}
+			}
+	}
+
+	if(NombreComp.Count>0) {
+		
+			fileManager.StartNewFile(NombreAPP + ".html");
+
+			WriteLine("<html> ");
+			WriteLine("<head>");
+			WriteLine("<title>"+NombreAPP+"</title>");
+			WriteLine("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+			WriteLine("</head>");
+			WriteLine("<body style='background-color:#d0efff; padding: 15px;'>");
+			WriteLine("<div>");
+			
+			WriteLine("<h1>"+NombreAPP+"</h1>");
+			WriteLine("<ul>");
+			foreach (String cmp in NombreComp) {
+            
+				 WriteLine("<li>");
+				 WriteLine("<a href='"+cmp+".html'>");
+				 WriteLine(cmp);
+				  WriteLine("</a>");
+				 WriteLine("</li>");
+
+			}
+			
+
+			WriteLine("</ul>");
+			WriteLine("</div>");
+			WriteLine("<button class='btn btn-primary'>Cerrar</button>");
+			WriteLine("<html>");
+		
+		
 	}
 
 }
@@ -308,6 +345,18 @@ fileManager.Process();
 #> 
 
 <#+
+
+	
+	private Boolean Visitado(List <String> visitados, String visit){
+		
+		foreach(String v in visitados){
+		
+			if(v.CompareTo(visit)==0)return true;
+		
+		}
+		return false;
+	}
+
 	private String Color(String color){
 		String resu="00aabb";
 
@@ -318,7 +367,7 @@ fileManager.Process();
 			resu="2E86C1";
 		
 		if (color.CompareTo("Blanco")==0)
-			resu="DFEFE";
+			resu="FFFFFF";
 		
 		if (color.CompareTo("Gris")==0)
 			resu="A6ACAF";

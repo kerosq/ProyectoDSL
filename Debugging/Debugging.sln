@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging.csproj", "{2FA49BF6-8E71-4CBC-9B3A-56BE0E3C476A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21A144CF-B8D2-4265-B2E4-2821981302AF}"
+	ProjectSection(SolutionItems) = preProject
+		HTMLIPS.tt = HTMLIPS.tt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
