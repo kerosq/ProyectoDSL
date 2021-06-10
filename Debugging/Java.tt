@@ -154,20 +154,44 @@
 						WriteLine(Atributo_SET);
 					}
 
+			
+
 					 List<String> ClaseAsiacion = new List<String>();
+					 List<String> ClaseAgregacion = new List<String>();
 					if(modelClass.TargetClase.Count >0) {
 
 						foreach (conAsociacion r in conAsociacion.GetLinksToTargetClase(modelClass)) {
 							
+
+
+									
+
 							if (getTipoConexion(r.ConexionTipo).Equals("asociacion")) {
 								WriteLine(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));							
+
+							
+
 							}
 
 							if (getTipoConexion(r.ConexionTipo).Equals("agregacion")) {
 								WriteLine(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
-								ClaseAsiacion.Add(getMAXrelacionASOC(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
+
+								
+							
+								ClaseAsiacion.Add(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
+								
+									
+
 							}
 
+
+						
+
+							if (getTipoConexion(r.ConexionTipo).Equals("composicion")) {
+								WriteLine(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
+							}
+
+						}
 
 							if (ClaseAsiacion.Count>0) {
 								String classesAsoc = "";
@@ -176,12 +200,6 @@
 								}
 								WriteLine ("public "+modelClass.NombreClase+ "(" + classesAsoc.TrimEnd(',')+"){}");
 							}
-
-							if (getTipoConexion(r.ConexionTipo).Equals("composicion")) {
-								WriteLine(getMAXrelacion(r.NombreRelacion,r.TargetClase.NombreClase,getTipoCardinalidad(r.refD)));
-							}
-
-						}
 
 					}
 
@@ -405,6 +423,10 @@ public class HerenciaHelper {
 
 	return " ";
 	}
+
+
+
+
 
 
 #>
